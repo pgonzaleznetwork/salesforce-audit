@@ -3,7 +3,7 @@ salesforce.AnimationRule Priority {
   animationFrequency = "often"
   developerName = "Priority"
   isActive = true
-  masterLabel = "Priority"
+  masterLabel = "Priority Path"
   recordTypeContext = "Custom"
   recordTypeName = "Customer"
   sobjectType = "Account"

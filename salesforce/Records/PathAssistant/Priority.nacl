@@ -3,7 +3,7 @@ salesforce.PathAssistant Priority {
   active = true
   entityName = "Account"
   fieldName = "CustomerPriority__c"
-  masterLabel = "Priority"
+  masterLabel = "Priority Path"
   pathAssistantSteps = [
     {
       fieldNames = [
