@@ -1,0 +1,12 @@
+salesforce.AnimationRule Priority {
+  fullName = "Priority"
+  animationFrequency = "often"
+  developerName = "Priority"
+  isActive = true
+  masterLabel = "Priority"
+  recordTypeContext = "Custom"
+  recordTypeName = "Customer"
+  sobjectType = "Account"
+  targetField = "CustomerPriority__c"
+  targetFieldChangeToValues = "Medium,Super High"
+}

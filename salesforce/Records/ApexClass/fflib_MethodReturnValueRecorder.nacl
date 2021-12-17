@@ -1,0 +1,26 @@
+salesforce.ApexClass fflib_MethodReturnValueRecorder {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MethodReturnValueRecorder"
+  content = file("salesforce/Records/ApexClass/fflib_MethodReturnValueRecorder.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_InvocationOnMock
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MatchersReturnValue
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodReturnValue
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+  ]
+}

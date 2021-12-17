@@ -1,0 +1,186 @@
+type salesforce.CustomField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string businessOwnerGroup {
+  }
+  string businessOwnerUser {
+  }
+  string businessStatus {
+  }
+  boolean caseSensitive {
+  }
+  string complianceGroup {
+  }
+  string customDataType {
+  }
+  string defaultValue {
+  }
+  boolean deprecated {
+  }
+  string description {
+  }
+  string displayFormat {
+  }
+  boolean escapeMarkup {
+  }
+  string externalDeveloperName {
+  }
+  boolean externalId {
+  }
+  string formula {
+  }
+  string inlineHelpText {
+  }
+  boolean isAIPredictionField {
+  }
+  boolean isConvertLeadDisabled {
+  }
+  boolean isFilteringDisabled {
+  }
+  boolean isNameField {
+  }
+  boolean isSortingDisabled {
+  }
+  string label {
+  }
+  number length {
+  }
+  salesforce.LookupFilter lookupFilter {
+  }
+  string maskChar {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "X",
+        "asterisk",
+      ]
+    }
+  }
+  string maskType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "all",
+        "creditCard",
+        "lastFour",
+        "nino",
+        "sin",
+        "ssn",
+      ]
+    }
+  }
+  string metadataRelationshipControllingField {
+  }
+  salesforce.MktDataLakeFieldAttributes mktDataLakeFieldAttributes {
+  }
+  salesforce.MktDataModelFieldAttributes mktDataModelFieldAttributes {
+  }
+  boolean populateExistingRows {
+  }
+  number precision {
+  }
+  string referenceTargetField {
+  }
+  string referenceTo {
+  }
+  string relationshipLabel {
+  }
+  string relationshipName {
+  }
+  number relationshipOrder {
+  }
+  boolean reparentableMasterDetail {
+  }
+  boolean required {
+  }
+  boolean restrictedAdminField {
+  }
+  number scale {
+  }
+  string securityClassification {
+  }
+  number startingNumber {
+  }
+  boolean stripMarkup {
+  }
+  string summarizedField {
+  }
+  salesforce.FilterItem summaryFilterItems {
+  }
+  string summaryForeignKey {
+  }
+  string summaryOperation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "count",
+        "max",
+        "min",
+        "sum",
+      ]
+    }
+  }
+  boolean trackFeedHistory {
+  }
+  boolean trackHistory {
+  }
+  boolean trackTrending {
+  }
+  boolean translateData {
+  }
+  boolean unique {
+  }
+  salesforce.ValueSet valueSet {
+  }
+  number visibleLines {
+  }
+  boolean writeRequiresMasterRead {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AutoNumber",
+        "Checkbox",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Email",
+        "EncryptedText",
+        "Html",
+        "LongTextArea",
+        "Lookup",
+        "MasterDetail",
+        "MultiselectPicklist",
+        "Number",
+        "Percent",
+        "Phone",
+        "Picklist",
+        "Summary",
+        "Text",
+        "TextArea",
+        "Time",
+        "Url",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "CustomField"
+}

@@ -1,0 +1,8 @@
+salesforce.ListView BoatType__c_All {
+  fullName = "BoatType__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.BoatType__c,
+  ]
+}

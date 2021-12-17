@@ -1,0 +1,3 @@
+salesforce.ApexEmailNotifications apexEmailNotifications {
+  fullName = "apexEmailNotifications"
+}

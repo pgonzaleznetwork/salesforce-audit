@@ -1,0 +1,118 @@
+salesforce.Layout CommunityMemberLayout_Community_Member_Layout@bss {
+  fullName = "CommunityMemberLayout-Community Member Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = false
+      editHeading = true
+      label = "Basic Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Name"
+            },
+            {
+              behavior = "Required"
+              field = "Alias"
+            },
+            {
+              behavior = "Required"
+              field = "Username"
+            },
+            {
+              behavior = "Required"
+              field = "ProfileId"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Email"
+            },
+            {
+              behavior = "Required"
+              field = "CommunityNickname"
+            },
+            {
+              behavior = "Required"
+              field = "ContactId"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = false
+      editHeading = true
+      label = "Language And Locale Settings"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "TimeZoneSidKey"
+            },
+            {
+              behavior = "Required"
+              field = "EmailEncodingKey"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "LocaleSidKey"
+            },
+            {
+              behavior = "Required"
+              field = "LanguageLocaleKey"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = false
+      editHeading = true
+      label = "Chatter Settings"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "DigestFrequency"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "DefaultGroupNotificationFrequency"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+}

@@ -1,0 +1,28 @@
+salesforce.ApexPage SRM_MetadataConflictWarning {
+  apiVersion = 44
+  availableInTouch = false
+  confirmationTokenRequired = false
+  label = "SRM_MetadataConflictWarning"
+  packageVersions = [
+    {
+      majorNumber = 1
+      minorNumber = 7
+      namespace = "sf_com_apps"
+    },
+    {
+      majorNumber = 1
+      minorNumber = 0
+      namespace = "trlhdtips"
+    },
+  ]
+  fullName = "SRM_MetadataConflictWarning"
+  content = file("salesforce/Records/ApexPage/SRM_MetadataConflictWarning.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataConflictWarningController
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+  ]
+}

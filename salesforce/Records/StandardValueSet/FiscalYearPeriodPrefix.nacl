@@ -1,0 +1,26 @@
+salesforce.StandardValueSet FiscalYearPeriodPrefix {
+  fullName = "FiscalYearPeriodPrefix"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Period"
+      default = true
+      label = "Period"
+    },
+    {
+      fullName = "FP"
+      default = false
+      label = "FP"
+    },
+    {
+      fullName = "P"
+      default = false
+      label = "P"
+    },
+    {
+      fullName = "Month"
+      default = false
+      label = "Month"
+    },
+  ]
+}

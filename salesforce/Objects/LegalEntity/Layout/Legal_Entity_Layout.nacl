@@ -1,0 +1,54 @@
+salesforce.Layout LegalEntity_Legal_Entity_Layout@bss {
+  fullName = "LegalEntity-Legal Entity Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LegalEntity.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LegalEntity.field.LegalEntityAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LegalEntity.field.Status
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LegalEntity.field.CompanyName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LegalEntity.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.LegalEntity,
+  ]
+}

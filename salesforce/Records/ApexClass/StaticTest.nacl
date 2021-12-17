@@ -1,0 +1,6 @@
+salesforce.ApexClass StaticTest {
+  apiVersion = 52
+  status = "Active"
+  fullName = "StaticTest"
+  content = file("salesforce/Records/ApexClass/StaticTest.cls")
+}

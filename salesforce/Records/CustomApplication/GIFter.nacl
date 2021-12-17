@@ -1,0 +1,24 @@
+salesforce.CustomApplication GIFter {
+  fullName = "GIFter"
+  brand = {
+    headerColor = "#0070D2"
+    shouldOverrideOrgTheme = false
+  }
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "GIFter: GIFs2Chatter"
+  navType = "Standard"
+  tabs = [
+    salesforce.CustomTab.instance.GIFter,
+  ]
+  uiType = "Lightning"
+  utilityBar = "GIFter_UtilityBar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.GIFter_UtilityBar
+    },
+  ]
+}

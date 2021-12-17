@@ -1,0 +1,15 @@
+salesforce.ListView Contract_AllDraftContracts {
+  fullName = "Contract.AllDraftContracts"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CONTRACT.STATUS_CODE"
+      operation = "equals"
+      value = "D"
+    },
+  ]
+  label = "All Draft Contracts"
+  _parent = [
+    salesforce.Contract,
+  ]
+}

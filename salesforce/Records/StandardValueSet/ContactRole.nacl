@@ -1,0 +1,51 @@
+salesforce.StandardValueSet ContactRole {
+  fullName = "ContactRole"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Business User"
+      default = false
+      label = "Business User"
+    },
+    {
+      fullName = "Decision Maker"
+      default = false
+      label = "Decision Maker"
+    },
+    {
+      fullName = "Economic Buyer"
+      default = false
+      label = "Economic Buyer"
+    },
+    {
+      fullName = "Economic Decision Maker"
+      default = false
+      label = "Economic Decision Maker"
+    },
+    {
+      fullName = "Evaluator"
+      default = false
+      label = "Evaluator"
+    },
+    {
+      fullName = "Executive Sponsor"
+      default = false
+      label = "Executive Sponsor"
+    },
+    {
+      fullName = "Influencer"
+      default = false
+      label = "Influencer"
+    },
+    {
+      fullName = "Technical Buyer"
+      default = false
+      label = "Technical Buyer"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

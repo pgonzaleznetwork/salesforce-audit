@@ -1,0 +1,54 @@
+type salesforce.WorkflowFlowAction {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  string flow {
+  }
+  salesforce.WorkflowFlowActionParameter flowInputs {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  string language {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "da",
+        "de",
+        "en_US",
+        "es",
+        "es_MX",
+        "fi",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nl_NL",
+        "no",
+        "pt_BR",
+        "ru",
+        "sv",
+        "th",
+        "zh_CN",
+        "zh_TW",
+      ]
+    }
+  }
+  boolean protected {
+  }
+  metadataType = "WorkflowFlowAction"
+}

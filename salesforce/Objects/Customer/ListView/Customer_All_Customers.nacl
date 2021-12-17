@@ -1,0 +1,8 @@
+salesforce.ListView Customer_All_Customers {
+  fullName = "Customer.All_Customers"
+  filterScope = "Everything"
+  label = "All Customers"
+  _parent = [
+    salesforce.Customer,
+  ]
+}

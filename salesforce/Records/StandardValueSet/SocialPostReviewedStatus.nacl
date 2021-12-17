@@ -1,0 +1,4 @@
+salesforce.StandardValueSet SocialPostReviewedStatus {
+  fullName = "SocialPostReviewedStatus"
+  sorted = false
+}

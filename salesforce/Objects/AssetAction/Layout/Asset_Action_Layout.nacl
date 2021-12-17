@@ -1,0 +1,128 @@
+salesforce.Layout AssetAction_Asset_Action_Layout@bss {
+  fullName = "AssetAction-Asset Action Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.CategoryEnum
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.AssetActionNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.Type
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.ActionDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.ProductAmountChange
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.EstimatedTaxChange
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.QuantityChange
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.SubtotalChange
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.AssetId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.Category
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.Amount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.AdjustmentAmountChange
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.ActualTaxChange
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetAction.field.MrrChange
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetAction.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "CategoryEnum",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AssetAction,
+  ]
+}

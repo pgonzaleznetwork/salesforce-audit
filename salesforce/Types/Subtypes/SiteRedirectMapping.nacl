@@ -1,0 +1,32 @@
+type salesforce.SiteRedirectMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string action {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Permanent",
+        "Temporary",
+      ]
+    }
+  }
+  boolean isActive {
+  }
+  string source {
+  }
+  string target {
+  }
+  metadataType = "SiteRedirectMapping"
+}

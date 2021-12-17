@@ -1,0 +1,402 @@
+type salesforce.SessionHijackingEventStore {
+  serviceid Id {
+    apiName = "SessionHijackingEventStore.Id"
+    label = "Session Hijacking Event Store ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.AutoNumber SessionHijackingEventNumber {
+    apiName = "SessionHijackingEventStore.SessionHijackingEventNumber"
+    label = "Event Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SessionHijackingEventStore.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SessionHijackingEventStore.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SessionHijackingEventStore.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text EventIdentifier {
+    apiName = "SessionHijackingEventStore.EventIdentifier"
+    label = "Event ID"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "SessionHijackingEventStore.UserId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "User"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Username {
+    apiName = "SessionHijackingEventStore.Username"
+    label = "Username"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EventDate {
+    apiName = "SessionHijackingEventStore.EventDate"
+    label = "Event Date"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SessionKey {
+    apiName = "SessionHijackingEventStore.SessionKey"
+    label = "Session Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 24
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LoginKey {
+    apiName = "SessionHijackingEventStore.LoginKey"
+    label = "Login Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 24
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SourceIp {
+    apiName = "SessionHijackingEventStore.SourceIp"
+    label = "Source IP Address"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PolicyId {
+    apiName = "SessionHijackingEventStore.PolicyId"
+    label = "Transaction Security Policy ID"
+    referenceTo = [
+      salesforce.TransactionSecurityPolicy,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Policy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PolicyOutcome {
+    apiName = "SessionHijackingEventStore.PolicyOutcome"
+    label = "Policy Outcome"
+    valueSet = [
+      {
+        fullName = "Block"
+        default = false
+        label = "Block"
+        isActive = true
+      },
+      {
+        fullName = "FreezeUser"
+        default = false
+        label = "FreezeUser"
+        isActive = true
+      },
+      {
+        fullName = "EndSession"
+        default = false
+        label = "EndSession"
+        isActive = true
+      },
+      {
+        fullName = "Notified"
+        default = false
+        label = "Notified"
+        isActive = true
+      },
+      {
+        fullName = "NoAction"
+        default = false
+        label = "NoAction"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAInitiated"
+        default = false
+        label = "TwoFAInitiated"
+        isActive = true
+      },
+      {
+        fullName = "TwoFASucceeded"
+        default = false
+        label = "TwoFASucceeded"
+        isActive = true
+      },
+      {
+        fullName = "TwoFADenied"
+        default = false
+        label = "TwoFADenied"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAInProgress"
+        default = false
+        label = "TwoFAInProgress"
+        isActive = true
+      },
+      {
+        fullName = "TwoFARecoverableError"
+        default = false
+        label = "TwoFARecoverableError"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAFailedGeneralError"
+        default = false
+        label = "TwoFAFailedGeneralError"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAFailedInvalidCode"
+        default = false
+        label = "TwoFAFailedInvalidCode"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAFailedTooManyAttempts"
+        default = false
+        label = "TwoFAFailedTooManyAttempts"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAAutomatedSuccess"
+        default = false
+        label = "TwoFAAutomatedSuccess"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAReportedDenied"
+        default = false
+        label = "TwoFAReportedDenied"
+        isActive = true
+      },
+      {
+        fullName = "TwoFANoAction"
+        default = false
+        label = "TwoFANoAction"
+        isActive = true
+      },
+      {
+        fullName = "FailedPasswordLockout"
+        default = false
+        label = "FailedPasswordLockout"
+        isActive = true
+      },
+      {
+        fullName = "FailedInvalidPassword"
+        default = false
+        label = "FailedInvalidPassword"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number EvaluationTime {
+    apiName = "SessionHijackingEventStore.EvaluationTime"
+    label = "Evaluation Time"
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Score {
+    apiName = "SessionHijackingEventStore.Score"
+    label = "Score"
+    precision = 12
+    scale = 6
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrentIp {
+    apiName = "SessionHijackingEventStore.CurrentIp"
+    label = "Current IP Address"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 39
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PreviousIp {
+    apiName = "SessionHijackingEventStore.PreviousIp"
+    label = "Previous IP Address"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 39
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrentPlatform {
+    apiName = "SessionHijackingEventStore.CurrentPlatform"
+    label = "Current Platform"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PreviousPlatform {
+    apiName = "SessionHijackingEventStore.PreviousPlatform"
+    label = "Previous Platform"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrentScreen {
+    apiName = "SessionHijackingEventStore.CurrentScreen"
+    label = "Current Screen"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PreviousScreen {
+    apiName = "SessionHijackingEventStore.PreviousScreen"
+    label = "Previous Screen"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CurrentWindow {
+    apiName = "SessionHijackingEventStore.CurrentWindow"
+    label = "Current Window"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PreviousWindow {
+    apiName = "SessionHijackingEventStore.PreviousWindow"
+    label = "Previous Window"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea CurrentUserAgent {
+    apiName = "SessionHijackingEventStore.CurrentUserAgent"
+    label = "Current User Agent"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea PreviousUserAgent {
+    apiName = "SessionHijackingEventStore.PreviousUserAgent"
+    label = "Previous User Agent"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea SecurityEventData {
+    apiName = "SessionHijackingEventStore.SecurityEventData"
+    label = "Event Data"
+    createable = false
+    updateable = false
+    length = 10000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Summary {
+    apiName = "SessionHijackingEventStore.Summary"
+    label = "Summary"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+}

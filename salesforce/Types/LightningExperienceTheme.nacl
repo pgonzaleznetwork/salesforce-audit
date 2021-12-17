@@ -1,0 +1,36 @@
+type salesforce.LightningExperienceTheme {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string defaultBrandingSet {
+    foreignKeyDomain = [
+      salesforce.BrandingSet,
+    ]
+  }
+  string description {
+  }
+  string masterLabel {
+  }
+  boolean shouldOverrideLoadingImage {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "lightningExperienceTheme"
+  dirName = "lightningExperienceThemes"
+  metadataType = "LightningExperienceTheme"
+}

@@ -1,0 +1,48 @@
+type salesforce.FlowDecision {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowConnector defaultConnector {
+  }
+  string defaultConnectorLabel {
+  }
+  string description {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+      ]
+    }
+    foreignKeyDomain = [
+      "FlowElementSubtypeDefinition",
+    ]
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  string name {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  "List<salesforce.FlowRule>" rules {
+  }
+  metadataType = "FlowDecision"
+}

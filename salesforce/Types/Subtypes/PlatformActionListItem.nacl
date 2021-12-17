@@ -1,0 +1,36 @@
+type salesforce.PlatformActionListItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionName {
+  }
+  string actionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActionLink",
+        "CustomButton",
+        "InvocableAction",
+        "ProductivityAction",
+        "QuickAction",
+        "StandardButton",
+      ]
+    }
+  }
+  number sortOrder {
+  }
+  string subtype {
+  }
+  metadataType = "PlatformActionListItem"
+}

@@ -1,0 +1,90 @@
+type salesforce.TransactionSecurityPolicy {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.TransactionSecurityAction action {
+  }
+  boolean active {
+  }
+  string apexClass {
+  }
+  string blockMessage {
+  }
+  string description {
+  }
+  string developerName {
+  }
+  string eventName {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AdminSetupEvent",
+        "ApiAnomalyEventStore",
+        "ApiEvent",
+        "BulkApiResultEventStore",
+        "CredentialStuffingEventStore",
+        "ListViewEvent",
+        "LoginEvent",
+        "PermissionSetEventStore",
+        "ReportAnomalyEventStore",
+        "ReportEvent",
+        "SessionHijackingEventStore",
+      ]
+    }
+  }
+  string eventType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AccessResource",
+        "AuditTrail",
+        "DataExport",
+        "Entity",
+        "Login",
+      ]
+    }
+  }
+  string executionUser {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  string flow {
+    foreignKeyDomain = [
+      salesforce.Flow,
+    ]
+  }
+  string masterLabel {
+  }
+  string resourceName {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomApexPolicy",
+        "CustomConditionBuilderPolicy",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "transactionSecurityPolicy"
+  dirName = "transactionSecurityPolicies"
+  metadataType = "TransactionSecurityPolicy"
+}

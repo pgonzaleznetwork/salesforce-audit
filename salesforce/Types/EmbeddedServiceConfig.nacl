@@ -1,0 +1,59 @@
+type salesforce.EmbeddedServiceConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean areGuestUsersAllowed {
+  }
+  string authMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CommunitiesLogin",
+        "CustomLogin",
+      ]
+    }
+  }
+  salesforce.EmbeddedServiceAppointmentSettings embeddedServiceAppointmentSettings {
+  }
+  salesforce.EmbeddedServiceCustomComponent embeddedServiceCustomComponents {
+  }
+  salesforce.EmbeddedServiceCustomLabel embeddedServiceCustomLabels {
+  }
+  salesforce.EmbeddedServiceCustomization embeddedServiceCustomizations {
+  }
+  salesforce.EmbeddedServiceFlowConfig embeddedServiceFlowConfig {
+  }
+  salesforce.EmbeddedServiceFlow embeddedServiceFlows {
+  }
+  salesforce.EmbeddedServiceLayout embeddedServiceLayouts {
+  }
+  string masterLabel {
+  }
+  boolean shouldHideAuthDialog {
+  }
+  string site {
+    foreignKeyDomain = [
+      salesforce.CustomSite,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "EmbeddedServiceConfig"
+  dirName = "EmbeddedServiceConfig"
+  metadataType = "EmbeddedServiceConfig"
+}

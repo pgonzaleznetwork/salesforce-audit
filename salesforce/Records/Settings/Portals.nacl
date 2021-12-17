@@ -1,0 +1,5 @@
+salesforce.PortalsSettings {
+  fullName = "Portals"
+  clickjackSSPLoginPage = "false"
+  redirectPortalLoginToHttps = "false"
+}

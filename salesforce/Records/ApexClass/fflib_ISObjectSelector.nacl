@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_ISObjectSelector {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_ISObjectSelector"
+  content = file("salesforce/Records/ApexClass/fflib_ISObjectSelector.cls")
+}

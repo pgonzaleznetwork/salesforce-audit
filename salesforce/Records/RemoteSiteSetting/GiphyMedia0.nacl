@@ -1,0 +1,6 @@
+salesforce.RemoteSiteSetting GiphyMedia0 {
+  fullName = "GiphyMedia0"
+  disableProtocolSecurity = false
+  isActive = true
+  url = "https://media0.giphy.com"
+}

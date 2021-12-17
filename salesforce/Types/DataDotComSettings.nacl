@@ -1,0 +1,39 @@
+settings salesforce.DataDotComSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableAccountExportButtonOff {
+  }
+  boolean enableAccountImportButtonOff {
+  }
+  boolean enableAllowDupeContactFromLead {
+  }
+  boolean enableAllowDupeLeadFromContact {
+  }
+  boolean enableCleanUpgradeRequested {
+  }
+  boolean enableContactExportButtonOff {
+  }
+  boolean enableContactImportButtonOff {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "DataDotComSettings"
+}

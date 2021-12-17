@@ -1,0 +1,26 @@
+salesforce.StandardValueSet FiscalYearQuarterName {
+  fullName = "FiscalYearQuarterName"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Spring"
+      default = true
+      label = "Spring"
+    },
+    {
+      fullName = "Summer"
+      default = false
+      label = "Summer"
+    },
+    {
+      fullName = "Fall"
+      default = false
+      label = "Fall"
+    },
+    {
+      fullName = "Winter"
+      default = false
+      label = "Winter"
+    },
+  ]
+}

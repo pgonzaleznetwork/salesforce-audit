@@ -1,0 +1,8 @@
+salesforce.ListView ProcessException_all_process_exceptions {
+  fullName = "ProcessException.all_process_exceptions"
+  filterScope = "Everything"
+  label = "All Process Exceptions"
+  _parent = [
+    salesforce.ProcessException,
+  ]
+}

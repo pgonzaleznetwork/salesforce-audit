@@ -1,0 +1,52 @@
+type salesforce.WorkSkillRouting {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  string masterLabel {
+  }
+  string relatedEntity {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BoatType__c",
+        "Case",
+        "Center__c",
+        "ContactRequest",
+        "Custom_Object__c",
+        "Lead",
+        "Order",
+        "Parent__c",
+        "SRM_CRM_Sprint__c",
+        "SRM_Connected_Org__c",
+        "SRM_Development_Task__c",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  salesforce.WorkSkillRoutingAttribute workSkillRoutingAttributes {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "workSkillRouting"
+  dirName = "workSkillRoutings"
+  metadataType = "WorkSkillRouting"
+}

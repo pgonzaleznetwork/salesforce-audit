@@ -1,0 +1,23 @@
+type salesforce.NotificationTypeSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.AppSettings appSettings {
+  }
+  salesforce.NotificationChannels notificationChannels {
+  }
+  string notificationType {
+  }
+  metadataType = "NotificationTypeSettings"
+}

@@ -1,0 +1,6 @@
+salesforce.FilesConnectSettings {
+  fullName = "FilesConnect"
+  enableContentHubAllowed = "true"
+  enableContentHubCvtLinksAllowed = "true"
+  enableContentHubEOSearchLayout = "false"
+}

@@ -1,0 +1,23 @@
+salesforce.ApexClass ContactTriggerHandlerV2 {
+  apiVersion = 51
+  status = "Active"
+  fullName = "ContactTriggerHandlerV2"
+  content = file("salesforce/Records/ApexClass/ContactTriggerHandlerV2.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.Average_Age__c
+    },
+    {
+      reference = salesforce.ApexClass.instance.ITrigger
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Contact.field.Age__c
+    },
+  ]
+}

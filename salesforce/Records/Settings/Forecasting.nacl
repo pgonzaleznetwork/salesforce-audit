@@ -1,0 +1,2994 @@
+salesforce.ForecastingSettings {
+  fullName = "Forecasting"
+  defaultToPersonalCurrency = false
+  enableForecasts = false
+  forecastingCategoryMappings = [
+    {
+      forecastingItemCategoryApiName = "commitonly"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "commit"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "closedonly"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "closed"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "openpipeline"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "pipeline"
+          weight = 1
+        },
+        {
+          sourceCategoryApiName = "commit"
+          weight = 1
+        },
+        {
+          sourceCategoryApiName = "best case"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "omittedonly"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "omitted"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "bestcaseforecast"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "closed"
+          weight = 1
+        },
+        {
+          sourceCategoryApiName = "commit"
+          weight = 1
+        },
+        {
+          sourceCategoryApiName = "best case"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "pipelineonly"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "pipeline"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "commitforecast"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "closed"
+          weight = 1
+        },
+        {
+          sourceCategoryApiName = "commit"
+          weight = 1
+        },
+      ]
+    },
+    {
+      forecastingItemCategoryApiName = "bestcaseonly"
+      weightedSourceCategories = [
+        {
+          sourceCategoryApiName = "best case"
+          weight = 1
+        },
+      ]
+    },
+  ]
+  forecastingTypeSettings = [
+    {
+      active = true
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "OpportunityCloseDate"
+      hasProductFamily = false
+      isAmount = true
+      isAvailable = true
+      isQuantity = false
+      masterLabel = "Opportunities"
+      name = "OpportunityRevenue"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.AMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "OpportunityCloseDate"
+      hasProductFamily = false
+      isAmount = false
+      isAvailable = true
+      isQuantity = true
+      masterLabel = "Opportunities"
+      name = "OpportunityQuantity"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "OpportunityCloseDate"
+      hasProductFamily = true
+      isAmount = true
+      isAvailable = true
+      isQuantity = false
+      masterLabel = "Product Families"
+      name = "OpportunityLineItemRevenue"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "OpportunityCloseDate"
+      hasProductFamily = true
+      isAmount = false
+      isAvailable = true
+      isQuantity = true
+      masterLabel = "Product Families"
+      name = "OpportunityLineItemQuantity"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ProductDate"
+      hasProductFamily = false
+      isAmount = true
+      isAvailable = true
+      isQuantity = false
+      masterLabel = "Opportunity Revenue Product Date"
+      name = "OpportunityRevenueProductDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ProductDate"
+      hasProductFamily = false
+      isAmount = false
+      isAvailable = true
+      isQuantity = true
+      masterLabel = "Opportunity Quantity Product Date"
+      name = "OpportunityQuantityProductDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ProductDate"
+      hasProductFamily = true
+      isAmount = true
+      isAvailable = true
+      isQuantity = false
+      masterLabel = "Line Item Revenue Product Date"
+      name = "LineItemRevenueProductDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ProductDate"
+      hasProductFamily = true
+      isAmount = false
+      isAvailable = true
+      isQuantity = true
+      masterLabel = "Line Item Quantity Product Date"
+      name = "LineItemQuantityProductDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ScheduleDate"
+      hasProductFamily = false
+      isAmount = true
+      isAvailable = false
+      isQuantity = false
+      masterLabel = "Opportunity Revenue Schedule Date"
+      name = "OpportunityRevenueScheduleDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ScheduleDate"
+      hasProductFamily = false
+      isAmount = false
+      isAvailable = false
+      isQuantity = true
+      masterLabel = "Opportunity Quantity Schedule Date"
+      name = "OpportunityQuantityScheduleDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ScheduleDate"
+      hasProductFamily = true
+      isAmount = true
+      isAvailable = false
+      isQuantity = false
+      masterLabel = "Line Item Revenue Schedule Date"
+      name = "LineItemRevenueScheduleDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "SPLITAMOUNT"
+          label = "Forecasted Amount"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "SPLITAMOUNT",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+    {
+      active = false
+      adjustmentsSettings = {
+        enableAdjustments = false
+        enableOwnerAdjustments = false
+      }
+      displayedCategoryApiNames = [
+        "closedonly",
+        "commitonly",
+        "bestcaseonly",
+        "pipelineonly",
+      ]
+      forecastRangeSettings = {
+        beginning = 0
+        displaying = 6
+        periodType = "Month"
+      }
+      forecastedCategoryApiNames = [
+        "commitonly",
+        "closedonly",
+        "pipelineonly",
+        "bestcaseonly",
+      ]
+      forecastingDateType = "ScheduleDate"
+      hasProductFamily = true
+      isAmount = false
+      isAvailable = false
+      isQuantity = true
+      masterLabel = "Line Item Quantity Schedule Date"
+      name = "LineItemQuantityScheduleDate"
+      opportunityListFieldsLabelMappings = [
+        {
+          field = "OPPORTUNITY.NAME"
+          label = "Opportunity Name"
+        },
+        {
+          field = "ACCOUNT.NAME"
+          label = "Account Name"
+        },
+        {
+          field = "OPPORTUNITY.QUANTITY"
+          label = "Quantity"
+        },
+        {
+          field = "OPPORTUNITY.CLOSE_DATE"
+          label = "Close Date"
+        },
+        {
+          field = "OPPORTUNITY.STAGE_NAME"
+          label = "Stage"
+        },
+        {
+          field = "OPPORTUNITY.PROBABILITY"
+          label = "Probability (%)"
+        },
+        {
+          field = "FORECAST_CATEGORY"
+          label = "Forecast Category"
+        },
+        {
+          field = "FULL_NAME"
+          label = "Owner Full Name"
+        },
+        {
+          field = "OPPORTUNITY.AMOUNT"
+          label = "Amount"
+        },
+        {
+          field = "CORE.USERS.ALIAS"
+          label = "Opportunity Owner Alias"
+        },
+        {
+          field = "CORE.USERS.FIRST_NAME"
+          label = "Owner First Name"
+        },
+        {
+          field = "CORE.USERS.LAST_NAME"
+          label = "Owner Last Name"
+        },
+        {
+          field = "DESCRIPTION"
+          label = "Description"
+        },
+        {
+          field = "OPPORTUNITY.EXP_AMOUNT"
+          label = "Expected Revenue"
+        },
+        {
+          field = "OPPORTUNITY.LEAD_SOURCE"
+          label = "Lead Source"
+        },
+        {
+          field = "OPPORTUNITY.NEXT_STEP"
+          label = "Next Step"
+        },
+        {
+          field = "OPPORTUNITY.PRIVATE"
+          label = "Private"
+        },
+        {
+          field = "OPPORTUNITY.TYPE"
+          label = "Type"
+        },
+        {
+          field = "UPDATEDBY_USER.ALIAS"
+          label = "Last Modified By Alias"
+        },
+        {
+          field = "CREATEDBY_USER.ALIAS"
+          label = "Created By Alias"
+        },
+        {
+          field = "OPPORTUNITY.CLOSED"
+          label = "Closed"
+        },
+        {
+          field = "OPPORTUNITY.WON"
+          label = "Won"
+        },
+        {
+          field = "ACCOUNT.SITE"
+          label = "Account Site"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_YEAR"
+          label = "Fiscal Year"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_QUARTER"
+          label = "Fiscal Quarter"
+        },
+        {
+          field = "OPPORTUNITY.FISCAL_PERIOD"
+          label = "Fiscal Period"
+        },
+        {
+          field = "OPPORTUNITY.LAST_ACTIVITY"
+          label = "Last Activity"
+        },
+        {
+          field = "OPPORTUNITY.CREATED_DATE"
+          label = "Created Date"
+        },
+        {
+          field = "OPPORTUNITY.LAST_UPDATE"
+          label = "Last Modified Date"
+        },
+        {
+          field = "Opportunity.account_name__c"
+          label = "account name"
+        },
+        {
+          field = "Opportunity.Account_Priority__c"
+          label = "Account Priority"
+        },
+        {
+          field = "Opportunity.CurrentGenerators__c"
+          label = "Current Generator(s)"
+        },
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          label = "Delivery/Installation Status"
+        },
+        {
+          field = "Opportunity.MainCompetitors__c"
+          label = "Main Competitor(s)"
+        },
+        {
+          field = "Opportunity.My_Lookup_Field__c"
+          label = "My Lookup Field"
+        },
+        {
+          field = "Opportunity.My_Picklist_Field__c"
+          label = "My Picklist Field"
+        },
+        {
+          field = "Opportunity.OrderNumber__c"
+          label = "Order Number"
+        },
+        {
+          field = "Opportunity.Partner_Account__c"
+          label = "Partner Account"
+        },
+        {
+          field = "Opportunity.TrackingNumber__c"
+          label = "Tracking Number"
+        },
+      ]
+      opportunityListFieldsSelectedSettings = {
+        field = [
+          "OPPORTUNITY.NAME",
+          "ACCOUNT.NAME",
+          "OPPORTUNITY.QUANTITY",
+          "OPPORTUNITY.CLOSE_DATE",
+          "OPPORTUNITY.STAGE_NAME",
+          "OPPORTUNITY.PROBABILITY",
+          "FORECAST_CATEGORY",
+          "FULL_NAME",
+        ]
+      }
+      opportunityListFieldsUnselectedSettings = {
+        field = [
+          "OPPORTUNITY.AMOUNT",
+          "CORE.USERS.ALIAS",
+          "CORE.USERS.FIRST_NAME",
+          "CORE.USERS.LAST_NAME",
+          "DESCRIPTION",
+          "OPPORTUNITY.EXP_AMOUNT",
+          "OPPORTUNITY.LEAD_SOURCE",
+          "OPPORTUNITY.NEXT_STEP",
+          "OPPORTUNITY.PRIVATE",
+          "OPPORTUNITY.TYPE",
+          "UPDATEDBY_USER.ALIAS",
+          "CREATEDBY_USER.ALIAS",
+          "OPPORTUNITY.CLOSED",
+          "OPPORTUNITY.WON",
+          "ACCOUNT.SITE",
+          "OPPORTUNITY.FISCAL_YEAR",
+          "OPPORTUNITY.FISCAL_QUARTER",
+          "OPPORTUNITY.FISCAL_PERIOD",
+          "OPPORTUNITY.LAST_ACTIVITY",
+          "OPPORTUNITY.CREATED_DATE",
+          "OPPORTUNITY.LAST_UPDATE",
+          "Opportunity.account_name__c",
+          "Opportunity.Account_Priority__c",
+          "Opportunity.CurrentGenerators__c",
+          "Opportunity.DeliveryInstallationStatus__c",
+          "Opportunity.MainCompetitors__c",
+          "Opportunity.My_Lookup_Field__c",
+          "Opportunity.My_Picklist_Field__c",
+          "Opportunity.OrderNumber__c",
+          "Opportunity.Partner_Account__c",
+          "Opportunity.TrackingNumber__c",
+        ]
+      }
+      quotasSettings = {
+        showQuotas = false
+      }
+    },
+  ]
+}

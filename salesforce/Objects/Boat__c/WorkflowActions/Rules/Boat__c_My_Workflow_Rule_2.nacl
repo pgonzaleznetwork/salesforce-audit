@@ -1,0 +1,9 @@
+salesforce.WorkflowRule Boat__c_My_Workflow_Rule_2@uuvsss {
+  fullName = "Boat__c.My Workflow Rule 2"
+  active = false
+  formula = "isblank( Picture__c )"
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

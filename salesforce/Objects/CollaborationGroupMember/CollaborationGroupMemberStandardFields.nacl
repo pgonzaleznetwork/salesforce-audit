@@ -1,0 +1,146 @@
+type salesforce.CollaborationGroupMember {
+  serviceid Id {
+    apiName = "CollaborationGroupMember.Id"
+    label = "Group Member Id"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup CollaborationGroupId {
+    apiName = "CollaborationGroupMember.CollaborationGroupId"
+    label = "CollaborationGroup ID"
+    _required = true
+    referenceTo = [
+      salesforce.CollaborationGroup,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "CollaborationGroup"
+    queryable = true
+  }
+  salesforce.Lookup MemberId {
+    apiName = "CollaborationGroupMember.MemberId"
+    label = "Member ID"
+    _required = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Member"
+    queryable = true
+  }
+  salesforce.Picklist CollaborationRole {
+    apiName = "CollaborationGroupMember.CollaborationRole"
+    label = "Group Member Role"
+    valueSet = [
+      {
+        fullName = "Admin"
+        default = false
+        label = "Manager"
+        isActive = true
+      },
+      {
+        fullName = "Standard"
+        default = false
+        label = "Member"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist NotificationFrequency {
+    apiName = "CollaborationGroupMember.NotificationFrequency"
+    label = "Notification Frequency"
+    valueSet = [
+      {
+        fullName = "P"
+        default = false
+        label = "Email on Each Post"
+        isActive = true
+      },
+      {
+        fullName = "D"
+        default = false
+        label = "Daily Digests"
+        isActive = true
+      },
+      {
+        fullName = "W"
+        default = false
+        label = "Weekly Digests"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = true
+        label = "Never"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CollaborationGroupMember.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CollaborationGroupMember.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CollaborationGroupMember.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CollaborationGroupMember.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CollaborationGroupMember.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastFeedAccessDate {
+    apiName = "CollaborationGroupMember.LastFeedAccessDate"
+    label = "Last Feed Access Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

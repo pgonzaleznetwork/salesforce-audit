@@ -1,0 +1,32 @@
+salesforce.ListView SRM_Jira_Ticket__c_Stories_To_Rebase_Pablo {
+  fullName = "SRM_Jira_Ticket__c.Stories_To_Rebase_Pablo"
+  columns = [
+    "NAME",
+    "Case_Subject__c",
+    "Approx_Deployment_Date__c",
+    "Owner__c",
+    "Rebased_By__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Status__c"
+      operation = "equals"
+      value = "Done,Deployed"
+    },
+    {
+      field = "Owner__c"
+      operation = "notEqual"
+      value = "Pablo"
+    },
+    {
+      field = "Rebased_By__c"
+      operation = "notContain"
+      value = "Pablo"
+    },
+  ]
+  label = "Stories To Rebase - Pablo"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

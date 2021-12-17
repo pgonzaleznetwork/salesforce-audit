@@ -1,0 +1,214 @@
+salesforce.Flow Process_Updating_Field {
+  fullName = "Process_Updating_Field"
+  actionCalls = {
+    processMetadataValues = [
+      {
+        name = "emailAlertSelection"
+        value = {
+          stringValue = "account_alert"
+        }
+      },
+    ]
+    name = "myRule_1_A2"
+    label = "send email"
+    locationX = 100
+    locationY = 300
+    actionName = salesforce.WorkflowAlert.instance.Account_account_alert@vu
+    actionType = "emailAlert"
+    inputParameters = [
+      {
+        name = "SObjectRowId"
+        value = {
+          elementReference = "myVariable_current.Id"
+        }
+      },
+    ]
+  }
+  apiVersion = 51
+  decisions = [
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 0
+        }
+      }
+      name = "myDecision"
+      label = "myDecision"
+      locationX = 50
+      locationY = 0
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "formula_myRule_1"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "myRule_1_A1"
+          }
+          label = "always"
+        },
+      ]
+    },
+  ]
+  formulas = [
+    {
+      name = "formula_myRule_1"
+      dataType = "Boolean"
+      expression = "true"
+    },
+  ]
+  interviewLabel = "Process_Updating_Field-2_InterviewLabel"
+  label = "Process Updating Field"
+  processMetadataValues = [
+    {
+      name = "ObjectType"
+      value = {
+        stringValue = "Account"
+      }
+    },
+    {
+      name = "ObjectVariable"
+      value = {
+        elementReference = "myVariable_current"
+      }
+    },
+    {
+      name = "OldObjectVariable"
+      value = {
+        elementReference = "myVariable_old"
+      }
+    },
+    {
+      name = "TriggerType"
+      value = {
+        stringValue = "onCreateOnly"
+      }
+    },
+  ]
+  processType = "Workflow"
+  recordUpdates = [
+    {
+      processMetadataValues = [
+        {
+          name = "evaluationType"
+          value = {
+            stringValue = "always"
+          }
+        },
+        {
+          name = "extraTypeInfo"
+        },
+        {
+          name = "isChildRelationship"
+          value = {
+            booleanValue = false
+          }
+        },
+        {
+          name = "reference"
+          value = {
+            stringValue = "[Account]"
+          }
+        },
+        {
+          name = "referenceTargetField"
+        },
+      ]
+      name = "myRule_1_A1"
+      label = "update field"
+      locationX = 100
+      locationY = 200
+      connector = {
+        targetReference = "myRule_1_A2"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          processMetadataValues = [
+            {
+              name = "implicit"
+              value = {
+                booleanValue = true
+              }
+            },
+          ]
+          field = salesforce.Account.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "myVariable_current.Id"
+          }
+        },
+      ]
+      inputAssignments = [
+        {
+          processMetadataValues = [
+            {
+              name = "dataType"
+              value = {
+                stringValue = "Picklist"
+              }
+            },
+            {
+              name = "isRequired"
+              value = {
+                booleanValue = false
+              }
+            },
+            {
+              name = "leftHandSideLabel"
+              value = {
+                stringValue = "Customer Priority"
+              }
+            },
+            {
+              name = "leftHandSideReferenceTo"
+              value = {
+                stringValue = ""
+              }
+            },
+            {
+              name = "rightHandSideType"
+              value = {
+                stringValue = "Picklist"
+              }
+            },
+          ]
+          field = salesforce.Account.field.CustomerPriority__c
+          value = {
+            stringValue = "Lowest"
+          }
+        },
+      ]
+      object = salesforce.Account
+    },
+  ]
+  startElementReference = "myDecision"
+  status = "Draft"
+  variables = [
+    {
+      name = "myVariable_current"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+    {
+      name = "myVariable_old"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Account
+    },
+  ]
+}

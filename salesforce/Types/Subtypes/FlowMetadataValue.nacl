@@ -1,0 +1,32 @@
+type salesforce.FlowMetadataValue {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string name {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "EventType",
+        "ObjectType",
+        "ObjectVariable",
+        "OldObjectVariable",
+        "RecursiveCountVariable",
+        "TriggerType",
+      ]
+    }
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  metadataType = "FlowMetadataValue"
+}

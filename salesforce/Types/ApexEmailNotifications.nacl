@@ -1,0 +1,27 @@
+type salesforce.ApexEmailNotifications {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.ApexEmailNotification apexEmailNotification {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "notifications"
+  dirName = "apexEmailNotifications"
+  metadataType = "ApexEmailNotifications"
+}

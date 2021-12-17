@@ -1,0 +1,39 @@
+type salesforce.AnalyticSnapshot {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  string groupColumn {
+  }
+  "List<salesforce.AnalyticSnapshotMapping>" mappings {
+  }
+  string name {
+  }
+  string runningUser {
+  }
+  string sourceReport {
+  }
+  string targetObject {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "snapshot"
+  dirName = "analyticSnapshots"
+  metadataType = "AnalyticSnapshot"
+}

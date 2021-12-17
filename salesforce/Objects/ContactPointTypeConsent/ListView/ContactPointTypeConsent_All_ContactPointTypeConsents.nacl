@@ -1,0 +1,8 @@
+salesforce.ListView ContactPointTypeConsent_All_ContactPointTypeConsents {
+  fullName = "ContactPointTypeConsent.All_ContactPointTypeConsents"
+  filterScope = "Everything"
+  label = "All Contact Point Type Consents"
+  _parent = [
+    salesforce.ContactPointTypeConsent,
+  ]
+}

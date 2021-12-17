@@ -1,0 +1,24 @@
+salesforce.ListView Event_MyUpcomingEvents {
+  fullName = "Event.MyUpcomingEvents"
+  columns = [
+    "START_DATE_TIME",
+    "END_DATE_TIME",
+    "SUBJECT",
+    "WHO_NAME",
+    "WHAT_NAME",
+    "CORE.USERS.ALIAS",
+    "ALL_DAY",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "DUE_DATE"
+      operation = "equals"
+      value = "TODAY,NEXT_N_DAYS:60"
+    },
+  ]
+  label = "My Upcoming Events"
+  _parent = [
+    salesforce.Event,
+  ]
+}

@@ -1,0 +1,17 @@
+salesforce.ApexClass SRM_GeneratePckListViewController_Tests {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_GeneratePckListViewController_Tests"
+  content = file("salesforce/Records/ApexClass/SRM_GeneratePckListViewController_Tests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_GeneratePackageListViewConttroller
+    },
+    {
+      reference = salesforce.ApexClass.instance.SRM_TestData
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+  ]
+}

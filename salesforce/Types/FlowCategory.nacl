@@ -1,0 +1,31 @@
+type salesforce.FlowCategory {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  salesforce.FlowCategoryItems flowCategoryItems {
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "flowCategory"
+  dirName = "flowCategories"
+  metadataType = "FlowCategory"
+}

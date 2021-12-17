@@ -1,0 +1,170 @@
+type salesforce.RelationshipOrder is number {
+  _restriction = {
+    min = 0
+    max = 1
+  }
+}
+type salesforce.RichTextAreaVisibleLines is number {
+  _restriction = {
+    min = 10
+    max = 50
+  }
+}
+type salesforce.MultiPicklistVisibleLines is number {
+  _restriction = {
+    min = 3
+    max = 10
+    enforce_value = false
+  }
+}
+type salesforce.LongTextAreaVisibleLines is number {
+  _restriction = {
+    min = 2
+    max = 50
+  }
+}
+type salesforce.EncryptedTextLength is number {
+  _restriction = {
+    min = 1
+    max = 175
+  }
+}
+type salesforce.TextAreaLength is number {
+  _restriction = {
+    min = 1
+    max = 131072
+  }
+}
+type salesforce.TextLength is number {
+  _restriction = {
+    min = 1
+    max = 255
+    enforce_value = false
+  }
+}
+type salesforce.formulaTreatBlanksAs is string {
+  _restriction = {
+    values = [
+      "BlankAsBlank",
+      "BlankAsZero",
+    ]
+  }
+}
+type salesforce.valueSet {
+  string fullName {
+  }
+  string label {
+  }
+  boolean default {
+  }
+  boolean isActive {
+  }
+  string color {
+  }
+}
+type salesforce.securityClassification is string {
+  _restriction = {
+    values = [
+      "Public",
+      "Internal",
+      "Confidential",
+      "Restricted",
+      "MissionCritical",
+    ]
+  }
+}
+type salesforce.businessStatus is string {
+  _restriction = {
+    values = [
+      "Active",
+      "DeprecateCandidate",
+      "Hidden",
+    ]
+  }
+}
+type salesforce.maskType is string {
+  _restriction = {
+    values = [
+      "all",
+      "creditCard",
+      "ssn",
+      "lastFour",
+      "sin",
+      "nino",
+    ]
+  }
+}
+type salesforce.maskChar is string {
+  _restriction = {
+    values = [
+      "X",
+      "asterisk",
+    ]
+  }
+}
+type salesforce.LookupFilter {
+  boolean active {
+  }
+  string booleanFilter {
+  }
+  string errorMessage {
+  }
+  string infoMessage {
+  }
+  boolean isOptional {
+  }
+  "List<salesforce.FilterItem>" filterItems {
+  }
+  apiName = "LookupFilter"
+}
+type salesforce.ValueSettings {
+  string valueName {
+  }
+  "List<string>" controllingFieldValue {
+  }
+  apiName = "ValueSettings"
+}
+type salesforce.rollupSummaryFilterOperation is string {
+  _restriction = {
+    values = [
+      "equals",
+      "notEqual",
+      "lessThan",
+      "greaterThan",
+      "lessOrEqual",
+      "greaterOrEqual",
+      "contains",
+      "notContain",
+      "startsWith",
+      "includes",
+      "excludes",
+      "within",
+    ]
+  }
+}
+type salesforce.summaryFilterItems {
+  string field {
+  }
+  salesforce.rollupSummaryFilterOperation operation {
+  }
+  string value {
+  }
+  string valueField {
+  }
+}
+type salesforce.summaryOperation is string {
+  _restriction = {
+    values = [
+      "count",
+      "min",
+      "max",
+      "sum",
+    ]
+  }
+}
+type salesforce.FieldDependency {
+  string controllingField {
+  }
+  "List<salesforce.ValueSettings>" valueSettings {
+  }
+}

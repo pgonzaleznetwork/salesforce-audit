@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_IMatcher {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_IMatcher"
+  content = file("salesforce/Records/ApexClass/fflib_IMatcher.cls")
+}

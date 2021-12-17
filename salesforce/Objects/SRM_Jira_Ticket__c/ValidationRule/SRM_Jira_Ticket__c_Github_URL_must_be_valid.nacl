@@ -1,0 +1,17 @@
+salesforce.ValidationRule SRM_Jira_Ticket__c_Github_URL_must_be_valid {
+  fullName = "SRM_Jira_Ticket__c.Github_URL_must_be_valid"
+  active = false
+  errorConditionFormula = '''
+NOT(ISBLANK(Git_Pull_Request_URL__c ))  
+
+&& 
+
+
+NOT(BEGINS(Git_Pull_Request_URL__c, "https://github.com/websummit/sfdc/pull/new/"))
+'''
+  errorDisplayField = salesforce.SRM_Jira_Ticket__c.field.Git_Pull_Request_URL__c
+  errorMessage = "This is not a valid Github Pull Request URL."
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

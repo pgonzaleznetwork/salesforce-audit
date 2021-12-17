@@ -1,0 +1,15 @@
+salesforce.CustomMetadata Lead_To_Oppty_Mapping_Industry@uuuv {
+  fullName = "Lead_To_Oppty_Mapping.Industry"
+  label = "Industry"
+  protected = false
+  values = [
+    {
+      field = "Lead_Field__c"
+      value = "Industry"
+    },
+    {
+      field = "Opportunity_Field__c"
+      value = "Industry"
+    },
+  ]
+}

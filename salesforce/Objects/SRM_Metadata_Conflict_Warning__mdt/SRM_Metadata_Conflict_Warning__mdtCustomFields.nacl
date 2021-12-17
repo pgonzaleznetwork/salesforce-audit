@@ -1,0 +1,44 @@
+type salesforce.SRM_Metadata_Conflict_Warning__mdt {
+  salesforce.TextArea Friendly_Message__c {
+    apiName = "SRM_Metadata_Conflict_Warning__mdt.Friendly_Message__c"
+    label = "Friendly Message"
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.TextArea Warning__c {
+    apiName = "SRM_Metadata_Conflict_Warning__mdt.Warning__c"
+    label = "Warning"
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text SRM_Object__c {
+    apiName = "SRM_Metadata_Conflict_Warning__mdt.SRM_Object__c"
+    label = "SRM Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SRM_Field__c {
+    apiName = "SRM_Metadata_Conflict_Warning__mdt.SRM_Field__c"
+    label = "SRM Field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,17 @@
+salesforce.GlobalValueSet My_Global_Value_Set {
+  fullName = "My_Global_Value_Set"
+  customValue = [
+    {
+      fullName = "value 1"
+      default = false
+      label = "value 1"
+    },
+    {
+      fullName = "value 2"
+      default = false
+      label = "value 2"
+    },
+  ]
+  masterLabel = "My Global Value Set"
+  sorted = false
+}

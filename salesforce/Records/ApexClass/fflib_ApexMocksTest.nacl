@@ -1,0 +1,26 @@
+salesforce.ApexClass fflib_ApexMocksTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_ApexMocksTest"
+  content = file("salesforce/Records/ApexClass/fflib_ApexMocksTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocksConfig
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Mocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MyList
+    },
+  ]
+}

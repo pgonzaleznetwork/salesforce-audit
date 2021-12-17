@@ -1,0 +1,143 @@
+type salesforce.PaymentGateway {
+  serviceid Id {
+    apiName = "PaymentGateway.Id"
+    label = "Payment Gateway ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PaymentGateway.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PaymentGatewayName {
+    apiName = "PaymentGateway.PaymentGatewayName"
+    label = "Payment Gateway Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PaymentGateway.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PaymentGateway.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PaymentGateway.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PaymentGateway.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PaymentGateway.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PaymentGatewayProviderId {
+    apiName = "PaymentGateway.PaymentGatewayProviderId"
+    label = "Payment Gateway Provider ID"
+    _required = true
+    referenceTo = [
+      salesforce.PaymentGatewayProvider,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentGatewayProvider"
+    queryable = true
+  }
+  salesforce.Lookup MerchantCredentialId {
+    apiName = "PaymentGateway.MerchantCredentialId"
+    label = "Named Credential ID"
+    _required = true
+    referenceTo = [
+      salesforce.NamedCredential,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "MerchantCredential"
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "PaymentGateway.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "Inactive"
+        default = false
+        label = "Inactive"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "PaymentGateway.Comments"
+    label = "Comments"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  salesforce.Text ExternalReference {
+    apiName = "PaymentGateway.ExternalReference"
+    label = "External Reference"
+    createable = true
+    updateable = true
+    unique = true
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+}

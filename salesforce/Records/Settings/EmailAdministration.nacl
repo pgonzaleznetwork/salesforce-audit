@@ -1,0 +1,22 @@
+salesforce.EmailAdministrationSettings {
+  fullName = "EmailAdministration"
+  enableComplianceBcc = false
+  enableEmailConsentManagement = false
+  enableEmailSenderIdCompliance = false
+  enableEmailSpfCompliance = true
+  enableEmailToSalesforce = false
+  enableEmailWorkflowApproval = false
+  enableEnhancedEmailEnabled = true
+  enableHandleBouncedEmails = false
+  enableHtmlEmail = false
+  enableInternationalEmailAddresses = "false"
+  enableListEmailLogActivities = true
+  enableResendBouncedEmails = false
+  enableRestrictTlsToDomains = false
+  enableSendViaExchangePref = false
+  enableSendViaGmailPref = false
+  enableUseOrgFootersForExtTrans = false
+  sendEmailsEvenWhenAutomationUpdatesSameRecord = false
+  sendMassEmailNotification = true
+  sendTextOnlySystemEmails = false
+}

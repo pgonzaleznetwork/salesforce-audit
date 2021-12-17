@@ -1,0 +1,33 @@
+type salesforce.ManagedContentType {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string description {
+  }
+  string developerName {
+  }
+  "List<salesforce.ManagedContentNodeType>" managedContentNodeTypes {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "managedContentType"
+  dirName = "managedContentTypes"
+  metadataType = "ManagedContentType"
+}

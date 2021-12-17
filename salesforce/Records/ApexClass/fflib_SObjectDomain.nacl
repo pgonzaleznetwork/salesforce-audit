@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_SObjectDomain {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectDomain"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectDomain.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectDomain
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

@@ -1,0 +1,28 @@
+type salesforce.IndexField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string name {
+  }
+  string sortDirection {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ASC",
+        "DESC",
+      ]
+    }
+  }
+  metadataType = "IndexField"
+}

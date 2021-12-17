@@ -1,0 +1,26 @@
+salesforce.ListView Task_RecurringTasks {
+  fullName = "Task.RecurringTasks"
+  columns = [
+    "SUBJECT",
+    "WHO_NAME",
+    "WHAT_NAME",
+    "DUE_DATE",
+    "STATUS",
+    "PRIORITY",
+    "CORE.USERS.ALIAS",
+    "LAST_UPDATE",
+    "UPDATEDBY_USER.ALIAS",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "IS_RECURRENCE"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "ENCODED:{!FilterNames.Task_RecurringTasks}"
+  _parent = [
+    salesforce.Task,
+  ]
+}

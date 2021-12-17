@@ -1,0 +1,170 @@
+salesforce.CustomLabels CustomLabels {
+  fullName = "CustomLabels"
+  labels = [
+    {
+      fullName = "Add_Review"
+      categories = "LWC Labels"
+      language = "en_US"
+      protected = true
+      shortDescription = "Add Review"
+      value = "Add Review"
+    },
+    {
+      fullName = "Details"
+      categories = "LWC Labels"
+      language = "en_US"
+      protected = true
+      shortDescription = "Details"
+      value = "Details"
+    },
+    {
+      fullName = "Full_Details"
+      categories = "LWC Labels"
+      language = "en_US"
+      protected = true
+      shortDescription = "Full Details"
+      value = "Full Details"
+    },
+    {
+      fullName = "Please_select_a_boat"
+      categories = "LWC Labels"
+      language = "en_US"
+      protected = true
+      shortDescription = "Please select a boat"
+      value = "Please select a boat :)"
+    },
+    {
+      fullName = "Reviews"
+      categories = "LWC Labels"
+      language = "en_US"
+      protected = true
+      shortDescription = "Reviews"
+      value = "Reviews"
+    },
+    {
+      fullName = "fflib_QueryFactory_crossobject_fieldsets_not_allowed_error"
+      language = "en_US"
+      protected = false
+      shortDescription = "Error when selecting a cross-object fieldsset is not allowed and attempted."
+      value = "Cross-object fields not allowed and field \"{0}\" is a cross-object field."
+    },
+    {
+      fullName = "fflib_QueryFactory_fieldset_wrong_sobject_error"
+      language = "en_US"
+      protected = false
+      shortDescription = "Error when selecting a field set for a different sobject type."
+      value = "Field set \"{0}\" is not for SObject type \"{1}\""
+    },
+    {
+      fullName = "fflib_QueryFactory_recursive_subquery_error"
+      language = "en_US"
+      protected = false
+      shortDescription = "Presented when attempting to nest subqueries."
+      value = "Invalid call to subselectQuery.  You may not add a subselect query to a subselect query."
+    },
+    {
+      fullName = "fflib_QueryFactory_subquery_invalid_relationship"
+      language = "en_US"
+      protected = false
+      shortDescription = "Presented when attempting to create a subquery from an invalid relationship."
+      value = "Invalid call to subselectQuery.  Invalid relationship for table."
+    },
+    {
+      fullName = "fflib_security_error_field_not_insertable"
+      categories = "security,error"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_field_not_insertable"
+      value = "You do not have permission to insert field {1} on {0}"
+    },
+    {
+      fullName = "fflib_security_error_field_not_readable"
+      categories = "security,error"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_field_not_readable"
+      value = "You do not have permission to read the field {1} on {0}"
+    },
+    {
+      fullName = "fflib_security_error_field_not_updateable"
+      categories = "security,error"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_field_not_updateable"
+      value = "You do not have permission to update the field {1} on {0}"
+    },
+    {
+      fullName = "fflib_security_error_object_not_deletable"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_object_not_deletable"
+      value = "You do not have permission to delete {0}"
+    },
+    {
+      fullName = "fflib_security_error_object_not_insertable"
+      categories = "security,error"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_object_not_insertable"
+      value = "You do not have permission to insert {0}"
+    },
+    {
+      fullName = "fflib_security_error_object_not_readable"
+      categories = "security,error"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_object_not_readable"
+      value = "You do not have permission to read {0}"
+    },
+    {
+      fullName = "fflib_security_error_object_not_updateable"
+      categories = "security,error"
+      language = "en_US"
+      protected = true
+      shortDescription = "fflib_security_error_object_not_updateable"
+      value = "You do not have permission to update {0}"
+    },
+    {
+      fullName = "label_with_template_api_name"
+      language = "en_US"
+      protected = true
+      shortDescription = "label with template api name"
+      value = "MarketingProductInquiryResponse"
+    },
+    {
+      fullName = "label_with_template_id"
+      language = "en_US"
+      protected = true
+      shortDescription = "label with template id"
+      value = "00X3h000001J53gEAC"
+    },
+    {
+      fullName = "label_with_template_label"
+      language = "en_US"
+      protected = true
+      shortDescription = "label with template label"
+      value = "Marketing: Product Inquiry Response"
+    },
+    {
+      fullName = "personal_template_api_name"
+      language = "en_US"
+      protected = true
+      shortDescription = "personal template api name"
+      value = "personal_template"
+    },
+    {
+      fullName = "personal_template_id"
+      language = "en_US"
+      protected = true
+      shortDescription = "personal template id"
+      value = "00X3h000001PpgYEAS"
+    },
+    {
+      fullName = "personal_template_name"
+      language = "en_US"
+      protected = true
+      shortDescription = "personal template name"
+      value = "personal template"
+    },
+  ]
+}

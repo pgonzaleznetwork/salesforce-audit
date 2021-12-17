@@ -1,0 +1,26 @@
+salesforce.StandardValueSet CampaignMemberStatus {
+  fullName = "CampaignMemberStatus"
+  sorted = true
+  standardValue = [
+    {
+      fullName = "Planned"
+      default = false
+      label = "Planned"
+    },
+    {
+      fullName = "Received"
+      default = false
+      label = "Received"
+    },
+    {
+      fullName = "Responded"
+      default = false
+      label = "Responded"
+    },
+    {
+      fullName = "Sent"
+      default = false
+      label = "Sent"
+    },
+  ]
+}

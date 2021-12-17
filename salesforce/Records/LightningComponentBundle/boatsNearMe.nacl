@@ -1,0 +1,22 @@
+salesforce.LightningComponentBundle boatsNearMe {
+  apiVersion = 48
+  isExposed = false
+  fullName = "boatsNearMe"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatsNearMe/boatsNearMe.html")
+        filePath = "lwc/boatsNearMe/boatsNearMe.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatsNearMe/boatsNearMe.js")
+        filePath = "lwc/boatsNearMe/boatsNearMe.js"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.BoatDataService
+    },
+  ]
+}

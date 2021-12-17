@@ -1,0 +1,15 @@
+salesforce.WebLink SRM_Jira_Ticket__c_Generate_package_xml_ListView {
+  fullName = "SRM_Jira_Ticket__c.Generate_package_xml_ListView"
+  availability = "online"
+  displayType = "massActionButton"
+  height = 600
+  linkType = "page"
+  masterLabel = "Generate Rebase Package"
+  openType = "sidebar"
+  page = salesforce.ApexPage.instance.SRM_GeneragePackageXMLListView
+  protected = false
+  requireRowSelection = true
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

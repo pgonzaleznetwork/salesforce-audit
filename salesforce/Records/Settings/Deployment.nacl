@@ -1,0 +1,4 @@
+salesforce.DeploymentSettings {
+  fullName = "Deployment"
+  doesSkipAsyncApexValidation = false
+}

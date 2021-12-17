@@ -1,0 +1,8 @@
+salesforce.CustomTab BoatType__c {
+  fullName = "BoatType__c"
+  customObject = true
+  motif = "Custom56: Bottle"
+  _parent = [
+    salesforce.BoatType__c,
+  ]
+}

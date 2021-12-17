@@ -1,0 +1,15 @@
+salesforce.ListView Solution_AllReviewedSolutions {
+  fullName = "Solution.AllReviewedSolutions"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "SOLUTION.STATUS_CODE"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "All Reviewed Solutions"
+  _parent = [
+    salesforce.Solution,
+  ]
+}

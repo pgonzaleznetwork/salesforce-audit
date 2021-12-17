@@ -1,0 +1,420 @@
+type salesforce.Site {
+  serviceid Id {
+    apiName = "Site.Id"
+    label = "Site ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Text Name {
+    apiName = "Site.Name"
+    label = "Site Name"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Subdomain {
+    apiName = "Site.Subdomain"
+    label = "Site Subdomain Prefix"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text UrlPathPrefix {
+    apiName = "Site.UrlPathPrefix"
+    label = "Default Web Address"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup GuestUserId {
+    apiName = "Site.GuestUserId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "GuestUser"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Site.Status"
+    label = "Site Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "Inactive"
+        default = false
+        label = "In Maintenance"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AdminId {
+    apiName = "Site.AdminId"
+    label = "User ID"
+    _required = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Admin"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsEnableFeeds {
+    apiName = "Site.OptionsEnableFeeds"
+    label = "Enable Feeds"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsRequireHttps {
+    apiName = "Site.OptionsRequireHttps"
+    label = "Require Secure Connections (HTTPS)"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowGuestPaymentsApi {
+    apiName = "Site.OptionsAllowGuestPaymentsApi"
+    label = "Guest Access to the Payments API"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsHasStoredPathPrefix {
+    apiName = "Site.OptionsHasStoredPathPrefix"
+    label = "HasStoredPathPrefix"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowHomePage {
+    apiName = "Site.OptionsAllowHomePage"
+    label = "Enable Standard Home Page"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowStandardIdeasPages {
+    apiName = "Site.OptionsAllowStandardIdeasPages"
+    label = "Enable Standard Ideas Pages"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowStandardSearch {
+    apiName = "Site.OptionsAllowStandardSearch"
+    label = "Enable Standard Lookup Pages"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowStandardLookups {
+    apiName = "Site.OptionsAllowStandardLookups"
+    label = "Enable Standard Search Pages"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowStandardAnswersPages {
+    apiName = "Site.OptionsAllowStandardAnswersPages"
+    label = "Enable Standard Answers Pages"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowGuestSupportApi {
+    apiName = "Site.OptionsAllowGuestSupportApi"
+    label = "Guest Access to the Support API"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowStandardPortalPages {
+    apiName = "Site.OptionsAllowStandardPortalPages"
+    label = "Allow Access to Standard Salesforce Pages"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsCspUpgradeInsecureRequests {
+    apiName = "Site.OptionsCspUpgradeInsecureRequests"
+    label = "Upgrade all requests to HTTPS"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsContentSniffingProtection {
+    apiName = "Site.OptionsContentSniffingProtection"
+    label = "Enable Content Sniffing Protection"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsBrowserXssProtection {
+    apiName = "Site.OptionsBrowserXssProtection"
+    label = "Enable Browser Cross Site Scripting Protection"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsReferrerPolicyOriginWhenCrossOrigin {
+    apiName = "Site.OptionsReferrerPolicyOriginWhenCrossOrigin"
+    label = "Referrer URL Protection"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Site.Description"
+    label = "Site Description"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text MasterLabel {
+    apiName = "Site.MasterLabel"
+    label = "Site Label"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text AnalyticsTrackingCode {
+    apiName = "Site.AnalyticsTrackingCode"
+    label = "Analytics Tracking Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SiteType {
+    apiName = "Site.SiteType"
+    label = "Site Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Siteforce"
+        default = false
+        label = "Site.com"
+        isActive = true
+      },
+      {
+        fullName = "Visualforce"
+        default = false
+        label = "Force.com"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ClickjackProtectionLevel {
+    apiName = "Site.ClickjackProtectionLevel"
+    label = "Clickjack Protection Level"
+    _required = true
+    valueSet = [
+      {
+        fullName = "AllowAllFraming"
+        default = false
+        label = "Allow framing by any page (No protection)"
+        isActive = true
+      },
+      {
+        fullName = "External"
+        default = false
+        label = "Allow framing of site pages on external domains (Good protection)"
+        isActive = true
+      },
+      {
+        fullName = "SameOriginOnly"
+        default = true
+        label = "Allow framing by the same origin only (Recommended)"
+        isActive = true
+      },
+      {
+        fullName = "NoFraming"
+        default = false
+        label = "Don't allow framing by any page (Most protection)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DailyBandwidthLimit {
+    apiName = "Site.DailyBandwidthLimit"
+    label = "Daily Bandwidth Limit (MB)"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DailyBandwidthUsed {
+    apiName = "Site.DailyBandwidthUsed"
+    label = "Daily Bandwidth Used"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DailyRequestTimeLimit {
+    apiName = "Site.DailyRequestTimeLimit"
+    label = "Daily Request Time Limit (min)"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DailyRequestTimeUsed {
+    apiName = "Site.DailyRequestTimeUsed"
+    label = "Daily Request Time Used"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number MonthlyPageViewsEntitlement {
+    apiName = "Site.MonthlyPageViewsEntitlement"
+    label = "Monthly Page Views Allowed"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Site.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Site.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Site.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Site.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Site.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup GuestRecordDefaultOwnerId {
+    apiName = "Site.GuestRecordDefaultOwnerId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "GuestRecordDefaultOwner"
+    queryable = true
+    _hidden_value = true
+  }
+}

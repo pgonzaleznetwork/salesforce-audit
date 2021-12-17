@@ -1,0 +1,695 @@
+type salesforce.ScratchOrgInfo {
+  serviceid Id {
+    apiName = "ScratchOrgInfo.Id"
+    label = "Scratch Org Info ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ScratchOrgInfo.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ScratchOrgInfo.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ScratchOrgInfo.Name"
+    label = "Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ScratchOrgInfo.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ScratchOrgInfo.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ScratchOrgInfo.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ScratchOrgInfo.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ScratchOrgInfo.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Edition {
+    apiName = "ScratchOrgInfo.Edition"
+    label = "Edition"
+    valueSet = [
+      {
+        fullName = "Developer"
+        default = false
+        label = "Developer"
+        isActive = true
+      },
+      {
+        fullName = "Group"
+        default = false
+        label = "Group"
+        isActive = true
+      },
+      {
+        fullName = "Professional"
+        default = false
+        label = "Professional"
+        isActive = true
+      },
+      {
+        fullName = "Enterprise"
+        default = false
+        label = "Enterprise"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Username {
+    apiName = "ScratchOrgInfo.Username"
+    label = "Requested Username"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Email AdminEmail {
+    apiName = "ScratchOrgInfo.AdminEmail"
+    label = "Requested Admin Email"
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Text OrgName {
+    apiName = "ScratchOrgInfo.OrgName"
+    label = "Org Name"
+    _required = true
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Number DurationDays {
+    apiName = "ScratchOrgInfo.DurationDays"
+    label = "Requested Duration In Days"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text ConnectedAppConsumerKey {
+    apiName = "ScratchOrgInfo.ConnectedAppConsumerKey"
+    label = "Connected App Consumer Key"
+    _required = true
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.LongTextArea ConnectedAppCallbackUrl {
+    apiName = "ScratchOrgInfo.ConnectedAppCallbackUrl"
+    label = "Connected App Callback URL"
+    _required = true
+    createable = true
+    updateable = false
+    length = 2000
+    queryable = true
+  }
+  salesforce.Text Namespace {
+    apiName = "ScratchOrgInfo.Namespace"
+    label = "Namespace"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 15
+    queryable = true
+  }
+  salesforce.LongTextArea Features {
+    apiName = "ScratchOrgInfo.Features"
+    label = "Features"
+    createable = true
+    updateable = false
+    length = 10000
+    queryable = true
+  }
+  salesforce.Text Country {
+    apiName = "ScratchOrgInfo.Country"
+    label = "Requested Country"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 3
+    queryable = true
+  }
+  salesforce.Picklist Language {
+    apiName = "ScratchOrgInfo.Language"
+    label = "Requested Language"
+    valueSet = [
+      {
+        fullName = "en_US"
+        default = false
+        label = "English"
+        isActive = true
+      },
+      {
+        fullName = "de"
+        default = false
+        label = "German"
+        isActive = true
+      },
+      {
+        fullName = "es"
+        default = false
+        label = "Spanish"
+        isActive = true
+      },
+      {
+        fullName = "fr"
+        default = false
+        label = "French"
+        isActive = true
+      },
+      {
+        fullName = "it"
+        default = false
+        label = "Italian"
+        isActive = true
+      },
+      {
+        fullName = "ja"
+        default = false
+        label = "Japanese"
+        isActive = true
+      },
+      {
+        fullName = "sv"
+        default = false
+        label = "Swedish"
+        isActive = true
+      },
+      {
+        fullName = "ko"
+        default = false
+        label = "Korean"
+        isActive = true
+      },
+      {
+        fullName = "zh_TW"
+        default = false
+        label = "Chinese (Traditional)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN"
+        default = false
+        label = "Chinese (Simplified)"
+        isActive = true
+      },
+      {
+        fullName = "pt_BR"
+        default = false
+        label = "Portuguese (Brazil)"
+        isActive = true
+      },
+      {
+        fullName = "nl_NL"
+        default = false
+        label = "Dutch"
+        isActive = true
+      },
+      {
+        fullName = "da"
+        default = false
+        label = "Danish"
+        isActive = true
+      },
+      {
+        fullName = "th"
+        default = false
+        label = "Thai"
+        isActive = true
+      },
+      {
+        fullName = "fi"
+        default = false
+        label = "Finnish"
+        isActive = true
+      },
+      {
+        fullName = "ru"
+        default = false
+        label = "Russian"
+        isActive = true
+      },
+      {
+        fullName = "es_MX"
+        default = false
+        label = "Spanish (Mexico)"
+        isActive = true
+      },
+      {
+        fullName = "no"
+        default = false
+        label = "Norwegian"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Instance {
+    apiName = "ScratchOrgInfo.Instance"
+    label = "Requested Instance"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Package2AncestorIds {
+    apiName = "ScratchOrgInfo.Package2AncestorIds"
+    label = "Requested Package2 Ancestor IDs"
+    createable = true
+    updateable = false
+    length = 2000
+    queryable = true
+  }
+  salesforce.Text SourceOrg {
+    apiName = "ScratchOrgInfo.SourceOrg"
+    label = "Shape Source Org"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+  }
+  salesforce.Checkbox HasSampleData {
+    apiName = "ScratchOrgInfo.HasSampleData"
+    label = "Has Sample Data"
+    defaultValue = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist Release {
+    apiName = "ScratchOrgInfo.Release"
+    label = "Release"
+    valueSet = [
+      {
+        fullName = "Current"
+        default = true
+        label = "Current"
+        isActive = true
+      },
+      {
+        fullName = "Preview"
+        default = false
+        label = "Preview"
+        isActive = true
+      },
+      {
+        fullName = "Previous"
+        default = false
+        label = "Previous"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text SignupUsername {
+    apiName = "ScratchOrgInfo.SignupUsername"
+    label = "Signup Username"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "ScratchOrgInfo.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "New"
+        default = true
+        label = "New"
+        isActive = true
+      },
+      {
+        fullName = "Creating"
+        default = false
+        label = "Creating"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "Deleted"
+        default = false
+        label = "Deleted"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ErrorCode {
+    apiName = "ScratchOrgInfo.ErrorCode"
+    label = "Error Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ScratchOrg {
+    apiName = "ScratchOrgInfo.ScratchOrg"
+    label = "Scratch Org ID"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 15
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SignupInstance {
+    apiName = "ScratchOrgInfo.SignupInstance"
+    label = "Signup Instance"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 15
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text AuthCode {
+    apiName = "ScratchOrgInfo.AuthCode"
+    label = "Connected App Authorization Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SignupCountry {
+    apiName = "ScratchOrgInfo.SignupCountry"
+    label = "Signup Country"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 3
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SignupLanguage {
+    apiName = "ScratchOrgInfo.SignupLanguage"
+    label = "Signup Language"
+    _required = true
+    valueSet = [
+      {
+        fullName = "en_US"
+        default = false
+        label = "English"
+        isActive = true
+      },
+      {
+        fullName = "de"
+        default = false
+        label = "German"
+        isActive = true
+      },
+      {
+        fullName = "es"
+        default = false
+        label = "Spanish"
+        isActive = true
+      },
+      {
+        fullName = "fr"
+        default = false
+        label = "French"
+        isActive = true
+      },
+      {
+        fullName = "it"
+        default = false
+        label = "Italian"
+        isActive = true
+      },
+      {
+        fullName = "ja"
+        default = false
+        label = "Japanese"
+        isActive = true
+      },
+      {
+        fullName = "sv"
+        default = false
+        label = "Swedish"
+        isActive = true
+      },
+      {
+        fullName = "ko"
+        default = false
+        label = "Korean"
+        isActive = true
+      },
+      {
+        fullName = "zh_TW"
+        default = false
+        label = "Chinese (Traditional)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN"
+        default = false
+        label = "Chinese (Simplified)"
+        isActive = true
+      },
+      {
+        fullName = "pt_BR"
+        default = false
+        label = "Portuguese (Brazil)"
+        isActive = true
+      },
+      {
+        fullName = "nl_NL"
+        default = false
+        label = "Dutch"
+        isActive = true
+      },
+      {
+        fullName = "da"
+        default = false
+        label = "Danish"
+        isActive = true
+      },
+      {
+        fullName = "th"
+        default = false
+        label = "Thai"
+        isActive = true
+      },
+      {
+        fullName = "fi"
+        default = false
+        label = "Finnish"
+        isActive = true
+      },
+      {
+        fullName = "ru"
+        default = false
+        label = "Russian"
+        isActive = true
+      },
+      {
+        fullName = "es_MX"
+        default = false
+        label = "Spanish (Mexico)"
+        isActive = true
+      },
+      {
+        fullName = "no"
+        default = false
+        label = "Norwegian"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Email SignupEmail {
+    apiName = "ScratchOrgInfo.SignupEmail"
+    label = "Signup Email"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SignupTrialDays {
+    apiName = "ScratchOrgInfo.SignupTrialDays"
+    label = "Signup Trial Days"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea LoginUrl {
+    apiName = "ScratchOrgInfo.LoginUrl"
+    label = "Login Url"
+    createable = false
+    updateable = false
+    length = 2000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ScratchOrgInfo.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 2000
+    queryable = true
+  }
+  salesforce.Date ExpirationDate {
+    apiName = "ScratchOrgInfo.ExpirationDate"
+    label = "Expiration Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date LastLoginDate {
+    apiName = "ScratchOrgInfo.LastLoginDate"
+    label = "Last Login Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DeletedBy {
+    apiName = "ScratchOrgInfo.DeletedBy"
+    label = "Deleted By"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 15
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date DeletedDate {
+    apiName = "ScratchOrgInfo.DeletedDate"
+    label = "Deleted Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

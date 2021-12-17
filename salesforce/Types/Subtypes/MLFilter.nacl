@@ -1,0 +1,130 @@
+type salesforce.MLFilter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string filterName {
+  }
+  salesforce.MLFilter lhFilter {
+    foreignKeyDomain = [
+      salesforce.MLFilter,
+    ]
+  }
+  string lhPredictionField {
+  }
+  string lhType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Comparison",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Number",
+        "String",
+        "Supplier",
+        "Varchar",
+      ]
+    }
+  }
+  string lhUnit {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Days",
+        "Hours",
+        "Milliseconds",
+        "Minutes",
+        "Months",
+        "Seconds",
+        "Weeks",
+        "Years",
+      ]
+    }
+  }
+  string lhValue {
+  }
+  string operation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Add",
+        "And",
+        "Between",
+        "Concat",
+        "Contains",
+        "Divide",
+        "DoesNotContain",
+        "EndsWith",
+        "Equals",
+        "GreaterThan",
+        "GreaterThanOrEqual",
+        "In",
+        "IsNotNull",
+        "IsNull",
+        "LessThan",
+        "LessThanOrEqual",
+        "Multiply",
+        "Not",
+        "NotEquals",
+        "Or",
+        "StartsWith",
+        "Subtract",
+      ]
+    }
+  }
+  salesforce.MLFilter rhFilter {
+    foreignKeyDomain = [
+      salesforce.MLFilter,
+    ]
+  }
+  string rhPredictionField {
+  }
+  string rhType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Comparison",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Number",
+        "String",
+        "Supplier",
+        "Varchar",
+      ]
+    }
+  }
+  string rhUnit {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Days",
+        "Hours",
+        "Milliseconds",
+        "Minutes",
+        "Months",
+        "Seconds",
+        "Weeks",
+        "Years",
+      ]
+    }
+  }
+  string rhValue {
+  }
+  number sortOrder {
+  }
+  metadataType = "MLFilter"
+}

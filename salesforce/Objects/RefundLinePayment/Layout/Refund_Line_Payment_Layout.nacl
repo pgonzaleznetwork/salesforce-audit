@@ -1,0 +1,169 @@
+salesforce.Layout RefundLinePayment_Refund_Line_Payment_Layout@bsss {
+  fullName = "RefundLinePayment-Refund Line Payment Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.RefundLinePaymentNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RefundLinePayment.field.RefundId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RefundLinePayment.field.HasBeenUnapplied
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.RefundLinePayment.field.Type
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RefundLinePayment.field.PaymentId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Balances"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.RefundLinePayment.field.Amount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.ImpactAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.RefundBalance
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.EffectiveImpactAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.PaymentBalance
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.AssociatedAccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.Date
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.AppliedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.AssociatedRefundLinePaymentId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RefundLinePayment.field.UnappliedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RefundLinePayment.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.RefundLinePayment,
+  ]
+}

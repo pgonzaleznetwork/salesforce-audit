@@ -1,0 +1,185 @@
+salesforce.Layout Order_Order_Layout@bs {
+  fullName = "Order-Order Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Order Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Order.field.OrderNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Order.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Order.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.CustomerAuthorizedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.CompanyAuthorizedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.BillingAddress
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Order.field.ActivatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Order.field.ContractId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Order.field.TotalAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.Type
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Order.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.ShippingAddress
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Order.field.ActivatedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Order.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Order.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Order.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Product2",
+        "ProductCode",
+        "Quantity",
+        "UnitPrice",
+        "TotalPrice",
+        "Description",
+      ]
+      relatedList = "RelatedOrderItemList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+  ]
+  relatedObjects = [
+    "ContractId",
+    "AccountId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Order,
+  ]
+}

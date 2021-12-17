@@ -1,0 +1,50 @@
+salesforce.ApexClass GenerateData {
+  apiVersion = 48
+  status = "Active"
+  fullName = "GenerateData"
+  content = file("salesforce/Records/ApexClass/GenerateData.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.BoatReview__c
+    },
+    {
+      reference = salesforce.BoatType__c
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.Boat__c.field.BoatType__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Contact__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Description__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Length__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Picture__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Price__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Year_Built__c
+    },
+    {
+      reference = salesforce.Case
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

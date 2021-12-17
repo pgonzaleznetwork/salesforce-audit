@@ -1,0 +1,61 @@
+salesforce.AppMenu Salesforce1 {
+  fullName = "Salesforce1"
+  appMenuItems = [
+    {
+      name = "EinsteinInsights"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Feed"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "MyDay"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Dashboards"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Tasks"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Search"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "People"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Groups"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Reports"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "Events"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "ProcessInstanceWorkitem"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "PendingInterviews"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "LightningInstrumentation"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "MobileHome"
+      type = "StandardAppMenuItem"
+    },
+  ]
+}

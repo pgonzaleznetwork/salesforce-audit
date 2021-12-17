@@ -1,0 +1,75 @@
+salesforce.Layout SRM_Metadata__c_Metadata_Layout@uuubs {
+  fullName = "SRM_Metadata__c-Metadata Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.SRM_Metadata__c.field.Jira_Ticket__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SRM_Metadata__c.field.Name__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.SRM_Metadata__c.field.Name
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SRM_Metadata__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SRM_Metadata__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Jira_Ticket__c",
+      "Name__c",
+    ]
+  }
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.SRM_Metadata__c,
+  ]
+}

@@ -1,0 +1,58 @@
+type salesforce.LightningBolt {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string category {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Communications",
+        "Education",
+        "FinancialServices",
+        "GeneralBusiness",
+        "Government",
+        "HealthcareLifeSciences",
+        "HighTech",
+        "Manufacturing",
+        "Media",
+        "Nonprofits",
+        "ProfessionalServices",
+        "RealEstate",
+        "Retail",
+        "TravelTransportationHospitality",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.LightningBoltFeatures lightningBoltFeatures {
+  }
+  salesforce.LightningBoltImages lightningBoltImages {
+  }
+  salesforce.LightningBoltItems lightningBoltItems {
+  }
+  string masterLabel {
+  }
+  string publisher {
+  }
+  string summary {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "lightningBolt"
+  dirName = "lightningBolts"
+  metadataType = "LightningBolt"
+}

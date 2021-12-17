@@ -1,0 +1,6 @@
+salesforce.SharingRules QuickText {
+  fullName = "QuickText"
+  _parent = [
+    salesforce.QuickText,
+  ]
+}

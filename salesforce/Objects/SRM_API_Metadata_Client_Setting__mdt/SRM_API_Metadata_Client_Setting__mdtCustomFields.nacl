@@ -1,0 +1,61 @@
+type salesforce.SRM_API_Metadata_Client_Setting__mdt {
+  salesforce.Text Additional_Metadata_Types__c {
+    apiName = "SRM_API_Metadata_Client_Setting__mdt.Additional_Metadata_Types__c"
+    label = "Additional Metadata Types"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 250
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text Api_Version__c {
+    apiName = "SRM_API_Metadata_Client_Setting__mdt.Api_Version__c"
+    label = "Api Version"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.TextArea Describe_Metadata_Exception__c {
+    apiName = "SRM_API_Metadata_Client_Setting__mdt.Describe_Metadata_Exception__c"
+    label = "Describe Metadata Exception"
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text Endpoint__c {
+    apiName = "SRM_API_Metadata_Client_Setting__mdt.Endpoint__c"
+    label = "Endpoint"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 250
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.TextArea List_Metadata_Exception__c {
+    apiName = "SRM_API_Metadata_Client_Setting__mdt.List_Metadata_Exception__c"
+    label = "List Metadata Exception"
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+}

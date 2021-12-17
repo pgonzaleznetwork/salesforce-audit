@@ -1,0 +1,39 @@
+settings salesforce.Territory2Settings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string defaultAccountAccessLevel {
+  }
+  string defaultCaseAccessLevel {
+  }
+  string defaultContactAccessLevel {
+  }
+  string defaultOpportunityAccessLevel {
+  }
+  boolean enableTerritoryManagement2 {
+  }
+  serviceid fullName {
+  }
+  salesforce.Territory2SettingsOpportunityFilter opportunityFilterSettings {
+  }
+  string t2ForecastAccessLevel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "Territory2Settings"
+}

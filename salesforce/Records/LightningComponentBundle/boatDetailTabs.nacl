@@ -1,0 +1,40 @@
+salesforce.LightningComponentBundle boatDetailTabs {
+  apiVersion = 48
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__AppPage",
+    ]
+  }
+  fullName = "boatDetailTabs"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatDetailTabs/boatDetailTabs.html")
+        filePath = "lwc/boatDetailTabs/boatDetailTabs.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatDetailTabs/boatDetailTabs.js")
+        filePath = "lwc/boatDetailTabs/boatDetailTabs.js"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatDetailTabs/boatDetailTabs.css")
+        filePath = "lwc/boatDetailTabs/boatDetailTabs.css"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatAddReviewForm
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatReviews
+    },
+    {
+      reference = salesforce.LightningMessageChannel.instance.BoatMessageChannel
+    },
+  ]
+}

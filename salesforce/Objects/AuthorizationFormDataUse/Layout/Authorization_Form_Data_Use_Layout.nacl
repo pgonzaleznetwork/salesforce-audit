@@ -1,0 +1,51 @@
+salesforce.Layout AuthorizationFormDataUse_Authorization_Form_Data_Use_Layout@bssss {
+  fullName = "AuthorizationFormDataUse-Authorization Form Data Use Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormDataUse.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormDataUse.field.DataUsePurposeId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormDataUse.field.AuthorizationFormId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AuthorizationFormDataUse,
+  ]
+}

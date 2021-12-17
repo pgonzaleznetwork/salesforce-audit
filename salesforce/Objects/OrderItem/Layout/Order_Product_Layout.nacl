@@ -1,0 +1,113 @@
+salesforce.Layout OrderItem_Order_Product_Layout@bss {
+  fullName = "OrderItem-Order Product Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Product Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.OrderItem.field.OrderId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.OrderItem.field.Product2Id
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.OrderItem.field.ProductCode
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.OrderItem.field.ListPrice
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OrderItem.field.UnitPrice
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OrderItem.field.Quantity
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OrderItem.field.TotalPrice
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OrderItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OrderItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.OrderItem.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+  ]
+  multilineLayoutFields = [
+    "Product2Id",
+    "Quantity",
+    "UnitPrice",
+    "ListPrice",
+    "Description",
+    "OrderId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.OrderItem,
+  ]
+}

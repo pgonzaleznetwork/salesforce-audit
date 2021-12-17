@@ -1,0 +1,28 @@
+type salesforce.ApprovalStepApprover {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.Approver approver {
+  }
+  string whenMultipleApprovers {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FirstResponse",
+        "Unanimous",
+      ]
+    }
+  }
+  metadataType = "ApprovalStepApprover"
+}

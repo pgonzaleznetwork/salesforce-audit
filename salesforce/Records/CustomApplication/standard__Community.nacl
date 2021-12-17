@@ -1,0 +1,21 @@
+salesforce.CustomApplication standard__Community {
+  fullName = "standard__Community"
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-Contact",
+    "standard-Account",
+    "standard-Idea",
+    "standard-IdeaTheme",
+    "standard-report",
+    "standard-Dashboard",
+    salesforce.CustomTab.instance.Center__c,
+    salesforce.CustomTab.instance.Parent__c,
+    salesforce.CustomTab.instance.Child__c,
+  ]
+}

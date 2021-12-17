@@ -1,0 +1,31 @@
+salesforce.StandardValueSet CaseType {
+  fullName = "CaseType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Mechanical"
+      default = false
+      label = "Mechanical"
+    },
+    {
+      fullName = "Electrical"
+      default = false
+      label = "Electrical"
+    },
+    {
+      fullName = "Electronic"
+      default = false
+      label = "Electronic"
+    },
+    {
+      fullName = "Structural"
+      default = false
+      label = "Structural"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

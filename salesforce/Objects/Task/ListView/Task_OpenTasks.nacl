@@ -1,0 +1,36 @@
+salesforce.ListView Task_OpenTasks {
+  fullName = "Task.OpenTasks"
+  columns = [
+    "SUBJECT",
+    "WHO_NAME",
+    "WHAT_NAME",
+    "DUE_DATE",
+    "STATUS",
+    "PRIORITY",
+    "CORE.USERS.ALIAS",
+    "LAST_UPDATE",
+    "UPDATEDBY_USER.ALIAS",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "IS_CLOSED"
+      operation = "equals"
+      value = "0"
+    },
+    {
+      field = "IS_RECURRENCE"
+      operation = "equals"
+      value = "0"
+    },
+    {
+      field = "DUE_DATE"
+      operation = "greaterOrEqual"
+      value = "LAST_N_DAYS:30"
+    },
+  ]
+  label = "ENCODED:{!FilterNames.Task_OpenTasks}"
+  _parent = [
+    salesforce.Task,
+  ]
+}

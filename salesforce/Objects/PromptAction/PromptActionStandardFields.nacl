@@ -1,0 +1,231 @@
+type salesforce.PromptAction {
+  serviceid Id {
+    apiName = "PromptAction.Id"
+    label = "Prompt Action ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PromptAction.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PromptAction.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "PromptAction.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PromptAction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PromptAction.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PromptAction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PromptAction.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PromptAction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PromptVersionId {
+    apiName = "PromptAction.PromptVersionId"
+    label = "Prompt Version ID"
+    _required = true
+    referenceTo = [
+      salesforce.PromptVersion,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PromptVersion"
+    queryable = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "PromptAction.UserId"
+    label = "User ID"
+    _required = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "User"
+    queryable = true
+  }
+  salesforce.Number TimesDisplayed {
+    apiName = "PromptAction.TimesDisplayed"
+    label = "Times Displayed"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimesActionTaken {
+    apiName = "PromptAction.TimesActionTaken"
+    label = "Times Action Taken"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimesDismissed {
+    apiName = "PromptAction.TimesDismissed"
+    label = "Times Dismissed"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime LastDisplayDate {
+    apiName = "PromptAction.LastDisplayDate"
+    label = "Last Display Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LastResult {
+    apiName = "PromptAction.LastResult"
+    label = "Last Result"
+    valueSet = [
+      {
+        fullName = "NotSeen"
+        default = false
+        label = "Not Seen"
+        isActive = true
+      },
+      {
+        fullName = "NoAction"
+        default = false
+        label = "No Action"
+        isActive = true
+      },
+      {
+        fullName = "Dismiss"
+        default = false
+        label = "Dismiss"
+        isActive = true
+      },
+      {
+        fullName = "CustomAction"
+        default = false
+        label = "Custom Action"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "Finish"
+        default = false
+        label = "Finish"
+        isActive = true
+      },
+      {
+        fullName = "Snooze"
+        default = false
+        label = "Snooze"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime LastResultDate {
+    apiName = "PromptAction.LastResultDate"
+    label = "Last Result Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number StepNumber {
+    apiName = "PromptAction.StepNumber"
+    label = "Step Number"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number StepCount {
+    apiName = "PromptAction.StepCount"
+    label = "Step Count"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+}

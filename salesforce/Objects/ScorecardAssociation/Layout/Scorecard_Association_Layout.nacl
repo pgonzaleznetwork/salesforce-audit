@@ -1,0 +1,39 @@
+salesforce.Layout ScorecardAssociation_Scorecard_Association_Layout@bss {
+  fullName = "ScorecardAssociation-Scorecard Association Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ScorecardAssociation.field.ScorecardId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ScorecardAssociation.field.TargetEntityId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ScorecardAssociation,
+  ]
+}

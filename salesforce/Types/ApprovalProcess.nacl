@@ -1,0 +1,74 @@
+type salesforce.ApprovalProcess {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  boolean allowRecall {
+  }
+  salesforce.ApprovalSubmitter allowedSubmitters {
+  }
+  salesforce.ApprovalPageField approvalPageFields {
+  }
+  "List<salesforce.ApprovalStep>" approvalStep {
+  }
+  string description {
+  }
+  string emailTemplate {
+  }
+  boolean enableMobileDeviceAccess {
+  }
+  salesforce.ApprovalEntryCriteria entryCriteria {
+  }
+  salesforce.ApprovalAction finalApprovalActions {
+  }
+  boolean finalApprovalRecordLock {
+  }
+  salesforce.ApprovalAction finalRejectionActions {
+  }
+  boolean finalRejectionRecordLock {
+  }
+  salesforce.ApprovalAction initialSubmissionActions {
+  }
+  string label {
+  }
+  salesforce.NextAutomatedApprover nextAutomatedApprover {
+  }
+  string postTemplate {
+  }
+  number processOrder {
+  }
+  salesforce.ApprovalAction recallActions {
+  }
+  string recordEditability {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AdminOnly",
+        "AdminOrCurrentApprover",
+      ]
+    }
+  }
+  boolean showApprovalHistory {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "approvalProcess"
+  dirName = "approvalProcesses"
+  metadataType = "ApprovalProcess"
+}

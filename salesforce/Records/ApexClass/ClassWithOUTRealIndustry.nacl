@@ -1,0 +1,11 @@
+salesforce.ApexClass ClassWithOUTRealIndustry {
+  apiVersion = 52
+  status = "Active"
+  fullName = "ClassWithOUTRealIndustry"
+  content = file("salesforce/Records/ApexClass/ClassWithOUTRealIndustry.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+  ]
+}

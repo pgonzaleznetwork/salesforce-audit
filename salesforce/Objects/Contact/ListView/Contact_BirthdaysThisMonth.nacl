@@ -1,0 +1,15 @@
+salesforce.ListView Contact_BirthdaysThisMonth {
+  fullName = "Contact.BirthdaysThisMonth"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CONTACT.BIRTHDATE"
+      operation = "equals"
+      value = "THIS_MONTH"
+    },
+  ]
+  label = "Birthdays This Month"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

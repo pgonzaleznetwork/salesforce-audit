@@ -1,0 +1,128 @@
+salesforce.Layout CreditMemo_Credit_Memo_Layout@bss {
+  fullName = "CreditMemo-Credit Memo Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemo.field.CreditMemoNumber
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.DocumentNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CreditMemo.field.BillingAccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemo.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemo.field.BillToContactId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CreditMemo.field.CreditDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CreditMemo.field.Status
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "CreditMemoAmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.TotalChargeAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.TotalAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.TotalTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.TotalAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.TotalAmountWithTax
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemo.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.CreditMemo,
+  ]
+}

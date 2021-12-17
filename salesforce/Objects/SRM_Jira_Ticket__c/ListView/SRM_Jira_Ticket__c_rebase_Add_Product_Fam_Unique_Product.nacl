@@ -1,0 +1,22 @@
+salesforce.ListView SRM_Jira_Ticket__c_rebase_Add_Product_Fam_Unique_Product {
+  fullName = "SRM_Jira_Ticket__c.rebase_Add_Product_Fam_Unique_Product"
+  columns = [
+    "NAME",
+    "Case_Subject__c",
+    "Case__c",
+    "Owner__c",
+    "Status__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Case_Subject__c"
+      operation = "equals"
+      value = "Sharing for Products?"
+    },
+  ]
+  label = "rebase:Add Product Fam Unique Product"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

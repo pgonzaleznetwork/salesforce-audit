@@ -1,0 +1,30 @@
+salesforce.StandardValueSet CaseStatus {
+  fullName = "CaseStatus"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "New"
+      default = true
+      label = "New"
+      closed = false
+    },
+    {
+      fullName = "Working"
+      default = false
+      label = "Working"
+      closed = false
+    },
+    {
+      fullName = "Escalated"
+      default = false
+      label = "Escalated"
+      closed = false
+    },
+    {
+      fullName = "Closed"
+      default = false
+      label = "Closed"
+      closed = true
+    },
+  ]
+}

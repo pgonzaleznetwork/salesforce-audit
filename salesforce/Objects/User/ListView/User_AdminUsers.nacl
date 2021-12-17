@@ -1,0 +1,15 @@
+salesforce.ListView User_AdminUsers {
+  fullName = "User.AdminUsers"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CORE.PROFILE.NAME"
+      operation = "equals"
+      value = "System Administrator"
+    },
+  ]
+  label = "Admin Users"
+  _parent = [
+    salesforce.User,
+  ]
+}

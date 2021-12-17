@@ -1,0 +1,14 @@
+salesforce.ApexClass ClassWritingToField {
+  apiVersion = 50
+  status = "Active"
+  fullName = "ClassWritingToField"
+  content = file("salesforce/Records/ApexClass/ClassWritingToField.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.CustomerPriority__c
+    },
+  ]
+}

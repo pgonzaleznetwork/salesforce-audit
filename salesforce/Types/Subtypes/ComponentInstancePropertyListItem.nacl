@@ -1,0 +1,21 @@
+type salesforce.ComponentInstancePropertyListItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string value {
+  }
+  salesforce.UiFormulaRule visibilityRule {
+  }
+  metadataType = "ComponentInstancePropertyListItem"
+}

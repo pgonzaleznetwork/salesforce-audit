@@ -1,0 +1,36 @@
+salesforce.CustomMetadata nebc__Trigger_Handler_my_setting@uuuvu {
+  fullName = "nebc__Trigger_Handler.my_setting"
+  label = "my setting"
+  protected = false
+  values = [
+    {
+      field = "class_to_call__c"
+    },
+    {
+      field = "nebc__Active__c"
+      value = "true"
+    },
+    {
+      field = "nebc__Apex_Class__c"
+      value = "nebc.forEACH"
+    },
+    {
+      field = "nebc__Description__c"
+    },
+    {
+      field = "nebc__Event__c"
+      value = "BEFORE_INSERT"
+    },
+    {
+      field = "nebc__Order__c"
+      value = "0"
+    },
+    {
+      field = "nebc__Parameters__c"
+    },
+    {
+      field = "nebc__SObject__c"
+      value = "any object"
+    },
+  ]
+}

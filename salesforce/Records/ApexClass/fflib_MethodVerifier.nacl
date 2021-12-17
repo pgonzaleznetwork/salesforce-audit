@@ -1,0 +1,29 @@
+salesforce.ApexClass fflib_MethodVerifier {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MethodVerifier"
+  content = file("salesforce/Records/ApexClass/fflib_MethodVerifier.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ArgumentCaptor
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_InvocationOnMock
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_VerificationMode
+    },
+  ]
+}

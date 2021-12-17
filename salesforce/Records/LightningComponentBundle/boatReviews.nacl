@@ -1,0 +1,29 @@
+salesforce.LightningComponentBundle boatReviews {
+  apiVersion = 48
+  isExposed = false
+  fullName = "boatReviews"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatReviews/boatReviews.js")
+        filePath = "lwc/boatReviews/boatReviews.js"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatReviews/boatReviews.html")
+        filePath = "lwc/boatReviews/boatReviews.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatReviews/boatReviews.css")
+        filePath = "lwc/boatReviews/boatReviews.css"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.BoatDataService
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.fiveStarRating
+    },
+  ]
+}

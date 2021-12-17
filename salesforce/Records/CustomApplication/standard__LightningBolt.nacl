@@ -1,0 +1,17 @@
+salesforce.CustomApplication standard__LightningBolt {
+  fullName = "standard__LightningBolt"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "LightningBolt"
+  navType = "Standard"
+  tabs = [
+    "standard-LightningBoltHome",
+    salesforce.CustomTab.instance.Center__c,
+    salesforce.CustomTab.instance.Parent__c,
+    salesforce.CustomTab.instance.Child__c,
+  ]
+  uiType = "Lightning"
+}

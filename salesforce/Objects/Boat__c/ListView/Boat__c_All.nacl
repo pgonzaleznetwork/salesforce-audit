@@ -1,0 +1,16 @@
+salesforce.ListView Boat__c_All {
+  fullName = "Boat__c.All"
+  columns = [
+    "NAME",
+    "Length__c",
+    "Picture__c",
+    "Price__c",
+    "Year_Built__c",
+    "Boat_Image__c",
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

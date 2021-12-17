@@ -1,0 +1,37 @@
+type salesforce.ChannelLayout {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean doesExcludeFieldLabels {
+  }
+  boolean doesExcludeFiles {
+  }
+  string enabledChannels {
+  }
+  string label {
+  }
+  salesforce.ChannelLayoutItem layoutItems {
+  }
+  string recordType {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "channelLayout"
+  dirName = "channelLayouts"
+  metadataType = "ChannelLayout"
+}

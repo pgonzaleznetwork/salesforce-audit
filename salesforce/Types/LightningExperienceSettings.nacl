@@ -1,0 +1,85 @@
+settings salesforce.LightningExperienceSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string activeThemeName {
+  }
+  serviceid fullName {
+  }
+  boolean enableAccessCheckCrucPref {
+  }
+  boolean enableApiUserLtngOutAccessPref {
+  }
+  boolean enableAuraCDNPref {
+  }
+  boolean enableAuraDepAccessChksCRUCPref {
+  }
+  boolean enableFeedbackInMobile {
+  }
+  boolean enableGoogleSheetsForSfdcEnabled {
+  }
+  boolean enableIE11DeprecationMsgHidden {
+  }
+  boolean enableIE11LEXCrucPref {
+  }
+  boolean enableInAppTooltips {
+  }
+  boolean enableLEXOnIpadEnabled {
+  }
+  boolean enableLexEndUsersNoSwitching {
+  }
+  boolean enableNavPersonalizationOptOut {
+  }
+  boolean enableRemoveThemeBrandBanner {
+  }
+  boolean enableS1BannerPref {
+  }
+  boolean enableS1BrowserEnabled {
+  }
+  boolean enableSkypeChatEnabled {
+  }
+  boolean enableS1DesktopEnabled {
+  }
+  boolean enableS1UiLoggingEnabled {
+  }
+  boolean enableSparkAllUsers {
+  }
+  boolean enableSparkConversationEnabled {
+  }
+  boolean enableTryLightningOptOut {
+  }
+  boolean enableUseS1AlohaDesktop {
+  }
+  boolean enableUsersAreLightningOnly {
+  }
+  boolean enableWebExEnabled {
+  }
+  boolean enableWebexAllUsers {
+  }
+  boolean isLEXExtensionComponentCustomizationOff {
+  }
+  boolean isLEXExtensionDarkModeOff {
+  }
+  boolean isLEXExtensionLinkGrabberOff {
+  }
+  boolean isLEXExtensionOff {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "LightningExperienceSettings"
+}

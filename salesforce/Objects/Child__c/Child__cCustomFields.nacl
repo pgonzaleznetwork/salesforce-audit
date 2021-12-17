@@ -1,0 +1,19 @@
+type salesforce.Child__c {
+  salesforce.MasterDetail Master_Field_to_Center_Obj__c {
+    apiName = "Child__c.Master_Field_to_Center_Obj__c"
+    label = "Master Field to Center Obj"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.Center__c,
+    ]
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "Childs"
+    queryable = true
+    externalId = false
+    relationshipLabel = "Childs"
+    trackTrending = false
+  }
+}

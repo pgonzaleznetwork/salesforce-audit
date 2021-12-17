@@ -1,0 +1,23 @@
+type salesforce.FlowCollectionMapItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string assignToFieldReference {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  metadataType = "FlowCollectionMapItem"
+}

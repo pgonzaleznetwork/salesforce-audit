@@ -1,0 +1,25 @@
+salesforce.BusinessHoursSettings {
+  fullName = "BusinessHours"
+  businessHours = {
+    Default = {
+      active = true
+      default = true
+      fridayEndTime = "00:00:00.000Z"
+      fridayStartTime = "00:00:00.000Z"
+      mondayEndTime = "00:00:00.000Z"
+      mondayStartTime = "00:00:00.000Z"
+      name = "Default"
+      saturdayEndTime = "00:00:00.000Z"
+      saturdayStartTime = "00:00:00.000Z"
+      sundayEndTime = "00:00:00.000Z"
+      sundayStartTime = "00:00:00.000Z"
+      thursdayEndTime = "00:00:00.000Z"
+      thursdayStartTime = "00:00:00.000Z"
+      timeZoneId = "America/Los_Angeles"
+      tuesdayEndTime = "00:00:00.000Z"
+      tuesdayStartTime = "00:00:00.000Z"
+      wednesdayEndTime = "00:00:00.000Z"
+      wednesdayStartTime = "00:00:00.000Z"
+    }
+  }
+}

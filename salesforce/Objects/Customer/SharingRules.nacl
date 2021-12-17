@@ -1,0 +1,6 @@
+salesforce.SharingRules Customer {
+  fullName = "Customer"
+  _parent = [
+    salesforce.Customer,
+  ]
+}

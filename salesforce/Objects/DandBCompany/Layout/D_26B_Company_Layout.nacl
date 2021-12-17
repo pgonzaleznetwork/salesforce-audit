@@ -1,0 +1,423 @@
+salesforce.Layout DandBCompany_D_26B_Company_Layout@bpss {
+  fullName = "DandBCompany-D%26B Company Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBDescription"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBPrimary"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.DandBCompany.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Address
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Phone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.CountryAccessCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SalesVolume
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.CurrencyCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.PublicIndicator
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.StockExchange
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FipsMsaCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.TradeStyle1
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.PrimarySic
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.PrimaryNaics
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Longitude
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.URL
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.MailingAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Fax
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.YearStarted
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SalesVolumeReliability
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.LocationStatus
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.OutOfBusiness
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.StockSymbol
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FipsMsaDesc
+            },
+            {
+              behavior = "Required"
+              field = salesforce.DandBCompany.field.DunsNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.PrimarySicDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.PrimaryNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Latitude
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBAdditionaClassification"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SecondSic
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ThirdSic
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FourthSic
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FifthSic
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SixthSic
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SecondNaics
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ThirdNaics
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FourthNaics
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FifthNaics
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SixthNaics
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SecondSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ThirdSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FourthSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FifthSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SixthSicDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SecondNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ThirdNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FourthNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FifthNaicsDesc
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SixthNaicsDesc
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBFirmographic"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.EmployeesTotal
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.EmployeesHere
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.FamilyMembers
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.LegalStatus
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ImportExportAgent
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.WomenOwned
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.OwnOrRent
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.NationalId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.GeoCodeAccuracy
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.TradeStyle2
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.TradeStyle4
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.MarketingSegmentationCluster
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.EmployeesTotalReliability
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.EmployeesHereReliability
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.GlobalUltimateTotalEmployees
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.Subsidiary
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.SmallBusiness
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.MinorityOwned
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.UsTaxId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.NationalIdType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.MarketingPreScreen
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.TradeStyle3
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.TradeStyle5
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DandBAdditionalParentCompany"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.GlobalUltimateBusinessName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ParentOrHqBusinessName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.DomesticUltimateBusinessName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.GlobalUltimateDunsNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.ParentOrHqDunsNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DandBCompany.field.DomesticUltimateDunsNumber
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Name",
+      "DunsNumber",
+      "Phone",
+      "Address",
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "ACCOUNT.NAME",
+        "ACCOUNT.SITE",
+        "ACCOUNT.ADDRESS1_STATE",
+        "ACCOUNT.PHONE1",
+        "ACCOUNT.TYPE",
+        "CORE.USERS.ALIAS",
+      ]
+      relatedList = "RelatedAccountList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.DandBCompany,
+  ]
+}

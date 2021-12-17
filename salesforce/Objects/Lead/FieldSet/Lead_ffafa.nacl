@@ -1,0 +1,8 @@
+salesforce.FieldSet Lead_ffafa {
+  fullName = "Lead.ffafa"
+  description = "fafa"
+  label = "ffafa"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

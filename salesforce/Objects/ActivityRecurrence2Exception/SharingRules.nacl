@@ -1,0 +1,6 @@
+salesforce.SharingRules ActivityRecurrence2Exception {
+  fullName = "ActivityRecurrence2Exception"
+  _parent = [
+    salesforce.ActivityRecurrence2Exception,
+  ]
+}

@@ -1,0 +1,44 @@
+type salesforce.Center__c {
+  salesforce.Lookup Lookup_Field_to_Parent_Obj__c {
+    apiName = "Center__c.Lookup_Field_to_Parent_Obj__c"
+    label = "Lookup Field to Parent Obj"
+    referenceTo = [
+      salesforce.Parent__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Centers"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    relationshipLabel = "Centers"
+    trackTrending = false
+  }
+  salesforce.Lookup Lookup_Field_to_Self__c {
+    apiName = "Center__c.Lookup_Field_to_Self__c"
+    label = "Lookup Field to Self"
+    referenceTo = [
+      salesforce.Center__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Centers"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    relationshipLabel = "Centers"
+    trackTrending = false
+  }
+  salesforce.Text My_text_field__c {
+    apiName = "Center__c.My_text_field__c"
+    label = "My text field"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    externalId = false
+    trackTrending = false
+  }
+}

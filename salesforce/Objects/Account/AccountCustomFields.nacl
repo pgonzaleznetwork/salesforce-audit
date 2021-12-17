@@ -1,0 +1,327 @@
+type salesforce.Account {
+  salesforce.Picklist CustomerPriority__c {
+    apiName = "Account.CustomerPriority__c"
+    label = "Customer Priority"
+    valueSet = [
+      {
+        fullName = "Lowest"
+        default = true
+        label = "Lowest"
+      },
+      {
+        fullName = "Medium"
+        default = false
+        label = "Medium"
+      },
+      {
+        fullName = "New High"
+        default = false
+        label = "New High"
+      },
+      {
+        fullName = "Super High"
+        default = false
+        label = "Super High"
+      },
+      {
+        fullName = "CLI"
+        default = false
+        label = "CLI Value"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "new help text"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Picklist SLA__c {
+    apiName = "Account.SLA__c"
+    label = "SLA"
+    valueSet = [
+      {
+        fullName = "Gold"
+        default = false
+        label = "Gold"
+      },
+      {
+        fullName = "Silver"
+        default = false
+        label = "Silver"
+      },
+      {
+        fullName = "Platinum"
+        default = false
+        label = "Platinum"
+      },
+      {
+        fullName = "Bronze"
+        default = false
+        label = "Bronze"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Picklist Active__c {
+    apiName = "Account.Active__c"
+    label = "Active"
+    valueSet = [
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Number NumberofLocations__c {
+    apiName = "Account.NumberofLocations__c"
+    label = "Number of Locations"
+    precision = 3
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Picklist UpsellOpportunity__c {
+    apiName = "Account.UpsellOpportunity__c"
+    label = "Upsell Opportunity"
+    valueSet = [
+      {
+        fullName = "Maybe"
+        default = false
+        label = "Maybe"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Text SLASerialNumber__c {
+    apiName = "Account.SLASerialNumber__c"
+    label = "SLA Serial Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Date SLAExpirationDate__c {
+    apiName = "Account.SLAExpirationDate__c"
+    label = "SLA Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Number Average_Age__c {
+    apiName = "Account.Average_Age__c"
+    label = "Average Age"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.FormulaText Name_Formula__c {
+    apiName = "Account.Name_Formula__c"
+    label = "Name Formula"
+    formula = "Name & \"--this text is from formula---\""
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+    _hidden_value = true
+  }
+  salesforce.Email really_not_used__c {
+    apiName = "Account.really_not_used__c"
+    label = "really not used"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.FormulaText Priority_Formula__c {
+    apiName = "Account.Priority_Formula__c"
+    label = "Priority Formula"
+    formula = "TEXT( CustomerPriority__c )"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Account.field.CustomerPriority__c
+      },
+    ]
+  }
+  salesforce.LongTextArea Long_Description__c {
+    apiName = "Account.Long_Description__c"
+    label = "Long Description"
+    createable = true
+    updateable = true
+    length = 32768
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    visibleLines = 3
+  }
+  salesforce.DateTime My_Date_Time__c {
+    apiName = "Account.My_Date_Time__c"
+    label = "My Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Text saltoQuickStartField__c {
+    apiName = "Account.saltoQuickStartField__c"
+    label = "saltoQuickStartField"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 32
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup original_lead__c {
+    apiName = "Account.original_lead__c"
+    label = "original_lead__c"
+    referenceTo = [
+      salesforce.Lead,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "created_accounts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.FormulaText Simple_Text_Formula__c {
+    apiName = "Account.Simple_Text_Formula__c"
+    label = "Simple Text Formula"
+    formula = "\"hi\""
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+    _hidden_value = true
+  }
+  salesforce.Picklist My_Broken_Picklist__c {
+    apiName = "Account.My_Broken_Picklist__c"
+    label = "My Broken Picklist"
+    valueSet = [
+      {
+        fullName = "ValueOne"
+        default = false
+        label = "ValueOne"
+      },
+      {
+        fullName = "Value1"
+        default = false
+        isActive = false
+        label = "Value1"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Checkbox not_used__c {
+    apiName = "Account.not_used__c"
+    defaultValue = false
+    externalId = false
+    label = "not used"
+    trackFeedHistory = false
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

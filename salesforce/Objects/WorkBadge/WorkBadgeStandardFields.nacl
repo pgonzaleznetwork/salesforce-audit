@@ -1,0 +1,148 @@
+type salesforce.WorkBadge {
+  serviceid Id {
+    apiName = "WorkBadge.Id"
+    label = "Badge Received ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkBadge.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkBadge.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkBadge.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkBadge.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkBadge.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkBadge.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SourceId {
+    apiName = "WorkBadge.SourceId"
+    label = "Thanks ID"
+    _required = true
+    referenceTo = [
+      salesforce.WorkThanks,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Source"
+    queryable = true
+  }
+  salesforce.Lookup DefinitionId {
+    apiName = "WorkBadge.DefinitionId"
+    label = "Badge ID"
+    _required = true
+    referenceTo = [
+      salesforce.WorkBadgeDefinition,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Definition"
+    queryable = true
+  }
+  salesforce.Lookup RecipientId {
+    apiName = "WorkBadge.RecipientId"
+    label = "User ID"
+    _required = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Recipient"
+    queryable = true
+  }
+  salesforce.Lookup GiverId {
+    apiName = "WorkBadge.GiverId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Giver"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Url ImageUrl {
+    apiName = "WorkBadge.ImageUrl"
+    label = "Image"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WorkBadge.Description"
+    label = "Description"
+    createable = false
+    updateable = false
+    length = 4000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Message {
+    apiName = "WorkBadge.Message"
+    label = "Message"
+    createable = false
+    updateable = false
+    length = 4000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RewardId {
+    apiName = "WorkBadge.RewardId"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

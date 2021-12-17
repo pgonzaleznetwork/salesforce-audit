@@ -1,0 +1,63 @@
+type salesforce.MLDataDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string developerName {
+  }
+  string entityDeveloperName {
+  }
+  string excludedFields {
+  }
+  string includedFields {
+  }
+  salesforce.MLField joinFields {
+  }
+  string parentDefinitionDevName {
+  }
+  salesforce.MLFilter scoringFilter {
+    foreignKeyDomain = [
+      salesforce.MLFilter,
+    ]
+  }
+  salesforce.MLFilter segmentFilter {
+    foreignKeyDomain = [
+      salesforce.MLFilter,
+    ]
+  }
+  salesforce.MLFilter trainingFilter {
+    foreignKeyDomain = [
+      salesforce.MLFilter,
+    ]
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Candidate",
+        "Interaction",
+        "Prediction",
+        "Recipient",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "mlDataDefinition"
+  dirName = "mlDataDefinitions"
+  metadataType = "MLDataDefinition"
+}

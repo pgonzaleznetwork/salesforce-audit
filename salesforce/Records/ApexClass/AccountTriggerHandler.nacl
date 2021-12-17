@@ -1,0 +1,14 @@
+salesforce.ApexClass AccountTriggerHandler {
+  apiVersion = 50
+  status = "Active"
+  fullName = "AccountTriggerHandler"
+  content = file("salesforce/Records/ApexClass/AccountTriggerHandler.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.Name_Formula__c
+    },
+  ]
+}

@@ -1,0 +1,3 @@
+salesforce.IframeWhiteListUrlSettings IframeWhiteListUrlSettings {
+  fullName = "IframeWhiteListUrlSettings"
+}

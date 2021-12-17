@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_InheritorTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_InheritorTest"
+  content = file("salesforce/Records/ApexClass/fflib_InheritorTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Inheritor
+    },
+  ]
+}

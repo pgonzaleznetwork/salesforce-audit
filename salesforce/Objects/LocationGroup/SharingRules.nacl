@@ -1,0 +1,6 @@
+salesforce.SharingRules LocationGroup {
+  fullName = "LocationGroup"
+  _parent = [
+    salesforce.LocationGroup,
+  ]
+}

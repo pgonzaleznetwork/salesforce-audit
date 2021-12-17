@@ -1,0 +1,26 @@
+salesforce.StandardValueSet OpportunityType {
+  fullName = "OpportunityType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Existing Customer - Upgrade"
+      default = false
+      label = "Existing Customer - Upgrade"
+    },
+    {
+      fullName = "Existing Customer - Replacement"
+      default = false
+      label = "Existing Customer - Replacement"
+    },
+    {
+      fullName = "Existing Customer - Downgrade"
+      default = false
+      label = "Existing Customer - Downgrade"
+    },
+    {
+      fullName = "New Customer"
+      default = false
+      label = "New Customer"
+    },
+  ]
+}

@@ -1,0 +1,23 @@
+salesforce.QuickAction Task_UpdateStatus_0@vu {
+  fullName = "Task.UpdateStatus_0"
+  optionsCreateFeedItem = false
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = salesforce.Task.field.Status
+            uiBehavior = "Required"
+          },
+        ]
+      },
+    ]
+  }
+  standardLabel = "ChangeStatus"
+  type = "Update"
+  _parent = [
+    salesforce.Task,
+  ]
+}

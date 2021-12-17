@@ -1,0 +1,15 @@
+salesforce.ListView CollaborationGroup_All_ChatterGroups {
+  fullName = "CollaborationGroup.All_ChatterGroups"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "IsArchived"
+      operation = "equals"
+      value = "0"
+    },
+  ]
+  label = "Active Groups"
+  _parent = [
+    salesforce.CollaborationGroup,
+  ]
+}

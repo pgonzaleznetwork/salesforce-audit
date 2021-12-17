@@ -1,0 +1,8 @@
+salesforce.ListView BusinessBrand_All_BusinessBrands {
+  fullName = "BusinessBrand.All_BusinessBrands"
+  filterScope = "Everything"
+  label = "All Business Brands"
+  _parent = [
+    salesforce.BusinessBrand,
+  ]
+}

@@ -1,0 +1,95 @@
+type salesforce.DuplicateRecordSet {
+  serviceid Id {
+    apiName = "DuplicateRecordSet.Id"
+    label = "Duplicate Record Set ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DuplicateRecordSet.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DuplicateRecordSet.Name"
+    label = "Duplicate Record Set Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DuplicateRecordSet.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DuplicateRecordSet.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DuplicateRecordSet.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DuplicateRecordSet.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DuplicateRecordSet.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup DuplicateRuleId {
+    apiName = "DuplicateRecordSet.DuplicateRuleId"
+    label = "Duplicate Rule ID"
+    referenceTo = [
+      salesforce.DuplicateRule,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "DuplicateRule"
+    queryable = true
+  }
+  salesforce.Summary RecordCount {
+    apiName = "DuplicateRecordSet.RecordCount"
+    label = "Record Count"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

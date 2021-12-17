@@ -1,0 +1,392 @@
+type salesforce.Campaign {
+  serviceid Id {
+    apiName = "Campaign.Id"
+    label = "Campaign ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Campaign.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Campaign.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "Campaign.ParentId"
+    label = "Parent Campaign ID"
+    referenceTo = [
+      salesforce.Campaign,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Parent"
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Campaign.Type"
+    label = "Type"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.CampaignType
+  }
+  salesforce.Picklist Status {
+    apiName = "Campaign.Status"
+    label = "Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.CampaignStatus
+  }
+  salesforce.Date StartDate {
+    apiName = "Campaign.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "Campaign.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency ExpectedRevenue {
+    apiName = "Campaign.ExpectedRevenue"
+    label = "Expected Revenue in Campaign"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency BudgetedCost {
+    apiName = "Campaign.BudgetedCost"
+    label = "Budgeted Cost in Campaign"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency ActualCost {
+    apiName = "Campaign.ActualCost"
+    label = "Actual Cost in Campaign"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  salesforce.Percent ExpectedResponse {
+    apiName = "Campaign.ExpectedResponse"
+    label = "Expected Response (%)"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 10
+    queryable = true
+  }
+  salesforce.Number NumberSent {
+    apiName = "Campaign.NumberSent"
+    label = "Num Sent in Campaign"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "Campaign.IsActive"
+    label = "Active"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Campaign.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Number NumberOfLeads {
+    apiName = "Campaign.NumberOfLeads"
+    label = "Leads in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfConvertedLeads {
+    apiName = "Campaign.NumberOfConvertedLeads"
+    label = "Converted Leads in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfContacts {
+    apiName = "Campaign.NumberOfContacts"
+    label = "Contacts in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfResponses {
+    apiName = "Campaign.NumberOfResponses"
+    label = "Responses in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfOpportunities {
+    apiName = "Campaign.NumberOfOpportunities"
+    label = "Opportunities in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfWonOpportunities {
+    apiName = "Campaign.NumberOfWonOpportunities"
+    label = "Won Opportunities in Campaign"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency AmountAllOpportunities {
+    apiName = "Campaign.AmountAllOpportunities"
+    label = "Value Opportunities in Campaign"
+    _required = true
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency AmountWonOpportunities {
+    apiName = "Campaign.AmountWonOpportunities"
+    label = "Value Won Opportunities in Campaign"
+    _required = true
+    createable = false
+    updateable = false
+    scale = 0
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Campaign.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Campaign.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Campaign.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Campaign.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Campaign.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Campaign.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date LastActivityDate {
+    apiName = "Campaign.LastActivityDate"
+    label = "Last Activity"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CampaignMemberRecordTypeId {
+    apiName = "Campaign.CampaignMemberRecordTypeId"
+    label = "Record Type ID"
+    referenceTo = [
+      salesforce.RecordType,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "CampaignMemberRecordType"
+    queryable = true
+  }
+  salesforce.Unknown HierarchyActualCost {
+    apiName = "Campaign.HierarchyActualCost"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyAmountAllOpportunities {
+    apiName = "Campaign.HierarchyAmountAllOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyAmountWonOpportunities {
+    apiName = "Campaign.HierarchyAmountWonOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyBudgetedCost {
+    apiName = "Campaign.HierarchyBudgetedCost"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyExpectedRevenue {
+    apiName = "Campaign.HierarchyExpectedRevenue"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberOfContacts {
+    apiName = "Campaign.HierarchyNumberOfContacts"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberOfConvertedLeads {
+    apiName = "Campaign.HierarchyNumberOfConvertedLeads"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberOfLeads {
+    apiName = "Campaign.HierarchyNumberOfLeads"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberOfOpportunities {
+    apiName = "Campaign.HierarchyNumberOfOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberOfResponses {
+    apiName = "Campaign.HierarchyNumberOfResponses"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberOfWonOpportunities {
+    apiName = "Campaign.HierarchyNumberOfWonOpportunities"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown HierarchyNumberSent {
+    apiName = "Campaign.HierarchyNumberSent"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,26 @@
+salesforce.StandardValueSet AccountOwnership {
+  fullName = "AccountOwnership"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Public"
+      default = false
+      label = "Public"
+    },
+    {
+      fullName = "Private"
+      default = false
+      label = "Private"
+    },
+    {
+      fullName = "Subsidiary"
+      default = false
+      label = "Subsidiary"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

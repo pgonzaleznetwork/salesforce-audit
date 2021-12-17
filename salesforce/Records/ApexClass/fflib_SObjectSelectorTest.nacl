@@ -1,0 +1,23 @@
+salesforce.ApexClass fflib_SObjectSelectorTest {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectSelectorTest"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectSelectorTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QueryFactory
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectSelector
+    },
+    {
+      reference = salesforce.User
+    },
+  ]
+}

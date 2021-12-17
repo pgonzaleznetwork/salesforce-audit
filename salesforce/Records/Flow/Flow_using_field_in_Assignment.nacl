@@ -1,0 +1,60 @@
+salesforce.Flow Flow_using_field_in_Assignment {
+  fullName = "Flow_using_field_in_Assignment"
+  apiVersion = 51
+  assignments = [
+    {
+      name = "assignment_to_high"
+      label = "assignment to high"
+      locationX = 176
+      locationY = 311
+      assignmentItems = [
+        {
+          assignToReference = "$Record.CustomerPriority__c"
+          operator = "Assign"
+          value = {
+            stringValue = "High"
+          }
+        },
+      ]
+    },
+  ]
+  interviewLabel = "Flow using field in Assignment {!$Flow.CurrentDateTime}"
+  label = "Flow using field in Assignment"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "assignment_to_high"
+    }
+    object = salesforce.Account
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Draft"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.CustomerPriority__c
+    },
+  ]
+}

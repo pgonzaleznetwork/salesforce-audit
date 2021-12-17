@@ -1,0 +1,32 @@
+type salesforce.FlowSchedule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string frequency {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Daily",
+        "OnActivate",
+        "Once",
+        "Weekly",
+      ]
+    }
+  }
+  string startDate {
+  }
+  string startTime {
+  }
+  metadataType = "FlowSchedule"
+}

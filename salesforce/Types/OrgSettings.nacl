@@ -1,0 +1,33 @@
+settings salesforce.OrgSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableCustomerSuccessPortal {
+  }
+  boolean enableExtendedMailMerge {
+  }
+  boolean enableManageSelfServiceUsers {
+  }
+  boolean saveMailMergeDocsAsSalesforceDocs {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "OrgSettings"
+}

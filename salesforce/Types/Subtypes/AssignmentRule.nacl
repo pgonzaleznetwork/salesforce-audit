@@ -1,0 +1,27 @@
+type salesforce.AssignmentRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  serviceid fullName {
+  }
+  "List<salesforce.RuleEntry>" ruleEntry {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "AssignmentRule"
+}

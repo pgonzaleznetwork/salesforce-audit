@@ -1,0 +1,33 @@
+type salesforce.FlowStep {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowConnector connectors {
+  }
+  string description {
+  }
+  string elementSubtype {
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  string name {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  metadataType = "FlowStep"
+}

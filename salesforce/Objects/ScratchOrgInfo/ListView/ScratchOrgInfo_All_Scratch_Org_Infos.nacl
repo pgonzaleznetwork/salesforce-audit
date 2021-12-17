@@ -1,0 +1,8 @@
+salesforce.ListView ScratchOrgInfo_All_Scratch_Org_Infos {
+  fullName = "ScratchOrgInfo.All_Scratch_Org_Infos"
+  filterScope = "Everything"
+  label = "All Scratch Org Infos"
+  _parent = [
+    salesforce.ScratchOrgInfo,
+  ]
+}

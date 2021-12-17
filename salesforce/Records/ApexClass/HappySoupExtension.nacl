@@ -1,0 +1,35 @@
+salesforce.ApexClass HappySoupExtension {
+  apiVersion = 52
+  status = "Active"
+  fullName = "HappySoupExtension"
+  content = file("salesforce/Records/ApexClass/HappySoupExtension.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.HappySoupApiMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.HappySoupExtensionController
+    },
+    {
+      reference = salesforce.ApexClass.instance.HappySoupTestData
+    },
+    {
+      reference = salesforce.SRM_CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Connected_Org__c
+    },
+    {
+      reference = salesforce.SRM_Connected_Org__c.field.Named_Credential_Reference__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Connected_Org__c
+    },
+  ]
+}

@@ -1,0 +1,10 @@
+type salesforce.LocationGroupAssignment {
+  salesforce.MasterDetail LocationGroupId {
+    apiName = "LocationGroupAssignment.LocationGroupId"
+    _hidden_value = true
+  }
+  salesforce.MasterDetail LocationId {
+    apiName = "LocationGroupAssignment.LocationId"
+    _hidden_value = true
+  }
+}

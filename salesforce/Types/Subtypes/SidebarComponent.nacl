@@ -1,0 +1,39 @@
+type salesforce.SidebarComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string componentType {
+  }
+  string createAction {
+  }
+  boolean enableLinking {
+  }
+  number height {
+  }
+  string label {
+  }
+  string lookup {
+  }
+  string page {
+  }
+  salesforce.RelatedList relatedLists {
+  }
+  string unit {
+  }
+  string updateAction {
+  }
+  number width {
+  }
+  metadataType = "SidebarComponent"
+}

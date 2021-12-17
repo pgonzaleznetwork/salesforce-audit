@@ -1,0 +1,4 @@
+salesforce.StandardValueSet SalesTeamRole {
+  fullName = "SalesTeamRole"
+  sorted = false
+}

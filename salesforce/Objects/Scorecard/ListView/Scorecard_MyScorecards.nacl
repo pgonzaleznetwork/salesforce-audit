@@ -1,0 +1,8 @@
+salesforce.ListView Scorecard_MyScorecards {
+  fullName = "Scorecard.MyScorecards"
+  filterScope = "Mine"
+  label = "My Scorecards"
+  _parent = [
+    salesforce.Scorecard,
+  ]
+}

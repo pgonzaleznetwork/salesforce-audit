@@ -1,0 +1,136 @@
+salesforce.FileUploadAndDownloadSecuritySettings {
+  fullName = "FileUploadAndDownloadSecurity"
+  dispositions = [
+    {
+      behavior = "HYBRID"
+      fileType = "AVI"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "WORD"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "WORD_X"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "EXE"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "HTML"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "WEBVIEW"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "JSON"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "RFC822"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "MOV"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "MP3"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "MP4"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "MPEG"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "PDF"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "POWER_POINT"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "POWER_POINT_X"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "SVG"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "FLASH"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "TXML"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "UNKNOWN"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "WAV"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "WMA"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "WMV"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "XHTML"
+      securityRiskFileType = true
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "EXCEL"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "HYBRID"
+      fileType = "EXCEL_X"
+      securityRiskFileType = false
+    },
+    {
+      behavior = "DOWNLOAD"
+      fileType = "XML"
+      securityRiskFileType = true
+    },
+  ]
+  noHtmlUploadAsAttachment = false
+}

@@ -1,0 +1,17 @@
+salesforce.ApexClass WatchForStageUpdates {
+  apiVersion = 48
+  status = "Active"
+  fullName = "WatchForStageUpdates"
+  content = file("salesforce/Records/ApexClass/WatchForStageUpdates.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.TriggerDispatcher
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+    {
+      reference = salesforce.Task
+    },
+  ]
+}

@@ -1,0 +1,8 @@
+salesforce.QueueRoutingConfig High_Priority_Cases {
+  fullName = "High_Priority_Cases"
+  capacityWeight = 1
+  isAttributeBased = true
+  label = "High-Priority Cases"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 1
+}

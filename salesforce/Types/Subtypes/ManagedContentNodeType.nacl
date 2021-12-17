@@ -1,0 +1,57 @@
+type salesforce.ManagedContentNodeType {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string helpText {
+  }
+  boolean isLocalizable {
+  }
+  boolean isRequired {
+  }
+  string nodeLabel {
+  }
+  string nodeName {
+  }
+  string nodeType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ADDRESS",
+        "BOOLEAN",
+        "CURRENCY",
+        "DATE",
+        "DATETIME",
+        "DOUBLE",
+        "EMAIL",
+        "ENCRYPTEDSTRING",
+        "IMG",
+        "INT",
+        "LOCATION",
+        "MEDIA",
+        "MTEXT",
+        "NAMEFIELD",
+        "PERCENT",
+        "PHONE",
+        "REFERENCE",
+        "RTE",
+        "TEXT",
+        "TIME",
+        "URL",
+      ]
+    }
+  }
+  string placeholderText {
+  }
+  metadataType = "ManagedContentNodeType"
+}

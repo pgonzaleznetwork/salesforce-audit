@@ -1,0 +1,52 @@
+type salesforce.ActionLinkGroupTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.ActionLinkTemplate actionLinkTemplates {
+  }
+  string category {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Overflow",
+        "Primary",
+      ]
+    }
+  }
+  string executionsAllowed {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Once",
+        "OncePerUser",
+        "Unlimited",
+      ]
+    }
+  }
+  number hoursUntilExpiration {
+  }
+  boolean isPublished {
+  }
+  string name {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "actionLinkGroupTemplate"
+  dirName = "actionLinkGroupTemplates"
+  metadataType = "ActionLinkGroupTemplate"
+}

@@ -1,0 +1,53 @@
+settings salesforce.ApexSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableAggregateCodeCoverageOnly {
+  }
+  boolean enableApexAccessRightsPref {
+  }
+  boolean enableApexApprovalLockUnlock {
+  }
+  boolean enableApexCtrlImplicitWithSharingPref {
+  }
+  boolean enableApexPropertyGetterPref {
+  }
+  boolean enableAuraApexCtrlAuthUserAccessCheckPref {
+  }
+  boolean enableAuraApexCtrlGuestUserAccessCheckPref {
+  }
+  boolean enableCompileOnDeploy {
+  }
+  boolean enableDisableParallelApexTesting {
+  }
+  boolean enableDoNotEmailDebugLog {
+  }
+  boolean enableGaplessTestAutoNum {
+  }
+  boolean enableMngdCtrlActionAccessPref {
+  }
+  boolean enableNonCertifiedApexMdCrud {
+  }
+  boolean enableSecureNoArgConstructorPref {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ApexSettings"
+}

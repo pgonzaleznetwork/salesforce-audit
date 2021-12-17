@@ -1,0 +1,14 @@
+salesforce.Queue High_Priority_Cases {
+  fullName = "High_Priority_Cases"
+  doesSendEmailToMembers = false
+  name = "High-Priority Cases"
+  queueMembers = {
+    users = {
+      user = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+    }
+  }
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.High_Priority_Cases
+  queueSobject = {
+    sobjectType = "Case"
+  }
+}

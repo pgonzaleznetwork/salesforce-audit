@@ -1,0 +1,9 @@
+salesforce.ValidationRule Account_address {
+  fullName = "Account.address"
+  active = true
+  errorConditionFormula = "NOT(ISBLANK(BillingAddress ))"
+  errorMessage = "Account.CustomerPriority__c"
+  _parent = [
+    salesforce.Account,
+  ]
+}

@@ -1,0 +1,35 @@
+salesforce.QuickAction CollaborationGroup_NewGroupMember@v {
+  fullName = "CollaborationGroup.NewGroupMember"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "CollaborationGroupId"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "MemberId"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "CollaborationRole"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+    ]
+  }
+  standardLabel = "AddMember"
+  targetObject = salesforce.CollaborationGroupMember
+  targetParentField = "CollaborationGroup"
+  type = "Create"
+  _parent = [
+    salesforce.CollaborationGroup,
+  ]
+}

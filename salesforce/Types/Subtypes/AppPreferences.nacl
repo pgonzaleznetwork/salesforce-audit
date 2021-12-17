@@ -1,0 +1,35 @@
+type salesforce.AppPreferences {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableCustomizeMyTabs {
+  }
+  boolean enableKeyboardShortcuts {
+  }
+  boolean enableListViewHover {
+  }
+  boolean enableListViewReskin {
+  }
+  boolean enableMultiMonitorComponents {
+  }
+  boolean enablePinTabs {
+  }
+  boolean enableTabHover {
+  }
+  boolean enableTabLimits {
+  }
+  boolean saveUserSessions {
+  }
+  metadataType = "AppPreferences"
+}

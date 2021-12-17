@@ -1,0 +1,27 @@
+type salesforce.CorsWhitelistOrigin {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string urlPattern {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "corsWhitelistOrigin"
+  dirName = "corsWhitelistOrigins"
+  metadataType = "CorsWhitelistOrigin"
+}

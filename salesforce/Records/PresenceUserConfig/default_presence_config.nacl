@@ -1,0 +1,10 @@
+salesforce.PresenceUserConfig default_presence_config {
+  fullName = "default_presence_config"
+  capacity = 5
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = true
+  enableRequestSound = true
+  label = "Default Presence Configuration"
+}

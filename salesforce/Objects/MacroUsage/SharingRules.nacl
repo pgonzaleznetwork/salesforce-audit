@@ -1,0 +1,6 @@
+salesforce.SharingRules MacroUsage {
+  fullName = "MacroUsage"
+  _parent = [
+    salesforce.MacroUsage,
+  ]
+}

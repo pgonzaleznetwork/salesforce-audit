@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_QueryFactory {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_QueryFactory"
+  content = file("salesforce/Records/ApexClass/fflib_QueryFactory.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDescribe
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SecurityUtils
+    },
+  ]
+}

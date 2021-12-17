@@ -1,0 +1,22 @@
+type salesforce.LocationGroup {
+  string Description {
+    _hidden_value = true
+  }
+  string ExternalReference {
+    _hidden_value = true
+  }
+  string IsEnabled {
+    _hidden_value = true
+  }
+  string LocationGroupName {
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LocationGroup.OwnerId"
+    trackHistory = "false"
+    _hidden_value = true
+  }
+  string ShouldSyncWithOci {
+    _hidden_value = true
+  }
+}

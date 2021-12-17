@@ -1,0 +1,39 @@
+type salesforce.SharingGuestRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string accessLevel {
+  }
+  salesforce.AccountSharingRuleSettings accountSettings {
+  }
+  string description {
+  }
+  string label {
+  }
+  salesforce.SharedTo sharedTo {
+  }
+  string booleanFilter {
+  }
+  salesforce.FilterItem criteriaItems {
+  }
+  boolean includeHVUOwnedRecords {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "SharingGuestRule"
+}

@@ -1,0 +1,84 @@
+salesforce.StandardValueSet PartnerRole {
+  fullName = "PartnerRole"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "System Integrator"
+      default = false
+      label = "System Integrator"
+      reverseRole = "Client"
+    },
+    {
+      fullName = "Agency"
+      default = false
+      label = "Agency"
+      reverseRole = "Client"
+    },
+    {
+      fullName = "Advertiser"
+      default = false
+      label = "Advertiser"
+      reverseRole = "Vendor"
+    },
+    {
+      fullName = "VAR/Reseller"
+      default = false
+      label = "VAR/Reseller"
+      reverseRole = "Vendor"
+    },
+    {
+      fullName = "Distributor"
+      default = false
+      label = "Distributor"
+      reverseRole = "Vendor"
+    },
+    {
+      fullName = "Developer"
+      default = false
+      label = "Developer"
+      reverseRole = "Vendor"
+    },
+    {
+      fullName = "Broker"
+      default = false
+      label = "Broker"
+      reverseRole = "Agent"
+    },
+    {
+      fullName = "Lender"
+      default = false
+      label = "Lender"
+      reverseRole = "Broker"
+    },
+    {
+      fullName = "Supplier"
+      default = false
+      label = "Supplier"
+      reverseRole = "Retailer"
+    },
+    {
+      fullName = "Institution"
+      default = false
+      label = "Institution"
+      reverseRole = "Client"
+    },
+    {
+      fullName = "Contractor"
+      default = false
+      label = "Contractor"
+      reverseRole = "Sub Contractor"
+    },
+    {
+      fullName = "Dealer"
+      default = false
+      label = "Dealer"
+      reverseRole = "Supplier"
+    },
+    {
+      fullName = "Consultant"
+      default = false
+      label = "Consultant"
+      reverseRole = "Client"
+    },
+  ]
+}

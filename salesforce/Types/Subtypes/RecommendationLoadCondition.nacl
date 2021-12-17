@@ -1,0 +1,21 @@
+type salesforce.RecommendationLoadCondition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+  }
+  salesforce.RecommendationConditionValue value {
+  }
+  metadataType = "RecommendationLoadCondition"
+}

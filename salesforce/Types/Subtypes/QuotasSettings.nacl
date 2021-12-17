@@ -1,0 +1,19 @@
+type salesforce.QuotasSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean showQuotas {
+  }
+  metadataType = "QuotasSettings"
+}

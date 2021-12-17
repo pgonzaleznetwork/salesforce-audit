@@ -1,0 +1,1285 @@
+type salesforce.Event {
+  serviceid Id {
+    apiName = "Event.Id"
+    label = "Activity ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup WhoId {
+    apiName = "Event.WhoId"
+    label = "Name ID"
+    referenceTo = [
+      salesforce.Contact,
+      salesforce.Lead,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Who"
+    queryable = true
+  }
+  salesforce.Lookup WhatId {
+    apiName = "Event.WhatId"
+    label = "Related To ID"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Asset,
+      salesforce.AssetRelationship,
+      salesforce.Campaign,
+      salesforce.Case,
+      salesforce.CommSubscriptionConsent,
+      salesforce.ContactRequest,
+      salesforce.Contract,
+      salesforce.CreditMemo,
+      salesforce.Image,
+      salesforce.Invoice,
+      salesforce.LegalEntity,
+      "ListEmail",
+      salesforce.Location,
+      salesforce.Opportunity,
+      salesforce.Order,
+      salesforce.PartyConsent,
+      salesforce.ProcessException,
+      salesforce.Product2,
+      salesforce.ServiceResource,
+      salesforce.Solution,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "What"
+    queryable = true
+  }
+  salesforce.Picklist Subject {
+    apiName = "Event.Subject"
+    label = "Subject"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.EventSubject
+  }
+  salesforce.Text Location {
+    apiName = "Event.Location"
+    label = "Location"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Checkbox IsAllDayEvent {
+    apiName = "Event.IsAllDayEvent"
+    label = "All-Day Event"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ActivityDateTime {
+    apiName = "Event.ActivityDateTime"
+    label = "Due Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date ActivityDate {
+    apiName = "Event.ActivityDate"
+    label = "Due Date Only"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number DurationInMinutes {
+    apiName = "Event.DurationInMinutes"
+    label = "Duration"
+    precision = 8
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime StartDateTime {
+    apiName = "Event.StartDateTime"
+    label = "Start Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime EndDateTime {
+    apiName = "Event.EndDateTime"
+    label = "End Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "Event.EndDate"
+    label = "End Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Event.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "Event.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Account"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Event.OwnerId"
+    label = "Assigned To ID"
+    referenceTo = [
+      "Calendar",
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPrivate {
+    apiName = "Event.IsPrivate"
+    label = "Private"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ShowAs {
+    apiName = "Event.ShowAs"
+    label = "Show Time As"
+    valueSet = [
+      {
+        fullName = "Busy"
+        default = true
+        label = "Busy"
+        isActive = true
+      },
+      {
+        fullName = "OutOfOffice"
+        default = false
+        label = "Out of Office"
+        isActive = true
+      },
+      {
+        fullName = "Free"
+        default = false
+        label = "Free"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Event.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsChild {
+    apiName = "Event.IsChild"
+    label = "Is Child"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsGroupEvent {
+    apiName = "Event.IsGroupEvent"
+    label = "Is Group Event"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist GroupEventType {
+    apiName = "Event.GroupEventType"
+    label = "Group Event Type"
+    valueSet = [
+      {
+        fullName = "0"
+        default = true
+        label = "Non-group Event"
+        isActive = true
+      },
+      {
+        fullName = "1"
+        default = false
+        label = "Group Event"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Proposed Event"
+        isActive = true
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "IsRecurrence2 Series Pattern"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Event.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Event.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Event.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Event.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Event.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsArchived {
+    apiName = "Event.IsArchived"
+    label = "Archived"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RecurrenceActivityId {
+    apiName = "Event.RecurrenceActivityId"
+    label = "Recurrence Activity ID"
+    referenceTo = [
+      salesforce.Event,
+    ]
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsRecurrence {
+    apiName = "Event.IsRecurrence"
+    label = "Create Recurring Series of Events"
+    defaultValue = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime RecurrenceStartDateTime {
+    apiName = "Event.RecurrenceStartDateTime"
+    label = "Recurrence Start"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date RecurrenceEndDateOnly {
+    apiName = "Event.RecurrenceEndDateOnly"
+    label = "Recurrence End"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist RecurrenceTimeZoneSidKey {
+    apiName = "Event.RecurrenceTimeZoneSidKey"
+    label = "Recurrence Time Zone"
+    valueSet = [
+      {
+        fullName = "Pacific/Kiritimati"
+        default = false
+        label = "(GMT+14:00) Line Islands Time (Pacific/Kiritimati)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Chatham"
+        default = false
+        label = "(GMT+13:45) Chatham Daylight Time (Pacific/Chatham)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Auckland"
+        default = false
+        label = "(GMT+13:00) New Zealand Daylight Time (Pacific/Auckland)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Enderbury"
+        default = false
+        label = "(GMT+13:00) Phoenix Islands Time (Pacific/Enderbury)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Fiji"
+        default = false
+        label = "(GMT+13:00) Fiji Summer Time (Pacific/Fiji)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Tongatapu"
+        default = false
+        label = "(GMT+13:00) Tonga Standard Time (Pacific/Tongatapu)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kamchatka"
+        default = false
+        label = "(GMT+12:00) Petropavlovsk-Kamchatski Standard Time (Asia/Kamchatka)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Norfolk"
+        default = false
+        label = "(GMT+12:00) Norfolk Island Daylight Time (Pacific/Norfolk)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Lord_Howe"
+        default = false
+        label = "(GMT+11:00) Lord Howe Daylight Time (Australia/Lord_Howe)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Sydney"
+        default = false
+        label = "(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Guadalcanal"
+        default = false
+        label = "(GMT+11:00) Solomon Islands Time (Pacific/Guadalcanal)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Adelaide"
+        default = false
+        label = "(GMT+10:30) Australian Central Daylight Time (Australia/Adelaide)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Brisbane"
+        default = false
+        label = "(GMT+10:00) Australian Eastern Standard Time (Australia/Brisbane)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Darwin"
+        default = false
+        label = "(GMT+09:30) Australian Central Standard Time (Australia/Darwin)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Seoul"
+        default = false
+        label = "(GMT+09:00) Korean Standard Time (Asia/Seoul)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tokyo"
+        default = false
+        label = "(GMT+09:00) Japan Standard Time (Asia/Tokyo)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Hong_Kong"
+        default = false
+        label = "(GMT+08:00) Hong Kong Standard Time (Asia/Hong_Kong)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kuala_Lumpur"
+        default = false
+        label = "(GMT+08:00) Malaysia Time (Asia/Kuala_Lumpur)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Manila"
+        default = false
+        label = "(GMT+08:00) Philippine Standard Time (Asia/Manila)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Shanghai"
+        default = false
+        label = "(GMT+08:00) China Standard Time (Asia/Shanghai)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Singapore"
+        default = false
+        label = "(GMT+08:00) Singapore Standard Time (Asia/Singapore)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Taipei"
+        default = false
+        label = "(GMT+08:00) Taipei Standard Time (Asia/Taipei)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Perth"
+        default = false
+        label = "(GMT+08:00) Australian Western Standard Time (Australia/Perth)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Bangkok"
+        default = false
+        label = "(GMT+07:00) Indochina Time (Asia/Bangkok)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Ho_Chi_Minh"
+        default = false
+        label = "(GMT+07:00) Indochina Time (Asia/Ho_Chi_Minh)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Jakarta"
+        default = false
+        label = "(GMT+07:00) Western Indonesia Time (Asia/Jakarta)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Rangoon"
+        default = false
+        label = "(GMT+06:30) Myanmar Time (Asia/Rangoon)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Dhaka"
+        default = false
+        label = "(GMT+06:00) Bangladesh Standard Time (Asia/Dhaka)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kathmandu"
+        default = false
+        label = "(GMT+05:45) Nepal Time (Asia/Kathmandu)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Colombo"
+        default = false
+        label = "(GMT+05:30) India Standard Time (Asia/Colombo)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kolkata"
+        default = false
+        label = "(GMT+05:30) India Standard Time (Asia/Kolkata)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Karachi"
+        default = false
+        label = "(GMT+05:00) Pakistan Standard Time (Asia/Karachi)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tashkent"
+        default = false
+        label = "(GMT+05:00) Uzbekistan Standard Time (Asia/Tashkent)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Yekaterinburg"
+        default = false
+        label = "(GMT+05:00) Yekaterinburg Standard Time (Asia/Yekaterinburg)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kabul"
+        default = false
+        label = "(GMT+04:30) Afghanistan Time (Asia/Kabul)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Baku"
+        default = false
+        label = "(GMT+04:00) Azerbaijan Standard Time (Asia/Baku)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Dubai"
+        default = false
+        label = "(GMT+04:00) Gulf Standard Time (Asia/Dubai)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tbilisi"
+        default = false
+        label = "(GMT+04:00) Georgia Standard Time (Asia/Tbilisi)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Yerevan"
+        default = false
+        label = "(GMT+04:00) Armenia Standard Time (Asia/Yerevan)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tehran"
+        default = false
+        label = "(GMT+03:30) Iran Standard Time (Asia/Tehran)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Nairobi"
+        default = false
+        label = "(GMT+03:00) East Africa Time (Africa/Nairobi)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Baghdad"
+        default = false
+        label = "(GMT+03:00) Arabian Standard Time (Asia/Baghdad)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kuwait"
+        default = false
+        label = "(GMT+03:00) Arabian Standard Time (Asia/Kuwait)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Riyadh"
+        default = false
+        label = "(GMT+03:00) Arabian Standard Time (Asia/Riyadh)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Istanbul"
+        default = false
+        label = "(GMT+03:00) Eastern European Standard Time (Europe/Istanbul)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Minsk"
+        default = false
+        label = "(GMT+03:00) Moscow Standard Time (Europe/Minsk)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Moscow"
+        default = false
+        label = "(GMT+03:00) Moscow Standard Time (Europe/Moscow)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Cairo"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Africa/Cairo)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Johannesburg"
+        default = false
+        label = "(GMT+02:00) South Africa Standard Time (Africa/Johannesburg)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Beirut"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Asia/Beirut)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Jerusalem"
+        default = false
+        label = "(GMT+02:00) Israel Standard Time (Asia/Jerusalem)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Athens"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Europe/Athens)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Bucharest"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Europe/Bucharest)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Helsinki"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Europe/Helsinki)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Algiers"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Africa/Algiers)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Casablanca"
+        default = false
+        label = "(GMT+01:00) Western European Summer Time (Africa/Casablanca)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Amsterdam"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Amsterdam)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Berlin"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Berlin)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Brussels"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Brussels)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Paris"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Paris)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Prague"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Prague)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Rome"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Rome)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Dublin"
+        default = false
+        label = "(GMT+00:00) Greenwich Mean Time (Europe/Dublin)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Lisbon"
+        default = false
+        label = "(GMT+00:00) Western European Standard Time (Europe/Lisbon)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/London"
+        default = false
+        label = "(GMT+00:00) Greenwich Mean Time (Europe/London)"
+        isActive = true
+      },
+      {
+        fullName = "GMT"
+        default = false
+        label = "(GMT+00:00) Greenwich Mean Time (GMT)"
+        isActive = true
+      },
+      {
+        fullName = "America/Scoresbysund"
+        default = false
+        label = "(GMT-01:00) East Greenland Standard Time (America/Scoresbysund)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/Azores"
+        default = false
+        label = "(GMT-01:00) Azores Standard Time (Atlantic/Azores)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/Cape_Verde"
+        default = false
+        label = "(GMT-01:00) Cape Verde Standard Time (Atlantic/Cape_Verde)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/South_Georgia"
+        default = false
+        label = "(GMT-02:00) South Georgia Time (Atlantic/South_Georgia)"
+        isActive = true
+      },
+      {
+        fullName = "America/Argentina/Buenos_Aires"
+        default = false
+        label = "(GMT-03:00) Argentina Standard Time (America/Argentina/Buenos_Aires)"
+        isActive = true
+      },
+      {
+        fullName = "America/Santiago"
+        default = false
+        label = "(GMT-03:00) Chile Summer Time (America/Santiago)"
+        isActive = true
+      },
+      {
+        fullName = "America/Sao_Paulo"
+        default = false
+        label = "(GMT-03:00) Brasilia Standard Time (America/Sao_Paulo)"
+        isActive = true
+      },
+      {
+        fullName = "America/St_Johns"
+        default = false
+        label = "(GMT-03:30) Newfoundland Standard Time (America/St_Johns)"
+        isActive = true
+      },
+      {
+        fullName = "America/Caracas"
+        default = false
+        label = "(GMT-04:00) Venezuela Time (America/Caracas)"
+        isActive = true
+      },
+      {
+        fullName = "America/Halifax"
+        default = false
+        label = "(GMT-04:00) Atlantic Standard Time (America/Halifax)"
+        isActive = true
+      },
+      {
+        fullName = "America/Puerto_Rico"
+        default = false
+        label = "(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/Bermuda"
+        default = false
+        label = "(GMT-04:00) Atlantic Standard Time (Atlantic/Bermuda)"
+        isActive = true
+      },
+      {
+        fullName = "America/Bogota"
+        default = false
+        label = "(GMT-05:00) Colombia Standard Time (America/Bogota)"
+        isActive = true
+      },
+      {
+        fullName = "America/Indiana/Indianapolis"
+        default = false
+        label = "(GMT-05:00) Eastern Standard Time (America/Indiana/Indianapolis)"
+        isActive = true
+      },
+      {
+        fullName = "America/Lima"
+        default = false
+        label = "(GMT-05:00) Peru Standard Time (America/Lima)"
+        isActive = true
+      },
+      {
+        fullName = "America/New_York"
+        default = false
+        label = "(GMT-05:00) Eastern Standard Time (America/New_York)"
+        isActive = true
+      },
+      {
+        fullName = "America/Panama"
+        default = false
+        label = "(GMT-05:00) Eastern Standard Time (America/Panama)"
+        isActive = true
+      },
+      {
+        fullName = "America/Chicago"
+        default = false
+        label = "(GMT-06:00) Central Standard Time (America/Chicago)"
+        isActive = true
+      },
+      {
+        fullName = "America/El_Salvador"
+        default = false
+        label = "(GMT-06:00) Central Standard Time (America/El_Salvador)"
+        isActive = true
+      },
+      {
+        fullName = "America/Mexico_City"
+        default = false
+        label = "(GMT-06:00) Central Standard Time (America/Mexico_City)"
+        isActive = true
+      },
+      {
+        fullName = "America/Denver"
+        default = false
+        label = "(GMT-07:00) Mountain Standard Time (America/Denver)"
+        isActive = true
+      },
+      {
+        fullName = "America/Mazatlan"
+        default = false
+        label = "(GMT-07:00) Mexican Pacific Standard Time (America/Mazatlan)"
+        isActive = true
+      },
+      {
+        fullName = "America/Phoenix"
+        default = false
+        label = "(GMT-07:00) Mountain Standard Time (America/Phoenix)"
+        isActive = true
+      },
+      {
+        fullName = "America/Los_Angeles"
+        default = false
+        label = "(GMT-08:00) Pacific Standard Time (America/Los_Angeles)"
+        isActive = true
+      },
+      {
+        fullName = "America/Tijuana"
+        default = false
+        label = "(GMT-08:00) Pacific Standard Time (America/Tijuana)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Pitcairn"
+        default = false
+        label = "(GMT-08:00) Pitcairn Time (Pacific/Pitcairn)"
+        isActive = true
+      },
+      {
+        fullName = "America/Anchorage"
+        default = false
+        label = "(GMT-09:00) Alaska Standard Time (America/Anchorage)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Gambier"
+        default = false
+        label = "(GMT-09:00) Gambier Time (Pacific/Gambier)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Marquesas"
+        default = false
+        label = "(GMT-09:30) Marquesas Time (Pacific/Marquesas)"
+        isActive = true
+      },
+      {
+        fullName = "America/Adak"
+        default = false
+        label = "(GMT-10:00) Hawaii-Aleutian Standard Time (America/Adak)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Honolulu"
+        default = false
+        label = "(GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Niue"
+        default = false
+        label = "(GMT-11:00) Niue Time (Pacific/Niue)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Pago_Pago"
+        default = false
+        label = "(GMT-11:00) Samoa Standard Time (Pacific/Pago_Pago)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist RecurrenceType {
+    apiName = "Event.RecurrenceType"
+    label = "Recurrence Type"
+    valueSet = [
+      {
+        fullName = "RecursDaily"
+        default = false
+        label = "Recurs Daily"
+        isActive = true
+      },
+      {
+        fullName = "RecursEveryWeekday"
+        default = false
+        label = "Recurs Every Weekday"
+        isActive = true
+      },
+      {
+        fullName = "RecursMonthly"
+        default = false
+        label = "Recurs Monthly"
+        isActive = true
+      },
+      {
+        fullName = "RecursMonthlyNth"
+        default = false
+        label = "Recurs Monthly Nth"
+        isActive = true
+      },
+      {
+        fullName = "RecursWeekly"
+        default = false
+        label = "Recurs Weekly"
+        isActive = true
+      },
+      {
+        fullName = "RecursYearly"
+        default = false
+        label = "Recurs Yearly"
+        isActive = true
+      },
+      {
+        fullName = "RecursYearlyNth"
+        default = false
+        label = "Recurs Yearly Nth"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number RecurrenceInterval {
+    apiName = "Event.RecurrenceInterval"
+    label = "Recurrence Interval"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number RecurrenceDayOfWeekMask {
+    apiName = "Event.RecurrenceDayOfWeekMask"
+    label = "Recurrence Day of Week Mask"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number RecurrenceDayOfMonth {
+    apiName = "Event.RecurrenceDayOfMonth"
+    label = "Recurrence Day of Month"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist RecurrenceInstance {
+    apiName = "Event.RecurrenceInstance"
+    label = "Recurrence Instance"
+    valueSet = [
+      {
+        fullName = "First"
+        default = false
+        label = "1st"
+        isActive = true
+      },
+      {
+        fullName = "Second"
+        default = false
+        label = "2nd"
+        isActive = true
+      },
+      {
+        fullName = "Third"
+        default = false
+        label = "3rd"
+        isActive = true
+      },
+      {
+        fullName = "Fourth"
+        default = false
+        label = "4th"
+        isActive = true
+      },
+      {
+        fullName = "Last"
+        default = false
+        label = "last"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist RecurrenceMonthOfYear {
+    apiName = "Event.RecurrenceMonthOfYear"
+    label = "Recurrence Month of Year"
+    valueSet = [
+      {
+        fullName = "January"
+        default = false
+        label = "January"
+        isActive = true
+      },
+      {
+        fullName = "February"
+        default = false
+        label = "February"
+        isActive = true
+      },
+      {
+        fullName = "March"
+        default = false
+        label = "March"
+        isActive = true
+      },
+      {
+        fullName = "April"
+        default = false
+        label = "April"
+        isActive = true
+      },
+      {
+        fullName = "May"
+        default = false
+        label = "May"
+        isActive = true
+      },
+      {
+        fullName = "June"
+        default = false
+        label = "June"
+        isActive = true
+      },
+      {
+        fullName = "July"
+        default = false
+        label = "July"
+        isActive = true
+      },
+      {
+        fullName = "August"
+        default = false
+        label = "August"
+        isActive = true
+      },
+      {
+        fullName = "September"
+        default = false
+        label = "September"
+        isActive = true
+      },
+      {
+        fullName = "October"
+        default = false
+        label = "October"
+        isActive = true
+      },
+      {
+        fullName = "November"
+        default = false
+        label = "November"
+        isActive = true
+      },
+      {
+        fullName = "December"
+        default = false
+        label = "December"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ReminderDateTime {
+    apiName = "Event.ReminderDateTime"
+    label = "Reminder Date/Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsReminderSet {
+    apiName = "Event.IsReminderSet"
+    label = "Reminder Set"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist EventSubtype {
+    apiName = "Event.EventSubtype"
+    label = "Event Subtype"
+    valueSet = [
+      {
+        fullName = "Event"
+        default = false
+        label = "Event"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsRecurrence2Exclusion {
+    apiName = "Event.IsRecurrence2Exclusion"
+    label = "Historical Event, Not Following Recurrence"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Recurrence2PatternText {
+    apiName = "Event.Recurrence2PatternText"
+    label = "Recurrence Pattern"
+    createable = true
+    updateable = false
+    length = 512
+    queryable = true
+  }
+  salesforce.Picklist Recurrence2PatternVersion {
+    apiName = "Event.Recurrence2PatternVersion"
+    label = "Pattern Version"
+    valueSet = [
+      {
+        fullName = "1"
+        default = false
+        label = "RFC 5545 v4 RRULE"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsRecurrence2 {
+    apiName = "Event.IsRecurrence2"
+    label = "Repeat"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsRecurrence2Exception {
+    apiName = "Event.IsRecurrence2Exception"
+    label = "Is Exception"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime Recurrence2PatternStartDate {
+    apiName = "Event.Recurrence2PatternStartDate"
+    label = "Recurrence Pattern Start Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Recurrence2PatternTimeZone {
+    apiName = "Event.Recurrence2PatternTimeZone"
+    label = "Recurrence Pattern Time Zone Reference"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown Attendees {
+    apiName = "Event.Attendees"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown Email {
+    apiName = "Event.Email"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown Phone {
+    apiName = "Event.Phone"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Event.Type"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

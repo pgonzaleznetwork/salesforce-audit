@@ -1,0 +1,11 @@
+salesforce.StandardValueSet Product2Family {
+  fullName = "Product2Family"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "None"
+      default = false
+      label = "None"
+    },
+  ]
+}

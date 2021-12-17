@@ -1,0 +1,9 @@
+salesforce.ProfileSessionSetting PT1_profileSessionSetting1479361192857 {
+  fullName = "PT1_profileSessionSetting1479361192857"
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "admin"
+  sessionPersistence = false
+  sessionTimeout = 0
+  sessionTimeoutWarning = false
+}

@@ -1,0 +1,95 @@
+salesforce.Layout AssetStatePeriod_Asset_State_Period_Layout@bsss {
+  fullName = "AssetStatePeriod-Asset State Period Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetStatePeriod.field.AssetStatePeriodNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetStatePeriod.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssetStatePeriod.field.EndDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetStatePeriod.field.Quantity
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetStatePeriod.field.Amount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssetStatePeriod.field.Mrr
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AssetStatePeriod.field.AssetId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetStatePeriod.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetStatePeriod.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetStatePeriod.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetStatePeriod.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AssetStatePeriod,
+  ]
+}

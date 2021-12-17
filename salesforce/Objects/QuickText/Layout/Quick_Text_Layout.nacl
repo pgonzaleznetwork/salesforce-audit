@@ -1,0 +1,55 @@
+salesforce.Layout QuickText_Quick_Text_Layout@bss {
+  fullName = "QuickText-Quick Text Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.QuickText.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.QuickText.field.Message
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.QuickText.field.Category
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.QuickText.field.Channel
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.QuickText.field.IsInsertable
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "IsInsertable",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.QuickText,
+  ]
+}

@@ -1,0 +1,47 @@
+type salesforce.PicklistValue {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string color {
+  }
+  boolean default {
+  }
+  string description {
+  }
+  boolean isActive {
+  }
+  boolean allowEmail {
+  }
+  boolean closed {
+  }
+  string controllingFieldValues {
+  }
+  boolean converted {
+  }
+  boolean cssExposed {
+  }
+  boolean highPriority {
+  }
+  number probability {
+  }
+  string reverseRole {
+  }
+  boolean reviewed {
+  }
+  boolean won {
+  }
+  metadataType = "PicklistValue"
+}

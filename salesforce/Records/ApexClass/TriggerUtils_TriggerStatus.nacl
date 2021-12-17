@@ -1,0 +1,32 @@
+salesforce.ApexClass TriggerUtils_TriggerStatus {
+  apiVersion = 45
+  status = "Active"
+  fullName = "TriggerUtils_TriggerStatus"
+  content = file("salesforce/Records/ApexClass/TriggerUtils_TriggerStatus.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Trigger_Context_Status__mdt
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_After_Delete__c
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_After_Insert__c
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_After_Undelete__c
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_After_Update__c
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_Before_Delete__c
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_Before_Insert__c
+    },
+    {
+      reference = salesforce.Trigger_Context_Status__mdt.field.Enable_Before_Update__c
+    },
+  ]
+}

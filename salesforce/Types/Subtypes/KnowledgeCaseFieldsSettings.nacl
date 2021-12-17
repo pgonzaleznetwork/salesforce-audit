@@ -1,0 +1,19 @@
+type salesforce.KnowledgeCaseFieldsSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.KnowledgeCaseField>" field {
+  }
+  metadataType = "KnowledgeCaseFieldsSettings"
+}

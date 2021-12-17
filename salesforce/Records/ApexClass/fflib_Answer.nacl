@@ -1,0 +1,11 @@
+salesforce.ApexClass fflib_Answer {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_Answer"
+  content = file("salesforce/Records/ApexClass/fflib_Answer.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_InvocationOnMock
+    },
+  ]
+}

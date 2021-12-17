@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Boat__c_update_picture@uuvu {
+  fullName = "Boat__c.update_picture"
+  field = salesforce.Boat__c.field.Picture__c
+  formula = "\"new value right here\""
+  name = "update picture"
+  notifyAssignee = false
+  operation = "Formula"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

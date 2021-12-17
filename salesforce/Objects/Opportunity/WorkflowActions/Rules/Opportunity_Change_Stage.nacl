@@ -1,0 +1,21 @@
+salesforce.WorkflowRule Opportunity_Change_Stage@vs {
+  fullName = "Opportunity.Change Stage"
+  actions = [
+    {
+      name = salesforce.WorkflowFieldUpdate.instance.Opportunity_update_stage@vu
+      type = "FieldUpdate"
+    },
+  ]
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.Opportunity.field.StageName
+      operation = "equals"
+      value = "Prospecting"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

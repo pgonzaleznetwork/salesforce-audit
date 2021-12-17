@@ -1,0 +1,23 @@
+type salesforce.DataCategory {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.DataCategory dataCategory {
+  }
+  string label {
+  }
+  string name {
+  }
+  metadataType = "DataCategory"
+}

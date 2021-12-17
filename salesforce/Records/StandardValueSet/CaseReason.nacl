@@ -1,0 +1,48 @@
+salesforce.StandardValueSet CaseReason {
+  fullName = "CaseReason"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Installation"
+      default = false
+      label = "Installation"
+      cssExposed = false
+    },
+    {
+      fullName = "Equipment Complexity"
+      default = false
+      label = "Equipment Complexity"
+      cssExposed = false
+    },
+    {
+      fullName = "Performance"
+      default = false
+      label = "Performance"
+      cssExposed = false
+    },
+    {
+      fullName = "Breakdown"
+      default = false
+      label = "Breakdown"
+      cssExposed = false
+    },
+    {
+      fullName = "Equipment Design"
+      default = false
+      label = "Equipment Design"
+      cssExposed = false
+    },
+    {
+      fullName = "Feedback"
+      default = false
+      label = "Feedback"
+      cssExposed = false
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+      cssExposed = false
+    },
+  ]
+}

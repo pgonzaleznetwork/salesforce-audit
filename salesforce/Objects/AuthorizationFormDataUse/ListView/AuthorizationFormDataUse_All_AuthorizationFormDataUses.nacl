@@ -1,0 +1,8 @@
+salesforce.ListView AuthorizationFormDataUse_All_AuthorizationFormDataUses {
+  fullName = "AuthorizationFormDataUse.All_AuthorizationFormDataUses"
+  filterScope = "Everything"
+  label = "All Authorization Form Data Uses"
+  _parent = [
+    salesforce.AuthorizationFormDataUse,
+  ]
+}

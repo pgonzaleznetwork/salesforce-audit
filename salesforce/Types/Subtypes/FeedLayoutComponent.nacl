@@ -1,0 +1,39 @@
+type salesforce.FeedLayoutComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string componentType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CaseExperts",
+        "CaseUnifiedFiles",
+        "CustomButtons",
+        "CustomLinks",
+        "Followers",
+        "Following",
+        "HelpAndToolLinks",
+        "Milestones",
+        "SimilarCases",
+        "Topics",
+        "Visualforce",
+      ]
+    }
+  }
+  number height {
+  }
+  string page {
+  }
+  metadataType = "FeedLayoutComponent"
+}

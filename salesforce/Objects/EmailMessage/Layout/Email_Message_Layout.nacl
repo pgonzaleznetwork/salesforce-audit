@@ -1,0 +1,149 @@
+salesforce.Layout EmailMessage_Email_Message_Layout@bss {
+  fullName = "EmailMessage-Email Message Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.EmailMessage.field.RelatedToId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.EmailMessage.field.MessageDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.EmailMessage.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.EmailMessage.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.EmailMessage.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.FromAddress
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.EmailMessage.field.FromName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.ToAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.CcAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.BccAddress
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Message Content"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.Subject
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.HtmlBody
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EmailMessage.field.TextBody
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 0
+      },
+      {
+        actionName = "EmailMessage._ReplyAll"
+        actionType = "QuickAction"
+        sortOrder = 1
+      },
+      {
+        actionName = "EmailMessage._Reply"
+        actionType = "QuickAction"
+        sortOrder = 2
+      },
+      {
+        actionName = "EmailMessage._Forward"
+        actionType = "QuickAction"
+        sortOrder = 3
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedAttachmentList"
+    },
+    {
+      fields = [
+        "NAME",
+        "TYPE",
+      ]
+      relatedList = "RelatedEmailMessagePeopleList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.EmailMessage,
+  ]
+}

@@ -1,0 +1,26 @@
+salesforce.ListView Idea_Ideas_Last_7_Days {
+  fullName = "Idea.Ideas_Last_7_Days"
+  columns = [
+    "IDEA.CREATED_DATE",
+    "IDEA.TITLE",
+    "IDEA.CREATED_BY_NICKNAME",
+    "VOTE_STATS.WEIGHTED_SUM",
+    "IDEA.NUM_COMMENTS",
+    "IDEA.STATUS",
+    "IDEA.CATEGORIES",
+    "COMMUNITY.NAME",
+    "IDEA.IDEA_THEME",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "IDEA.CREATED_DATE"
+      operation = "equals"
+      value = "LAST_N_DAYS:7"
+    },
+  ]
+  label = "Last 7 Days"
+  _parent = [
+    salesforce.Idea,
+  ]
+}

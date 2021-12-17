@@ -1,0 +1,16 @@
+<template>
+    <lightning-card
+        title="Metadata Conflicts"
+        icon-name="custom:custom34">
+        <template if:true={result.data}>
+            <div class="slds-m-around_medium">
+                <template if:true={hasConflicts}>
+                    <p style="color:#F46B6B">{warning}</p>
+                </template>
+                <template if:false={hasConflicts}>
+                    <p style="color:#3FBD82">{warning}</p>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

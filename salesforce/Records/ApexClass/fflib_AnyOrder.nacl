@@ -1,0 +1,32 @@
+salesforce.ApexClass fflib_AnyOrder {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_AnyOrder"
+  content = file("salesforce/Records/ApexClass/fflib_AnyOrder.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodCountRecorder
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodVerifier
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_VerificationMode
+    },
+  ]
+}

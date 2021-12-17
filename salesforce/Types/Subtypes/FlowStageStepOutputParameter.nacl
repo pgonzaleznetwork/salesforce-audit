@@ -1,0 +1,23 @@
+type salesforce.FlowStageStepOutputParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string assignToReference {
+  }
+  string name {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  metadataType = "FlowStageStepOutputParameter"
+}

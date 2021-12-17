@@ -1,0 +1,21 @@
+type salesforce.LayoutColumn {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.LayoutItem>" layoutItems {
+  }
+  string reserved {
+  }
+  metadataType = "LayoutColumn"
+}

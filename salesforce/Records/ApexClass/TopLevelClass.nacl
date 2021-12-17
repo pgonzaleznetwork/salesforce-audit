@@ -1,0 +1,23 @@
+salesforce.ApexClass TopLevelClass {
+  apiVersion = 51
+  status = "Active"
+  fullName = "TopLevelClass"
+  content = file("salesforce/Records/ApexClass/TopLevelClass.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.LeftClass
+    },
+    {
+      reference = salesforce.ApexClass.instance.RightClass
+    },
+    {
+      reference = salesforce.Lead
+    },
+    {
+      reference = salesforce.Lead.field.Connected_Org__c
+    },
+    {
+      reference = salesforce.Lead.field.ProductInterest__c
+    },
+  ]
+}

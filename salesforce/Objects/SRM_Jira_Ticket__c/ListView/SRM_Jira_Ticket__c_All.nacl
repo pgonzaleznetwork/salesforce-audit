@@ -1,0 +1,15 @@
+salesforce.ListView SRM_Jira_Ticket__c_All {
+  fullName = "SRM_Jira_Ticket__c.All"
+  columns = [
+    "NAME",
+    "Status__c",
+    "Case_Subject__c",
+    "Owner__c",
+    "Rebased_By__c",
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

@@ -1,0 +1,14 @@
+salesforce.ApexClass SRM_GeneratePackageFlowAction {
+  apiVersion = 48
+  status = "Active"
+  fullName = "SRM_GeneratePackageFlowAction"
+  content = file("salesforce/Records/ApexClass/SRM_GeneratePackageFlowAction.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_PackageXML
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+  ]
+}

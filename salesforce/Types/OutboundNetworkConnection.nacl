@@ -1,0 +1,56 @@
+type salesforce.OutboundNetworkConnection {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string connectionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AwsPrivateLink",
+      ]
+    }
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  string label {
+  }
+  salesforce.OutboundNetworkConnProperty outboundNetworkConnProperties {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Allocating",
+        "DeletedRemotely",
+        "PendingAcceptance",
+        "PendingActivation",
+        "Ready",
+        "RejectedRemotely",
+        "TeardownInProgress",
+        "Unprovisioned",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "outboundNetworkConnection"
+  dirName = "outboundNetworkConnections"
+  metadataType = "OutboundNetworkConnection"
+}

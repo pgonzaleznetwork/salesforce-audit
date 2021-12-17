@@ -1,0 +1,20 @@
+salesforce.ApexClass ClassReadingField {
+  apiVersion = 50
+  status = "Active"
+  fullName = "ClassReadingField"
+  content = file("salesforce/Records/ApexClass/ClassReadingField.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.CustomerPriority__c
+    },
+    {
+      reference = salesforce.Field_referencing__mdt
+    },
+    {
+      reference = salesforce.Field_referencing__mdt.field.second_field__c
+    },
+  ]
+}

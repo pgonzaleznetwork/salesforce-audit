@@ -1,0 +1,50 @@
+type salesforce.AlternativePaymentMethod {
+  salesforce.Lookup AccountId {
+    apiName = "AlternativePaymentMethod.AccountId"
+    _hidden_value = true
+  }
+  string AuditEmail {
+    _hidden_value = true
+  }
+  string Comments {
+    _hidden_value = true
+  }
+  string CompanyName {
+    _hidden_value = true
+  }
+  string Email {
+    _hidden_value = true
+  }
+  string GatewayToken {
+    _hidden_value = true
+  }
+  string GatewayTokenDetails {
+    _hidden_value = true
+  }
+  string IpAddress {
+    _hidden_value = true
+  }
+  string MacAddress {
+    _hidden_value = true
+  }
+  string NickName {
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AlternativePaymentMethod.OwnerId"
+    _hidden_value = true
+  }
+  salesforce.Lookup PaymentGatewayId {
+    apiName = "AlternativePaymentMethod.PaymentGatewayId"
+    _hidden_value = true
+  }
+  string Phone {
+    _hidden_value = true
+  }
+  string ProcessingMode {
+    _hidden_value = true
+  }
+  string Status {
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,145 @@
+type salesforce.QuickAction {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Action",
+        "ScreenAction",
+      ]
+    }
+  }
+  string canvas {
+  }
+  string description {
+  }
+  "List<salesforce.FieldOverride>" fieldOverrides {
+  }
+  string flowDefinition {
+  }
+  serviceid fullName {
+  }
+  number height {
+  }
+  string icon {
+    foreignKeyDomain = [
+      salesforce.StaticResource,
+    ]
+  }
+  boolean isProtected {
+  }
+  string label {
+  }
+  string lightningComponent {
+  }
+  string lightningWebComponent {
+  }
+  boolean optionsCreateFeedItem {
+  }
+  string page {
+  }
+  salesforce.QuickActionLayout quickActionLayout {
+  }
+  salesforce.QuickActionSendEmailOptions quickActionSendEmailOptions {
+  }
+  string standardLabel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AddMember",
+        "AddRecord",
+        "ChangeDueDate",
+        "ChangePriority",
+        "ChangeStatus",
+        "CreateNew",
+        "CreateNewRecordType",
+        "Custom",
+        "Defer",
+        "EditDescription",
+        "EnrollInProgram",
+        "Escalate",
+        "EscalateToRecord",
+        "Forward",
+        "LogACall",
+        "LogANote",
+        "ModifyAppointment",
+        "New",
+        "NewChild",
+        "NewChildRecordType",
+        "NewRecordType",
+        "OfferFeedback",
+        "Quick",
+        "QuickRecordType",
+        "Quip",
+        "Reply",
+        "ReplyAll",
+        "RequestFeedback",
+        "ScheduleAppointment",
+        "SendEmail",
+        "SocialPost",
+        "Update",
+        "UpdateRecordType",
+      ]
+    }
+  }
+  string successMessage {
+  }
+  string targetObject {
+  }
+  string targetParentField {
+  }
+  string targetRecordType {
+    foreignKeyDomain = [
+      salesforce.RecordType,
+    ]
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Canvas",
+        "CaseComment",
+        "ChangeDueDate",
+        "ChangePriority",
+        "ChangeStatus",
+        "Create",
+        "Email",
+        "Flow",
+        "LightningComponent",
+        "LightningWebComponent",
+        "LogACall",
+        "MobileCreateFull",
+        "MobileExtension",
+        "MobileSmartActions",
+        "Post",
+        "Quip",
+        "SendEmail",
+        "SocialPost",
+        "Update",
+        "VisualforcePage",
+      ]
+    }
+  }
+  number width {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "quickAction"
+  dirName = "quickActions"
+  metadataType = "QuickAction"
+}

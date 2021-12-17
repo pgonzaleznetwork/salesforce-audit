@@ -1,0 +1,29 @@
+salesforce.ApexClass SimilarBoatsControllerTest {
+  apiVersion = 48
+  status = "Active"
+  fullName = "SimilarBoatsControllerTest"
+  content = file("salesforce/Records/ApexClass/SimilarBoatsControllerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.GenerateData
+    },
+    {
+      reference = salesforce.ApexClass.instance.SimilarBoatsController
+    },
+    {
+      reference = salesforce.ApexPage.instance.SimilarBoats
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Length__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Price__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Year_Built__c
+    },
+  ]
+}

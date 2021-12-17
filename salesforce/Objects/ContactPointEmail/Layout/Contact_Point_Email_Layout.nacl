@@ -1,0 +1,56 @@
+salesforce.Layout ContactPointEmail_Contact_Point_Email_Layout@bsss {
+  fullName = "ContactPointEmail-Contact Point Email Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointEmail.field.IsPrimary
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointEmail.field.EmailAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointEmail.field.ParentId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "ContactPoint",
+        "DataUsePurpose",
+        "PrivacyConsentStatus",
+      ]
+      relatedList = "ContactPointConsents"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ContactPointEmail,
+  ]
+}

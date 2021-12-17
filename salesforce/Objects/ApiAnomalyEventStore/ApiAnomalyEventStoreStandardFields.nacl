@@ -1,0 +1,358 @@
+type salesforce.ApiAnomalyEventStore {
+  serviceid Id {
+    apiName = "ApiAnomalyEventStore.Id"
+    label = "API Anomaly Event Store ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.AutoNumber ApiAnomalyEventNumber {
+    apiName = "ApiAnomalyEventStore.ApiAnomalyEventNumber"
+    label = "Event Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApiAnomalyEventStore.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApiAnomalyEventStore.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApiAnomalyEventStore.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text EventIdentifier {
+    apiName = "ApiAnomalyEventStore.EventIdentifier"
+    label = "Event ID"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "ApiAnomalyEventStore.UserId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "User"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Username {
+    apiName = "ApiAnomalyEventStore.Username"
+    label = "Username"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EventDate {
+    apiName = "ApiAnomalyEventStore.EventDate"
+    label = "Event Date"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SessionKey {
+    apiName = "ApiAnomalyEventStore.SessionKey"
+    label = "Session Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 24
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LoginKey {
+    apiName = "ApiAnomalyEventStore.LoginKey"
+    label = "Login Key"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 24
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text SourceIp {
+    apiName = "ApiAnomalyEventStore.SourceIp"
+    label = "Source IP Address"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PolicyId {
+    apiName = "ApiAnomalyEventStore.PolicyId"
+    label = "Transaction Security Policy ID"
+    referenceTo = [
+      salesforce.TransactionSecurityPolicy,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Policy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PolicyOutcome {
+    apiName = "ApiAnomalyEventStore.PolicyOutcome"
+    label = "Policy Outcome"
+    valueSet = [
+      {
+        fullName = "Block"
+        default = false
+        label = "Block"
+        isActive = true
+      },
+      {
+        fullName = "FreezeUser"
+        default = false
+        label = "FreezeUser"
+        isActive = true
+      },
+      {
+        fullName = "EndSession"
+        default = false
+        label = "EndSession"
+        isActive = true
+      },
+      {
+        fullName = "Notified"
+        default = false
+        label = "Notified"
+        isActive = true
+      },
+      {
+        fullName = "NoAction"
+        default = false
+        label = "NoAction"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAInitiated"
+        default = false
+        label = "TwoFAInitiated"
+        isActive = true
+      },
+      {
+        fullName = "TwoFASucceeded"
+        default = false
+        label = "TwoFASucceeded"
+        isActive = true
+      },
+      {
+        fullName = "TwoFADenied"
+        default = false
+        label = "TwoFADenied"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAInProgress"
+        default = false
+        label = "TwoFAInProgress"
+        isActive = true
+      },
+      {
+        fullName = "TwoFARecoverableError"
+        default = false
+        label = "TwoFARecoverableError"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAFailedGeneralError"
+        default = false
+        label = "TwoFAFailedGeneralError"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAFailedInvalidCode"
+        default = false
+        label = "TwoFAFailedInvalidCode"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAFailedTooManyAttempts"
+        default = false
+        label = "TwoFAFailedTooManyAttempts"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAAutomatedSuccess"
+        default = false
+        label = "TwoFAAutomatedSuccess"
+        isActive = true
+      },
+      {
+        fullName = "TwoFAReportedDenied"
+        default = false
+        label = "TwoFAReportedDenied"
+        isActive = true
+      },
+      {
+        fullName = "TwoFANoAction"
+        default = false
+        label = "TwoFANoAction"
+        isActive = true
+      },
+      {
+        fullName = "FailedPasswordLockout"
+        default = false
+        label = "FailedPasswordLockout"
+        isActive = true
+      },
+      {
+        fullName = "FailedInvalidPassword"
+        default = false
+        label = "FailedInvalidPassword"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number EvaluationTime {
+    apiName = "ApiAnomalyEventStore.EvaluationTime"
+    label = "Evaluation Time"
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Operation {
+    apiName = "ApiAnomalyEventStore.Operation"
+    label = "Operation"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea QueriedEntities {
+    apiName = "ApiAnomalyEventStore.QueriedEntities"
+    label = "Queried Entities"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text RequestIdentifier {
+    apiName = "ApiAnomalyEventStore.RequestIdentifier"
+    label = "Request Identifier"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number RowsProcessed {
+    apiName = "ApiAnomalyEventStore.RowsProcessed"
+    label = "Rows Processed"
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Score {
+    apiName = "ApiAnomalyEventStore.Score"
+    label = "Score"
+    precision = 12
+    scale = 6
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea SecurityEventData {
+    apiName = "ApiAnomalyEventStore.SecurityEventData"
+    label = "Event Data"
+    createable = false
+    updateable = false
+    length = 10000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Summary {
+    apiName = "ApiAnomalyEventStore.Summary"
+    label = "Summary"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Uri {
+    apiName = "ApiAnomalyEventStore.Uri"
+    label = "Uri"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea UserAgent {
+    apiName = "ApiAnomalyEventStore.UserAgent"
+    label = "User Agent"
+    createable = false
+    updateable = false
+    length = 1000
+    queryable = true
+    _hidden_value = true
+  }
+}

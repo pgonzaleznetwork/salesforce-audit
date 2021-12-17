@@ -1,0 +1,35 @@
+settings salesforce.ProductSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableCascadeActivateToRelatedPrices {
+  }
+  boolean enableQuantitySchedule {
+  }
+  boolean enableRevenueSchedule {
+  }
+  boolean enableSecureGuestUserRecordAccess {
+  }
+  serviceid fullName {
+  }
+  boolean enableMySettings {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ProductSettings"
+}

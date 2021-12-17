@@ -1,0 +1,22 @@
+salesforce.WebLink Account_Billing {
+  fullName = "Account.Billing"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = true
+  hasScrollbars = true
+  hasToolbar = true
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Billing"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = true
+  showsStatus = true
+  url = "http://www.genwatt.com/genwatt/billing.htm?actname={!Account_Name}"
+  _parent = [
+    salesforce.Account,
+  ]
+}

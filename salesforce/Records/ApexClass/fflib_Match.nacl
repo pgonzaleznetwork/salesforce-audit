@@ -1,0 +1,20 @@
+salesforce.ApexClass fflib_Match {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_Match"
+  content = file("salesforce/Records/ApexClass/fflib_Match.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MatcherDefinitions
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+  ]
+}

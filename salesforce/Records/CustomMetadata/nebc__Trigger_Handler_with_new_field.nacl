@@ -1,0 +1,37 @@
+salesforce.CustomMetadata nebc__Trigger_Handler_with_new_field@uuuvuu {
+  fullName = "nebc__Trigger_Handler.with_new_field"
+  label = "with new field"
+  protected = false
+  values = [
+    {
+      field = "class_to_call__c"
+      value = "triggerdmlsupport"
+    },
+    {
+      field = "nebc__Active__c"
+      value = "true"
+    },
+    {
+      field = "nebc__Apex_Class__c"
+      value = "anything"
+    },
+    {
+      field = "nebc__Description__c"
+    },
+    {
+      field = "nebc__Event__c"
+      value = "BEFORE_INSERT"
+    },
+    {
+      field = "nebc__Order__c"
+      value = "0"
+    },
+    {
+      field = "nebc__Parameters__c"
+    },
+    {
+      field = "nebc__SObject__c"
+      value = "any object"
+    },
+  ]
+}

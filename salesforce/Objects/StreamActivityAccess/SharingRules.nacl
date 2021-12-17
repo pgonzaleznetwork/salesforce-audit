@@ -1,0 +1,6 @@
+salesforce.SharingRules StreamActivityAccess {
+  fullName = "StreamActivityAccess"
+  _parent = [
+    salesforce.StreamActivityAccess,
+  ]
+}

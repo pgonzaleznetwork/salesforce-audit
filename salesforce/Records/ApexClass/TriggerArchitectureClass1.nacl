@@ -1,0 +1,17 @@
+salesforce.ApexClass TriggerArchitectureClass1 {
+  apiVersion = 48
+  status = "Active"
+  fullName = "TriggerArchitectureClass1"
+  content = file("salesforce/Records/ApexClass/TriggerArchitectureClass1.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.TriggerDMLSupport
+    },
+    {
+      reference = salesforce.ApexClass.instance.TriggerDispatcher
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

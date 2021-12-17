@@ -1,0 +1,50 @@
+salesforce.ApexClass BoatDataService {
+  apiVersion = 48
+  status = "Active"
+  fullName = "BoatDataService"
+  content = file("salesforce/Records/ApexClass/BoatDataService.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.BoatReview__c
+    },
+    {
+      reference = salesforce.BoatReview__c.field.Boat__c
+    },
+    {
+      reference = salesforce.BoatReview__c.field.Comment__c
+    },
+    {
+      reference = salesforce.BoatReview__c.field.Rating__c
+    },
+    {
+      reference = salesforce.BoatType__c
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.Boat__c.field.BoatType__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Contact__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Length__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Picture__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Price__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Year_Built__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.User
+    },
+  ]
+}

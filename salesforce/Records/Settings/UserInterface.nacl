@@ -1,0 +1,21 @@
+salesforce.UserInterfaceSettings {
+  fullName = "UserInterface"
+  alternateAlohaListView = "true"
+  enableAsyncRelatedLists = false
+  enableClickjackUserPageHeaderless = false
+  enableCollapsibleSections = true
+  enableCollapsibleSideBar = "false"
+  enableCustomObjectTruncate = false
+  enableCustomeSideBarOnAllPages = "false"
+  enableDeleteFieldHistory = false
+  enableExternalObjectAsyncRelatedLists = true
+  enableHoverDetails = true
+  enableInlineEdit = true
+  enableNewPageLayoutEditor = "true"
+  enablePersonalCanvas = true
+  enablePrintableListViews = "true"
+  enableProfileCustomTabsets = "true"
+  enableQuickCreate = true
+  enableRelatedListHovers = "true"
+  enableTabOrganizer = "true"
+}

@@ -1,0 +1,206 @@
+type salesforce.DataUseLegalBasis {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "DataUseLegalBasis"
+  metadataType = "CustomObject"
+  label = "Data Use Legal Basis"
+  actionOverrides = [
+    {
+      actionName = "CancelEdit"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "List"
+      type = "Default"
+    },
+    {
+      actionName = "List"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "List"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "New"
+      type = "Default"
+    },
+    {
+      actionName = "New"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "New"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Tab"
+      type = "Default"
+    },
+    {
+      actionName = "Tab"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Tab"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Small"
+      type = "Default"
+    },
+  ]
+  compactLayoutAssignment = "SYSTEM"
+  enableFeeds = false
+  externalSharingModel = "Private"
+  searchLayouts = {
+    customTabListAdditionalFields = [
+      "Source",
+      "Description",
+      "LastModifiedDate",
+      "LastModifiedBy",
+    ]
+    searchResultsAdditionalFields = [
+      "Source",
+      "Description",
+      "LastModifiedDate",
+      "LastModifiedBy",
+    ]
+  }
+}

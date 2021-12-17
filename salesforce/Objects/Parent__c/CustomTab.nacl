@@ -1,0 +1,8 @@
+salesforce.CustomTab Parent__c {
+  fullName = "Parent__c"
+  customObject = true
+  motif = "Custom28: Cell phone"
+  _parent = [
+    salesforce.Parent__c,
+  ]
+}

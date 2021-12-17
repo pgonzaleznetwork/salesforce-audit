@@ -1,0 +1,26 @@
+salesforce.WorkflowRule Boat__c_My_Workflow_Rule@uuvsu {
+  fullName = "Boat__c.My Workflow_Rule"
+  actions = [
+    {
+      name = salesforce.WorkflowAlert.instance.Boat__c_my_email_alert@uuvuu
+      type = "Alert"
+    },
+  ]
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.Boat__c.field.Name
+      operation = "equals"
+      value = "trigger"
+    },
+    {
+      field = salesforce.Boat__c.field.Picture__c
+      operation = "equals"
+      value = "value"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

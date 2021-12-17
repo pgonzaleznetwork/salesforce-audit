@@ -1,0 +1,11 @@
+salesforce.ApexClass fflib_VerificationMode {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_VerificationMode"
+  content = file("salesforce/Records/ApexClass/fflib_VerificationMode.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+  ]
+}

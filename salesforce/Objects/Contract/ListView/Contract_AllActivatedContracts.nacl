@@ -1,0 +1,15 @@
+salesforce.ListView Contract_AllActivatedContracts {
+  fullName = "Contract.AllActivatedContracts"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CONTRACT.STATUS_CODE"
+      operation = "equals"
+      value = "A"
+    },
+  ]
+  label = "All Activated Contracts"
+  _parent = [
+    salesforce.Contract,
+  ]
+}

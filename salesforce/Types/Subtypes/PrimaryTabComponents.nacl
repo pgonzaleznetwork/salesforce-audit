@@ -1,0 +1,19 @@
+type salesforce.PrimaryTabComponents {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.Container containers {
+  }
+  metadataType = "PrimaryTabComponents"
+}

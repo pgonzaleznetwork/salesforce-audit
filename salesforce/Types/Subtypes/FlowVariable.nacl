@@ -1,0 +1,54 @@
+type salesforce.FlowVariable {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string apexClass {
+  }
+  string description {
+  }
+  boolean isCollection {
+  }
+  boolean isInput {
+  }
+  boolean isOutput {
+  }
+  string name {
+  }
+  string objectType {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  number scale {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Apex",
+        "Boolean",
+        "Currency",
+        "Date",
+        "DateTime",
+        "Multipicklist",
+        "Number",
+        "Picklist",
+        "SObject",
+        "String",
+      ]
+    }
+  }
+  metadataType = "FlowVariable"
+}

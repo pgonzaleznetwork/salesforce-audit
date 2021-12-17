@@ -1,0 +1,8 @@
+salesforce.ListView DataUsePurpose_All_DataUsePurposes {
+  fullName = "DataUsePurpose.All_DataUsePurposes"
+  filterScope = "Everything"
+  label = "All Data Use Purposes"
+  _parent = [
+    salesforce.DataUsePurpose,
+  ]
+}

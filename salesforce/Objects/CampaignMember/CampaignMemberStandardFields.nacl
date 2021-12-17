@@ -1,0 +1,363 @@
+type salesforce.CampaignMember {
+  serviceid Id {
+    apiName = "CampaignMember.Id"
+    label = "Campaign Member ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CampaignMember.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CampaignId {
+    apiName = "CampaignMember.CampaignId"
+    label = "Campaign ID"
+    _required = true
+    referenceTo = [
+      salesforce.Campaign,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Campaign"
+    queryable = true
+  }
+  salesforce.Lookup LeadId {
+    apiName = "CampaignMember.LeadId"
+    label = "Lead ID"
+    referenceTo = [
+      salesforce.Lead,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Lead"
+    queryable = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "CampaignMember.ContactId"
+    label = "Contact ID"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Contact"
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "CampaignMember.Status"
+    label = "Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.CampaignMemberStatus
+  }
+  salesforce.Checkbox HasResponded {
+    apiName = "CampaignMember.HasResponded"
+    label = "Responded"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CampaignMember.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CampaignMember.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CampaignMember.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CampaignMember.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CampaignMember.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date FirstRespondedDate {
+    apiName = "CampaignMember.FirstRespondedDate"
+    label = "First Responded Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Salutation {
+    apiName = "CampaignMember.Salutation"
+    label = "Salutation"
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.Salutation
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CampaignMember.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text FirstName {
+    apiName = "CampaignMember.FirstName"
+    label = "First Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text LastName {
+    apiName = "CampaignMember.LastName"
+    label = "Last Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Title {
+    apiName = "CampaignMember.Title"
+    label = "Title"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 128
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Street {
+    apiName = "CampaignMember.Street"
+    label = "Street"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text City {
+    apiName = "CampaignMember.City"
+    label = "City"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text State {
+    apiName = "CampaignMember.State"
+    label = "State/Province"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PostalCode {
+    apiName = "CampaignMember.PostalCode"
+    label = "Zip/Postal Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Country {
+    apiName = "CampaignMember.Country"
+    label = "Country"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Email Email {
+    apiName = "CampaignMember.Email"
+    label = "Email"
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Phone Phone {
+    apiName = "CampaignMember.Phone"
+    label = "Phone"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Phone Fax {
+    apiName = "CampaignMember.Fax"
+    label = "Fax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Phone MobilePhone {
+    apiName = "CampaignMember.MobilePhone"
+    label = "Mobile"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "CampaignMember.Description"
+    label = "Description"
+    createable = false
+    updateable = false
+    length = 32000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox DoNotCall {
+    apiName = "CampaignMember.DoNotCall"
+    label = "Do Not Call"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox HasOptedOutOfEmail {
+    apiName = "CampaignMember.HasOptedOutOfEmail"
+    label = "Email Opt Out"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox HasOptedOutOfFax {
+    apiName = "CampaignMember.HasOptedOutOfFax"
+    label = "Fax Opt Out"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LeadSource {
+    apiName = "CampaignMember.LeadSource"
+    label = "Lead Source"
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.LeadSource
+    _hidden_value = true
+  }
+  salesforce.Text CompanyOrAccount {
+    apiName = "CampaignMember.CompanyOrAccount"
+    label = "Company (Account)"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Type {
+    apiName = "CampaignMember.Type"
+    label = "Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LeadOrContactId {
+    apiName = "CampaignMember.LeadOrContactId"
+    label = "Related Record ID"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Contact,
+      salesforce.Lead,
+    ]
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LeadOrContactOwnerId {
+    apiName = "CampaignMember.LeadOrContactOwnerId"
+    label = "Related Record Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LeadOrContactOwner"
+    queryable = true
+    _hidden_value = true
+  }
+}

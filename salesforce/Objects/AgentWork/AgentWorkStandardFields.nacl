@@ -1,0 +1,519 @@
+type salesforce.AgentWork {
+  serviceid Id {
+    apiName = "AgentWork.Id"
+    label = "Agent Work ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AgentWork.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AgentWork.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AgentWork.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AgentWork.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AgentWork.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AgentWork.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AgentWork.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AgentWork.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "AgentWork.UserId"
+    label = "User ID"
+    _required = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "User"
+    queryable = true
+  }
+  salesforce.Lookup WorkItemId {
+    apiName = "AgentWork.WorkItemId"
+    label = "WorkItem ID"
+    _required = true
+    referenceTo = [
+      salesforce.Account,
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Case,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.Contact,
+      salesforce.ContactRequest,
+      salesforce.Custom_Object__c,
+      salesforce.Lead,
+      salesforce.Opportunity,
+      salesforce.Order,
+      salesforce.Parent__c,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "WorkItem"
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "AgentWork.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Assigned"
+        default = false
+        label = "Assigned"
+        isActive = true
+      },
+      {
+        fullName = "Unavailable"
+        default = false
+        label = "Unavailable"
+        isActive = true
+      },
+      {
+        fullName = "Declined"
+        default = false
+        label = "Declined"
+        isActive = true
+      },
+      {
+        fullName = "Opened"
+        default = false
+        label = "Opened"
+        isActive = true
+      },
+      {
+        fullName = "Closed"
+        default = false
+        label = "Closed"
+        isActive = true
+      },
+      {
+        fullName = "DeclinedOnPushTimeout"
+        default = false
+        label = "Declined on Push Time-Out"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Transferred"
+        default = false
+        label = "Transferred"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ServiceChannelId {
+    apiName = "AgentWork.ServiceChannelId"
+    label = "Service Channel ID"
+    _required = true
+    referenceTo = [
+      salesforce.ServiceChannel,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ServiceChannel"
+    queryable = true
+  }
+  salesforce.Lookup OriginalQueueId {
+    apiName = "AgentWork.OriginalQueueId"
+    label = "Queue ID"
+    referenceTo = [
+      salesforce.Group,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "OriginalQueue"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number CapacityWeight {
+    apiName = "AgentWork.CapacityWeight"
+    label = "Units of Capacity"
+    precision = 10
+    scale = 2
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Percent CapacityPercentage {
+    apiName = "AgentWork.CapacityPercentage"
+    label = "Percentage of Capacity"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.DateTime RequestDateTime {
+    apiName = "AgentWork.RequestDateTime"
+    label = "Request Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime AcceptDateTime {
+    apiName = "AgentWork.AcceptDateTime"
+    label = "Accept Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime DeclineDateTime {
+    apiName = "AgentWork.DeclineDateTime"
+    label = "Decline Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CloseDateTime {
+    apiName = "AgentWork.CloseDateTime"
+    label = "Close Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SpeedToAnswer {
+    apiName = "AgentWork.SpeedToAnswer"
+    label = "Speed To Answer"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number AgentCapacityWhenDeclined {
+    apiName = "AgentWork.AgentCapacityWhenDeclined"
+    label = "Agent Capacity when Declined"
+    precision = 10
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PendingServiceRoutingId {
+    apiName = "AgentWork.PendingServiceRoutingId"
+    label = "Pending Service Routing ID"
+    referenceTo = [
+      salesforce.PendingServiceRouting,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "PendingServiceRouting"
+    queryable = true
+  }
+  salesforce.Number PushTimeout {
+    apiName = "AgentWork.PushTimeout"
+    label = "Push Time-Out"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime PushTimeoutDateTime {
+    apiName = "AgentWork.PushTimeoutDateTime"
+    label = "Push Time-Out Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number HandleTime {
+    apiName = "AgentWork.HandleTime"
+    label = "Handle Time"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number ActiveTime {
+    apiName = "AgentWork.ActiveTime"
+    label = "Active Time"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DeclineReason {
+    apiName = "AgentWork.DeclineReason"
+    label = "Decline Reason"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 200
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CancelDateTime {
+    apiName = "AgentWork.CancelDateTime"
+    label = "Cancel Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox ShouldSkipCapacityCheck {
+    apiName = "AgentWork.ShouldSkipCapacityCheck"
+    label = "Should Skip Capacity Check"
+    defaultValue = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist RoutingType {
+    apiName = "AgentWork.RoutingType"
+    label = "Routing Type"
+    valueSet = [
+      {
+        fullName = "QueueBased"
+        default = false
+        label = "Queue Based"
+        isActive = true
+      },
+      {
+        fullName = "SkillsBased"
+        default = false
+        label = "Skills Based"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist RoutingModel {
+    apiName = "AgentWork.RoutingModel"
+    label = "Routing Model"
+    valueSet = [
+      {
+        fullName = "LeastActive"
+        default = false
+        label = "Least Active"
+        isActive = true
+      },
+      {
+        fullName = "MostAvailable"
+        default = false
+        label = "Most Available"
+        isActive = true
+      },
+      {
+        fullName = "ExternalRouting"
+        default = false
+        label = "External Routing"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number RoutingPriority {
+    apiName = "AgentWork.RoutingPriority"
+    label = "Routing Priority"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary AssignedDateTime {
+    apiName = "AgentWork.AssignedDateTime"
+    label = "Assign Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PreferredUserId {
+    apiName = "AgentWork.PreferredUserId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "PreferredUser"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OriginalGroupId {
+    apiName = "AgentWork.OriginalGroupId"
+    label = "Group ID"
+    referenceTo = [
+      salesforce.Group,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "OriginalGroup"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPreferredUserRequired {
+    apiName = "AgentWork.IsPreferredUserRequired"
+    label = "Is Preferred User Required"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown ChannelData {
+    apiName = "AgentWork.ChannelData"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown IsAutoAcceptEnabled {
+    apiName = "AgentWork.IsAutoAcceptEnabled"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown IsConference {
+    apiName = "AgentWork.IsConference"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown IsTransfer {
+    apiName = "AgentWork.IsTransfer"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown LASessionId {
+    apiName = "AgentWork.LASessionId"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ShouldSkipChannelCheck {
+    apiName = "AgentWork.ShouldSkipChannelCheck"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown StatusSequence {
+    apiName = "AgentWork.StatusSequence"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

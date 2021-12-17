@@ -1,0 +1,12 @@
+salesforce.CspTrustedSite GIPHY {
+  fullName = "GIPHY"
+  context = "All"
+  endpointUrl = "https://api.giphy.com"
+  isActive = true
+  isApplicableToConnectSrc = true
+  isApplicableToFontSrc = true
+  isApplicableToFrameSrc = true
+  isApplicableToImgSrc = true
+  isApplicableToMediaSrc = true
+  isApplicableToStyleSrc = true
+}

@@ -1,0 +1,47 @@
+settings salesforce.EmailIntegrationSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean doesEmailLogAsEmailMessageInOutlook {
+  }
+  boolean doesGmailStayConnectedToSalesforce {
+  }
+  boolean enableContactAndEventSync {
+  }
+  boolean enableEmailTrackingInMobile {
+  }
+  boolean enableEngageForOutlook {
+  }
+  boolean enableGmailIntegration {
+  }
+  boolean enableOutlookIntegration {
+  }
+  boolean enableProductivityFeatures {
+  }
+  boolean enableSupplementalContactInfoInMobile {
+  }
+  boolean isLayoutCustomizationAllowed {
+  }
+  boolean shouldUseTrustedDomainsList {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "EmailIntegrationSettings"
+}

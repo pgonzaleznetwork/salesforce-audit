@@ -1,0 +1,106 @@
+type salesforce.AuthProvider {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string appleTeam {
+  }
+  string authorizeUrl {
+  }
+  string consumerKey {
+  }
+  string consumerSecret {
+  }
+  string customMetadataTypeRecord {
+  }
+  string defaultScopes {
+  }
+  string ecKey {
+  }
+  string errorUrl {
+  }
+  string executionUser {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  string friendlyName {
+  }
+  serviceid fullName {
+  }
+  string iconUrl {
+  }
+  string idTokenIssuer {
+  }
+  boolean includeOrgIdInIdentifier {
+  }
+  string linkKickoffUrl {
+  }
+  string logoutUrl {
+  }
+  string oauthKickoffUrl {
+  }
+  string plugin {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string portal {
+    foreignKeyDomain = [
+      "Portal",
+    ]
+  }
+  string providerType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Apple",
+        "Custom",
+        "Evergreen",
+        "Facebook",
+        "GitHub",
+        "Google",
+        "Janrain",
+        "LinkedIn",
+        "MicrosoftACS",
+        "OpenIdConnect",
+        "Salesforce",
+        "Twitter",
+      ]
+    }
+  }
+  string registrationHandler {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  boolean sendAccessTokenInHeader {
+  }
+  boolean sendClientCredentialsInHeader {
+  }
+  boolean sendSecretInApis {
+  }
+  string ssoKickoffUrl {
+  }
+  string tokenUrl {
+  }
+  string userInfoUrl {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "authprovider"
+  dirName = "authproviders"
+  metadataType = "AuthProvider"
+}

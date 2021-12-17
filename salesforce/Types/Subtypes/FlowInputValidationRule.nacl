@@ -1,0 +1,21 @@
+type salesforce.FlowInputValidationRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string errorMessage {
+  }
+  string formulaExpression {
+  }
+  metadataType = "FlowInputValidationRule"
+}

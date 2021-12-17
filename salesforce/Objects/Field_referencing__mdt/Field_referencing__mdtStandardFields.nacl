@@ -1,0 +1,187 @@
+type salesforce.Field_referencing__mdt {
+  serviceid Id {
+    apiName = "Field_referencing__mdt.Id"
+    label = "Custom Metadata Record ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Text DeveloperName {
+    apiName = "Field_referencing__mdt.DeveloperName"
+    label = "Custom Metadata Record Name"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text MasterLabel {
+    apiName = "Field_referencing__mdt.MasterLabel"
+    label = "Label"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Language {
+    apiName = "Field_referencing__mdt.Language"
+    label = "Master Language"
+    _required = true
+    valueSet = [
+      {
+        fullName = "en_US"
+        default = false
+        label = "English"
+        isActive = true
+      },
+      {
+        fullName = "de"
+        default = false
+        label = "German"
+        isActive = true
+      },
+      {
+        fullName = "es"
+        default = false
+        label = "Spanish"
+        isActive = true
+      },
+      {
+        fullName = "fr"
+        default = false
+        label = "French"
+        isActive = true
+      },
+      {
+        fullName = "it"
+        default = false
+        label = "Italian"
+        isActive = true
+      },
+      {
+        fullName = "ja"
+        default = false
+        label = "Japanese"
+        isActive = true
+      },
+      {
+        fullName = "sv"
+        default = false
+        label = "Swedish"
+        isActive = true
+      },
+      {
+        fullName = "ko"
+        default = false
+        label = "Korean"
+        isActive = true
+      },
+      {
+        fullName = "zh_TW"
+        default = false
+        label = "Chinese (Traditional)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN"
+        default = false
+        label = "Chinese (Simplified)"
+        isActive = true
+      },
+      {
+        fullName = "pt_BR"
+        default = false
+        label = "Portuguese (Brazil)"
+        isActive = true
+      },
+      {
+        fullName = "nl_NL"
+        default = false
+        label = "Dutch"
+        isActive = true
+      },
+      {
+        fullName = "da"
+        default = false
+        label = "Danish"
+        isActive = true
+      },
+      {
+        fullName = "th"
+        default = false
+        label = "Thai"
+        isActive = true
+      },
+      {
+        fullName = "fi"
+        default = false
+        label = "Finnish"
+        isActive = true
+      },
+      {
+        fullName = "ru"
+        default = false
+        label = "Russian"
+        isActive = true
+      },
+      {
+        fullName = "es_MX"
+        default = false
+        label = "Spanish (Mexico)"
+        isActive = true
+      },
+      {
+        fullName = "no"
+        default = false
+        label = "Norwegian"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text NamespacePrefix {
+    apiName = "Field_referencing__mdt.NamespacePrefix"
+    label = "Namespace Prefix"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 15
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Label {
+    apiName = "Field_referencing__mdt.Label"
+    label = "Label"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text QualifiedApiName {
+    apiName = "Field_referencing__mdt.QualifiedApiName"
+    label = "Qualified API Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 70
+    queryable = true
+    _hidden_value = true
+  }
+}

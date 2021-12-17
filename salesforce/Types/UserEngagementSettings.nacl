@@ -1,0 +1,77 @@
+settings salesforce.UserEngagementSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean canGovCloudUseAdoptionApps {
+  }
+  boolean doesScheduledSwitcherRunDaily {
+  }
+  boolean enableCustomHelpGlobalSection {
+  }
+  boolean enableHelpMenuShowFeedback {
+  }
+  boolean enableHelpMenuShowHelp {
+  }
+  boolean enableHelpMenuShowNewUser {
+  }
+  boolean enableHelpMenuShowSearch {
+  }
+  boolean enableHelpMenuShowSfdcContent {
+  }
+  boolean enableHelpMenuShowShortcut {
+  }
+  boolean enableHelpMenuShowSupport {
+  }
+  boolean enableHelpMenuShowTrailhead {
+  }
+  boolean enableIBILOptOutDashboards {
+  }
+  boolean enableIBILOptOutEvents {
+  }
+  boolean enableIBILOptOutReports {
+  }
+  boolean enableIBILOptOutTasks {
+  }
+  boolean enableLexToClassicFeedbackEnable {
+  }
+  boolean enableOrchestrationInSandbox {
+  }
+  boolean enableOrgUserAssistEnabled {
+  }
+  boolean enableScheduledSwitcher {
+  }
+  boolean enableSfdcProductFeedbackSurvey {
+  }
+  boolean enableShowSalesforceUserAssist {
+  }
+  boolean isCrucNotificationDisabled {
+  }
+  boolean isLEXWelcomeMatDisabled {
+  }
+  boolean isMeetTheAssistantDisabledInClassic {
+  }
+  boolean isMeetTheAssistantDisabledInLightning {
+  }
+  boolean optimizerAppEnabled {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "UserEngagementSettings"
+}

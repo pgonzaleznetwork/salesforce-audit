@@ -1,0 +1,6 @@
+<apex:page standardController="SRM_Jira_Ticket__c" extensions="SRM_MetadataConflictWarningController">
+    
+   <b style="color:#F46B6B; font-size:14px;" >{!warning}</b>
+   <b style="color:#3FBD82; font-size:14px;">{!friendlyMessage}</b>
+
+</apex:page>

@@ -1,0 +1,25 @@
+salesforce.ListView Activity_TodaysTasks {
+  fullName = "Activity.TodaysTasks"
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "ACTIVITY.TASK"
+      operation = "equals"
+      value = "1"
+    },
+    {
+      field = "TASK.CLOSED"
+      operation = "equals"
+      value = "0"
+    },
+    {
+      field = "TASK.DUE_DATE"
+      operation = "lessThan"
+      value = "TOMORROW"
+    },
+  ]
+  label = "Today's Tasks"
+  _parent = [
+    salesforce.Activity,
+  ]
+}

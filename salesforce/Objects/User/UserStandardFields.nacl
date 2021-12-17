@@ -1,0 +1,3402 @@
+type salesforce.User {
+  serviceid Id {
+    apiName = "User.Id"
+    label = "User ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Text Username {
+    apiName = "User.Username"
+    label = "Username"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Name2 Name {
+    apiName = "User.Name"
+    label = "Full Name"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CompanyName {
+    apiName = "User.CompanyName"
+    label = "Company Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text Division {
+    apiName = "User.Division"
+    label = "Division"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text Department {
+    apiName = "User.Department"
+    label = "Department"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text Title {
+    apiName = "User.Title"
+    label = "Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Address Address {
+    apiName = "User.Address"
+    label = "Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Email Email {
+    apiName = "User.Email"
+    label = "Email"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Checkbox EmailPreferencesAutoBcc {
+    apiName = "User.EmailPreferencesAutoBcc"
+    label = "AutoBcc"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox EmailPreferencesAutoBccStayInTouch {
+    apiName = "User.EmailPreferencesAutoBccStayInTouch"
+    label = "AutoBccStayInTouch"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox EmailPreferencesStayInTouchReminder {
+    apiName = "User.EmailPreferencesStayInTouchReminder"
+    label = "StayInTouchReminder"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Email SenderEmail {
+    apiName = "User.SenderEmail"
+    label = "Email Sender Address"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Text SenderName {
+    apiName = "User.SenderName"
+    label = "Email Sender Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.LongTextArea Signature {
+    apiName = "User.Signature"
+    label = "Email Signature"
+    createable = true
+    updateable = true
+    length = 1333
+    queryable = true
+  }
+  salesforce.Text StayInTouchSubject {
+    apiName = "User.StayInTouchSubject"
+    label = "Stay-in-Touch Email Subject"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.LongTextArea StayInTouchSignature {
+    apiName = "User.StayInTouchSignature"
+    label = "Stay-in-Touch Email Signature"
+    createable = true
+    updateable = true
+    length = 512
+    queryable = true
+  }
+  salesforce.Text StayInTouchNote {
+    apiName = "User.StayInTouchNote"
+    label = "Stay-in-Touch Email Note"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 512
+    queryable = true
+  }
+  salesforce.Phone Phone {
+    apiName = "User.Phone"
+    label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Phone Fax {
+    apiName = "User.Fax"
+    label = "Fax"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Phone MobilePhone {
+    apiName = "User.MobilePhone"
+    label = "Mobile"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Alias {
+    apiName = "User.Alias"
+    label = "Alias"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text CommunityNickname {
+    apiName = "User.CommunityNickname"
+    label = "Nickname"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+  }
+  salesforce.Text BadgeText {
+    apiName = "User.BadgeText"
+    label = "User Photo badge text overlay"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "User.IsActive"
+    label = "Active"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist TimeZoneSidKey {
+    apiName = "User.TimeZoneSidKey"
+    label = "Time Zone"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Pacific/Kiritimati"
+        default = false
+        label = "(GMT+14:00) Line Islands Time (Pacific/Kiritimati)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Chatham"
+        default = false
+        label = "(GMT+13:45) Chatham Daylight Time (Pacific/Chatham)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Auckland"
+        default = false
+        label = "(GMT+13:00) New Zealand Daylight Time (Pacific/Auckland)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Enderbury"
+        default = false
+        label = "(GMT+13:00) Phoenix Islands Time (Pacific/Enderbury)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Fiji"
+        default = false
+        label = "(GMT+13:00) Fiji Summer Time (Pacific/Fiji)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Tongatapu"
+        default = false
+        label = "(GMT+13:00) Tonga Standard Time (Pacific/Tongatapu)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kamchatka"
+        default = false
+        label = "(GMT+12:00) Petropavlovsk-Kamchatski Standard Time (Asia/Kamchatka)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Norfolk"
+        default = false
+        label = "(GMT+12:00) Norfolk Island Daylight Time (Pacific/Norfolk)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Lord_Howe"
+        default = false
+        label = "(GMT+11:00) Lord Howe Daylight Time (Australia/Lord_Howe)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Sydney"
+        default = false
+        label = "(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Guadalcanal"
+        default = false
+        label = "(GMT+11:00) Solomon Islands Time (Pacific/Guadalcanal)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Adelaide"
+        default = false
+        label = "(GMT+10:30) Australian Central Daylight Time (Australia/Adelaide)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Brisbane"
+        default = false
+        label = "(GMT+10:00) Australian Eastern Standard Time (Australia/Brisbane)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Darwin"
+        default = false
+        label = "(GMT+09:30) Australian Central Standard Time (Australia/Darwin)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Seoul"
+        default = false
+        label = "(GMT+09:00) Korean Standard Time (Asia/Seoul)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tokyo"
+        default = false
+        label = "(GMT+09:00) Japan Standard Time (Asia/Tokyo)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Hong_Kong"
+        default = false
+        label = "(GMT+08:00) Hong Kong Standard Time (Asia/Hong_Kong)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kuala_Lumpur"
+        default = false
+        label = "(GMT+08:00) Malaysia Time (Asia/Kuala_Lumpur)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Manila"
+        default = false
+        label = "(GMT+08:00) Philippine Standard Time (Asia/Manila)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Shanghai"
+        default = false
+        label = "(GMT+08:00) China Standard Time (Asia/Shanghai)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Singapore"
+        default = false
+        label = "(GMT+08:00) Singapore Standard Time (Asia/Singapore)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Taipei"
+        default = false
+        label = "(GMT+08:00) Taipei Standard Time (Asia/Taipei)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Perth"
+        default = false
+        label = "(GMT+08:00) Australian Western Standard Time (Australia/Perth)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Bangkok"
+        default = false
+        label = "(GMT+07:00) Indochina Time (Asia/Bangkok)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Ho_Chi_Minh"
+        default = false
+        label = "(GMT+07:00) Indochina Time (Asia/Ho_Chi_Minh)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Jakarta"
+        default = false
+        label = "(GMT+07:00) Western Indonesia Time (Asia/Jakarta)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Rangoon"
+        default = false
+        label = "(GMT+06:30) Myanmar Time (Asia/Rangoon)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Dhaka"
+        default = false
+        label = "(GMT+06:00) Bangladesh Standard Time (Asia/Dhaka)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kathmandu"
+        default = false
+        label = "(GMT+05:45) Nepal Time (Asia/Kathmandu)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Colombo"
+        default = false
+        label = "(GMT+05:30) India Standard Time (Asia/Colombo)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kolkata"
+        default = false
+        label = "(GMT+05:30) India Standard Time (Asia/Kolkata)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Karachi"
+        default = false
+        label = "(GMT+05:00) Pakistan Standard Time (Asia/Karachi)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tashkent"
+        default = false
+        label = "(GMT+05:00) Uzbekistan Standard Time (Asia/Tashkent)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Yekaterinburg"
+        default = false
+        label = "(GMT+05:00) Yekaterinburg Standard Time (Asia/Yekaterinburg)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kabul"
+        default = false
+        label = "(GMT+04:30) Afghanistan Time (Asia/Kabul)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Baku"
+        default = false
+        label = "(GMT+04:00) Azerbaijan Standard Time (Asia/Baku)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Dubai"
+        default = false
+        label = "(GMT+04:00) Gulf Standard Time (Asia/Dubai)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tbilisi"
+        default = false
+        label = "(GMT+04:00) Georgia Standard Time (Asia/Tbilisi)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Yerevan"
+        default = false
+        label = "(GMT+04:00) Armenia Standard Time (Asia/Yerevan)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tehran"
+        default = false
+        label = "(GMT+03:30) Iran Standard Time (Asia/Tehran)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Nairobi"
+        default = false
+        label = "(GMT+03:00) East Africa Time (Africa/Nairobi)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Baghdad"
+        default = false
+        label = "(GMT+03:00) Arabian Standard Time (Asia/Baghdad)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Kuwait"
+        default = false
+        label = "(GMT+03:00) Arabian Standard Time (Asia/Kuwait)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Riyadh"
+        default = false
+        label = "(GMT+03:00) Arabian Standard Time (Asia/Riyadh)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Istanbul"
+        default = false
+        label = "(GMT+03:00) Eastern European Standard Time (Europe/Istanbul)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Minsk"
+        default = false
+        label = "(GMT+03:00) Moscow Standard Time (Europe/Minsk)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Moscow"
+        default = false
+        label = "(GMT+03:00) Moscow Standard Time (Europe/Moscow)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Cairo"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Africa/Cairo)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Johannesburg"
+        default = false
+        label = "(GMT+02:00) South Africa Standard Time (Africa/Johannesburg)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Beirut"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Asia/Beirut)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Jerusalem"
+        default = false
+        label = "(GMT+02:00) Israel Standard Time (Asia/Jerusalem)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Athens"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Europe/Athens)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Bucharest"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Europe/Bucharest)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Helsinki"
+        default = false
+        label = "(GMT+02:00) Eastern European Standard Time (Europe/Helsinki)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Algiers"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Africa/Algiers)"
+        isActive = true
+      },
+      {
+        fullName = "Africa/Casablanca"
+        default = false
+        label = "(GMT+01:00) Western European Summer Time (Africa/Casablanca)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Amsterdam"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Amsterdam)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Berlin"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Berlin)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Brussels"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Brussels)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Paris"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Paris)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Prague"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Prague)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Rome"
+        default = false
+        label = "(GMT+01:00) Central European Standard Time (Europe/Rome)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Dublin"
+        default = false
+        label = "(GMT+00:00) Greenwich Mean Time (Europe/Dublin)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/Lisbon"
+        default = false
+        label = "(GMT+00:00) Western European Standard Time (Europe/Lisbon)"
+        isActive = true
+      },
+      {
+        fullName = "Europe/London"
+        default = false
+        label = "(GMT+00:00) Greenwich Mean Time (Europe/London)"
+        isActive = true
+      },
+      {
+        fullName = "GMT"
+        default = false
+        label = "(GMT+00:00) Greenwich Mean Time (GMT)"
+        isActive = true
+      },
+      {
+        fullName = "America/Scoresbysund"
+        default = false
+        label = "(GMT-01:00) East Greenland Standard Time (America/Scoresbysund)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/Azores"
+        default = false
+        label = "(GMT-01:00) Azores Standard Time (Atlantic/Azores)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/Cape_Verde"
+        default = false
+        label = "(GMT-01:00) Cape Verde Standard Time (Atlantic/Cape_Verde)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/South_Georgia"
+        default = false
+        label = "(GMT-02:00) South Georgia Time (Atlantic/South_Georgia)"
+        isActive = true
+      },
+      {
+        fullName = "America/Argentina/Buenos_Aires"
+        default = false
+        label = "(GMT-03:00) Argentina Standard Time (America/Argentina/Buenos_Aires)"
+        isActive = true
+      },
+      {
+        fullName = "America/Santiago"
+        default = false
+        label = "(GMT-03:00) Chile Summer Time (America/Santiago)"
+        isActive = true
+      },
+      {
+        fullName = "America/Sao_Paulo"
+        default = false
+        label = "(GMT-03:00) Brasilia Standard Time (America/Sao_Paulo)"
+        isActive = true
+      },
+      {
+        fullName = "America/St_Johns"
+        default = false
+        label = "(GMT-03:30) Newfoundland Standard Time (America/St_Johns)"
+        isActive = true
+      },
+      {
+        fullName = "America/Caracas"
+        default = false
+        label = "(GMT-04:00) Venezuela Time (America/Caracas)"
+        isActive = true
+      },
+      {
+        fullName = "America/Halifax"
+        default = false
+        label = "(GMT-04:00) Atlantic Standard Time (America/Halifax)"
+        isActive = true
+      },
+      {
+        fullName = "America/Puerto_Rico"
+        default = false
+        label = "(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico)"
+        isActive = true
+      },
+      {
+        fullName = "Atlantic/Bermuda"
+        default = false
+        label = "(GMT-04:00) Atlantic Standard Time (Atlantic/Bermuda)"
+        isActive = true
+      },
+      {
+        fullName = "America/Bogota"
+        default = false
+        label = "(GMT-05:00) Colombia Standard Time (America/Bogota)"
+        isActive = true
+      },
+      {
+        fullName = "America/Indiana/Indianapolis"
+        default = false
+        label = "(GMT-05:00) Eastern Standard Time (America/Indiana/Indianapolis)"
+        isActive = true
+      },
+      {
+        fullName = "America/Lima"
+        default = false
+        label = "(GMT-05:00) Peru Standard Time (America/Lima)"
+        isActive = true
+      },
+      {
+        fullName = "America/New_York"
+        default = false
+        label = "(GMT-05:00) Eastern Standard Time (America/New_York)"
+        isActive = true
+      },
+      {
+        fullName = "America/Panama"
+        default = false
+        label = "(GMT-05:00) Eastern Standard Time (America/Panama)"
+        isActive = true
+      },
+      {
+        fullName = "America/Chicago"
+        default = false
+        label = "(GMT-06:00) Central Standard Time (America/Chicago)"
+        isActive = true
+      },
+      {
+        fullName = "America/El_Salvador"
+        default = false
+        label = "(GMT-06:00) Central Standard Time (America/El_Salvador)"
+        isActive = true
+      },
+      {
+        fullName = "America/Mexico_City"
+        default = false
+        label = "(GMT-06:00) Central Standard Time (America/Mexico_City)"
+        isActive = true
+      },
+      {
+        fullName = "America/Denver"
+        default = false
+        label = "(GMT-07:00) Mountain Standard Time (America/Denver)"
+        isActive = true
+      },
+      {
+        fullName = "America/Mazatlan"
+        default = false
+        label = "(GMT-07:00) Mexican Pacific Standard Time (America/Mazatlan)"
+        isActive = true
+      },
+      {
+        fullName = "America/Phoenix"
+        default = false
+        label = "(GMT-07:00) Mountain Standard Time (America/Phoenix)"
+        isActive = true
+      },
+      {
+        fullName = "America/Los_Angeles"
+        default = false
+        label = "(GMT-08:00) Pacific Standard Time (America/Los_Angeles)"
+        isActive = true
+      },
+      {
+        fullName = "America/Tijuana"
+        default = false
+        label = "(GMT-08:00) Pacific Standard Time (America/Tijuana)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Pitcairn"
+        default = false
+        label = "(GMT-08:00) Pitcairn Time (Pacific/Pitcairn)"
+        isActive = true
+      },
+      {
+        fullName = "America/Anchorage"
+        default = false
+        label = "(GMT-09:00) Alaska Standard Time (America/Anchorage)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Gambier"
+        default = false
+        label = "(GMT-09:00) Gambier Time (Pacific/Gambier)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Marquesas"
+        default = false
+        label = "(GMT-09:30) Marquesas Time (Pacific/Marquesas)"
+        isActive = true
+      },
+      {
+        fullName = "America/Adak"
+        default = false
+        label = "(GMT-10:00) Hawaii-Aleutian Standard Time (America/Adak)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Honolulu"
+        default = false
+        label = "(GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Niue"
+        default = false
+        label = "(GMT-11:00) Niue Time (Pacific/Niue)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Pago_Pago"
+        default = false
+        label = "(GMT-11:00) Samoa Standard Time (Pacific/Pago_Pago)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup UserRoleId {
+    apiName = "User.UserRoleId"
+    label = "Role ID"
+    referenceTo = [
+      "UserRole",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "UserRole"
+    queryable = true
+  }
+  salesforce.Picklist LocaleSidKey {
+    apiName = "User.LocaleSidKey"
+    label = "Locale"
+    _required = true
+    valueSet = [
+      {
+        fullName = "af_ZA"
+        default = false
+        label = "Afrikaans (South Africa)"
+        isActive = true
+      },
+      {
+        fullName = "sq_AL"
+        default = false
+        label = "Albanian (Albania)"
+        isActive = true
+      },
+      {
+        fullName = "ar_DZ"
+        default = false
+        label = "Arabic (Algeria)"
+        isActive = true
+      },
+      {
+        fullName = "ar_BH"
+        default = false
+        label = "Arabic (Bahrain)"
+        isActive = true
+      },
+      {
+        fullName = "ar_EG"
+        default = false
+        label = "Arabic (Egypt)"
+        isActive = true
+      },
+      {
+        fullName = "ar_IQ"
+        default = false
+        label = "Arabic (Iraq)"
+        isActive = true
+      },
+      {
+        fullName = "ar_JO"
+        default = false
+        label = "Arabic (Jordan)"
+        isActive = true
+      },
+      {
+        fullName = "ar_KW"
+        default = false
+        label = "Arabic (Kuwait)"
+        isActive = true
+      },
+      {
+        fullName = "ar_LB"
+        default = false
+        label = "Arabic (Lebanon)"
+        isActive = true
+      },
+      {
+        fullName = "ar_LY"
+        default = false
+        label = "Arabic (Libya)"
+        isActive = true
+      },
+      {
+        fullName = "ar_MA"
+        default = false
+        label = "Arabic (Morocco)"
+        isActive = true
+      },
+      {
+        fullName = "ar_OM"
+        default = false
+        label = "Arabic (Oman)"
+        isActive = true
+      },
+      {
+        fullName = "ar_QA"
+        default = false
+        label = "Arabic (Qatar)"
+        isActive = true
+      },
+      {
+        fullName = "ar_SA"
+        default = false
+        label = "Arabic (Saudi Arabia)"
+        isActive = true
+      },
+      {
+        fullName = "ar_SD"
+        default = false
+        label = "Arabic (Sudan)"
+        isActive = true
+      },
+      {
+        fullName = "ar_SY"
+        default = false
+        label = "Arabic (Syria)"
+        isActive = true
+      },
+      {
+        fullName = "ar_TN"
+        default = false
+        label = "Arabic (Tunisia)"
+        isActive = true
+      },
+      {
+        fullName = "ar_AE"
+        default = false
+        label = "Arabic (United Arab Emirates)"
+        isActive = true
+      },
+      {
+        fullName = "ar_YE"
+        default = false
+        label = "Arabic (Yemen)"
+        isActive = true
+      },
+      {
+        fullName = "hy_AM"
+        default = false
+        label = "Armenian (Armenia)"
+        isActive = true
+      },
+      {
+        fullName = "az_AZ"
+        default = false
+        label = "Azerbaijani (Azerbaijan)"
+        isActive = true
+      },
+      {
+        fullName = "bn_BD"
+        default = false
+        label = "Bangla (Bangladesh)"
+        isActive = true
+      },
+      {
+        fullName = "bn_IN"
+        default = false
+        label = "Bangla (India)"
+        isActive = true
+      },
+      {
+        fullName = "eu_ES"
+        default = false
+        label = "Basque (Spain)"
+        isActive = true
+      },
+      {
+        fullName = "be_BY"
+        default = false
+        label = "Belarusian (Belarus)"
+        isActive = true
+      },
+      {
+        fullName = "bs_BA"
+        default = false
+        label = "Bosnian (Bosnia & Herzegovina)"
+        isActive = true
+      },
+      {
+        fullName = "bg_BG"
+        default = false
+        label = "Bulgarian (Bulgaria)"
+        isActive = true
+      },
+      {
+        fullName = "my_MM"
+        default = false
+        label = "Burmese (Myanmar (Burma))"
+        isActive = true
+      },
+      {
+        fullName = "ca_ES"
+        default = false
+        label = "Catalan (Spain)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN_PINYIN"
+        default = false
+        label = "Chinese (China, Pinyin Ordering)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN_STROKE"
+        default = false
+        label = "Chinese (China, Stroke Ordering)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN"
+        default = false
+        label = "Chinese (China)"
+        isActive = true
+      },
+      {
+        fullName = "zh_HK_STROKE"
+        default = false
+        label = "Chinese (Hong Kong SAR China, Stroke Ordering)"
+        isActive = true
+      },
+      {
+        fullName = "zh_HK"
+        default = false
+        label = "Chinese (Hong Kong SAR China)"
+        isActive = true
+      },
+      {
+        fullName = "zh_MO"
+        default = false
+        label = "Chinese (Macao SAR China)"
+        isActive = true
+      },
+      {
+        fullName = "zh_SG"
+        default = false
+        label = "Chinese (Singapore)"
+        isActive = true
+      },
+      {
+        fullName = "zh_TW_STROKE"
+        default = false
+        label = "Chinese (Taiwan, Stroke Ordering)"
+        isActive = true
+      },
+      {
+        fullName = "zh_TW"
+        default = false
+        label = "Chinese (Taiwan)"
+        isActive = true
+      },
+      {
+        fullName = "hr_HR"
+        default = false
+        label = "Croatian (Croatia)"
+        isActive = true
+      },
+      {
+        fullName = "cs_CZ"
+        default = false
+        label = "Czech (Czechia)"
+        isActive = true
+      },
+      {
+        fullName = "da_DK"
+        default = false
+        label = "Danish (Denmark)"
+        isActive = true
+      },
+      {
+        fullName = "nl_AW"
+        default = false
+        label = "Dutch (Aruba)"
+        isActive = true
+      },
+      {
+        fullName = "nl_BE"
+        default = false
+        label = "Dutch (Belgium)"
+        isActive = true
+      },
+      {
+        fullName = "nl_NL"
+        default = false
+        label = "Dutch (Netherlands)"
+        isActive = true
+      },
+      {
+        fullName = "nl_SR"
+        default = false
+        label = "Dutch (Suriname)"
+        isActive = true
+      },
+      {
+        fullName = "dz_BT"
+        default = false
+        label = "Dzongkha (Bhutan)"
+        isActive = true
+      },
+      {
+        fullName = "en_AG"
+        default = false
+        label = "English (Antigua & Barbuda)"
+        isActive = true
+      },
+      {
+        fullName = "en_AU"
+        default = false
+        label = "English (Australia)"
+        isActive = true
+      },
+      {
+        fullName = "en_BS"
+        default = false
+        label = "English (Bahamas)"
+        isActive = true
+      },
+      {
+        fullName = "en_BB"
+        default = false
+        label = "English (Barbados)"
+        isActive = true
+      },
+      {
+        fullName = "en_BZ"
+        default = false
+        label = "English (Belize)"
+        isActive = true
+      },
+      {
+        fullName = "en_BM"
+        default = false
+        label = "English (Bermuda)"
+        isActive = true
+      },
+      {
+        fullName = "en_BW"
+        default = false
+        label = "English (Botswana)"
+        isActive = true
+      },
+      {
+        fullName = "en_CM"
+        default = false
+        label = "English (Cameroon)"
+        isActive = true
+      },
+      {
+        fullName = "en_CA"
+        default = false
+        label = "English (Canada)"
+        isActive = true
+      },
+      {
+        fullName = "en_KY"
+        default = false
+        label = "English (Cayman Islands)"
+        isActive = true
+      },
+      {
+        fullName = "en_ER"
+        default = false
+        label = "English (Eritrea)"
+        isActive = true
+      },
+      {
+        fullName = "en_SZ"
+        default = false
+        label = "English (Eswatini)"
+        isActive = true
+      },
+      {
+        fullName = "en_FK"
+        default = false
+        label = "English (Falkland Islands)"
+        isActive = true
+      },
+      {
+        fullName = "en_FJ"
+        default = false
+        label = "English (Fiji)"
+        isActive = true
+      },
+      {
+        fullName = "en_GM"
+        default = false
+        label = "English (Gambia)"
+        isActive = true
+      },
+      {
+        fullName = "en_GH"
+        default = false
+        label = "English (Ghana)"
+        isActive = true
+      },
+      {
+        fullName = "en_GI"
+        default = false
+        label = "English (Gibraltar)"
+        isActive = true
+      },
+      {
+        fullName = "en_GY"
+        default = false
+        label = "English (Guyana)"
+        isActive = true
+      },
+      {
+        fullName = "en_HK"
+        default = false
+        label = "English (Hong Kong SAR China)"
+        isActive = true
+      },
+      {
+        fullName = "en_IN"
+        default = false
+        label = "English (India)"
+        isActive = true
+      },
+      {
+        fullName = "en_ID"
+        default = false
+        label = "English (Indonesia)"
+        isActive = true
+      },
+      {
+        fullName = "en_IE"
+        default = false
+        label = "English (Ireland)"
+        isActive = true
+      },
+      {
+        fullName = "en_JM"
+        default = false
+        label = "English (Jamaica)"
+        isActive = true
+      },
+      {
+        fullName = "en_KE"
+        default = false
+        label = "English (Kenya)"
+        isActive = true
+      },
+      {
+        fullName = "en_LR"
+        default = false
+        label = "English (Liberia)"
+        isActive = true
+      },
+      {
+        fullName = "en_MG"
+        default = false
+        label = "English (Madagascar)"
+        isActive = true
+      },
+      {
+        fullName = "en_MW"
+        default = false
+        label = "English (Malawi)"
+        isActive = true
+      },
+      {
+        fullName = "en_MY"
+        default = false
+        label = "English (Malaysia)"
+        isActive = true
+      },
+      {
+        fullName = "en_MU"
+        default = false
+        label = "English (Mauritius)"
+        isActive = true
+      },
+      {
+        fullName = "en_NA"
+        default = false
+        label = "English (Namibia)"
+        isActive = true
+      },
+      {
+        fullName = "en_NZ"
+        default = false
+        label = "English (New Zealand)"
+        isActive = true
+      },
+      {
+        fullName = "en_NG"
+        default = false
+        label = "English (Nigeria)"
+        isActive = true
+      },
+      {
+        fullName = "en_PK"
+        default = false
+        label = "English (Pakistan)"
+        isActive = true
+      },
+      {
+        fullName = "en_PG"
+        default = false
+        label = "English (Papua New Guinea)"
+        isActive = true
+      },
+      {
+        fullName = "en_PH"
+        default = false
+        label = "English (Philippines)"
+        isActive = true
+      },
+      {
+        fullName = "en_RW"
+        default = false
+        label = "English (Rwanda)"
+        isActive = true
+      },
+      {
+        fullName = "en_WS"
+        default = false
+        label = "English (Samoa)"
+        isActive = true
+      },
+      {
+        fullName = "en_SC"
+        default = false
+        label = "English (Seychelles)"
+        isActive = true
+      },
+      {
+        fullName = "en_SL"
+        default = false
+        label = "English (Sierra Leone)"
+        isActive = true
+      },
+      {
+        fullName = "en_SG"
+        default = false
+        label = "English (Singapore)"
+        isActive = true
+      },
+      {
+        fullName = "en_SX"
+        default = false
+        label = "English (Sint Maarten)"
+        isActive = true
+      },
+      {
+        fullName = "en_SB"
+        default = false
+        label = "English (Solomon Islands)"
+        isActive = true
+      },
+      {
+        fullName = "en_ZA"
+        default = false
+        label = "English (South Africa)"
+        isActive = true
+      },
+      {
+        fullName = "en_SH"
+        default = false
+        label = "English (St. Helena)"
+        isActive = true
+      },
+      {
+        fullName = "en_TZ"
+        default = false
+        label = "English (Tanzania)"
+        isActive = true
+      },
+      {
+        fullName = "en_TO"
+        default = false
+        label = "English (Tonga)"
+        isActive = true
+      },
+      {
+        fullName = "en_TT"
+        default = false
+        label = "English (Trinidad & Tobago)"
+        isActive = true
+      },
+      {
+        fullName = "en_UG"
+        default = false
+        label = "English (Uganda)"
+        isActive = true
+      },
+      {
+        fullName = "en_GB"
+        default = false
+        label = "English (United Kingdom)"
+        isActive = true
+      },
+      {
+        fullName = "en_US"
+        default = false
+        label = "English (United States)"
+        isActive = true
+      },
+      {
+        fullName = "en_VU"
+        default = false
+        label = "English (Vanuatu)"
+        isActive = true
+      },
+      {
+        fullName = "et_EE"
+        default = false
+        label = "Estonian (Estonia)"
+        isActive = true
+      },
+      {
+        fullName = "fi_FI"
+        default = false
+        label = "Finnish (Finland)"
+        isActive = true
+      },
+      {
+        fullName = "fr_BE"
+        default = false
+        label = "French (Belgium)"
+        isActive = true
+      },
+      {
+        fullName = "fr_CA"
+        default = false
+        label = "French (Canada)"
+        isActive = true
+      },
+      {
+        fullName = "fr_KM"
+        default = false
+        label = "French (Comoros)"
+        isActive = true
+      },
+      {
+        fullName = "fr_FR"
+        default = false
+        label = "French (France)"
+        isActive = true
+      },
+      {
+        fullName = "fr_GN"
+        default = false
+        label = "French (Guinea)"
+        isActive = true
+      },
+      {
+        fullName = "fr_HT"
+        default = false
+        label = "French (Haiti)"
+        isActive = true
+      },
+      {
+        fullName = "fr_LU"
+        default = false
+        label = "French (Luxembourg)"
+        isActive = true
+      },
+      {
+        fullName = "fr_MR"
+        default = false
+        label = "French (Mauritania)"
+        isActive = true
+      },
+      {
+        fullName = "fr_MC"
+        default = false
+        label = "French (Monaco)"
+        isActive = true
+      },
+      {
+        fullName = "fr_CH"
+        default = false
+        label = "French (Switzerland)"
+        isActive = true
+      },
+      {
+        fullName = "fr_WF"
+        default = false
+        label = "French (Wallis & Futuna)"
+        isActive = true
+      },
+      {
+        fullName = "ka_GE"
+        default = false
+        label = "Georgian (Georgia)"
+        isActive = true
+      },
+      {
+        fullName = "de_AT"
+        default = false
+        label = "German (Austria)"
+        isActive = true
+      },
+      {
+        fullName = "de_BE"
+        default = false
+        label = "German (Belgium)"
+        isActive = true
+      },
+      {
+        fullName = "de_DE"
+        default = false
+        label = "German (Germany)"
+        isActive = true
+      },
+      {
+        fullName = "de_LU"
+        default = false
+        label = "German (Luxembourg)"
+        isActive = true
+      },
+      {
+        fullName = "de_CH"
+        default = false
+        label = "German (Switzerland)"
+        isActive = true
+      },
+      {
+        fullName = "el_GR"
+        default = false
+        label = "Greek (Greece)"
+        isActive = true
+      },
+      {
+        fullName = "gu_IN"
+        default = false
+        label = "Gujarati (India)"
+        isActive = true
+      },
+      {
+        fullName = "iw_IL"
+        default = false
+        label = "Hebrew (Israel)"
+        isActive = true
+      },
+      {
+        fullName = "hi_IN"
+        default = false
+        label = "Hindi (India)"
+        isActive = true
+      },
+      {
+        fullName = "hu_HU"
+        default = false
+        label = "Hungarian (Hungary)"
+        isActive = true
+      },
+      {
+        fullName = "is_IS"
+        default = false
+        label = "Icelandic (Iceland)"
+        isActive = true
+      },
+      {
+        fullName = "in_ID"
+        default = false
+        label = "Indonesian (Indonesia)"
+        isActive = true
+      },
+      {
+        fullName = "ga_IE"
+        default = false
+        label = "Irish (Ireland)"
+        isActive = true
+      },
+      {
+        fullName = "it_IT"
+        default = false
+        label = "Italian (Italy)"
+        isActive = true
+      },
+      {
+        fullName = "it_CH"
+        default = false
+        label = "Italian (Switzerland)"
+        isActive = true
+      },
+      {
+        fullName = "ja_JP"
+        default = false
+        label = "Japanese (Japan)"
+        isActive = true
+      },
+      {
+        fullName = "kn_IN"
+        default = false
+        label = "Kannada (India)"
+        isActive = true
+      },
+      {
+        fullName = "kk_KZ"
+        default = false
+        label = "Kazakh (Kazakhstan)"
+        isActive = true
+      },
+      {
+        fullName = "km_KH"
+        default = false
+        label = "Khmer (Cambodia)"
+        isActive = true
+      },
+      {
+        fullName = "ko_KP"
+        default = false
+        label = "Korean (North Korea)"
+        isActive = true
+      },
+      {
+        fullName = "ko_KR"
+        default = false
+        label = "Korean (South Korea)"
+        isActive = true
+      },
+      {
+        fullName = "ky_KG"
+        default = false
+        label = "Kyrgyz (Kyrgyzstan)"
+        isActive = true
+      },
+      {
+        fullName = "lo_LA"
+        default = false
+        label = "Lao (Laos)"
+        isActive = true
+      },
+      {
+        fullName = "lv_LV"
+        default = false
+        label = "Latvian (Latvia)"
+        isActive = true
+      },
+      {
+        fullName = "lt_LT"
+        default = false
+        label = "Lithuanian (Lithuania)"
+        isActive = true
+      },
+      {
+        fullName = "lu_CD"
+        default = false
+        label = "Luba-Katanga (Congo - Kinshasa)"
+        isActive = true
+      },
+      {
+        fullName = "lb_LU"
+        default = false
+        label = "Luxembourgish (Luxembourg)"
+        isActive = true
+      },
+      {
+        fullName = "mk_MK"
+        default = false
+        label = "Macedonian (North Macedonia)"
+        isActive = true
+      },
+      {
+        fullName = "ms_BN"
+        default = false
+        label = "Malay (Brunei)"
+        isActive = true
+      },
+      {
+        fullName = "ms_MY"
+        default = false
+        label = "Malay (Malaysia)"
+        isActive = true
+      },
+      {
+        fullName = "ml_IN"
+        default = false
+        label = "Malayalam (India)"
+        isActive = true
+      },
+      {
+        fullName = "mt_MT"
+        default = false
+        label = "Maltese (Malta)"
+        isActive = true
+      },
+      {
+        fullName = "mr_IN"
+        default = false
+        label = "Marathi (India)"
+        isActive = true
+      },
+      {
+        fullName = "sh_ME_USD"
+        default = false
+        label = "Montenegrin (Montenegro, USD)"
+        isActive = true
+      },
+      {
+        fullName = "sh_ME"
+        default = false
+        label = "Montenegrin (Montenegro)"
+        isActive = true
+      },
+      {
+        fullName = "ne_NP"
+        default = false
+        label = "Nepali (Nepal)"
+        isActive = true
+      },
+      {
+        fullName = "no_NO"
+        default = false
+        label = "Norwegian (Norway)"
+        isActive = true
+      },
+      {
+        fullName = "ps_AF"
+        default = false
+        label = "Pashto (Afghanistan)"
+        isActive = true
+      },
+      {
+        fullName = "fa_IR"
+        default = false
+        label = "Persian (Iran)"
+        isActive = true
+      },
+      {
+        fullName = "pl_PL"
+        default = false
+        label = "Polish (Poland)"
+        isActive = true
+      },
+      {
+        fullName = "pt_AO"
+        default = false
+        label = "Portuguese (Angola)"
+        isActive = true
+      },
+      {
+        fullName = "pt_BR"
+        default = false
+        label = "Portuguese (Brazil)"
+        isActive = true
+      },
+      {
+        fullName = "pt_CV"
+        default = false
+        label = "Portuguese (Cape Verde)"
+        isActive = true
+      },
+      {
+        fullName = "pt_MZ"
+        default = false
+        label = "Portuguese (Mozambique)"
+        isActive = true
+      },
+      {
+        fullName = "pt_PT"
+        default = false
+        label = "Portuguese (Portugal)"
+        isActive = true
+      },
+      {
+        fullName = "pt_ST"
+        default = false
+        label = "Portuguese (São Tomé & Príncipe)"
+        isActive = true
+      },
+      {
+        fullName = "ro_MD"
+        default = false
+        label = "Romanian (Moldova)"
+        isActive = true
+      },
+      {
+        fullName = "ro_RO"
+        default = false
+        label = "Romanian (Romania)"
+        isActive = true
+      },
+      {
+        fullName = "rm_CH"
+        default = false
+        label = "Romansh (Switzerland)"
+        isActive = true
+      },
+      {
+        fullName = "rn_BI"
+        default = false
+        label = "Rundi (Burundi)"
+        isActive = true
+      },
+      {
+        fullName = "ru_KZ"
+        default = false
+        label = "Russian (Kazakhstan)"
+        isActive = true
+      },
+      {
+        fullName = "ru_RU"
+        default = false
+        label = "Russian (Russia)"
+        isActive = true
+      },
+      {
+        fullName = "sr_BA"
+        default = false
+        label = "Serbian (Cyrillic) (Bosnia and Herzegovina)"
+        isActive = true
+      },
+      {
+        fullName = "sr_CS"
+        default = false
+        label = "Serbian (Cyrillic) (Serbia)"
+        isActive = true
+      },
+      {
+        fullName = "sh_BA"
+        default = false
+        label = "Serbian (Latin) (Bosnia and Herzegovina)"
+        isActive = true
+      },
+      {
+        fullName = "sh_CS"
+        default = false
+        label = "Serbian (Latin) (Serbia)"
+        isActive = true
+      },
+      {
+        fullName = "sr_RS"
+        default = false
+        label = "Serbian (Serbia)"
+        isActive = true
+      },
+      {
+        fullName = "sk_SK"
+        default = false
+        label = "Slovak (Slovakia)"
+        isActive = true
+      },
+      {
+        fullName = "sl_SI"
+        default = false
+        label = "Slovenian (Slovenia)"
+        isActive = true
+      },
+      {
+        fullName = "so_DJ"
+        default = false
+        label = "Somali (Djibouti)"
+        isActive = true
+      },
+      {
+        fullName = "so_SO"
+        default = false
+        label = "Somali (Somalia)"
+        isActive = true
+      },
+      {
+        fullName = "es_AR"
+        default = false
+        label = "Spanish (Argentina)"
+        isActive = true
+      },
+      {
+        fullName = "es_BO"
+        default = false
+        label = "Spanish (Bolivia)"
+        isActive = true
+      },
+      {
+        fullName = "es_CL"
+        default = false
+        label = "Spanish (Chile)"
+        isActive = true
+      },
+      {
+        fullName = "es_CO"
+        default = false
+        label = "Spanish (Colombia)"
+        isActive = true
+      },
+      {
+        fullName = "es_CR"
+        default = false
+        label = "Spanish (Costa Rica)"
+        isActive = true
+      },
+      {
+        fullName = "es_CU"
+        default = false
+        label = "Spanish (Cuba)"
+        isActive = true
+      },
+      {
+        fullName = "es_DO"
+        default = false
+        label = "Spanish (Dominican Republic)"
+        isActive = true
+      },
+      {
+        fullName = "es_EC"
+        default = false
+        label = "Spanish (Ecuador)"
+        isActive = true
+      },
+      {
+        fullName = "es_SV"
+        default = false
+        label = "Spanish (El Salvador)"
+        isActive = true
+      },
+      {
+        fullName = "es_GT"
+        default = false
+        label = "Spanish (Guatemala)"
+        isActive = true
+      },
+      {
+        fullName = "es_HN"
+        default = false
+        label = "Spanish (Honduras)"
+        isActive = true
+      },
+      {
+        fullName = "es_MX"
+        default = false
+        label = "Spanish (Mexico)"
+        isActive = true
+      },
+      {
+        fullName = "es_NI"
+        default = false
+        label = "Spanish (Nicaragua)"
+        isActive = true
+      },
+      {
+        fullName = "es_PA"
+        default = false
+        label = "Spanish (Panama)"
+        isActive = true
+      },
+      {
+        fullName = "es_PY"
+        default = false
+        label = "Spanish (Paraguay)"
+        isActive = true
+      },
+      {
+        fullName = "es_PE"
+        default = false
+        label = "Spanish (Peru)"
+        isActive = true
+      },
+      {
+        fullName = "es_PR"
+        default = false
+        label = "Spanish (Puerto Rico)"
+        isActive = true
+      },
+      {
+        fullName = "es_ES"
+        default = false
+        label = "Spanish (Spain)"
+        isActive = true
+      },
+      {
+        fullName = "es_US"
+        default = false
+        label = "Spanish (United States)"
+        isActive = true
+      },
+      {
+        fullName = "es_UY"
+        default = false
+        label = "Spanish (Uruguay)"
+        isActive = true
+      },
+      {
+        fullName = "es_VE"
+        default = false
+        label = "Spanish (Venezuela)"
+        isActive = true
+      },
+      {
+        fullName = "sw_KE"
+        default = false
+        label = "Swahili (Kenya)"
+        isActive = true
+      },
+      {
+        fullName = "sv_SE"
+        default = false
+        label = "Swedish (Sweden)"
+        isActive = true
+      },
+      {
+        fullName = "tl_PH"
+        default = false
+        label = "Tagalog (Philippines)"
+        isActive = true
+      },
+      {
+        fullName = "tg_TJ"
+        default = false
+        label = "Tajik (Tajikistan)"
+        isActive = true
+      },
+      {
+        fullName = "ta_IN"
+        default = false
+        label = "Tamil (India)"
+        isActive = true
+      },
+      {
+        fullName = "ta_LK"
+        default = false
+        label = "Tamil (Sri Lanka)"
+        isActive = true
+      },
+      {
+        fullName = "te_IN"
+        default = false
+        label = "Telugu (India)"
+        isActive = true
+      },
+      {
+        fullName = "mi_NZ"
+        default = false
+        label = "Te reo (New Zealand)"
+        isActive = true
+      },
+      {
+        fullName = "th_TH"
+        default = false
+        label = "Thai (Thailand)"
+        isActive = true
+      },
+      {
+        fullName = "ti_ET"
+        default = false
+        label = "Tigrinya (Ethiopia)"
+        isActive = true
+      },
+      {
+        fullName = "tr_TR"
+        default = false
+        label = "Turkish (Turkey)"
+        isActive = true
+      },
+      {
+        fullName = "uk_UA"
+        default = false
+        label = "Ukrainian (Ukraine)"
+        isActive = true
+      },
+      {
+        fullName = "ur_PK"
+        default = false
+        label = "Urdu (Pakistan)"
+        isActive = true
+      },
+      {
+        fullName = "uz_LATN_UZ"
+        default = false
+        label = "Uzbek (LATN,UZ)"
+        isActive = true
+      },
+      {
+        fullName = "vi_VN"
+        default = false
+        label = "Vietnamese (Vietnam)"
+        isActive = true
+      },
+      {
+        fullName = "cy_GB"
+        default = false
+        label = "Welsh (United Kingdom)"
+        isActive = true
+      },
+      {
+        fullName = "xh_ZA"
+        default = false
+        label = "Xhosa (South Africa)"
+        isActive = true
+      },
+      {
+        fullName = "yo_BJ"
+        default = false
+        label = "Yoruba (Benin)"
+        isActive = true
+      },
+      {
+        fullName = "zu_ZA"
+        default = false
+        label = "Zulu (South Africa)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox ReceivesInfoEmails {
+    apiName = "User.ReceivesInfoEmails"
+    label = "Info Emails"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox ReceivesAdminInfoEmails {
+    apiName = "User.ReceivesAdminInfoEmails"
+    label = "Admin Info Emails"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist EmailEncodingKey {
+    apiName = "User.EmailEncodingKey"
+    label = "Email Encoding"
+    _required = true
+    valueSet = [
+      {
+        fullName = "UTF-8"
+        default = false
+        label = "Unicode (UTF-8)"
+        isActive = true
+      },
+      {
+        fullName = "ISO-8859-1"
+        default = false
+        label = "General US & Western Europe (ISO-8859-1, ISO-LATIN-1)"
+        isActive = true
+      },
+      {
+        fullName = "Shift_JIS"
+        default = false
+        label = "Japanese (Shift-JIS)"
+        isActive = true
+      },
+      {
+        fullName = "ISO-2022-JP"
+        default = false
+        label = "Japanese (JIS)"
+        isActive = true
+      },
+      {
+        fullName = "EUC-JP"
+        default = false
+        label = "Japanese (EUC)"
+        isActive = true
+      },
+      {
+        fullName = "ks_c_5601-1987"
+        default = false
+        label = "Korean (ks_c_5601-1987)"
+        isActive = true
+      },
+      {
+        fullName = "Big5"
+        default = false
+        label = "Traditional Chinese (Big5)"
+        isActive = true
+      },
+      {
+        fullName = "GB2312"
+        default = false
+        label = "Simplified Chinese (GB2312)"
+        isActive = true
+      },
+      {
+        fullName = "Big5-HKSCS"
+        default = false
+        label = "Traditional Chinese Hong Kong (Big5-HKSCS)"
+        isActive = true
+      },
+      {
+        fullName = "x-SJIS_0213"
+        default = false
+        label = "Japanese (Shift-JIS_2004)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ProfileId {
+    apiName = "User.ProfileId"
+    label = "Profile ID"
+    _required = true
+    referenceTo = [
+      "Profile",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Profile"
+    queryable = true
+  }
+  salesforce.Picklist UserType {
+    apiName = "User.UserType"
+    label = "User Type"
+    valueSet = [
+      {
+        fullName = "Standard"
+        default = false
+        label = "Standard"
+        isActive = true
+      },
+      {
+        fullName = "PowerPartner"
+        default = false
+        label = "Partner"
+        isActive = true
+      },
+      {
+        fullName = "PowerCustomerSuccess"
+        default = false
+        label = "Customer Portal Manager"
+        isActive = true
+      },
+      {
+        fullName = "CustomerSuccess"
+        default = false
+        label = "Customer Portal User"
+        isActive = true
+      },
+      {
+        fullName = "Guest"
+        default = false
+        label = "Guest"
+        isActive = true
+      },
+      {
+        fullName = "CspLitePortal"
+        default = false
+        label = "High Volume Portal"
+        isActive = true
+      },
+      {
+        fullName = "CsnOnly"
+        default = false
+        label = "CSN Only"
+        isActive = true
+      },
+      {
+        fullName = "SelfService"
+        default = false
+        label = "Self Service"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LanguageLocaleKey {
+    apiName = "User.LanguageLocaleKey"
+    label = "Language"
+    _required = true
+    valueSet = [
+      {
+        fullName = "en_US"
+        default = false
+        label = "English"
+        isActive = true
+      },
+      {
+        fullName = "de"
+        default = false
+        label = "German"
+        isActive = true
+      },
+      {
+        fullName = "es"
+        default = false
+        label = "Spanish"
+        isActive = true
+      },
+      {
+        fullName = "fr"
+        default = false
+        label = "French"
+        isActive = true
+      },
+      {
+        fullName = "it"
+        default = false
+        label = "Italian"
+        isActive = true
+      },
+      {
+        fullName = "ja"
+        default = false
+        label = "Japanese"
+        isActive = true
+      },
+      {
+        fullName = "sv"
+        default = false
+        label = "Swedish"
+        isActive = true
+      },
+      {
+        fullName = "ko"
+        default = false
+        label = "Korean"
+        isActive = true
+      },
+      {
+        fullName = "zh_TW"
+        default = false
+        label = "Chinese (Traditional)"
+        isActive = true
+      },
+      {
+        fullName = "zh_CN"
+        default = false
+        label = "Chinese (Simplified)"
+        isActive = true
+      },
+      {
+        fullName = "pt_BR"
+        default = false
+        label = "Portuguese (Brazil)"
+        isActive = true
+      },
+      {
+        fullName = "nl_NL"
+        default = false
+        label = "Dutch"
+        isActive = true
+      },
+      {
+        fullName = "da"
+        default = false
+        label = "Danish"
+        isActive = true
+      },
+      {
+        fullName = "th"
+        default = false
+        label = "Thai"
+        isActive = true
+      },
+      {
+        fullName = "fi"
+        default = false
+        label = "Finnish"
+        isActive = true
+      },
+      {
+        fullName = "ru"
+        default = false
+        label = "Russian"
+        isActive = true
+      },
+      {
+        fullName = "es_MX"
+        default = false
+        label = "Spanish (Mexico)"
+        isActive = true
+      },
+      {
+        fullName = "no"
+        default = false
+        label = "Norwegian"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text EmployeeNumber {
+    apiName = "User.EmployeeNumber"
+    label = "Employee Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+  }
+  salesforce.Lookup DelegatedApproverId {
+    apiName = "User.DelegatedApproverId"
+    label = "Delegated Approver ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ManagerId {
+    apiName = "User.ManagerId"
+    label = "Manager ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Manager"
+    queryable = true
+  }
+  salesforce.DateTime LastLoginDate {
+    apiName = "User.LastLoginDate"
+    label = "Last Login"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastPasswordChangeDate {
+    apiName = "User.LastPasswordChangeDate"
+    label = "Last Password Change or Reset"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "User.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "User.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "User.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "User.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "User.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number NumberOfFailedLogins {
+    apiName = "User.NumberOfFailedLogins"
+    label = "Failed Login Attempts"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime OfflineTrialExpirationDate {
+    apiName = "User.OfflineTrialExpirationDate"
+    label = "Offline Edition Trial Expiration Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime OfflinePdaTrialExpirationDate {
+    apiName = "User.OfflinePdaTrialExpirationDate"
+    label = "Sales Anywhere Trial Expiration Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox UserPermissionsMarketingUser {
+    apiName = "User.UserPermissionsMarketingUser"
+    label = "Marketing User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsOfflineUser {
+    apiName = "User.UserPermissionsOfflineUser"
+    label = "Offline User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsCallCenterAutoLogin {
+    apiName = "User.UserPermissionsCallCenterAutoLogin"
+    label = "Auto-login To Call Center"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsSFContentUser {
+    apiName = "User.UserPermissionsSFContentUser"
+    label = "Salesforce CRM Content User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsKnowledgeUser {
+    apiName = "User.UserPermissionsKnowledgeUser"
+    label = "Knowledge User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsInteractionUser {
+    apiName = "User.UserPermissionsInteractionUser"
+    label = "Flow User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsSupportUser {
+    apiName = "User.UserPermissionsSupportUser"
+    label = "Service Cloud User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsJigsawProspectingUser {
+    apiName = "User.UserPermissionsJigsawProspectingUser"
+    label = "Data.com User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsSiteforceContributorUser {
+    apiName = "User.UserPermissionsSiteforceContributorUser"
+    label = "Site.com Contributor User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsSiteforcePublisherUser {
+    apiName = "User.UserPermissionsSiteforcePublisherUser"
+    label = "Site.com Publisher User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPermissionsWorkDotComUserFeature {
+    apiName = "User.UserPermissionsWorkDotComUserFeature"
+    label = "WDC User"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox ForecastEnabled {
+    apiName = "User.ForecastEnabled"
+    label = "Allow Forecasting"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesActivityRemindersPopup {
+    apiName = "User.UserPreferencesActivityRemindersPopup"
+    label = "ActivityRemindersPopup"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesEventRemindersCheckboxDefault {
+    apiName = "User.UserPreferencesEventRemindersCheckboxDefault"
+    label = "EventRemindersCheckboxDefault"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesTaskRemindersCheckboxDefault {
+    apiName = "User.UserPreferencesTaskRemindersCheckboxDefault"
+    label = "TaskRemindersCheckboxDefault"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesReminderSoundOff {
+    apiName = "User.UserPreferencesReminderSoundOff"
+    label = "ReminderSoundOff"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableAllFeedsEmail {
+    apiName = "User.UserPreferencesDisableAllFeedsEmail"
+    label = "DisableAllFeedsEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableFollowersEmail {
+    apiName = "User.UserPreferencesDisableFollowersEmail"
+    label = "DisableFollowersEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableProfilePostEmail {
+    apiName = "User.UserPreferencesDisableProfilePostEmail"
+    label = "DisableProfilePostEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableChangeCommentEmail {
+    apiName = "User.UserPreferencesDisableChangeCommentEmail"
+    label = "DisableChangeCommentEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableLaterCommentEmail {
+    apiName = "User.UserPreferencesDisableLaterCommentEmail"
+    label = "DisableLaterCommentEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisProfPostCommentEmail {
+    apiName = "User.UserPreferencesDisProfPostCommentEmail"
+    label = "DisProfPostCommentEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesContentNoEmail {
+    apiName = "User.UserPreferencesContentNoEmail"
+    label = "ContentNoEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesContentEmailAsAndWhen {
+    apiName = "User.UserPreferencesContentEmailAsAndWhen"
+    label = "ContentEmailAsAndWhen"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesApexPagesDeveloperMode {
+    apiName = "User.UserPreferencesApexPagesDeveloperMode"
+    label = "ApexPagesDeveloperMode"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesReceiveNoNotificationsAsApprover {
+    apiName = "User.UserPreferencesReceiveNoNotificationsAsApprover"
+    label = "ReceiveNoNotificationsAsApprover"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesReceiveNotificationsAsDelegatedApprover {
+    apiName = "User.UserPreferencesReceiveNotificationsAsDelegatedApprover"
+    label = "ReceiveNotificationsAsDelegatedApprover"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideCSNGetChatterMobileTask {
+    apiName = "User.UserPreferencesHideCSNGetChatterMobileTask"
+    label = "HideCSNGetChatterMobileTask"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableMentionsPostEmail {
+    apiName = "User.UserPreferencesDisableMentionsPostEmail"
+    label = "DisableMentionsPostEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisMentionsCommentEmail {
+    apiName = "User.UserPreferencesDisMentionsCommentEmail"
+    label = "DisMentionsCommentEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideCSNDesktopTask {
+    apiName = "User.UserPreferencesHideCSNDesktopTask"
+    label = "HideCSNDesktopTask"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideChatterOnboardingSplash {
+    apiName = "User.UserPreferencesHideChatterOnboardingSplash"
+    label = "HideChatterOnboardingSplash"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideSecondChatterOnboardingSplash {
+    apiName = "User.UserPreferencesHideSecondChatterOnboardingSplash"
+    label = "HideSecondChatterOnboardingSplash"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisCommentAfterLikeEmail {
+    apiName = "User.UserPreferencesDisCommentAfterLikeEmail"
+    label = "DisCommentAfterLikeEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableLikeEmail {
+    apiName = "User.UserPreferencesDisableLikeEmail"
+    label = "DisableLikeEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesSortFeedByComment {
+    apiName = "User.UserPreferencesSortFeedByComment"
+    label = "SortFeedByComment"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableMessageEmail {
+    apiName = "User.UserPreferencesDisableMessageEmail"
+    label = "DisableMessageEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideLegacyRetirementModal {
+    apiName = "User.UserPreferencesHideLegacyRetirementModal"
+    label = "HideLegacyRetirementModal"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesJigsawListUser {
+    apiName = "User.UserPreferencesJigsawListUser"
+    label = "JigsawListUser"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableBookmarkEmail {
+    apiName = "User.UserPreferencesDisableBookmarkEmail"
+    label = "DisableBookmarkEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableSharePostEmail {
+    apiName = "User.UserPreferencesDisableSharePostEmail"
+    label = "DisableSharePostEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesEnableAutoSubForFeeds {
+    apiName = "User.UserPreferencesEnableAutoSubForFeeds"
+    label = "EnableAutoSubForFeeds"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableFileShareNotificationsForApi {
+    apiName = "User.UserPreferencesDisableFileShareNotificationsForApi"
+    label = "DisableFileShareNotificationsForApi"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowTitleToExternalUsers {
+    apiName = "User.UserPreferencesShowTitleToExternalUsers"
+    label = "ShowTitleToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowManagerToExternalUsers {
+    apiName = "User.UserPreferencesShowManagerToExternalUsers"
+    label = "ShowManagerToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowEmailToExternalUsers {
+    apiName = "User.UserPreferencesShowEmailToExternalUsers"
+    label = "ShowEmailToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowWorkPhoneToExternalUsers {
+    apiName = "User.UserPreferencesShowWorkPhoneToExternalUsers"
+    label = "ShowWorkPhoneToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowMobilePhoneToExternalUsers {
+    apiName = "User.UserPreferencesShowMobilePhoneToExternalUsers"
+    label = "ShowMobilePhoneToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowFaxToExternalUsers {
+    apiName = "User.UserPreferencesShowFaxToExternalUsers"
+    label = "ShowFaxToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowStreetAddressToExternalUsers {
+    apiName = "User.UserPreferencesShowStreetAddressToExternalUsers"
+    label = "ShowStreetAddressToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowCityToExternalUsers {
+    apiName = "User.UserPreferencesShowCityToExternalUsers"
+    label = "ShowCityToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowStateToExternalUsers {
+    apiName = "User.UserPreferencesShowStateToExternalUsers"
+    label = "ShowStateToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowPostalCodeToExternalUsers {
+    apiName = "User.UserPreferencesShowPostalCodeToExternalUsers"
+    label = "ShowPostalCodeToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowCountryToExternalUsers {
+    apiName = "User.UserPreferencesShowCountryToExternalUsers"
+    label = "ShowCountryToExternalUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowProfilePicToGuestUsers {
+    apiName = "User.UserPreferencesShowProfilePicToGuestUsers"
+    label = "ShowProfilePicToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowTitleToGuestUsers {
+    apiName = "User.UserPreferencesShowTitleToGuestUsers"
+    label = "ShowTitleToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowCityToGuestUsers {
+    apiName = "User.UserPreferencesShowCityToGuestUsers"
+    label = "ShowCityToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowStateToGuestUsers {
+    apiName = "User.UserPreferencesShowStateToGuestUsers"
+    label = "ShowStateToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowPostalCodeToGuestUsers {
+    apiName = "User.UserPreferencesShowPostalCodeToGuestUsers"
+    label = "ShowPostalCodeToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowCountryToGuestUsers {
+    apiName = "User.UserPreferencesShowCountryToGuestUsers"
+    label = "ShowCountryToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableFeedbackEmail {
+    apiName = "User.UserPreferencesDisableFeedbackEmail"
+    label = "DisableFeedbackEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableWorkEmail {
+    apiName = "User.UserPreferencesDisableWorkEmail"
+    label = "DisableWorkEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideS1BrowserUI {
+    apiName = "User.UserPreferencesHideS1BrowserUI"
+    label = "HideS1BrowserUI"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesDisableEndorsementEmail {
+    apiName = "User.UserPreferencesDisableEndorsementEmail"
+    label = "DisableEndorsementEmail"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesPathAssistantCollapsed {
+    apiName = "User.UserPreferencesPathAssistantCollapsed"
+    label = "PathAssistantCollapsed"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesCacheDiagnostics {
+    apiName = "User.UserPreferencesCacheDiagnostics"
+    label = "CacheDiagnostics"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowEmailToGuestUsers {
+    apiName = "User.UserPreferencesShowEmailToGuestUsers"
+    label = "ShowEmailToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowManagerToGuestUsers {
+    apiName = "User.UserPreferencesShowManagerToGuestUsers"
+    label = "ShowManagerToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowWorkPhoneToGuestUsers {
+    apiName = "User.UserPreferencesShowWorkPhoneToGuestUsers"
+    label = "ShowWorkPhoneToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowMobilePhoneToGuestUsers {
+    apiName = "User.UserPreferencesShowMobilePhoneToGuestUsers"
+    label = "ShowMobilePhoneToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowFaxToGuestUsers {
+    apiName = "User.UserPreferencesShowFaxToGuestUsers"
+    label = "ShowFaxToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesShowStreetAddressToGuestUsers {
+    apiName = "User.UserPreferencesShowStreetAddressToGuestUsers"
+    label = "ShowStreetAddressToGuestUsers"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesLightningExperiencePreferred {
+    apiName = "User.UserPreferencesLightningExperiencePreferred"
+    label = "LightningExperiencePreferred"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesPreviewLightning {
+    apiName = "User.UserPreferencesPreviewLightning"
+    label = "PreviewLightning"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideEndUserOnboardingAssistantModal {
+    apiName = "User.UserPreferencesHideEndUserOnboardingAssistantModal"
+    label = "HideEndUserOnboardingAssistantModal"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideLightningMigrationModal {
+    apiName = "User.UserPreferencesHideLightningMigrationModal"
+    label = "HideLightningMigrationModal"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideSfxWelcomeMat {
+    apiName = "User.UserPreferencesHideSfxWelcomeMat"
+    label = "HideSfxWelcomeMat"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHideBiggerPhotoCallout {
+    apiName = "User.UserPreferencesHideBiggerPhotoCallout"
+    label = "HideBiggerPhotoCallout"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesGlobalNavBarWTShown {
+    apiName = "User.UserPreferencesGlobalNavBarWTShown"
+    label = "GlobalNavBarWTShown"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesGlobalNavGridMenuWTShown {
+    apiName = "User.UserPreferencesGlobalNavGridMenuWTShown"
+    label = "GlobalNavGridMenuWTShown"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesCreateLEXAppsWTShown {
+    apiName = "User.UserPreferencesCreateLEXAppsWTShown"
+    label = "CreateLEXAppsWTShown"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesFavoritesWTShown {
+    apiName = "User.UserPreferencesFavoritesWTShown"
+    label = "FavoritesWTShown"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesRecordHomeSectionCollapseWTShown {
+    apiName = "User.UserPreferencesRecordHomeSectionCollapseWTShown"
+    label = "RecordHomeSectionCollapseWTShown"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesRecordHomeReservedWTShown {
+    apiName = "User.UserPreferencesRecordHomeReservedWTShown"
+    label = "RecordHomeReservedWTShown"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesFavoritesShowTopFavorites {
+    apiName = "User.UserPreferencesFavoritesShowTopFavorites"
+    label = "FavoritesShowTopFavorites"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesExcludeMailAppAttachments {
+    apiName = "User.UserPreferencesExcludeMailAppAttachments"
+    label = "ExcludeMailAppAttachments"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesSuppressTaskSFXReminders {
+    apiName = "User.UserPreferencesSuppressTaskSFXReminders"
+    label = "SuppressTaskSFXReminders"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesSuppressEventSFXReminders {
+    apiName = "User.UserPreferencesSuppressEventSFXReminders"
+    label = "SuppressEventSFXReminders"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesPreviewCustomTheme {
+    apiName = "User.UserPreferencesPreviewCustomTheme"
+    label = "PreviewCustomTheme"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesHasCelebrationBadge {
+    apiName = "User.UserPreferencesHasCelebrationBadge"
+    label = "HasCelebrationBadge"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesUserDebugModePref {
+    apiName = "User.UserPreferencesUserDebugModePref"
+    label = "UserDebugModePref"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesSRHOverrideActivities {
+    apiName = "User.UserPreferencesSRHOverrideActivities"
+    label = "SRHOverrideActivities"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesNewLightningReportRunPageEnabled {
+    apiName = "User.UserPreferencesNewLightningReportRunPageEnabled"
+    label = "NewLightningReportRunPageEnabled"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox UserPreferencesNativeEmailClient {
+    apiName = "User.UserPreferencesNativeEmailClient"
+    label = "NativeEmailClient"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "User.ContactId"
+    label = "Contact ID"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contact"
+    queryable = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "User.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Account"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CallCenterId {
+    apiName = "User.CallCenterId"
+    label = "Call Center ID"
+    referenceTo = [
+      salesforce.CallCenter,
+    ]
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Phone Extension {
+    apiName = "User.Extension"
+    label = "Extension"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text FederationIdentifier {
+    apiName = "User.FederationIdentifier"
+    label = "SAML Federation ID"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 512
+    queryable = true
+  }
+  salesforce.LongTextArea AboutMe {
+    apiName = "User.AboutMe"
+    label = "About Me"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  salesforce.Url FullPhotoUrl {
+    apiName = "User.FullPhotoUrl"
+    label = "Url for full-sized Photo"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Url SmallPhotoUrl {
+    apiName = "User.SmallPhotoUrl"
+    label = "Photo"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsExtIndicatorVisible {
+    apiName = "User.IsExtIndicatorVisible"
+    label = "Show external indicator"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text OutOfOfficeMessage {
+    apiName = "User.OutOfOfficeMessage"
+    label = "Out of office message"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Url MediumPhotoUrl {
+    apiName = "User.MediumPhotoUrl"
+    label = "Url for medium profile photo"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist DigestFrequency {
+    apiName = "User.DigestFrequency"
+    label = "Chatter Email Highlights Frequency"
+    _required = true
+    valueSet = [
+      {
+        fullName = "D"
+        default = false
+        label = "Daily"
+        isActive = true
+      },
+      {
+        fullName = "W"
+        default = false
+        label = "Weekly"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = true
+        label = "Never"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist DefaultGroupNotificationFrequency {
+    apiName = "User.DefaultGroupNotificationFrequency"
+    label = "Default Notification Frequency when Joining Groups"
+    _required = true
+    valueSet = [
+      {
+        fullName = "P"
+        default = false
+        label = "Email on Each Post"
+        isActive = true
+      },
+      {
+        fullName = "D"
+        default = false
+        label = "Daily Digests"
+        isActive = true
+      },
+      {
+        fullName = "W"
+        default = false
+        label = "Weekly Digests"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = true
+        label = "Never"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number JigsawImportLimitOverride {
+    apiName = "User.JigsawImportLimitOverride"
+    label = "Data.com Monthly Addition Limit"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Url BannerPhotoUrl {
+    apiName = "User.BannerPhotoUrl"
+    label = "Url for banner photo"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Url SmallBannerPhotoUrl {
+    apiName = "User.SmallBannerPhotoUrl"
+    label = "Url for IOS banner photo"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Url MediumBannerPhotoUrl {
+    apiName = "User.MediumBannerPhotoUrl"
+    label = "Url for Android banner photo"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsProfilePhotoActive {
+    apiName = "User.IsProfilePhotoActive"
+    label = "Has Profile Photo"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup IndividualId {
+    apiName = "User.IndividualId"
+    label = "Individual ID"
+    referenceTo = [
+      salesforce.Individual,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Individual"
+    queryable = true
+  }
+}

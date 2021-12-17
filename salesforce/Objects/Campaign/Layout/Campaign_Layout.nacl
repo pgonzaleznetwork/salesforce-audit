@@ -1,0 +1,257 @@
+salesforce.Layout Campaign_Campaign_Layout@bs {
+  fullName = "Campaign-Campaign Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  headers = [
+    "PersonalTagging",
+    "PublicTagging",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Campaign Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Campaign.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.ExpectedRevenue
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.BudgetedCost
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.ActualCost
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.ExpectedResponse
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.NumberSent
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.ParentId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.NumberOfLeads
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.NumberOfConvertedLeads
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.NumberOfContacts
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.NumberOfResponses
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.NumberOfOpportunities
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.NumberOfWonOpportunities
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.AmountAllOpportunities
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.AmountWonOpportunities
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Other Information"
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Campaign.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Campaign.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              customLink = salesforce.WebLink.instance.Campaign_ViewCampaignInfluenceReport
+            },
+          ]
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Campaign.field.ParentId
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "CAMPAIGN.NAME",
+      ]
+      relatedList = "RelatedCampaignHierarchyList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      relatedList = "RelatedAttachmentList"
+    },
+    {
+      fields = [
+        "OPPORTUNITY.NAME",
+        "OPPORTUNITY.STAGE_NAME",
+        "OPPORTUNITY.AMOUNT",
+        "OPPORTUNITY.CLOSE_DATE",
+      ]
+      relatedList = "RelatedOpportunityList"
+    },
+    {
+      fields = [
+        "MEMBER_TYPE",
+        "STATUS",
+        "FULL_NAME",
+        "TITLE",
+        "FIRST_NAME",
+        "LAST_NAME",
+        "COMPANY",
+      ]
+      relatedList = "RelatedCampaignMemberList"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Campaign,
+  ]
+}

@@ -1,0 +1,79 @@
+salesforce.Layout AssociatedLocation_Associated_Location_Layout@bss {
+  fullName = "AssociatedLocation-Associated Location Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssociatedLocation.field.AssociatedLocationNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AssociatedLocation.field.LocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssociatedLocation.field.ActiveFrom
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AssociatedLocation.field.ParentRecordId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssociatedLocation.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssociatedLocation.field.ActiveTo
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssociatedLocation.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.AssociatedLocation.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AssociatedLocation,
+  ]
+}

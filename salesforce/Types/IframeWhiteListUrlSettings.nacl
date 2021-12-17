@@ -1,0 +1,27 @@
+type salesforce.IframeWhiteListUrlSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.IframeWhiteListUrl iframeWhiteListUrls {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "iframeWhiteListUrlSettings"
+  dirName = "iframeWhiteListUrlSettings"
+  metadataType = "IframeWhiteListUrlSettings"
+}

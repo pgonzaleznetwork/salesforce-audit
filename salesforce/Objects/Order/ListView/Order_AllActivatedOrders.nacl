@@ -1,0 +1,15 @@
+salesforce.ListView Order_AllActivatedOrders {
+  fullName = "Order.AllActivatedOrders"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "ORDERS.STATUS_CODE"
+      operation = "equals"
+      value = "A"
+    },
+  ]
+  label = "All Activated Orders"
+  _parent = [
+    salesforce.Order,
+  ]
+}

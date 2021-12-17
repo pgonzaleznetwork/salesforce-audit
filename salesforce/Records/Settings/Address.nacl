@@ -1,0 +1,4968 @@
+salesforce.AddressSettings {
+  fullName = "Address"
+  countriesAndStates = {
+    countries = [
+      {
+        active = true
+        integrationValue = "Andorra"
+        isoCode = "AD"
+        label = "Andorra"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "United Arab Emirates"
+        isoCode = "AE"
+        label = "United Arab Emirates"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Afghanistan"
+        isoCode = "AF"
+        label = "Afghanistan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Antigua and Barbuda"
+        isoCode = "AG"
+        label = "Antigua and Barbuda"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Anguilla"
+        isoCode = "AI"
+        label = "Anguilla"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Albania"
+        isoCode = "AL"
+        label = "Albania"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Armenia"
+        isoCode = "AM"
+        label = "Armenia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Angola"
+        isoCode = "AO"
+        label = "Angola"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Antarctica"
+        isoCode = "AQ"
+        label = "Antarctica"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Argentina"
+        isoCode = "AR"
+        label = "Argentina"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Austria"
+        isoCode = "AT"
+        label = "Austria"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Australia"
+        isoCode = "AU"
+        label = "Australia"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Australian Capital Territory"
+            isoCode = "ACT"
+            label = "Australian Capital Territory"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "New South Wales"
+            isoCode = "NSW"
+            label = "New South Wales"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Northern Territory"
+            isoCode = "NT"
+            label = "Northern Territory"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Queensland"
+            isoCode = "QLD"
+            label = "Queensland"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "South Australia"
+            isoCode = "SA"
+            label = "South Australia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tasmania"
+            isoCode = "TAS"
+            label = "Tasmania"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Victoria"
+            isoCode = "VIC"
+            label = "Victoria"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Western Australia"
+            isoCode = "WA"
+            label = "Western Australia"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Aruba"
+        isoCode = "AW"
+        label = "Aruba"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Aland Islands"
+        isoCode = "AX"
+        label = "Aland Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Azerbaijan"
+        isoCode = "AZ"
+        label = "Azerbaijan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bosnia and Herzegovina"
+        isoCode = "BA"
+        label = "Bosnia and Herzegovina"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Barbados"
+        isoCode = "BB"
+        label = "Barbados"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bangladesh"
+        isoCode = "BD"
+        label = "Bangladesh"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Belgium"
+        isoCode = "BE"
+        label = "Belgium"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Burkina Faso"
+        isoCode = "BF"
+        label = "Burkina Faso"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bulgaria"
+        isoCode = "BG"
+        label = "Bulgaria"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bahrain"
+        isoCode = "BH"
+        label = "Bahrain"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Burundi"
+        isoCode = "BI"
+        label = "Burundi"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Benin"
+        isoCode = "BJ"
+        label = "Benin"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Barthélemy"
+        isoCode = "BL"
+        label = "Saint Barthélemy"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bermuda"
+        isoCode = "BM"
+        label = "Bermuda"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Brunei Darussalam"
+        isoCode = "BN"
+        label = "Brunei Darussalam"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bolivia, Plurinational State of"
+        isoCode = "BO"
+        label = "Bolivia, Plurinational State of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bonaire, Sint Eustatius and Saba"
+        isoCode = "BQ"
+        label = "Bonaire, Sint Eustatius and Saba"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Brazil"
+        isoCode = "BR"
+        label = "Brazil"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Acre"
+            isoCode = "AC"
+            label = "Acre"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Alagoas"
+            isoCode = "AL"
+            label = "Alagoas"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Amazonas"
+            isoCode = "AM"
+            label = "Amazonas"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Amapá"
+            isoCode = "AP"
+            label = "Amapá"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Bahia"
+            isoCode = "BA"
+            label = "Bahia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ceará"
+            isoCode = "CE"
+            label = "Ceará"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Distrito Federal"
+            isoCode = "DF"
+            label = "Distrito Federal"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Espírito Santo"
+            isoCode = "ES"
+            label = "Espírito Santo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Goiás"
+            isoCode = "GO"
+            label = "Goiás"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Maranhão"
+            isoCode = "MA"
+            label = "Maranhão"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Minas Gerais"
+            isoCode = "MG"
+            label = "Minas Gerais"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Mato Grosso do Sul"
+            isoCode = "MS"
+            label = "Mato Grosso do Sul"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Mato Grosso"
+            isoCode = "MT"
+            label = "Mato Grosso"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pará"
+            isoCode = "PA"
+            label = "Pará"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Paraíba"
+            isoCode = "PB"
+            label = "Paraíba"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pernambuco"
+            isoCode = "PE"
+            label = "Pernambuco"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Piauí"
+            isoCode = "PI"
+            label = "Piauí"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Paraná"
+            isoCode = "PR"
+            label = "Paraná"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rio de Janeiro"
+            isoCode = "RJ"
+            label = "Rio de Janeiro"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rio Grande do Norte"
+            isoCode = "RN"
+            label = "Rio Grande do Norte"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rondônia"
+            isoCode = "RO"
+            label = "Rondônia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Roraima"
+            isoCode = "RR"
+            label = "Roraima"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rio Grande do Sul"
+            isoCode = "RS"
+            label = "Rio Grande do Sul"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Santa Catarina"
+            isoCode = "SC"
+            label = "Santa Catarina"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sergipe"
+            isoCode = "SE"
+            label = "Sergipe"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "São Paulo"
+            isoCode = "SP"
+            label = "São Paulo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tocantins"
+            isoCode = "TO"
+            label = "Tocantins"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bahamas"
+        isoCode = "BS"
+        label = "Bahamas"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bhutan"
+        isoCode = "BT"
+        label = "Bhutan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Bouvet Island"
+        isoCode = "BV"
+        label = "Bouvet Island"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Botswana"
+        isoCode = "BW"
+        label = "Botswana"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Belarus"
+        isoCode = "BY"
+        label = "Belarus"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Belize"
+        isoCode = "BZ"
+        label = "Belize"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Canada"
+        isoCode = "CA"
+        label = "Canada"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Alberta"
+            isoCode = "AB"
+            label = "Alberta"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "British Columbia"
+            isoCode = "BC"
+            label = "British Columbia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Manitoba"
+            isoCode = "MB"
+            label = "Manitoba"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "New Brunswick"
+            isoCode = "NB"
+            label = "New Brunswick"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Newfoundland and Labrador"
+            isoCode = "NL"
+            label = "Newfoundland and Labrador"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nova Scotia"
+            isoCode = "NS"
+            label = "Nova Scotia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Northwest Territories"
+            isoCode = "NT"
+            label = "Northwest Territories"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nunavut"
+            isoCode = "NU"
+            label = "Nunavut"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ontario"
+            isoCode = "ON"
+            label = "Ontario"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Prince Edward Island"
+            isoCode = "PE"
+            label = "Prince Edward Island"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Quebec"
+            isoCode = "QC"
+            label = "Quebec"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Saskatchewan"
+            isoCode = "SK"
+            label = "Saskatchewan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Yukon Territories"
+            isoCode = "YT"
+            label = "Yukon Territories"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cocos (Keeling) Islands"
+        isoCode = "CC"
+        label = "Cocos (Keeling) Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Congo, the Democratic Republic of the"
+        isoCode = "CD"
+        label = "Congo, the Democratic Republic of the"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Central African Republic"
+        isoCode = "CF"
+        label = "Central African Republic"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Congo"
+        isoCode = "CG"
+        label = "Congo"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Switzerland"
+        isoCode = "CH"
+        label = "Switzerland"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cote d'Ivoire"
+        isoCode = "CI"
+        label = "Cote d'Ivoire"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cook Islands"
+        isoCode = "CK"
+        label = "Cook Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Chile"
+        isoCode = "CL"
+        label = "Chile"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cameroon"
+        isoCode = "CM"
+        label = "Cameroon"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "China"
+        isoCode = "CN"
+        label = "China"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Beijing"
+            isoCode = "11"
+            label = "Beijing"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tianjin"
+            isoCode = "12"
+            label = "Tianjin"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Hebei"
+            isoCode = "13"
+            label = "Hebei"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Shanxi"
+            isoCode = "14"
+            label = "Shanxi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nei Mongol"
+            isoCode = "15"
+            label = "Nei Mongol"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Liaoning"
+            isoCode = "21"
+            label = "Liaoning"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Jilin"
+            isoCode = "22"
+            label = "Jilin"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Heilongjiang"
+            isoCode = "23"
+            label = "Heilongjiang"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Shanghai"
+            isoCode = "31"
+            label = "Shanghai"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Jiangsu"
+            isoCode = "32"
+            label = "Jiangsu"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Zhejiang"
+            isoCode = "33"
+            label = "Zhejiang"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Anhui"
+            isoCode = "34"
+            label = "Anhui"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Fujian"
+            isoCode = "35"
+            label = "Fujian"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Jiangxi"
+            isoCode = "36"
+            label = "Jiangxi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Shandong"
+            isoCode = "37"
+            label = "Shandong"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Henan"
+            isoCode = "41"
+            label = "Henan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Hubei"
+            isoCode = "42"
+            label = "Hubei"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Hunan"
+            isoCode = "43"
+            label = "Hunan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Guangdong"
+            isoCode = "44"
+            label = "Guangdong"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Guangxi"
+            isoCode = "45"
+            label = "Guangxi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Hainan"
+            isoCode = "46"
+            label = "Hainan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Chongqing"
+            isoCode = "50"
+            label = "Chongqing"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sichuan"
+            isoCode = "51"
+            label = "Sichuan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Guizhou"
+            isoCode = "52"
+            label = "Guizhou"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Yunnan"
+            isoCode = "53"
+            label = "Yunnan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Xizang"
+            isoCode = "54"
+            label = "Xizang"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Shaanxi"
+            isoCode = "61"
+            label = "Shaanxi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Gansu"
+            isoCode = "62"
+            label = "Gansu"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Qinghai"
+            isoCode = "63"
+            label = "Qinghai"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ningxia"
+            isoCode = "64"
+            label = "Ningxia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Xinjiang"
+            isoCode = "65"
+            label = "Xinjiang"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Taiwan"
+            isoCode = "71"
+            label = "Taiwan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Hong Kong"
+            isoCode = "91"
+            label = "Hong Kong"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Macao"
+            isoCode = "92"
+            label = "Macao"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Colombia"
+        isoCode = "CO"
+        label = "Colombia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Costa Rica"
+        isoCode = "CR"
+        label = "Costa Rica"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cuba"
+        isoCode = "CU"
+        label = "Cuba"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cape Verde"
+        isoCode = "CV"
+        label = "Cape Verde"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Curaçao"
+        isoCode = "CW"
+        label = "Curaçao"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Christmas Island"
+        isoCode = "CX"
+        label = "Christmas Island"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cyprus"
+        isoCode = "CY"
+        label = "Cyprus"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Czech Republic"
+        isoCode = "CZ"
+        label = "Czech Republic"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Germany"
+        isoCode = "DE"
+        label = "Germany"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Djibouti"
+        isoCode = "DJ"
+        label = "Djibouti"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Denmark"
+        isoCode = "DK"
+        label = "Denmark"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Dominica"
+        isoCode = "DM"
+        label = "Dominica"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Dominican Republic"
+        isoCode = "DO"
+        label = "Dominican Republic"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Algeria"
+        isoCode = "DZ"
+        label = "Algeria"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Ecuador"
+        isoCode = "EC"
+        label = "Ecuador"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Estonia"
+        isoCode = "EE"
+        label = "Estonia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Egypt"
+        isoCode = "EG"
+        label = "Egypt"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Western Sahara"
+        isoCode = "EH"
+        label = "Western Sahara"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Eritrea"
+        isoCode = "ER"
+        label = "Eritrea"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Spain"
+        isoCode = "ES"
+        label = "Spain"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Ethiopia"
+        isoCode = "ET"
+        label = "Ethiopia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Finland"
+        isoCode = "FI"
+        label = "Finland"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Fiji"
+        isoCode = "FJ"
+        label = "Fiji"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Falkland Islands (Malvinas)"
+        isoCode = "FK"
+        label = "Falkland Islands (Malvinas)"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Faroe Islands"
+        isoCode = "FO"
+        label = "Faroe Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "France"
+        isoCode = "FR"
+        label = "France"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Gabon"
+        isoCode = "GA"
+        label = "Gabon"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "United Kingdom"
+        isoCode = "GB"
+        label = "United Kingdom"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Grenada"
+        isoCode = "GD"
+        label = "Grenada"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Georgia"
+        isoCode = "GE"
+        label = "Georgia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "French Guiana"
+        isoCode = "GF"
+        label = "French Guiana"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Guernsey"
+        isoCode = "GG"
+        label = "Guernsey"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Ghana"
+        isoCode = "GH"
+        label = "Ghana"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Gibraltar"
+        isoCode = "GI"
+        label = "Gibraltar"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Greenland"
+        isoCode = "GL"
+        label = "Greenland"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Gambia"
+        isoCode = "GM"
+        label = "Gambia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Guinea"
+        isoCode = "GN"
+        label = "Guinea"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Guadeloupe"
+        isoCode = "GP"
+        label = "Guadeloupe"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Equatorial Guinea"
+        isoCode = "GQ"
+        label = "Equatorial Guinea"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Greece"
+        isoCode = "GR"
+        label = "Greece"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "South Georgia and the South Sandwich Islands"
+        isoCode = "GS"
+        label = "South Georgia and the South Sandwich Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Guatemala"
+        isoCode = "GT"
+        label = "Guatemala"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Guinea-Bissau"
+        isoCode = "GW"
+        label = "Guinea-Bissau"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Guyana"
+        isoCode = "GY"
+        label = "Guyana"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Heard Island and McDonald Islands"
+        isoCode = "HM"
+        label = "Heard Island and McDonald Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Honduras"
+        isoCode = "HN"
+        label = "Honduras"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Croatia"
+        isoCode = "HR"
+        label = "Croatia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Haiti"
+        isoCode = "HT"
+        label = "Haiti"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Hungary"
+        isoCode = "HU"
+        label = "Hungary"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Indonesia"
+        isoCode = "ID"
+        label = "Indonesia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Ireland"
+        isoCode = "IE"
+        label = "Ireland"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Clare"
+            isoCode = "CE"
+            label = "Clare"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Cavan"
+            isoCode = "CN"
+            label = "Cavan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Cork"
+            isoCode = "CO"
+            label = "Cork"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Carlow"
+            isoCode = "CW"
+            label = "Carlow"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Dublin"
+            isoCode = "D"
+            label = "Dublin"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Donegal"
+            isoCode = "DL"
+            label = "Donegal"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Galway"
+            isoCode = "G"
+            label = "Galway"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Kildare"
+            isoCode = "KE"
+            label = "Kildare"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Kilkenny"
+            isoCode = "KK"
+            label = "Kilkenny"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Kerry"
+            isoCode = "KY"
+            label = "Kerry"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Longford"
+            isoCode = "LD"
+            label = "Longford"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Louth"
+            isoCode = "LH"
+            label = "Louth"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Limerick"
+            isoCode = "LK"
+            label = "Limerick"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Leitrim"
+            isoCode = "LM"
+            label = "Leitrim"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Laois"
+            isoCode = "LS"
+            label = "Laois"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Meath"
+            isoCode = "MH"
+            label = "Meath"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Monaghan"
+            isoCode = "MN"
+            label = "Monaghan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Mayo"
+            isoCode = "MO"
+            label = "Mayo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Offaly"
+            isoCode = "OY"
+            label = "Offaly"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Roscommon"
+            isoCode = "RN"
+            label = "Roscommon"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sligo"
+            isoCode = "SO"
+            label = "Sligo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tipperary"
+            isoCode = "TA"
+            label = "Tipperary"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Waterford"
+            isoCode = "WD"
+            label = "Waterford"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Westmeath"
+            isoCode = "WH"
+            label = "Westmeath"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Wicklow"
+            isoCode = "WW"
+            label = "Wicklow"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Wexford"
+            isoCode = "WX"
+            label = "Wexford"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Israel"
+        isoCode = "IL"
+        label = "Israel"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Isle of Man"
+        isoCode = "IM"
+        label = "Isle of Man"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "India"
+        isoCode = "IN"
+        label = "India"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Andaman and Nicobar Islands"
+            isoCode = "AN"
+            label = "Andaman and Nicobar Islands"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Andhra Pradesh"
+            isoCode = "AP"
+            label = "Andhra Pradesh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Arunachal Pradesh"
+            isoCode = "AR"
+            label = "Arunachal Pradesh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Assam"
+            isoCode = "AS"
+            label = "Assam"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Bihar"
+            isoCode = "BR"
+            label = "Bihar"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Chandigarh"
+            isoCode = "CH"
+            label = "Chandigarh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Chhattisgarh"
+            isoCode = "CT"
+            label = "Chhattisgarh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Daman and Diu"
+            isoCode = "DD"
+            label = "Daman and Diu"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Delhi"
+            isoCode = "DL"
+            label = "Delhi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Dadra and Nagar Haveli"
+            isoCode = "DN"
+            label = "Dadra and Nagar Haveli"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Goa"
+            isoCode = "GA"
+            label = "Goa"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Gujarat"
+            isoCode = "GJ"
+            label = "Gujarat"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Himachal Pradesh"
+            isoCode = "HP"
+            label = "Himachal Pradesh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Haryana"
+            isoCode = "HR"
+            label = "Haryana"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Jharkhand"
+            isoCode = "JH"
+            label = "Jharkhand"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Jammu and Kashmir"
+            isoCode = "JK"
+            label = "Jammu and Kashmir"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Karnataka"
+            isoCode = "KA"
+            label = "Karnataka"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Kerala"
+            isoCode = "KL"
+            label = "Kerala"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Lakshadweep"
+            isoCode = "LD"
+            label = "Lakshadweep"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Maharashtra"
+            isoCode = "MH"
+            label = "Maharashtra"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Meghalaya"
+            isoCode = "ML"
+            label = "Meghalaya"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Manipur"
+            isoCode = "MN"
+            label = "Manipur"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Madhya Pradesh"
+            isoCode = "MP"
+            label = "Madhya Pradesh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Mizoram"
+            isoCode = "MZ"
+            label = "Mizoram"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nagaland"
+            isoCode = "NL"
+            label = "Nagaland"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Odisha"
+            isoCode = "OR"
+            label = "Odisha"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Punjab"
+            isoCode = "PB"
+            label = "Punjab"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Puducherry"
+            isoCode = "PY"
+            label = "Puducherry"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rajasthan"
+            isoCode = "RJ"
+            label = "Rajasthan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sikkim"
+            isoCode = "SK"
+            label = "Sikkim"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Telangana"
+            isoCode = "TG"
+            label = "Telangana"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tamil Nadu"
+            isoCode = "TN"
+            label = "Tamil Nadu"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tripura"
+            isoCode = "TR"
+            label = "Tripura"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Uttar Pradesh"
+            isoCode = "UP"
+            label = "Uttar Pradesh"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Uttarakhand"
+            isoCode = "UT"
+            label = "Uttarakhand"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "West Bengal"
+            isoCode = "WB"
+            label = "West Bengal"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "British Indian Ocean Territory"
+        isoCode = "IO"
+        label = "British Indian Ocean Territory"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Iraq"
+        isoCode = "IQ"
+        label = "Iraq"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Iran, Islamic Republic of"
+        isoCode = "IR"
+        label = "Iran, Islamic Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Iceland"
+        isoCode = "IS"
+        label = "Iceland"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Italy"
+        isoCode = "IT"
+        label = "Italy"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Agrigento"
+            isoCode = "AG"
+            label = "Agrigento"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Alessandria"
+            isoCode = "AL"
+            label = "Alessandria"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ancona"
+            isoCode = "AN"
+            label = "Ancona"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Aosta"
+            isoCode = "AO"
+            label = "Aosta"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ascoli Piceno"
+            isoCode = "AP"
+            label = "Ascoli Piceno"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "L'Aquila"
+            isoCode = "AQ"
+            label = "L'Aquila"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Arezzo"
+            isoCode = "AR"
+            label = "Arezzo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Asti"
+            isoCode = "AT"
+            label = "Asti"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Avellino"
+            isoCode = "AV"
+            label = "Avellino"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Bari"
+            isoCode = "BA"
+            label = "Bari"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Bergamo"
+            isoCode = "BG"
+            label = "Bergamo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Biella"
+            isoCode = "BI"
+            label = "Biella"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Belluno"
+            isoCode = "BL"
+            label = "Belluno"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Benevento"
+            isoCode = "BN"
+            label = "Benevento"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Bologna"
+            isoCode = "BO"
+            label = "Bologna"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Brindisi"
+            isoCode = "BR"
+            label = "Brindisi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Brescia"
+            isoCode = "BS"
+            label = "Brescia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Barletta-Andria-Trani"
+            isoCode = "BT"
+            label = "Barletta-Andria-Trani"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Bolzano"
+            isoCode = "BZ"
+            label = "Bolzano"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Cagliari"
+            isoCode = "CA"
+            label = "Cagliari"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Campobasso"
+            isoCode = "CB"
+            label = "Campobasso"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Caserta"
+            isoCode = "CE"
+            label = "Caserta"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Chieti"
+            isoCode = "CH"
+            label = "Chieti"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Carbonia-Iglesias"
+            isoCode = "CI"
+            label = "Carbonia-Iglesias"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Caltanissetta"
+            isoCode = "CL"
+            label = "Caltanissetta"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Cuneo"
+            isoCode = "CN"
+            label = "Cuneo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Como"
+            isoCode = "CO"
+            label = "Como"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Cremona"
+            isoCode = "CR"
+            label = "Cremona"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Cosenza"
+            isoCode = "CS"
+            label = "Cosenza"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Catania"
+            isoCode = "CT"
+            label = "Catania"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Catanzaro"
+            isoCode = "CZ"
+            label = "Catanzaro"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Enna"
+            isoCode = "EN"
+            label = "Enna"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Forlì-Cesena"
+            isoCode = "FC"
+            label = "Forlì-Cesena"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ferrara"
+            isoCode = "FE"
+            label = "Ferrara"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Foggia"
+            isoCode = "FG"
+            label = "Foggia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Florence"
+            isoCode = "FI"
+            label = "Florence"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Fermo"
+            isoCode = "FM"
+            label = "Fermo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Frosinone"
+            isoCode = "FR"
+            label = "Frosinone"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Genoa"
+            isoCode = "GE"
+            label = "Genoa"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Gorizia"
+            isoCode = "GO"
+            label = "Gorizia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Grosseto"
+            isoCode = "GR"
+            label = "Grosseto"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Imperia"
+            isoCode = "IM"
+            label = "Imperia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Isernia"
+            isoCode = "IS"
+            label = "Isernia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Crotone"
+            isoCode = "KR"
+            label = "Crotone"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Lecco"
+            isoCode = "LC"
+            label = "Lecco"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Lecce"
+            isoCode = "LE"
+            label = "Lecce"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Livorno"
+            isoCode = "LI"
+            label = "Livorno"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Lodi"
+            isoCode = "LO"
+            label = "Lodi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Latina"
+            isoCode = "LT"
+            label = "Latina"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Lucca"
+            isoCode = "LU"
+            label = "Lucca"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Monza and Brianza"
+            isoCode = "MB"
+            label = "Monza and Brianza"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Macerata"
+            isoCode = "MC"
+            label = "Macerata"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Messina"
+            isoCode = "ME"
+            label = "Messina"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Milan"
+            isoCode = "MI"
+            label = "Milan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Mantua"
+            isoCode = "MN"
+            label = "Mantua"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Modena"
+            isoCode = "MO"
+            label = "Modena"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Massa and Carrara"
+            isoCode = "MS"
+            label = "Massa and Carrara"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Matera"
+            isoCode = "MT"
+            label = "Matera"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Naples"
+            isoCode = "NA"
+            label = "Naples"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Novara"
+            isoCode = "NO"
+            label = "Novara"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nuoro"
+            isoCode = "NU"
+            label = "Nuoro"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ogliastra"
+            isoCode = "OG"
+            label = "Ogliastra"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Oristano"
+            isoCode = "OR"
+            label = "Oristano"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Olbia-Tempio"
+            isoCode = "OT"
+            label = "Olbia-Tempio"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Palermo"
+            isoCode = "PA"
+            label = "Palermo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Piacenza"
+            isoCode = "PC"
+            label = "Piacenza"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Padua"
+            isoCode = "PD"
+            label = "Padua"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pescara"
+            isoCode = "PE"
+            label = "Pescara"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Perugia"
+            isoCode = "PG"
+            label = "Perugia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pisa"
+            isoCode = "PI"
+            label = "Pisa"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pordenone"
+            isoCode = "PN"
+            label = "Pordenone"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Prato"
+            isoCode = "PO"
+            label = "Prato"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Parma"
+            isoCode = "PR"
+            label = "Parma"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pistoia"
+            isoCode = "PT"
+            label = "Pistoia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pesaro and Urbino"
+            isoCode = "PU"
+            label = "Pesaro and Urbino"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pavia"
+            isoCode = "PV"
+            label = "Pavia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Potenza"
+            isoCode = "PZ"
+            label = "Potenza"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ravenna"
+            isoCode = "RA"
+            label = "Ravenna"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Reggio Calabria"
+            isoCode = "RC"
+            label = "Reggio Calabria"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Reggio Emilia"
+            isoCode = "RE"
+            label = "Reggio Emilia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ragusa"
+            isoCode = "RG"
+            label = "Ragusa"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rieti"
+            isoCode = "RI"
+            label = "Rieti"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rome"
+            isoCode = "RM"
+            label = "Rome"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rimini"
+            isoCode = "RN"
+            label = "Rimini"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Rovigo"
+            isoCode = "RO"
+            label = "Rovigo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Salerno"
+            isoCode = "SA"
+            label = "Salerno"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Siena"
+            isoCode = "SI"
+            label = "Siena"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sondrio"
+            isoCode = "SO"
+            label = "Sondrio"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "La Spezia"
+            isoCode = "SP"
+            label = "La Spezia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Syracuse"
+            isoCode = "SR"
+            label = "Syracuse"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sassari"
+            isoCode = "SS"
+            label = "Sassari"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Savona"
+            isoCode = "SV"
+            label = "Savona"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Taranto"
+            isoCode = "TA"
+            label = "Taranto"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Teramo"
+            isoCode = "TE"
+            label = "Teramo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Trento"
+            isoCode = "TN"
+            label = "Trento"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Turin"
+            isoCode = "TO"
+            label = "Turin"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Trapani"
+            isoCode = "TP"
+            label = "Trapani"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Terni"
+            isoCode = "TR"
+            label = "Terni"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Trieste"
+            isoCode = "TS"
+            label = "Trieste"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Treviso"
+            isoCode = "TV"
+            label = "Treviso"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Udine"
+            isoCode = "UD"
+            label = "Udine"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Varese"
+            isoCode = "VA"
+            label = "Varese"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Verbano-Cusio-Ossola"
+            isoCode = "VB"
+            label = "Verbano-Cusio-Ossola"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Vercelli"
+            isoCode = "VC"
+            label = "Vercelli"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Venice"
+            isoCode = "VE"
+            label = "Venice"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Vicenza"
+            isoCode = "VI"
+            label = "Vicenza"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Verona"
+            isoCode = "VR"
+            label = "Verona"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Medio Campidano"
+            isoCode = "VS"
+            label = "Medio Campidano"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Viterbo"
+            isoCode = "VT"
+            label = "Viterbo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Vibo Valentia"
+            isoCode = "VV"
+            label = "Vibo Valentia"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Jersey"
+        isoCode = "JE"
+        label = "Jersey"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Jamaica"
+        isoCode = "JM"
+        label = "Jamaica"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Jordan"
+        isoCode = "JO"
+        label = "Jordan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Japan"
+        isoCode = "JP"
+        label = "Japan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Kenya"
+        isoCode = "KE"
+        label = "Kenya"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Kyrgyzstan"
+        isoCode = "KG"
+        label = "Kyrgyzstan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cambodia"
+        isoCode = "KH"
+        label = "Cambodia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Kiribati"
+        isoCode = "KI"
+        label = "Kiribati"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Comoros"
+        isoCode = "KM"
+        label = "Comoros"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Kitts and Nevis"
+        isoCode = "KN"
+        label = "Saint Kitts and Nevis"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Korea, Democratic People's Republic of"
+        isoCode = "KP"
+        label = "Korea, Democratic People's Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Korea, Republic of"
+        isoCode = "KR"
+        label = "Korea, Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Kuwait"
+        isoCode = "KW"
+        label = "Kuwait"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Cayman Islands"
+        isoCode = "KY"
+        label = "Cayman Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Kazakhstan"
+        isoCode = "KZ"
+        label = "Kazakhstan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Lao People's Democratic Republic"
+        isoCode = "LA"
+        label = "Lao People's Democratic Republic"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Lebanon"
+        isoCode = "LB"
+        label = "Lebanon"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Lucia"
+        isoCode = "LC"
+        label = "Saint Lucia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Liechtenstein"
+        isoCode = "LI"
+        label = "Liechtenstein"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Sri Lanka"
+        isoCode = "LK"
+        label = "Sri Lanka"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Liberia"
+        isoCode = "LR"
+        label = "Liberia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Lesotho"
+        isoCode = "LS"
+        label = "Lesotho"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Lithuania"
+        isoCode = "LT"
+        label = "Lithuania"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Luxembourg"
+        isoCode = "LU"
+        label = "Luxembourg"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Latvia"
+        isoCode = "LV"
+        label = "Latvia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Libya"
+        isoCode = "LY"
+        label = "Libya"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Morocco"
+        isoCode = "MA"
+        label = "Morocco"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Monaco"
+        isoCode = "MC"
+        label = "Monaco"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Moldova, Republic of"
+        isoCode = "MD"
+        label = "Moldova, Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Montenegro"
+        isoCode = "ME"
+        label = "Montenegro"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Martin (French part)"
+        isoCode = "MF"
+        label = "Saint Martin (French part)"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Madagascar"
+        isoCode = "MG"
+        label = "Madagascar"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Macedonia, the former Yugoslav Republic of"
+        isoCode = "MK"
+        label = "Macedonia, the former Yugoslav Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mali"
+        isoCode = "ML"
+        label = "Mali"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Myanmar"
+        isoCode = "MM"
+        label = "Myanmar"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mongolia"
+        isoCode = "MN"
+        label = "Mongolia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Macao"
+        isoCode = "MO"
+        label = "Macao"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Martinique"
+        isoCode = "MQ"
+        label = "Martinique"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mauritania"
+        isoCode = "MR"
+        label = "Mauritania"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Montserrat"
+        isoCode = "MS"
+        label = "Montserrat"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Malta"
+        isoCode = "MT"
+        label = "Malta"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mauritius"
+        isoCode = "MU"
+        label = "Mauritius"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Maldives"
+        isoCode = "MV"
+        label = "Maldives"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Malawi"
+        isoCode = "MW"
+        label = "Malawi"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mexico"
+        isoCode = "MX"
+        label = "Mexico"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = true
+            integrationValue = "Aguascalientes"
+            isoCode = "AG"
+            label = "Aguascalientes"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Baja California"
+            isoCode = "BC"
+            label = "Baja California"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Baja California Sur"
+            isoCode = "BS"
+            label = "Baja California Sur"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Chihuahua"
+            isoCode = "CH"
+            label = "Chihuahua"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Colima"
+            isoCode = "CL"
+            label = "Colima"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Campeche"
+            isoCode = "CM"
+            label = "Campeche"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Coahuila"
+            isoCode = "CO"
+            label = "Coahuila"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Chiapas"
+            isoCode = "CS"
+            label = "Chiapas"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Federal District"
+            isoCode = "DF"
+            label = "Federal District"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Durango"
+            isoCode = "DG"
+            label = "Durango"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Guerrero"
+            isoCode = "GR"
+            label = "Guerrero"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Guanajuato"
+            isoCode = "GT"
+            label = "Guanajuato"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Hidalgo"
+            isoCode = "HG"
+            label = "Hidalgo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Jalisco"
+            isoCode = "JA"
+            label = "Jalisco"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Mexico State"
+            isoCode = "ME"
+            label = "Mexico State"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Michoacán"
+            isoCode = "MI"
+            label = "Michoacán"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Morelos"
+            isoCode = "MO"
+            label = "Morelos"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nayarit"
+            isoCode = "NA"
+            label = "Nayarit"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nuevo León"
+            isoCode = "NL"
+            label = "Nuevo León"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Oaxaca"
+            isoCode = "OA"
+            label = "Oaxaca"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Puebla"
+            isoCode = "PB"
+            label = "Puebla"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Querétaro"
+            isoCode = "QE"
+            label = "Querétaro"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Quintana Roo"
+            isoCode = "QR"
+            label = "Quintana Roo"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sinaloa"
+            isoCode = "SI"
+            label = "Sinaloa"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "San Luis Potosí"
+            isoCode = "SL"
+            label = "San Luis Potosí"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Sonora"
+            isoCode = "SO"
+            label = "Sonora"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tabasco"
+            isoCode = "TB"
+            label = "Tabasco"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tlaxcala"
+            isoCode = "TL"
+            label = "Tlaxcala"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tamaulipas"
+            isoCode = "TM"
+            label = "Tamaulipas"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Veracruz"
+            isoCode = "VE"
+            label = "Veracruz"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Yucatán"
+            isoCode = "YU"
+            label = "Yucatán"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Zacatecas"
+            isoCode = "ZA"
+            label = "Zacatecas"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Malaysia"
+        isoCode = "MY"
+        label = "Malaysia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mozambique"
+        isoCode = "MZ"
+        label = "Mozambique"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Namibia"
+        isoCode = "NA"
+        label = "Namibia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "New Caledonia"
+        isoCode = "NC"
+        label = "New Caledonia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Niger"
+        isoCode = "NE"
+        label = "Niger"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Norfolk Island"
+        isoCode = "NF"
+        label = "Norfolk Island"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Nigeria"
+        isoCode = "NG"
+        label = "Nigeria"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Nicaragua"
+        isoCode = "NI"
+        label = "Nicaragua"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Netherlands"
+        isoCode = "NL"
+        label = "Netherlands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Norway"
+        isoCode = "NO"
+        label = "Norway"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Nepal"
+        isoCode = "NP"
+        label = "Nepal"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Nauru"
+        isoCode = "NR"
+        label = "Nauru"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Niue"
+        isoCode = "NU"
+        label = "Niue"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "New Zealand"
+        isoCode = "NZ"
+        label = "New Zealand"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Oman"
+        isoCode = "OM"
+        label = "Oman"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Panama"
+        isoCode = "PA"
+        label = "Panama"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Peru"
+        isoCode = "PE"
+        label = "Peru"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "French Polynesia"
+        isoCode = "PF"
+        label = "French Polynesia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Papua New Guinea"
+        isoCode = "PG"
+        label = "Papua New Guinea"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Philippines"
+        isoCode = "PH"
+        label = "Philippines"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Pakistan"
+        isoCode = "PK"
+        label = "Pakistan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Poland"
+        isoCode = "PL"
+        label = "Poland"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Pierre and Miquelon"
+        isoCode = "PM"
+        label = "Saint Pierre and Miquelon"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Pitcairn"
+        isoCode = "PN"
+        label = "Pitcairn"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Palestine"
+        isoCode = "PS"
+        label = "Palestine"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Portugal"
+        isoCode = "PT"
+        label = "Portugal"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Paraguay"
+        isoCode = "PY"
+        label = "Paraguay"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Qatar"
+        isoCode = "QA"
+        label = "Qatar"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Reunion"
+        isoCode = "RE"
+        label = "Reunion"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Romania"
+        isoCode = "RO"
+        label = "Romania"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Serbia"
+        isoCode = "RS"
+        label = "Serbia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Russian Federation"
+        isoCode = "RU"
+        label = "Russian Federation"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Rwanda"
+        isoCode = "RW"
+        label = "Rwanda"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saudi Arabia"
+        isoCode = "SA"
+        label = "Saudi Arabia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Solomon Islands"
+        isoCode = "SB"
+        label = "Solomon Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Seychelles"
+        isoCode = "SC"
+        label = "Seychelles"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Sudan"
+        isoCode = "SD"
+        label = "Sudan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Sweden"
+        isoCode = "SE"
+        label = "Sweden"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Singapore"
+        isoCode = "SG"
+        label = "Singapore"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Helena, Ascension and Tristan da Cunha"
+        isoCode = "SH"
+        label = "Saint Helena, Ascension and Tristan da Cunha"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Slovenia"
+        isoCode = "SI"
+        label = "Slovenia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Svalbard and Jan Mayen"
+        isoCode = "SJ"
+        label = "Svalbard and Jan Mayen"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Slovakia"
+        isoCode = "SK"
+        label = "Slovakia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Sierra Leone"
+        isoCode = "SL"
+        label = "Sierra Leone"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "San Marino"
+        isoCode = "SM"
+        label = "San Marino"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Senegal"
+        isoCode = "SN"
+        label = "Senegal"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Somalia"
+        isoCode = "SO"
+        label = "Somalia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Suriname"
+        isoCode = "SR"
+        label = "Suriname"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "South Sudan"
+        isoCode = "SS"
+        label = "South Sudan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Sao Tome and Principe"
+        isoCode = "ST"
+        label = "Sao Tome and Principe"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "El Salvador"
+        isoCode = "SV"
+        label = "El Salvador"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Sint Maarten (Dutch part)"
+        isoCode = "SX"
+        label = "Sint Maarten (Dutch part)"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Syrian Arab Republic"
+        isoCode = "SY"
+        label = "Syrian Arab Republic"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Swaziland"
+        isoCode = "SZ"
+        label = "Swaziland"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Turks and Caicos Islands"
+        isoCode = "TC"
+        label = "Turks and Caicos Islands"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Chad"
+        isoCode = "TD"
+        label = "Chad"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "French Southern Territories"
+        isoCode = "TF"
+        label = "French Southern Territories"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Togo"
+        isoCode = "TG"
+        label = "Togo"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Thailand"
+        isoCode = "TH"
+        label = "Thailand"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Tajikistan"
+        isoCode = "TJ"
+        label = "Tajikistan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Tokelau"
+        isoCode = "TK"
+        label = "Tokelau"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Timor-Leste"
+        isoCode = "TL"
+        label = "Timor-Leste"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Turkmenistan"
+        isoCode = "TM"
+        label = "Turkmenistan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Tunisia"
+        isoCode = "TN"
+        label = "Tunisia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Tonga"
+        isoCode = "TO"
+        label = "Tonga"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Turkey"
+        isoCode = "TR"
+        label = "Turkey"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Trinidad and Tobago"
+        isoCode = "TT"
+        label = "Trinidad and Tobago"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Tuvalu"
+        isoCode = "TV"
+        label = "Tuvalu"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Taiwan"
+        isoCode = "TW"
+        label = "Taiwan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Tanzania, United Republic of"
+        isoCode = "TZ"
+        label = "Tanzania, United Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Ukraine"
+        isoCode = "UA"
+        label = "Ukraine"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Uganda"
+        isoCode = "UG"
+        label = "Uganda"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "United States"
+        isoCode = "US"
+        label = "United States"
+        orgDefault = false
+        standard = true
+        states = [
+          {
+            active = false
+            integrationValue = "Armed Forces Americas"
+            isoCode = "AA"
+            label = "Armed Forces Americas"
+            standard = true
+            visible = false
+          },
+          {
+            active = false
+            integrationValue = "Armed Forces Europe"
+            isoCode = "AE"
+            label = "Armed Forces Europe"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Alaska"
+            isoCode = "AK"
+            label = "Alaska"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Alabama"
+            isoCode = "AL"
+            label = "Alabama"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "Armed Forces Pacific"
+            isoCode = "AP"
+            label = "Armed Forces Pacific"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Arkansas"
+            isoCode = "AR"
+            label = "Arkansas"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "American Samoa"
+            isoCode = "AS"
+            label = "American Samoa"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Arizona"
+            isoCode = "AZ"
+            label = "Arizona"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "California"
+            isoCode = "CA"
+            label = "California"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Colorado"
+            isoCode = "CO"
+            label = "Colorado"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Connecticut"
+            isoCode = "CT"
+            label = "Connecticut"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "District of Columbia"
+            isoCode = "DC"
+            label = "District of Columbia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Delaware"
+            isoCode = "DE"
+            label = "Delaware"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Florida"
+            isoCode = "FL"
+            label = "Florida"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "Federated Micronesia"
+            isoCode = "FM"
+            label = "Federated Micronesia"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Georgia"
+            isoCode = "GA"
+            label = "Georgia"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "Guam"
+            isoCode = "GU"
+            label = "Guam"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Hawaii"
+            isoCode = "HI"
+            label = "Hawaii"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Iowa"
+            isoCode = "IA"
+            label = "Iowa"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Idaho"
+            isoCode = "ID"
+            label = "Idaho"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Illinois"
+            isoCode = "IL"
+            label = "Illinois"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Indiana"
+            isoCode = "IN"
+            label = "Indiana"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Kansas"
+            isoCode = "KS"
+            label = "Kansas"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Kentucky"
+            isoCode = "KY"
+            label = "Kentucky"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Louisiana"
+            isoCode = "LA"
+            label = "Louisiana"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Massachusetts"
+            isoCode = "MA"
+            label = "Massachusetts"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Maryland"
+            isoCode = "MD"
+            label = "Maryland"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Maine"
+            isoCode = "ME"
+            label = "Maine"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "Marshall Islands"
+            isoCode = "MH"
+            label = "Marshall Islands"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Michigan"
+            isoCode = "MI"
+            label = "Michigan"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Minnesota"
+            isoCode = "MN"
+            label = "Minnesota"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Missouri"
+            isoCode = "MO"
+            label = "Missouri"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "Northern Mariana Islands"
+            isoCode = "MP"
+            label = "Northern Mariana Islands"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Mississippi"
+            isoCode = "MS"
+            label = "Mississippi"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Montana"
+            isoCode = "MT"
+            label = "Montana"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "North Carolina"
+            isoCode = "NC"
+            label = "North Carolina"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "North Dakota"
+            isoCode = "ND"
+            label = "North Dakota"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nebraska"
+            isoCode = "NE"
+            label = "Nebraska"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "New Hampshire"
+            isoCode = "NH"
+            label = "New Hampshire"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "New Jersey"
+            isoCode = "NJ"
+            label = "New Jersey"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "New Mexico"
+            isoCode = "NM"
+            label = "New Mexico"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Nevada"
+            isoCode = "NV"
+            label = "Nevada"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "New York"
+            isoCode = "NY"
+            label = "New York"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Ohio"
+            isoCode = "OH"
+            label = "Ohio"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Oklahoma"
+            isoCode = "OK"
+            label = "Oklahoma"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Oregon"
+            isoCode = "OR"
+            label = "Oregon"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Pennsylvania"
+            isoCode = "PA"
+            label = "Pennsylvania"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "Puerto Rico"
+            isoCode = "PR"
+            label = "Puerto Rico"
+            standard = true
+            visible = false
+          },
+          {
+            active = false
+            integrationValue = "Palau"
+            isoCode = "PW"
+            label = "Palau"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Rhode Island"
+            isoCode = "RI"
+            label = "Rhode Island"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "South Carolina"
+            isoCode = "SC"
+            label = "South Carolina"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "South Dakota"
+            isoCode = "SD"
+            label = "South Dakota"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Tennessee"
+            isoCode = "TN"
+            label = "Tennessee"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Texas"
+            isoCode = "TX"
+            label = "Texas"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "United States Minor Outlying Islands"
+            isoCode = "UM"
+            label = "United States Minor Outlying Islands"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Utah"
+            isoCode = "UT"
+            label = "Utah"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Virginia"
+            isoCode = "VA"
+            label = "Virginia"
+            standard = true
+            visible = true
+          },
+          {
+            active = false
+            integrationValue = "US Virgin Islands"
+            isoCode = "VI"
+            label = "US Virgin Islands"
+            standard = true
+            visible = false
+          },
+          {
+            active = true
+            integrationValue = "Vermont"
+            isoCode = "VT"
+            label = "Vermont"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Washington"
+            isoCode = "WA"
+            label = "Washington"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Wisconsin"
+            isoCode = "WI"
+            label = "Wisconsin"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "West Virginia"
+            isoCode = "WV"
+            label = "West Virginia"
+            standard = true
+            visible = true
+          },
+          {
+            active = true
+            integrationValue = "Wyoming"
+            isoCode = "WY"
+            label = "Wyoming"
+            standard = true
+            visible = true
+          },
+        ]
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Uruguay"
+        isoCode = "UY"
+        label = "Uruguay"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Uzbekistan"
+        isoCode = "UZ"
+        label = "Uzbekistan"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Holy See (Vatican City State)"
+        isoCode = "VA"
+        label = "Holy See (Vatican City State)"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Saint Vincent and the Grenadines"
+        isoCode = "VC"
+        label = "Saint Vincent and the Grenadines"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Venezuela, Bolivarian Republic of"
+        isoCode = "VE"
+        label = "Venezuela, Bolivarian Republic of"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Virgin Islands, British"
+        isoCode = "VG"
+        label = "Virgin Islands, British"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Vietnam"
+        isoCode = "VN"
+        label = "Vietnam"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Vanuatu"
+        isoCode = "VU"
+        label = "Vanuatu"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Wallis and Futuna"
+        isoCode = "WF"
+        label = "Wallis and Futuna"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Samoa"
+        isoCode = "WS"
+        label = "Samoa"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Yemen"
+        isoCode = "YE"
+        label = "Yemen"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Mayotte"
+        isoCode = "YT"
+        label = "Mayotte"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "South Africa"
+        isoCode = "ZA"
+        label = "South Africa"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Zambia"
+        isoCode = "ZM"
+        label = "Zambia"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+      {
+        active = true
+        integrationValue = "Zimbabwe"
+        isoCode = "ZW"
+        label = "Zimbabwe"
+        orgDefault = false
+        standard = true
+        visible = true
+      },
+    ]
+  }
+}

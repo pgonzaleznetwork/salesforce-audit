@@ -1,0 +1,54 @@
+salesforce.Layout ContactPointAddress_Contact_Point_Address_Layout@bsss {
+  fullName = "ContactPointAddress-Contact Point Address Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointAddress.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointAddress.field.ParentId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointAddress.field.Address
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointAddress.field.AddressType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointAddress.field.IsDefault
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ContactPointAddress,
+  ]
+}

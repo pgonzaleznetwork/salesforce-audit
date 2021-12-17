@@ -1,0 +1,32 @@
+type salesforce.EmbeddedServiceLayout {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.EmbeddedServiceLayoutRule embeddedServiceLayoutRules {
+  }
+  string layout {
+    foreignKeyDomain = [
+      salesforce.LightningPage,
+    ]
+  }
+  string layoutType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FS_AppointmentHome",
+      ]
+    }
+  }
+  metadataType = "EmbeddedServiceLayout"
+}

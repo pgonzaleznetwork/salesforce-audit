@@ -1,0 +1,120 @@
+type salesforce.CommSubscriptionChannelType {
+  serviceid Id {
+    apiName = "CommSubscriptionChannelType.Id"
+    label = "Communication Subscription Channel Type ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "CommSubscriptionChannelType.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CommSubscriptionChannelType.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "CommSubscriptionChannelType.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CommSubscriptionChannelType.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CommSubscriptionChannelType.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CommSubscriptionChannelType.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CommSubscriptionChannelType.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CommSubscriptionChannelType.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CommunicationSubscriptionId {
+    apiName = "CommSubscriptionChannelType.CommunicationSubscriptionId"
+    label = "Communication Subscription ID"
+    _required = true
+    referenceTo = [
+      salesforce.CommSubscription,
+    ]
+    inlineHelpText = "The communication subscription record associated with the communication subscription channel type."
+    createable = true
+    updateable = true
+    relationshipName = "CommunicationSubscription"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup EngagementChannelTypeId {
+    apiName = "CommSubscriptionChannelType.EngagementChannelTypeId"
+    label = "Engagement Channel Type ID"
+    _required = true
+    referenceTo = [
+      salesforce.EngagementChannelType,
+    ]
+    inlineHelpText = "The engagement channel type record associated with the communication subscription channel type."
+    createable = true
+    updateable = true
+    relationshipName = "EngagementChannelType"
+    queryable = true
+    trackHistory = "false"
+  }
+}

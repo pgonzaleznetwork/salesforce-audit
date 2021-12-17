@@ -1,0 +1,143 @@
+type salesforce.AppProfileActionOverride {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionName {
+  }
+  string content {
+    foreignKeyDomain = [
+      salesforce.LightningPage,
+    ]
+  }
+  string formFactor {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Large",
+        "Medium",
+        "Small",
+      ]
+    }
+  }
+  string pageOrSobjectType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "AlternativePaymentMethod",
+        "Asset",
+        "AssetAction",
+        "AssetActionSource",
+        "AssetRelationship",
+        "AssetStatePeriod",
+        "AssociatedLocation",
+        "AsyncOperationLog",
+        "BoatReview__c",
+        "BoatType__c",
+        "Boat__c",
+        "Campaign",
+        "CampaignMember",
+        "CardPaymentMethod",
+        "Case",
+        "Center__c",
+        "Child__c",
+        "CollaborationGroup",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "Contact",
+        "ContactRequest",
+        "ContentDocument",
+        "Contract",
+        "Custom_Object__c",
+        "DigitalWallet",
+        "EngagementChannelType",
+        "EnhancedLetterhead",
+        "Event",
+        "Individual",
+        "Lead",
+        "LegalEntity",
+        "Location",
+        "LocationGroup",
+        "LocationGroupAssignment",
+        "ManagedContentVariant",
+        "Note",
+        "Opportunity",
+        "OpportunityLineItem",
+        "Order",
+        "OrderItem",
+        "Parent__c",
+        "PartyConsent",
+        "Payment",
+        "PaymentAuthAdjustment",
+        "PaymentAuthorization",
+        "PaymentGateway",
+        "PaymentGatewayLog",
+        "PaymentLineInvoice",
+        "Pricebook2",
+        "PricebookEntry",
+        "ProcessException",
+        "ProcessInstanceStep",
+        "ProcessInstanceWorkitem",
+        "Product2",
+        "Refund",
+        "RefundLinePayment",
+        "SRM_CRM_Sprint__c",
+        "SRM_Connected_Org__c",
+        "SRM_Development_Task__c",
+        "SRM_Jira_Ticket__c",
+        "SRM_Metadata__c",
+        "Scorecard",
+        "ScorecardAssociation",
+        "ScorecardMetric",
+        "ServiceResource",
+        "ServiceResourceSkill",
+        "SkillRequirement",
+        "SocialPersona",
+        "Task",
+        "User",
+        "standard-home",
+        "standard-mailapp",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string recordType {
+    foreignKeyDomain = [
+      salesforce.RecordType,
+    ]
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Default",
+        "Flexipage",
+        "LightningComponent",
+        "Scontrol",
+        "Standard",
+        "Visualforce",
+      ]
+    }
+  }
+  string profile {
+    foreignKeyDomain = [
+      "Profile",
+    ]
+  }
+  metadataType = "AppProfileActionOverride"
+}

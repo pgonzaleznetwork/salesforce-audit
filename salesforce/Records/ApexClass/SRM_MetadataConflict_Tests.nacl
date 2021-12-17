@@ -1,0 +1,44 @@
+salesforce.ApexClass SRM_MetadataConflict_Tests {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_MetadataConflict_Tests"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataConflict_Tests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.SRM_CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Connected_Org__c
+    },
+    {
+      reference = salesforce.SRM_Connected_Org__c.field.Named_Credential_Reference__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Connected_Org__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Owner__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Name__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Referenced_in__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Type__c
+    },
+  ]
+}

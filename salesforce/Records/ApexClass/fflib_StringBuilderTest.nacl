@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_StringBuilderTest {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_StringBuilderTest"
+  content = file("salesforce/Records/ApexClass/fflib_StringBuilderTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_StringBuilder
+    },
+  ]
+}

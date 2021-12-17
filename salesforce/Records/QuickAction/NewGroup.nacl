@@ -1,0 +1,36 @@
+salesforce.QuickAction NewGroup {
+  fullName = "NewGroup"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Name"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "Description"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "CollaborationType"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "CanHaveGuests"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+    ]
+  }
+  standardLabel = "New"
+  targetObject = salesforce.CollaborationGroup
+  type = "Create"
+}

@@ -1,0 +1,8 @@
+salesforce.ListView NamespaceRegistry_All_Namespace_Registries {
+  fullName = "NamespaceRegistry.All_Namespace_Registries"
+  filterScope = "Everything"
+  label = "All Namespace Registries"
+  _parent = [
+    salesforce.NamespaceRegistry,
+  ]
+}

@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Account_update_name_2@vuu {
+  fullName = "Account.update_name_2"
+  field = salesforce.Account.field.Name
+  formula = "\"updated by workflow\""
+  name = "update name 2"
+  notifyAssignee = false
+  operation = "Formula"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+}

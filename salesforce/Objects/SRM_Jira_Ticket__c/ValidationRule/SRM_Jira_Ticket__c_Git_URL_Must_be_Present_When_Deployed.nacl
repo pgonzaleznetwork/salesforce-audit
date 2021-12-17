@@ -1,0 +1,16 @@
+salesforce.ValidationRule SRM_Jira_Ticket__c_Git_URL_Must_be_Present_When_Deployed {
+  fullName = "SRM_Jira_Ticket__c.Git_URL_Must_be_Present_When_Deployed"
+  active = true
+  description = "This validation rule prevents the user from closing the deployment if they don't have a Git Pull Request URL. In other words, the deployment cannot be marked as closed unless the metadata has been pushed to Git."
+  errorConditionFormula = "ISPICKVAL( Status__c ,\"Deployed\") &&  ISBLANK( Git_Pull_Request_URL__c )"
+  errorDisplayField = salesforce.SRM_Jira_Ticket__c.field.Git_Pull_Request_URL__c
+  errorMessage = "You PABLO enter the Github Pull Request URL for this deployment. If you don't have one, then you must create a new branch with this metadata and pull it to the remote repository."
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Status__c
+    },
+  ]
+}

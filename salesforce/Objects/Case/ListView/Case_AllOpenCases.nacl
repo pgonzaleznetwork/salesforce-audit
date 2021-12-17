@@ -1,0 +1,15 @@
+salesforce.ListView Case_AllOpenCases {
+  fullName = "Case.AllOpenCases"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CASES.CLOSED"
+      operation = "equals"
+      value = "0"
+    },
+  ]
+  label = "All Open Cases"
+  _parent = [
+    salesforce.Case,
+  ]
+}

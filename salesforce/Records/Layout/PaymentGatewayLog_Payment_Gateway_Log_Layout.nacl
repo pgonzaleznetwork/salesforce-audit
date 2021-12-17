@@ -1,0 +1,162 @@
+salesforce.Layout PaymentGatewayLog_Payment_Gateway_Log_Layout@bsss {
+  fullName = "PaymentGatewayLog-Payment Gateway Log Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "PaymentGatewayLogNumber"
+            },
+            {
+              behavior = "Edit"
+              field = "InteractionType"
+            },
+            {
+              behavior = "Edit"
+              field = "PaymentGatewayId"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "ReferencedEntityId"
+            },
+            {
+              behavior = "Edit"
+              field = "InteractionStatus"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "GatewayDate"
+            },
+            {
+              behavior = "Edit"
+              field = "GatewayResultCode"
+            },
+            {
+              behavior = "Edit"
+              field = "GatewayAuthCode"
+            },
+            {
+              behavior = "Edit"
+              field = "GatewayMessage"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "GatewayRefNumber"
+            },
+            {
+              behavior = "Edit"
+              field = "GatewayResultCodeDescription"
+            },
+            {
+              behavior = "Edit"
+              field = "GatewayAvsCode"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "SfResultCode"
+            },
+            {
+              behavior = "Edit"
+              field = "Request"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "SfRefNumber"
+            },
+            {
+              behavior = "Edit"
+              field = "Response"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "CreatedById"
+            },
+            {
+              behavior = "Readonly"
+              field = "CreatedDate"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "LastModifiedById"
+            },
+            {
+              behavior = "Readonly"
+              field = "LastModifiedDate"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+}

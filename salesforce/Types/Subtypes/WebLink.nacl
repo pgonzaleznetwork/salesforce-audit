@@ -1,0 +1,128 @@
+type salesforce.WebLink {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string availability {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "offline",
+        "online",
+      ]
+    }
+  }
+  string description {
+  }
+  string encodingKey {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Big5",
+        "Big5-HKSCS",
+        "EUC-JP",
+        "GB2312",
+        "ISO-2022-JP",
+        "ISO-8859-1",
+        "Shift_JIS",
+        "UTF-8",
+        "ks_c_5601-1987",
+        "x-SJIS_0213",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  boolean hasMenubar {
+  }
+  boolean hasScrollbars {
+  }
+  boolean hasToolbar {
+  }
+  number height {
+  }
+  boolean isResizable {
+  }
+  string linkType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "flow",
+        "javascript",
+        "page",
+        "sControl",
+        "url",
+      ]
+    }
+  }
+  string masterLabel {
+  }
+  string openType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "newWindow",
+        "noSidebar",
+        "onClickJavaScript",
+        "replace",
+        "sidebar",
+      ]
+    }
+  }
+  string page {
+  }
+  string position {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "fullScreen",
+        "none",
+        "topLeft",
+      ]
+    }
+  }
+  boolean protected {
+  }
+  boolean requireRowSelection {
+  }
+  string scontrol {
+    foreignKeyDomain = [
+      salesforce.ApexPage,
+      "FlowDefinition",
+      salesforce.Scontrol,
+    ]
+  }
+  boolean showsLocation {
+  }
+  boolean showsStatus {
+  }
+  string url {
+  }
+  number width {
+  }
+  string displayType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "button",
+        "link",
+        "massActionButton",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "WebLink"
+}

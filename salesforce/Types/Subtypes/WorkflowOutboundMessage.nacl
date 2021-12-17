@@ -1,0 +1,44 @@
+type salesforce.WorkflowOutboundMessage {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number apiVersion {
+  }
+  string description {
+  }
+  string endpointUrl {
+  }
+  "List<string>" fields {
+  }
+  serviceid fullName {
+  }
+  boolean includeSessionId {
+  }
+  string integrationUser {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  string name {
+  }
+  boolean protected {
+  }
+  boolean useDeadLetterQueue {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "WorkflowOutboundMessage"
+}

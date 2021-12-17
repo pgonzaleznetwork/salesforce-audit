@@ -1,0 +1,54 @@
+type salesforce.ActionOverride {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionName {
+  }
+  string comment {
+  }
+  string content {
+    foreignKeyDomain = [
+      salesforce.ApexPage,
+      salesforce.AuraDefinitionBundle,
+      salesforce.LightningPage,
+      salesforce.Scontrol,
+    ]
+  }
+  string formFactor {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Large",
+        "Medium",
+        "Small",
+      ]
+    }
+  }
+  boolean skipRecordTypeSelect {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Default",
+        "Flexipage",
+        "LightningComponent",
+        "Scontrol",
+        "Standard",
+        "Visualforce",
+      ]
+    }
+  }
+  metadataType = "ActionOverride"
+}

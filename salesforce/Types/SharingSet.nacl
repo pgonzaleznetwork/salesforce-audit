@@ -1,0 +1,33 @@
+type salesforce.SharingSet {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.AccessMapping accessMappings {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  string name {
+  }
+  string profiles {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "sharingSet"
+  dirName = "sharingSets"
+  metadataType = "SharingSet"
+}

@@ -1,0 +1,117 @@
+settings salesforce.CaseSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string caseAssignNotificationTemplate {
+  }
+  string caseCloseNotificationTemplate {
+  }
+  string caseCommentNotificationTemplate {
+  }
+  string caseCreateNotificationTemplate {
+  }
+  salesforce.FeedItemSettings caseFeedItemSettings {
+  }
+  boolean closeCaseThroughStatusChange {
+  }
+  string defaultCaseOwner {
+  }
+  string defaultCaseOwnerType {
+  }
+  string defaultCaseUser {
+  }
+  string emailActionDefaultsHandlerClass {
+  }
+  salesforce.EmailToCaseSettings emailToCase {
+  }
+  boolean enableCaseFeed {
+  }
+  boolean enableCollapseEmailThread {
+  }
+  boolean enableDraftEmails {
+  }
+  boolean enableEarlyEscalationRuleTriggers {
+  }
+  boolean enableEmailActionDefaultsHandler {
+  }
+  boolean enableSuggestedArticlesApplication {
+  }
+  boolean enableSuggestedArticlesCustomerPortal {
+  }
+  boolean enableSuggestedArticlesPartnerPortal {
+  }
+  boolean enableSuggestedSolutions {
+  }
+  serviceid fullName {
+  }
+  boolean keepRecordTypeOnAssignmentRule {
+  }
+  boolean notifyContactOnCaseComment {
+  }
+  boolean notifyDefaultCaseOwner {
+  }
+  boolean notifyOwnerOnCaseComment {
+  }
+  boolean notifyOwnerOnCaseOwnerChange {
+  }
+  boolean showEmailAttachmentsInCaseAttachmentsRL {
+  }
+  boolean showFewerCloseActions {
+  }
+  string systemUserEmail {
+  }
+  boolean useSystemEmailAddress {
+  }
+  boolean useSystemUserAsDefaultCaseUser {
+  }
+  salesforce.WebToCaseSettings webToCase {
+  }
+  string newEmailDefaultTemplateClass {
+  }
+  boolean caseAutoProcUser {
+  }
+  boolean caseFeedReadUnreadLtng {
+  }
+  boolean caseMergeinLightning {
+  }
+  boolean defaultCaseFeedLayoutOn {
+  }
+  boolean enableEmailContactOnCasePost {
+  }
+  boolean enableEscalateQfiToCaseInternal {
+  }
+  boolean enableEscalateQfiToCaseNetworks {
+  }
+  boolean enableExtNetworksCaseFeedEnabled {
+  }
+  boolean enableNewEmailDefaultTemplate {
+  }
+  boolean escalateCaseBefore {
+  }
+  boolean genericMessageEnabled {
+  }
+  boolean keepCaseMergeRecords {
+  }
+  boolean predictiveSupportEnabled {
+  }
+  boolean visibleInCssCheckbox {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "CaseSettings"
+}

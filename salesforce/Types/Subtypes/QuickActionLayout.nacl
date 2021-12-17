@@ -1,0 +1,19 @@
+type salesforce.QuickActionLayout {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.QuickActionLayoutColumn>" quickActionLayoutColumns {
+  }
+  metadataType = "QuickActionLayout"
+}

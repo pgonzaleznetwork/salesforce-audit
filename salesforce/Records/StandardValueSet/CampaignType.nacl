@@ -1,0 +1,66 @@
+salesforce.StandardValueSet CampaignType {
+  fullName = "CampaignType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Conference"
+      default = true
+      label = "Conference"
+    },
+    {
+      fullName = "Webinar"
+      default = false
+      label = "Webinar"
+    },
+    {
+      fullName = "Trade Show"
+      default = false
+      label = "Trade Show"
+    },
+    {
+      fullName = "Public Relations"
+      default = false
+      label = "Public Relations"
+    },
+    {
+      fullName = "Partners"
+      default = false
+      label = "Partners"
+    },
+    {
+      fullName = "Referral Program"
+      default = false
+      label = "Referral Program"
+    },
+    {
+      fullName = "Advertisement"
+      default = false
+      label = "Advertisement"
+    },
+    {
+      fullName = "Banner Ads"
+      default = false
+      label = "Banner Ads"
+    },
+    {
+      fullName = "Direct Mail"
+      default = false
+      label = "Direct Mail"
+    },
+    {
+      fullName = "Email"
+      default = false
+      label = "Email"
+    },
+    {
+      fullName = "Telemarketing"
+      default = false
+      label = "Telemarketing"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

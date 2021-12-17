@@ -1,0 +1,38 @@
+type salesforce.LayoutSection {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean customLabel {
+  }
+  boolean detailHeading {
+  }
+  boolean editHeading {
+  }
+  string label {
+  }
+  "List<salesforce.LayoutColumn>" layoutColumns {
+  }
+  string style {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomLinks",
+        "OneColumn",
+        "TwoColumnsLeftToRight",
+        "TwoColumnsTopToBottom",
+      ]
+    }
+  }
+  metadataType = "LayoutSection"
+}

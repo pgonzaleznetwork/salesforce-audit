@@ -1,0 +1,22 @@
+salesforce.ListView SRM_Jira_Ticket__c_Lightning {
+  fullName = "SRM_Jira_Ticket__c.Lightning"
+  columns = [
+    "NAME",
+    "Case_Number__c",
+    "Case_Subject__c",
+    "Status__c",
+    "Owner__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CRM_Sprint__c"
+      operation = "equals"
+      value = "Lightning"
+    },
+  ]
+  label = "Lightning"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

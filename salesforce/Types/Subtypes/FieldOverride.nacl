@@ -1,0 +1,23 @@
+type salesforce.FieldOverride {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+  }
+  string formula {
+  }
+  string literalValue {
+  }
+  metadataType = "FieldOverride"
+}

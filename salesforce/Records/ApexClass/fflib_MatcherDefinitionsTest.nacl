@@ -1,0 +1,26 @@
+salesforce.ApexClass fflib_MatcherDefinitionsTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MatcherDefinitionsTest"
+  content = file("salesforce/Records/ApexClass/fflib_MatcherDefinitionsTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocksUtilsTest
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IDGenerator
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MatcherDefinitions
+    },
+  ]
+}

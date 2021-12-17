@@ -1,0 +1,25 @@
+type salesforce.ObjectSearchSetting {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enhancedLookupEnabled {
+  }
+  boolean lookupAutoCompleteEnabled {
+  }
+  string name {
+  }
+  number resultsPerPageCount {
+  }
+  metadataType = "ObjectSearchSetting"
+}

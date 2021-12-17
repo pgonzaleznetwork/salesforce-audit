@@ -1,0 +1,26 @@
+salesforce.PathAssistant Priority {
+  fullName = "Priority"
+  active = true
+  entityName = "Account"
+  fieldName = "CustomerPriority__c"
+  masterLabel = "Priority"
+  pathAssistantSteps = [
+    {
+      fieldNames = [
+        "Average_Age__c",
+        "My_Broken_Picklist__c",
+      ]
+      info = "<p>text on lowest</p>"
+      picklistValueName = "Lowest"
+    },
+    {
+      fieldNames = [
+        "My_Date_Time__c",
+        "not_used__c",
+      ]
+      info = "<p>text on new high</p>"
+      picklistValueName = "New High"
+    },
+  ]
+  recordTypeName = "Customer"
+}

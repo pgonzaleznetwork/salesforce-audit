@@ -1,0 +1,11 @@
+salesforce.ApexClass fflib_MethodArgValuesTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MethodArgValuesTest"
+  content = file("salesforce/Records/ApexClass/fflib_MethodArgValuesTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+  ]
+}

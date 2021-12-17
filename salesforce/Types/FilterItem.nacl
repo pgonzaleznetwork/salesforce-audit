@@ -1,0 +1,27 @@
+type salesforce.FilterItem {
+  string field {
+  }
+  string operation {
+    _restriction = {
+      values = [
+        "contains",
+        "equals",
+        "excludes",
+        "greaterOrEqual",
+        "greaterThan",
+        "includes",
+        "lessOrEqual",
+        "lessThan",
+        "notContain",
+        "notEqual",
+        "startsWith",
+        "within",
+      ]
+    }
+  }
+  string valueField {
+  }
+  string value {
+  }
+  apiName = "FilterItem"
+}

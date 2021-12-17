@@ -1,0 +1,41 @@
+settings salesforce.VoiceSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableCallDisposition {
+  }
+  boolean enableVoiceCallList {
+  }
+  boolean enableVoiceCallRecording {
+  }
+  boolean enableVoiceCoaching {
+  }
+  boolean enableVoiceConferencing {
+  }
+  boolean enableVoiceLocalPresence {
+  }
+  boolean enableVoiceMail {
+  }
+  boolean enableVoiceMailDrop {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "VoiceSettings"
+}

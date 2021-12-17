@@ -1,0 +1,41 @@
+type salesforce.DocumentFolder {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string accessType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Hidden",
+        "Public",
+        "PublicInternal",
+        "Shared",
+      ]
+    }
+  }
+  string name {
+  }
+  salesforce.SharedTo sharedTo {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  folderContentType = "Document"
+  dirName = "documents"
+  metadataType = "DocumentFolder"
+}

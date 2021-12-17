@@ -1,0 +1,6 @@
+salesforce.SharingRules FinanceTransaction {
+  fullName = "FinanceTransaction"
+  _parent = [
+    salesforce.FinanceTransaction,
+  ]
+}

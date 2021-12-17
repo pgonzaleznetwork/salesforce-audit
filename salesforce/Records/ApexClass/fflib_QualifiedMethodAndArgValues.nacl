@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_QualifiedMethodAndArgValues {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_QualifiedMethodAndArgValues"
+  content = file("salesforce/Records/ApexClass/fflib_QualifiedMethodAndArgValues.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+  ]
+}

@@ -1,0 +1,27 @@
+type salesforce.RelatedListItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<string>" customButtons {
+  }
+  "List<string>" excludeButtons {
+  }
+  "List<string>" fields {
+  }
+  string relatedList {
+  }
+  string sortField {
+  }
+  metadataType = "RelatedListItem"
+}

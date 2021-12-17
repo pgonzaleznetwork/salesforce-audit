@@ -1,0 +1,6 @@
+salesforce.SharingRules Location {
+  fullName = "Location"
+  _parent = [
+    salesforce.Location,
+  ]
+}

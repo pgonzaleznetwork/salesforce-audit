@@ -1,0 +1,27 @@
+salesforce.LightningPage LightningSalesConsole_UtilityBar {
+  fullName = "LightningSalesConsole_UtilityBar"
+  description = "The default utility bar for the Sales Console application."
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "console:history"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "notes:utilityBarNoteList"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Sales Console App Utility Bar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+  }
+  type = "UtilityBar"
+}

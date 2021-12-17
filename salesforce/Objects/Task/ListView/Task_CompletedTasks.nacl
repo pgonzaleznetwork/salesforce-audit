@@ -1,0 +1,36 @@
+salesforce.ListView Task_CompletedTasks {
+  fullName = "Task.CompletedTasks"
+  columns = [
+    "SUBJECT",
+    "WHO_NAME",
+    "WHAT_NAME",
+    "DUE_DATE",
+    "STATUS",
+    "PRIORITY",
+    "CORE.USERS.ALIAS",
+    "LAST_UPDATE",
+    "UPDATEDBY_USER.ALIAS",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "IS_CLOSED"
+      operation = "equals"
+      value = "1"
+    },
+    {
+      field = "IS_RECURRENCE"
+      operation = "equals"
+      value = "0"
+    },
+    {
+      field = "LAST_UPDATE"
+      operation = "equals"
+      value = "TODAY,LAST_N_DAYS:30"
+    },
+  ]
+  label = "ENCODED:{!FilterNames.Task_CompletedTasks}"
+  _parent = [
+    salesforce.Task,
+  ]
+}

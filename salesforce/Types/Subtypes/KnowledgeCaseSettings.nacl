@@ -1,0 +1,39 @@
+type salesforce.KnowledgeCaseSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string articlePDFCreationProfile {
+  }
+  unknown articlePublicSharingCommunities {
+  }
+  salesforce.KnowledgeSitesSettings articlePublicSharingSites {
+  }
+  salesforce.KnowledgeSitesSettings articlePublicSharingSitesChatterAnswers {
+  }
+  string assignTo {
+  }
+  string customizationClass {
+  }
+  string defaultContributionArticleType {
+  }
+  boolean enableArticleCreation {
+  }
+  boolean enableArticlePublicSharingSites {
+  }
+  boolean enableCaseDataCategoryMapping {
+  }
+  boolean useProfileForPDFCreation {
+  }
+  metadataType = "KnowledgeCaseSettings"
+}

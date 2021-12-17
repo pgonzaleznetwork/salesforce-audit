@@ -1,0 +1,184 @@
+salesforce.LightningPage Boat_Record_Page {
+  fullName = "Boat_Record_Page"
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "false"
+              },
+              {
+                name = "hideChatterActions"
+                value = "false"
+              },
+              {
+                name = "numVisibleActions"
+                value = "3"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "relatedListComponentOverride"
+                value = "NONE"
+              },
+              {
+                name = "rowsToDisplay"
+                value = "10"
+              },
+              {
+                name = "showActionBar"
+                value = "true"
+              },
+            ]
+            componentName = "force:relatedListContainer"
+          }
+        },
+      ]
+      name = "Facet-bb03a46e-10cb-4294-bdbb-0906030ab4d1"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+          }
+        },
+      ]
+      name = "Facet-8d545061-19de-49e4-ac6d-6ab60514e156"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "Facet-bb03a46e-10cb-4294-bdbb-0906030ab4d1"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.relatedLists"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-8d545061-19de-49e4-ac6d-6ab60514e156"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.detail"
+              },
+            ]
+            componentName = "flexipage:tab"
+          }
+        },
+      ]
+      name = "Facet-206f1d56-15f7-47c6-8f89-128643ea1a5a"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "Facet-206f1d56-15f7-47c6-8f89-128643ea1a5a"
+              },
+            ]
+            componentName = "flexipage:tabset"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "boatMap"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "similarBy"
+                value = "Type"
+              },
+            ]
+            componentName = "similarBoats"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "similarBy"
+                value = "Length"
+              },
+            ]
+            componentName = "similarBoats"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "similarBy"
+                value = "Price"
+              },
+            ]
+            componentName = "similarBoats"
+          }
+        },
+      ]
+      name = "sidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Boat Record Page"
+  sobjectType = "Boat__c"
+  template = {
+    name = "flexipage:recordHomeTemplateDesktop"
+  }
+  type = "RecordPage"
+  _parent = [
+    salesforce.Boat__c,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatMap
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.similarBoats
+    },
+  ]
+}

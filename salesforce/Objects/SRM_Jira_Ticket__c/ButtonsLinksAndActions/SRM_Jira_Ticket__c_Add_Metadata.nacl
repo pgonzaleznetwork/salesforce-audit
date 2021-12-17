@@ -1,0 +1,14 @@
+salesforce.WebLink SRM_Jira_Ticket__c_Add_Metadata {
+  fullName = "SRM_Jira_Ticket__c.Add_Metadata"
+  availability = "online"
+  displayType = "button"
+  height = 600
+  linkType = "page"
+  masterLabel = "Add Metadata"
+  openType = "sidebar"
+  page = salesforce.ApexPage.instance.SRM_SelectMetadataLex
+  protected = false
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

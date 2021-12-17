@@ -1,0 +1,42 @@
+type salesforce.Role {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string caseAccessLevel {
+  }
+  string contactAccessLevel {
+  }
+  string description {
+  }
+  boolean mayForecastManagerShare {
+  }
+  string name {
+  }
+  string opportunityAccessLevel {
+  }
+  string parentRole {
+    foreignKeyDomain = [
+      salesforce.Role,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "role"
+  dirName = "roles"
+  metadataType = "Role"
+}

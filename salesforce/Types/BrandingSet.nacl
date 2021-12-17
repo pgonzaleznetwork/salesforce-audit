@@ -1,0 +1,74 @@
+type salesforce.BrandingSet {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BrandingSetProperty brandingSetProperty {
+  }
+  string description {
+  }
+  string masterLabel {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "b2b-storefront:branding",
+        "b2b:branding-b2b",
+        "b2c-lite-storefront:branding",
+        "citizen:branding-citizen",
+        "cpt:branding-cpt",
+        "cypress:branding-cypress",
+        "ember:branding-ember",
+        "es-channel-menu",
+        "es-messaging",
+        "helpCenter:branding-helpCenter",
+        "identity:branding-identity",
+        "insurance:branding-insurance",
+        "jepson:branding-jepson",
+        "koa:branding-koa",
+        "kokua:branding-kokua",
+        "login:branding-login",
+        "login:branding-login2",
+        "loyalty:branding-loyalty",
+        "lpi:branding-lpi",
+        "mfg:branding-mfg",
+        "microsite-template-marketing:branding",
+        "mortgage:branding-mortgage",
+        "napili:branding-napili",
+        "napili:branding-napili-merged",
+        "prm:branding-prm-merged",
+        "service:branding-service",
+        "serviceSetupHelpCenter:branding-serviceSetupHelpCenter",
+        "sna-aura-lwr-shell-template:branding",
+        "starter:branding-starter",
+        "stella:branding-stella",
+        "survey",
+        "talon-template-byo:branding",
+        "webster:branding-webster",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "brandingSet"
+  dirName = "brandingSets"
+  metadataType = "BrandingSet"
+}

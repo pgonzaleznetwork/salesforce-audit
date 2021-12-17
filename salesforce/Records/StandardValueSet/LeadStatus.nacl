@@ -1,0 +1,30 @@
+salesforce.StandardValueSet LeadStatus {
+  fullName = "LeadStatus"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Open - Not Contacted"
+      default = true
+      label = "Open - Not Contacted"
+      converted = false
+    },
+    {
+      fullName = "Working - Contacted"
+      default = false
+      label = "Working - Contacted"
+      converted = false
+    },
+    {
+      fullName = "Closed - Converted"
+      default = false
+      label = "Closed - Converted"
+      converted = true
+    },
+    {
+      fullName = "Closed - Not Converted"
+      default = false
+      label = "Closed - Not Converted"
+      converted = false
+    },
+  ]
+}

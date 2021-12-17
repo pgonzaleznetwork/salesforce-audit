@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_StringBuilder {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_StringBuilder"
+  content = file("salesforce/Records/ApexClass/fflib_StringBuilder.cls")
+}

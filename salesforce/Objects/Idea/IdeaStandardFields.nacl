@@ -1,0 +1,238 @@
+type salesforce.Idea {
+  serviceid Id {
+    apiName = "Idea.Id"
+    label = "Idea ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Idea.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Title {
+    apiName = "Idea.Title"
+    label = "Title"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Lookup RecordTypeId {
+    apiName = "Idea.RecordTypeId"
+    label = "Record Type ID"
+    referenceTo = [
+      salesforce.RecordType,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RecordType"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Idea.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Idea.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Idea.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Idea.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Idea.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CommunityId {
+    apiName = "Idea.CommunityId"
+    label = "Zone ID"
+    _required = true
+    referenceTo = [
+      salesforce.Community,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "Community"
+    queryable = true
+  }
+  salesforce.Html Body {
+    apiName = "Idea.Body"
+    label = "Idea Body"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Summary NumComments {
+    apiName = "Idea.NumComments"
+    label = "Number of Comments"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number VoteScore {
+    apiName = "Idea.VoteScore"
+    label = "Vote Score"
+    precision = 18
+    scale = 4
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number VoteTotal {
+    apiName = "Idea.VoteTotal"
+    label = "Vote Total"
+    precision = 18
+    scale = 0
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MultiselectPicklist Categories {
+    apiName = "Idea.Categories"
+    label = "Categories"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Idea.Status"
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Summary LastCommentDate {
+    apiName = "Idea.LastCommentDate"
+    label = "Last Idea Comment Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastCommentId {
+    apiName = "Idea.LastCommentId"
+    label = "Idea Comment ID"
+    referenceTo = [
+      "IdeaComment",
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastComment"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentIdeaId {
+    apiName = "Idea.ParentIdeaId"
+    label = "Idea ID"
+    referenceTo = [
+      salesforce.Idea,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ParentIdea"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsHtml {
+    apiName = "Idea.IsHtml"
+    label = "IsHtml"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsMerged {
+    apiName = "Idea.IsMerged"
+    label = "Is Merged"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CreatorFullPhotoUrl {
+    apiName = "Idea.CreatorFullPhotoUrl"
+    label = "Url of Creator's Profile Photo"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CreatorSmallPhotoUrl {
+    apiName = "Idea.CreatorSmallPhotoUrl"
+    label = "Url of Creator's Thumbnail Photo"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text CreatorName {
+    apiName = "Idea.CreatorName"
+    label = "Name of Creator"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 121
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_ISObjectDomain {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_ISObjectDomain"
+  content = file("salesforce/Records/ApexClass/fflib_ISObjectDomain.cls")
+}

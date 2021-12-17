@@ -1,0 +1,10 @@
+salesforce.Role WesternSalesTeam {
+  fullName = "WesternSalesTeam"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Western Sales Team"
+  mayForecastManagerShare = false
+  name = "Western Sales Team"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.DirectorDirectSales
+}

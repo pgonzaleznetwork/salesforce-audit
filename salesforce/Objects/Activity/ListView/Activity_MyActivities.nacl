@@ -1,0 +1,8 @@
+salesforce.ListView Activity_MyActivities {
+  fullName = "Activity.MyActivities"
+  filterScope = "Mine"
+  label = "My Activities"
+  _parent = [
+    salesforce.Activity,
+  ]
+}

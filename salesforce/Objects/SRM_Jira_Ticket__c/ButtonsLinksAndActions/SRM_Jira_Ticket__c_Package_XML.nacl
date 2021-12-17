@@ -1,0 +1,15 @@
+salesforce.WebLink SRM_Jira_Ticket__c_Package_XML {
+  fullName = "SRM_Jira_Ticket__c.Package_XML"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  height = 600
+  linkType = "url"
+  masterLabel = "Package XML"
+  openType = "sidebar"
+  protected = false
+  url = "/flow/Generate_Package_Xml?recordId={!SRM_Jira_Ticket__c.Id}&objectType=deployment"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

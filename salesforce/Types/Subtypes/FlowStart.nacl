@@ -1,0 +1,78 @@
+type salesforce.FlowStart {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+      ]
+    }
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  salesforce.FlowConnector connector {
+  }
+  boolean doesRequireRecordChangedToMeetCriteria {
+  }
+  string filterLogic {
+  }
+  salesforce.FlowRecordFilter filters {
+  }
+  string object {
+  }
+  string objectContainer {
+  }
+  string recordTriggerType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Create",
+        "CreateAndUpdate",
+        "Delete",
+        "Update",
+      ]
+    }
+  }
+  salesforce.FlowSchedule schedule {
+  }
+  string triggerType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "None",
+        "PlatformEvent",
+        "RecordAfterSave",
+        "RecordBeforeDelete",
+        "RecordBeforeSave",
+        "Scheduled",
+        "ScheduledJourney",
+      ]
+    }
+  }
+  metadataType = "FlowStart"
+}

@@ -1,0 +1,56 @@
+type salesforce.FlowRecordCreate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+      ]
+    }
+    foreignKeyDomain = [
+      "FlowElementSubtypeDefinition",
+    ]
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  string assignRecordIdToReference {
+  }
+  salesforce.FlowConnector connector {
+  }
+  salesforce.FlowConnector faultConnector {
+  }
+  "List<salesforce.FlowInputFieldAssignment>" inputAssignments {
+  }
+  string inputReference {
+  }
+  string object {
+  }
+  boolean storeOutputAutomatically {
+  }
+  metadataType = "FlowRecordCreate"
+}

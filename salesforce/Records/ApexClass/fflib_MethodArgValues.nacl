@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_MethodArgValues {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MethodArgValues"
+  content = file("salesforce/Records/ApexClass/fflib_MethodArgValues.cls")
+}

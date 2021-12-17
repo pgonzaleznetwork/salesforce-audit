@@ -1,0 +1,43 @@
+salesforce.ApexPage SimilarBoats {
+  apiVersion = 48
+  availableInTouch = false
+  confirmationTokenRequired = false
+  label = "SimilarBoats"
+  packageVersions = [
+    {
+      majorNumber = 1
+      minorNumber = 7
+      namespace = "sf_com_apps"
+    },
+    {
+      majorNumber = 1
+      minorNumber = 0
+      namespace = "trlhdtips"
+    },
+  ]
+  fullName = "SimilarBoats"
+  content = file("salesforce/Records/ApexPage/SimilarBoats.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SimilarBoatsController
+    },
+    {
+      reference = salesforce.ApexComponent.instance.SimilarBoatsComponent
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Length__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Picture__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Price__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Year_Built__c
+    },
+  ]
+}

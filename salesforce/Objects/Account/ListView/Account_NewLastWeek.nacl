@@ -1,0 +1,15 @@
+salesforce.ListView Account_NewLastWeek {
+  fullName = "Account.NewLastWeek"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "ACCOUNT.CREATED_DATE"
+      operation = "equals"
+      value = "LAST_WEEK"
+    },
+  ]
+  label = "New Last Week"
+  _parent = [
+    salesforce.Account,
+  ]
+}

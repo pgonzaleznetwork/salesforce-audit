@@ -1,0 +1,24 @@
+salesforce.ListView Event_MyTeamsRecentEvents {
+  fullName = "Event.MyTeamsRecentEvents"
+  columns = [
+    "START_DATE_TIME",
+    "END_DATE_TIME",
+    "SUBJECT",
+    "WHO_NAME",
+    "WHAT_NAME",
+    "CORE.USERS.ALIAS",
+    "ALL_DAY",
+  ]
+  filterScope = "Team"
+  filters = [
+    {
+      field = "DUE_DATE"
+      operation = "equals"
+      value = "LAST_N_DAYS:30"
+    },
+  ]
+  label = "My Team's Recent Events"
+  _parent = [
+    salesforce.Event,
+  ]
+}

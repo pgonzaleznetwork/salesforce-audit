@@ -1,0 +1,49 @@
+type salesforce.LightningComponentBundleProperty {
+  string datasource {
+    isAttribute = true
+  }
+  string default {
+    isAttribute = true
+  }
+  string description {
+    isAttribute = true
+  }
+  string label {
+    isAttribute = true
+  }
+  number max {
+    isAttribute = true
+  }
+  number min {
+    isAttribute = true
+  }
+  string name {
+    _required = true
+    isAttribute = true
+  }
+  string placeholder {
+    isAttribute = true
+  }
+  boolean required {
+    isAttribute = true
+  }
+  string role {
+    isAttribute = true
+  }
+  string type {
+    _required = true
+    isAttribute = true
+    _restriction = {
+      values = [
+        "Boolean",
+        "Integer",
+        "String",
+        "Color",
+        "Date",
+        "DateTime",
+      ]
+      enforce_value = false
+    }
+  }
+  metadataType = "LightningComponentBundleProperty"
+}

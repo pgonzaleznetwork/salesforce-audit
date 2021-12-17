@@ -1,0 +1,27 @@
+type salesforce.FlowScreenRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string conditionLogic {
+  }
+  salesforce.FlowCondition conditions {
+  }
+  string label {
+  }
+  salesforce.FlowScreenRuleAction ruleActions {
+  }
+  metadataType = "FlowScreenRule"
+}

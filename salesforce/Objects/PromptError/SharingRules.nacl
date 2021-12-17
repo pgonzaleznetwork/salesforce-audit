@@ -1,0 +1,6 @@
+salesforce.SharingRules PromptError {
+  fullName = "PromptError"
+  _parent = [
+    salesforce.PromptError,
+  ]
+}

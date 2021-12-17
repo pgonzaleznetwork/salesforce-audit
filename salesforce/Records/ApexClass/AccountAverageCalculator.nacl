@@ -1,0 +1,11 @@
+salesforce.ApexClass AccountAverageCalculator {
+  apiVersion = 51
+  status = "Active"
+  fullName = "AccountAverageCalculator"
+  content = file("salesforce/Records/ApexClass/AccountAverageCalculator.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact
+    },
+  ]
+}

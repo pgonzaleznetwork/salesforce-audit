@@ -1,0 +1,219 @@
+type salesforce.Image {
+  serviceid Id {
+    apiName = "Image.Id"
+    label = "Image ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Image.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Image.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Image.Name"
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Image.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Image.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Image.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Image.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Image.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ImageViewType {
+    apiName = "Image.ImageViewType"
+    label = "Image Orientation"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "Image.IsActive"
+    label = "Active"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ImageClass {
+    apiName = "Image.ImageClass"
+    label = "Category"
+    valueSet = [
+      {
+        fullName = "SCENES"
+        default = true
+        label = "Scenes"
+        isActive = true
+      },
+      {
+        fullName = "FOOD"
+        default = false
+        label = "Food"
+        isActive = true
+      },
+      {
+        fullName = "OBJECTS"
+        default = false
+        label = "Objects"
+        isActive = true
+      },
+      {
+        fullName = "LOGOS"
+        default = false
+        label = "Logos"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ImageClassObjectType {
+    apiName = "Image.ImageClassObjectType"
+    label = "Image Type"
+    valueSet = [
+      {
+        fullName = "TRAINING"
+        default = true
+        label = "Training"
+        isActive = true
+      },
+      {
+        fullName = "DETECTION"
+        default = false
+        label = "Actual Image"
+        isActive = true
+      },
+      {
+        fullName = "FEEDBACK"
+        default = false
+        label = "Feedback"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContentDocumentId {
+    apiName = "Image.ContentDocumentId"
+    label = "ContentDocument ID"
+    referenceTo = [
+      "ContentDocument",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ContentDocument"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Text CapturedAngle {
+    apiName = "Image.CapturedAngle"
+    label = "Camera Angle"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text Title {
+    apiName = "Image.Title"
+    label = "Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text AlternateText {
+    apiName = "Image.AlternateText"
+    label = "Accessibility Text"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Url Url {
+    apiName = "Image.Url"
+    label = "URL"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

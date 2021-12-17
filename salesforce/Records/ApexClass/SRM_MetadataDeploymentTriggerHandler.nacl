@@ -1,0 +1,35 @@
+salesforce.ApexClass SRM_MetadataDeploymentTriggerHandler {
+  apiVersion = 45
+  status = "Active"
+  fullName = "SRM_MetadataDeploymentTriggerHandler"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataDeploymentTriggerHandler.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.TriggerUtils_TriggerStatus
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Deployed_Apex_Names__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Fire_New_Apex_Notification__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Status__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Name__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Type__c
+    },
+  ]
+}

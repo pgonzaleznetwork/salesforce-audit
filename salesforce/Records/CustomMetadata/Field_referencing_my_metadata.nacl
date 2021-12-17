@@ -1,0 +1,18 @@
+salesforce.CustomMetadata Field_referencing_my_metadata@uvu {
+  fullName = "Field_referencing.my_metadata"
+  label = "my metadata"
+  protected = false
+  values = [
+    {
+      field = "Related_Field__c"
+      value = "CustomerPriority__c"
+    },
+    {
+      field = "Related_Object__c"
+      value = "Account"
+    },
+    {
+      field = "second_field__c"
+    },
+  ]
+}

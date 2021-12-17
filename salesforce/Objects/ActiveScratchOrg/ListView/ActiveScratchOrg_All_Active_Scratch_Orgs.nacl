@@ -1,0 +1,8 @@
+salesforce.ListView ActiveScratchOrg_All_Active_Scratch_Orgs {
+  fullName = "ActiveScratchOrg.All_Active_Scratch_Orgs"
+  filterScope = "Everything"
+  label = "All Active Scratch Orgs"
+  _parent = [
+    salesforce.ActiveScratchOrg,
+  ]
+}

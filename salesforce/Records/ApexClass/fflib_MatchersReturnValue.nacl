@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_MatchersReturnValue {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MatchersReturnValue"
+  content = file("salesforce/Records/ApexClass/fflib_MatchersReturnValue.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodReturnValue
+    },
+  ]
+}

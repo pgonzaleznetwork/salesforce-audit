@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_ArgumentCaptor {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_ArgumentCaptor"
+  content = file("salesforce/Records/ApexClass/fflib_ArgumentCaptor.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+  ]
+}

@@ -1,0 +1,12 @@
+salesforce.MobileSettings {
+  fullName = "Mobile"
+  dashboardMobile = {
+    enableDashboardIPadApp = true
+  }
+  enableImportContactFromDevice = true
+  enableNewSalesforceMobileAppForTablet = true
+  enableOfflineDraftsEnabled = true
+  enablePopulateNameManuallyInToday = false
+  enableS1EncryptedStoragePref2 = true
+  enableS1OfflinePref = true
+}

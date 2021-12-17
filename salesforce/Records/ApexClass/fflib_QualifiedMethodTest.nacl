@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_QualifiedMethodTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_QualifiedMethodTest"
+  content = file("salesforce/Records/ApexClass/fflib_QualifiedMethodTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocksConfig
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+  ]
+}

@@ -1,0 +1,5 @@
+salesforce.WebToXSettings {
+  fullName = "WebToX"
+  webToCaseSpamFilter = "false"
+  webToLeadSpamFilter = "false"
+}

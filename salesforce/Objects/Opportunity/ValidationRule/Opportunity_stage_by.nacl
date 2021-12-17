@@ -1,0 +1,10 @@
+salesforce.ValidationRule Opportunity_stage_by {
+  fullName = "Opportunity.stage_by"
+  active = true
+  errorConditionFormula = "FALSE"
+  errorDisplayField = salesforce.Opportunity.field.StageName
+  errorMessage = "test"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

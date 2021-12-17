@@ -1,0 +1,29 @@
+type salesforce.ServicePresenceStatus {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.ServiceChannelStatus channels {
+  }
+  string label {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "servicePresenceStatus"
+  dirName = "servicePresenceStatuses"
+  metadataType = "ServicePresenceStatus"
+}

@@ -1,0 +1,8 @@
+salesforce.ListView Account_MyAccounts {
+  fullName = "Account.MyAccounts"
+  filterScope = "Mine"
+  label = "My Accounts"
+  _parent = [
+    salesforce.Account,
+  ]
+}

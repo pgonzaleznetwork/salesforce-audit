@@ -1,0 +1,15 @@
+salesforce.ListView Contract_MyInApprovalContracts {
+  fullName = "Contract.MyInApprovalContracts"
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "CONTRACT.STATUS_CODE"
+      operation = "equals"
+      value = "P"
+    },
+  ]
+  label = "My In Approval Contracts"
+  _parent = [
+    salesforce.Contract,
+  ]
+}

@@ -1,0 +1,14 @@
+salesforce.ApexClass fflib_IDGeneratorTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_IDGeneratorTest"
+  content = file("salesforce/Records/ApexClass/fflib_IDGeneratorTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IDGenerator
+    },
+  ]
+}

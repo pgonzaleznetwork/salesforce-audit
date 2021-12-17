@@ -1,0 +1,97 @@
+type salesforce.SessionSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean allowUserAuthenticationByCertificate {
+  }
+  boolean canConfirmEmailChangeInLightningCommunities {
+  }
+  boolean canConfirmIdentityBySmsOnly {
+  }
+  boolean disableTimeoutWarning {
+  }
+  boolean enableCSPOnEmail {
+  }
+  boolean enableCSRFOnGet {
+  }
+  boolean enableCSRFOnPost {
+  }
+  boolean enableCacheAndAutocomplete {
+  }
+  boolean enableClickjackNonsetupSFDC {
+  }
+  boolean enableClickjackNonsetupUser {
+  }
+  boolean enableClickjackNonsetupUserHeaderless {
+  }
+  boolean enableClickjackSetup {
+  }
+  boolean enableContentSniffingProtection {
+  }
+  boolean enableLightningLogin {
+  }
+  boolean enableLightningLoginOnlyWithUserPerm {
+  }
+  boolean enableOauthCorsPolicy {
+  }
+  boolean enablePostForSessions {
+  }
+  boolean enableSMSIdentity {
+  }
+  boolean enableU2F {
+  }
+  boolean enableUpgradeInsecureRequests {
+  }
+  boolean enableXssProtection {
+  }
+  boolean enforceIpRangesEveryRequest {
+  }
+  boolean enforceUserDeviceRevoked {
+  }
+  boolean forceLogoutOnSessionTimeout {
+  }
+  boolean forceRelogin {
+  }
+  boolean hasRetainedLoginHints {
+  }
+  boolean hasUserSwitching {
+  }
+  boolean hstsOnForcecomSites {
+  }
+  boolean identityConfirmationOnEmailChange {
+  }
+  boolean identityConfirmationOnTwoFactorRegistrationEnabled {
+  }
+  boolean lockSessionsToDomain {
+  }
+  boolean lockSessionsToIp {
+  }
+  string lockerServiceAPIVersion {
+  }
+  boolean lockerServiceCSP {
+  }
+  string logoutURL {
+  }
+  boolean redirectionWarning {
+  }
+  boolean referrerPolicy {
+  }
+  boolean requireHttpOnly {
+  }
+  boolean requireHttps {
+  }
+  boolean securityCentralKillSession {
+  }
+  metadataType = "SessionSettings"
+}

@@ -1,0 +1,31 @@
+type salesforce.RecordActionDeploymentChannel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string channel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Chat",
+        "Other",
+        "Phone",
+      ]
+    }
+  }
+  salesforce.RecordActionDefaultItem channelItems {
+  }
+  boolean isAutopopEnabled {
+  }
+  metadataType = "RecordActionDeploymentChannel"
+}

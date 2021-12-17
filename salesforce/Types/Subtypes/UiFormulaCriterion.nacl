@@ -1,0 +1,26 @@
+type salesforce.UiFormulaCriterion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string leftValue {
+  }
+  string operator {
+    foreignKeyDomain = [
+      "FormulaOperator",
+    ]
+  }
+  string rightValue {
+  }
+  metadataType = "UiFormulaCriterion"
+}

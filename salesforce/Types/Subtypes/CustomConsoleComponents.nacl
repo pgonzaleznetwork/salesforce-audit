@@ -1,0 +1,21 @@
+type salesforce.CustomConsoleComponents {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.PrimaryTabComponents primaryTabComponents {
+  }
+  salesforce.SubtabComponents subtabComponents {
+  }
+  metadataType = "CustomConsoleComponents"
+}

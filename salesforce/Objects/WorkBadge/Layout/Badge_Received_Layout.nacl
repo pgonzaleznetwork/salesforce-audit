@@ -1,0 +1,83 @@
+salesforce.Layout WorkBadge_Badge_Received_Layout@bss {
+  fullName = "WorkBadge-Badge Received Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Name"
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadge.field.CreatedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.GiverId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.SourceId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadge.field.LastModifiedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.RecipientId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description_and_Image"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadge.field.DefinitionId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadge.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadge.field.ImageUrl
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.WorkBadge,
+  ]
+}

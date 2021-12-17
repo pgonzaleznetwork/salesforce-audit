@@ -1,0 +1,23 @@
+salesforce.ApexClass GenerateDataTests {
+  apiVersion = 48
+  status = "Active"
+  fullName = "GenerateDataTests"
+  content = file("salesforce/Records/ApexClass/GenerateDataTests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.GenerateData
+    },
+    {
+      reference = salesforce.BoatType__c
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+  ]
+}

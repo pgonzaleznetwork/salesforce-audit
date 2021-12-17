@@ -1,0 +1,8 @@
+salesforce.ListView ConsumptionSchedule_All_ConsumptionSchedules {
+  fullName = "ConsumptionSchedule.All_ConsumptionSchedules"
+  filterScope = "Everything"
+  label = "All Consumption Schedules"
+  _parent = [
+    salesforce.ConsumptionSchedule,
+  ]
+}

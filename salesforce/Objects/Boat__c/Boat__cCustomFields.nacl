@@ -1,0 +1,129 @@
+type salesforce.Boat__c {
+  salesforce.MasterDetail Contact__c {
+    apiName = "Boat__c.Contact__c"
+    label = "Contact"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "Boats"
+    queryable = true
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Boats"
+    trackTrending = false
+  }
+  salesforce.Lookup BoatType__c {
+    apiName = "Boat__c.BoatType__c"
+    label = "Boat Type"
+    referenceTo = [
+      salesforce.BoatType__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Boats"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Boats"
+    trackTrending = false
+  }
+  salesforce.FormulaText Boat_Image__c {
+    apiName = "Boat__c.Boat_Image__c"
+    label = "Boat Image"
+    formula = "IMAGE( Picture__c ,  Name )"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Boat__c.field.Picture__c
+      },
+    ]
+  }
+  salesforce.TextArea Description__c {
+    apiName = "Boat__c.Description__c"
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Geolocation Geolocation__c {
+    apiName = "Boat__c.Geolocation__c"
+    label = "Geolocation"
+    scale = 7
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    displayLocationInDecimal = false
+    externalId = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Number Length__c {
+    apiName = "Boat__c.Length__c"
+    label = "Length"
+    precision = 4
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Url Picture__c {
+    apiName = "Boat__c.Picture__c"
+    label = "Picture"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Currency Price__c {
+    apiName = "Boat__c.Price__c"
+    label = "Price"
+    inlineHelpText = "Estimated Price"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 7
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number Year_Built__c {
+    apiName = "Boat__c.Year_Built__c"
+    label = "Year Built"
+    precision = 4
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackTrending = false
+  }
+}

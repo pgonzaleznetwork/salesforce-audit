@@ -1,0 +1,31 @@
+salesforce.StandardValueSet LeadSource {
+  fullName = "LeadSource"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Web"
+      default = false
+      label = "Web"
+    },
+    {
+      fullName = "Phone Inquiry"
+      default = false
+      label = "Phone Inquiry"
+    },
+    {
+      fullName = "Partner Referral"
+      default = false
+      label = "Partner Referral"
+    },
+    {
+      fullName = "Purchased List"
+      default = false
+      label = "Purchased List"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

@@ -1,0 +1,8 @@
+salesforce.ListView User_AllUsers {
+  fullName = "User.AllUsers"
+  filterScope = "Everything"
+  label = "All Users"
+  _parent = [
+    salesforce.User,
+  ]
+}

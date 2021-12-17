@@ -1,0 +1,8 @@
+salesforce.ProductSettings {
+  fullName = "Product"
+  enableCascadeActivateToRelatedPrices = true
+  enableMySettings = true
+  enableQuantitySchedule = false
+  enableRevenueSchedule = false
+  enableSecureGuestUserRecordAccess = false
+}

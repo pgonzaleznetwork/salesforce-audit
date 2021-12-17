@@ -1,0 +1,31 @@
+type salesforce.ComponentInstanceProperty {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string name {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "decorator",
+      ]
+    }
+  }
+  string value {
+  }
+  salesforce.ComponentInstancePropertyList valueList {
+  }
+  metadataType = "ComponentInstanceProperty"
+}

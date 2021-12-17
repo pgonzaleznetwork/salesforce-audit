@@ -1,0 +1,16 @@
+salesforce.CustomApplication standard__Platform {
+  fullName = "standard__Platform"
+  defaultLandingTab = "standard-home"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-Account",
+    "standard-Contact",
+    "standard-report",
+    "standard-Dashboard",
+    salesforce.CustomTab.instance.Center__c,
+    salesforce.CustomTab.instance.Parent__c,
+    salesforce.CustomTab.instance.Child__c,
+  ]
+}

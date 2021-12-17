@@ -1,0 +1,151 @@
+salesforce.Flow Process_using_field_as_criteria {
+  fullName = "Process_using_field_as_criteria"
+  actionCalls = {
+    processMetadataValues = [
+      {
+        name = "textJson"
+        value = {
+          stringValue = "{\"mentions\":[],\"message\":\"Yay!\"}"
+        }
+      },
+    ]
+    name = "myRule_1_A1"
+    label = "chatter"
+    locationX = 100
+    locationY = 200
+    actionName = "chatterPost"
+    actionType = "chatterPost"
+    inputParameters = [
+      {
+        name = "text"
+        value = {
+          stringValue = "Yay!"
+        }
+      },
+      {
+        name = "type"
+      },
+      {
+        name = "subjectNameOrId"
+        value = {
+          elementReference = "myVariable_current.Id"
+        }
+      },
+    ]
+  }
+  apiVersion = 51
+  decisions = [
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 0
+        }
+      }
+      name = "myDecision"
+      label = "myDecision"
+      locationX = 50
+      locationY = 0
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              processMetadataValues = [
+                {
+                  name = "inputDataType"
+                  value = {
+                    stringValue = "Picklist"
+                  }
+                },
+                {
+                  name = "leftHandSideType"
+                  value = {
+                    stringValue = "Picklist"
+                  }
+                },
+                {
+                  name = "operatorDataType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+                {
+                  name = "rightHandSideType"
+                  value = {
+                    stringValue = "Picklist"
+                  }
+                },
+              ]
+              leftValueReference = "myVariable_current.CustomerPriority__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "High"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "myRule_1_A1"
+          }
+          label = "field"
+        },
+      ]
+    },
+  ]
+  interviewLabel = "Process_using_field_as_criteria-1_InterviewLabel"
+  label = "Process using field as criteria"
+  processMetadataValues = [
+    {
+      name = "ObjectType"
+      value = {
+        stringValue = "Account"
+      }
+    },
+    {
+      name = "ObjectVariable"
+      value = {
+        elementReference = "myVariable_current"
+      }
+    },
+    {
+      name = "OldObjectVariable"
+      value = {
+        elementReference = "myVariable_old"
+      }
+    },
+    {
+      name = "TriggerType"
+      value = {
+        stringValue = "onAllChanges"
+      }
+    },
+  ]
+  processType = "Workflow"
+  startElementReference = "myDecision"
+  status = "Active"
+  variables = [
+    {
+      name = "myVariable_current"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+    {
+      name = "myVariable_old"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Account
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.CustomerPriority__c
+    },
+  ]
+}

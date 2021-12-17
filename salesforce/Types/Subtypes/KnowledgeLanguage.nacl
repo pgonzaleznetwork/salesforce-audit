@@ -1,0 +1,43 @@
+type salesforce.KnowledgeLanguage {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  string defaultAssignee {
+  }
+  string defaultReviewer {
+  }
+  string name {
+  }
+  string defaultAssigneeType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Queue",
+        "User",
+      ]
+    }
+  }
+  string defaultReviewerType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Queue",
+        "User",
+      ]
+    }
+  }
+  metadataType = "KnowledgeLanguage"
+}

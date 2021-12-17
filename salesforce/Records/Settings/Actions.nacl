@@ -1,0 +1,7 @@
+salesforce.ActionsSettings {
+  fullName = "Actions"
+  enableDefaultQuickActionsOn = true
+  enableMdpEnabled = true
+  enableOfflineWebLinks = "false"
+  enableThirdPartyActions = false
+}

@@ -1,0 +1,320 @@
+salesforce.RecordType Account_Partner {
+  fullName = "Account.Partner"
+  active = true
+  label = "Partner"
+  picklistValues = [
+    {
+      picklist = salesforce.Account.field.AccountSource
+      values = [
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Partner Referral"
+          default = false
+        },
+        {
+          fullName = "Phone Inquiry"
+          default = false
+        },
+        {
+          fullName = "Purchased List"
+          default = false
+        },
+        {
+          fullName = "Web"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.Active__c
+      values = [
+        {
+          fullName = "No"
+          default = false
+        },
+        {
+          fullName = "Yes"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.CustomerPriority__c
+      values = [
+        {
+          fullName = "Lowest"
+          default = false
+        },
+        {
+          fullName = "Medium"
+          default = false
+        },
+        {
+          fullName = "New High"
+          default = false
+        },
+        {
+          fullName = "Super High"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.Industry
+      values = [
+        {
+          fullName = "Agriculture"
+          default = false
+        },
+        {
+          fullName = "Apparel"
+          default = false
+        },
+        {
+          fullName = "Banking"
+          default = false
+        },
+        {
+          fullName = "Biotechnology"
+          default = false
+        },
+        {
+          fullName = "Chemicals"
+          default = false
+        },
+        {
+          fullName = "Communications"
+          default = false
+        },
+        {
+          fullName = "Construction"
+          default = false
+        },
+        {
+          fullName = "Consulting"
+          default = false
+        },
+        {
+          fullName = "Education"
+          default = false
+        },
+        {
+          fullName = "Electronics"
+          default = false
+        },
+        {
+          fullName = "Energy"
+          default = false
+        },
+        {
+          fullName = "Engineering"
+          default = false
+        },
+        {
+          fullName = "Entertainment"
+          default = false
+        },
+        {
+          fullName = "Environmental"
+          default = false
+        },
+        {
+          fullName = "Finance"
+          default = false
+        },
+        {
+          fullName = "Food %26 Beverage"
+          default = false
+        },
+        {
+          fullName = "Government"
+          default = false
+        },
+        {
+          fullName = "Healthcare"
+          default = false
+        },
+        {
+          fullName = "Hospitality"
+          default = false
+        },
+        {
+          fullName = "Insurance"
+          default = false
+        },
+        {
+          fullName = "Machinery"
+          default = false
+        },
+        {
+          fullName = "Manufacturing"
+          default = false
+        },
+        {
+          fullName = "Media"
+          default = false
+        },
+        {
+          fullName = "Not For Profit"
+          default = false
+        },
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Recreation"
+          default = false
+        },
+        {
+          fullName = "Retail"
+          default = false
+        },
+        {
+          fullName = "Shipping"
+          default = false
+        },
+        {
+          fullName = "Technology"
+          default = false
+        },
+        {
+          fullName = "Telecommunications"
+          default = false
+        },
+        {
+          fullName = "Transportation"
+          default = false
+        },
+        {
+          fullName = "Utilities"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.My_Broken_Picklist__c
+      values = [
+        {
+          fullName = "ValueOne"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.Ownership
+      values = [
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Private"
+          default = false
+        },
+        {
+          fullName = "Public"
+          default = false
+        },
+        {
+          fullName = "Subsidiary"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.Rating
+      values = [
+        {
+          fullName = "Cold"
+          default = false
+        },
+        {
+          fullName = "Hot"
+          default = false
+        },
+        {
+          fullName = "Warm"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.SLA__c
+      values = [
+        {
+          fullName = "Bronze"
+          default = false
+        },
+        {
+          fullName = "Gold"
+          default = false
+        },
+        {
+          fullName = "Platinum"
+          default = false
+        },
+        {
+          fullName = "Silver"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.Type
+      values = [
+        {
+          fullName = "Channel Partner %2F Reseller"
+          default = false
+        },
+        {
+          fullName = "Customer - Channel"
+          default = false
+        },
+        {
+          fullName = "Customer - Direct"
+          default = false
+        },
+        {
+          fullName = "Installation Partner"
+          default = false
+        },
+        {
+          fullName = "Other"
+          default = false
+        },
+        {
+          fullName = "Prospect"
+          default = false
+        },
+        {
+          fullName = "Technology Partner"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Account.field.UpsellOpportunity__c
+      values = [
+        {
+          fullName = "Maybe"
+          default = false
+        },
+        {
+          fullName = "No"
+          default = false
+        },
+        {
+          fullName = "Yes"
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.Account,
+  ]
+}

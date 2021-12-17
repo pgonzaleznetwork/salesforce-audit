@@ -1,0 +1,19 @@
+salesforce.WorkflowRule Account_When_priority_is_high__3C@vssssp {
+  fullName = "Account.When priority is high %3C"
+  actions = [
+    {
+      name = salesforce.WorkflowAlert.instance.Account_account_alert@vu
+      type = "Alert"
+    },
+    {
+      name = salesforce.WorkflowFieldUpdate.instance.Account_update_name_2@vuu
+      type = "FieldUpdate"
+    },
+  ]
+  active = true
+  formula = "NOT(ISBLANK(TEXT(CustomerPriority__c)))"
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Account,
+  ]
+}

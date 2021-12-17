@@ -1,0 +1,37 @@
+type salesforce.ConnectedAppOauthConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.ConnectedAppOauthAssetToken assetTokenConfig {
+  }
+  string callbackUrl {
+  }
+  string certificate {
+  }
+  string consumerKey {
+  }
+  string consumerSecret {
+  }
+  salesforce.ConnectedAppOauthIdToken idTokenConfig {
+  }
+  boolean isAdminApproved {
+  }
+  boolean isConsumerSecretOptional {
+  }
+  boolean isIntrospectAllTokens {
+  }
+  string singleLogoutUrl {
+  }
+  metadataType = "ConnectedAppOauthConfig"
+}

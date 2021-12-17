@@ -1,0 +1,65 @@
+settings salesforce.EmailAdministrationSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableComplianceBcc {
+  }
+  boolean enableEmailConsentManagement {
+  }
+  boolean enableEmailSenderIdCompliance {
+  }
+  boolean enableEmailSpfCompliance {
+  }
+  boolean enableEmailToSalesforce {
+  }
+  boolean enableEmailWorkflowApproval {
+  }
+  boolean enableEnhancedEmailEnabled {
+  }
+  boolean enableHandleBouncedEmails {
+  }
+  boolean enableHtmlEmail {
+  }
+  boolean enableListEmailLogActivities {
+  }
+  boolean enableResendBouncedEmails {
+  }
+  boolean enableRestrictTlsToDomains {
+  }
+  boolean enableSendThroughGmailPref {
+  }
+  boolean enableSendViaExchangePref {
+  }
+  boolean enableSendViaGmailPref {
+  }
+  boolean enableSetMatchingEmailsOnBounce {
+  }
+  boolean enableUseOrgFootersForExtTrans {
+  }
+  boolean sendEmailsEvenWhenAutomationUpdatesSameRecord {
+  }
+  boolean sendMassEmailNotification {
+  }
+  boolean sendTextOnlySystemEmails {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "EmailAdministrationSettings"
+}

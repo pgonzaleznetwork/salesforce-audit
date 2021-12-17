@@ -1,0 +1,331 @@
+<apex:page standardController="SRM_Jira_Ticket__c" extensions="SRM_SelectMetadataExtension" tabStyle="SRM_Metadata__c" title="Add Metadata" lightningStylesheets="true">
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+	<style>
+
+       
+        table.recordsTable {
+            width: 100%;
+            text-align: center;
+        }
+
+        table.recordsTable td,
+        table.recordsTable th {
+            border: 2px solid #424242;
+            padding: 3px 2px;
+            word-break: break-all;
+        }
+
+        table.recordsTable tbody tr td {
+            border: 1px solid #DDDDDD !important;
+            font-size: 13px;
+        }
+
+        table.recordsTable thead {
+            background: #EDEDED;
+            background: -moz-linear-gradient(top, #f1f1f1 0%, #eeeeee 66%, #EDEDED 100%);
+            background: -webkit-linear-gradient(top, #f1f1f1 0%, #eeeeee 66%, #EDEDED 100%);
+            background: linear-gradient(to bottom, #f1f1f1 0%, #eeeeee 66%, #EDEDED 100%);
+            border-bottom: 2px solid #444444;
+        }
+
+        table.recordsTable thead tr {
+            font-size: 12px;
+            font-weight: bold;
+            color: #000000;
+            text-align: center;
+            border-left: 2px solid #D0E4F5;
+        }
+
+        table.recordsTable thead th:first-child {
+            border-left: none;
+        }
+
+
+        table.recordsTable tfoot td {
+            font-size: 14px;
+        }
+
+        table.recordsTable tfoot .links {
+            text-align: right;
+        }
+
+        table.recordsTable tfoot .links a {
+            display: inline-block;
+            background: #1C6EA4;
+            color: #FFFFFF;
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+
+        section.controlButtons {
+            display: block;
+            text-align: center;
+            margin: auto;
+        }
+
+        img {
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        #overlay {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 2;
+          cursor: pointer;
+        }
+        
+        #text{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 50px;
+          color: white;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+        }
+	</style>
+    
+    
+   <apex:sectionHeader title="New Relevant Metadata" subtitle="Metadata">
+   </apex:sectionHeader>
+
+   <!-- Remote object definition to access SRM_Metadata__c in Javascript. -->
+   <apex:remoteObjects >
+      <apex:remoteObjectModel name="SRM_Metadata__c" jsShorthand="metadata">
+         <apex:remoteObjectField name="Name__c" jsShorthand="name"/>
+         <apex:remoteObjectField name="Type__c" jsShorthand="mdType"/>
+         <apex:remoteObjectField name="Deployment_Type__c" jsShorthand="deploymentType"/>
+         <apex:remoteObjectField name="Jira_Ticket__c" jsShorthand="parentId"/>
+      </apex:remoteObjectModel>
+   </apex:remoteObjects>
+   <!-- End of Remote object definition. -->
+    
+
+   <apex:form >
+      <apex:pageBlock >
+         <apex:pageMessages />
+         <div ng-app="SRM_SelectMetadataApp" ng-controller="ngController" ng-init="getMetadataTypes()">
+             
+             <div id="overlay">
+              <div id="text">Saving Metadata...hold on a moment</div>
+            </div>
+             
+            <apex:pageBlockSection title="Jira Ticket Information">
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="jiraTicketNumber" value="Jira Ticket Number"/>
+                  <apex:outputText value="{!jiraTicketNumber}" id="jiraTicketNumber"/>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="crmsprint" value="CRM Sprint"/>
+                  <apex:outputText value="{!crmSprint}" id="crmSprint"/>
+               </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Select members based on their type">
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="filterBox" value="Filter by name"/>
+                  <input id="filterBox" type="text" ng-model="query"/>
+                  <br/>
+                  <br/>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="mdTypesList" value="Metadata Type"/>
+                  <select id="mdTypesList" ng-model="selectedName1" ng-options="mdtype for mdtype in mdTypes" ng-change="updateMembers()">
+                  </select>
+                  <br/>
+                  <br/>
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="memberList" value="Members"/>
+                  <select id="memberList" ng-model="selectedName" ng-options="x for x in members | filter:query" multiple="true" style="min-width:500px;"
+                     size="10">
+                  </select>
+                  <br/>
+                  <br/>
+                  <button type="button" ng-click="keepTrackOfEntries()">Add Selected Members</button>
+               </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Metadata to be tracked for this ticket">
+               <table id="selectedRecordsTable" class="recordsTable">
+                  <thead>
+                     <tr>
+                        <td>Remove</td>
+                        <td>Type</td>
+                        <td>Name</td>
+                     </tr>
+                  </thead>
+                  <tbody ng-repeat="x in membersToCreate">
+                     <tr >
+                        <td>
+                           <a  ng-click="removeEntry(x)">
+                           <img id="theImage" src="{!$Resource.CancelIcon}" width="12" height="12"/>
+                           </a>
+                        </td>
+                        <td>{{x.get('mdType')}}</td>
+                        <td>{{x.get('name')}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </apex:pageBlockSection>
+            <section class="controlButtons">
+               <button type="button" ng-click="performSave();showOverlay()">
+               Save
+               </button>
+               <button type="button" ng-click="goBack()">
+               <!-- <a href="{!ReturnUrl}" style="text-decoration:none;">Cancel</a>-->
+               Cancel
+               </button>
+            </section>
+         </div>
+      </apex:pageBlock>
+   </apex:form>
+   <script>
+                   
+     /*
+      * AngularJS application to support all the UI interaction. It uses Javascript Remoting to call
+      * the Metadata API via the Apex Controller.
+                               
+      * It also uses Remote Objects to create SRM_Metadata__c records, meaning all CRUD operations are done
+      * directly in Javascript. 
+      */
+      var app = angular.module('SRM_SelectMetadataApp', []);
+      app.controller('ngController', function($scope) {
+          
+          $scope.mdTypes = [];
+          $scope.members = ['--Select a Metadata Type--'];
+          $scope.membersToCreate = [];
+          $scope.entriesToShow = [];
+          $scope.selectedMemberNames = [];
+          $scope.metadataSObjects = [];
+          $scope.namedCredential = '{!NamedCredential}';
+          
+          $scope.showOverlay = function(){
+              document.getElementById("overlay").style.display = "block";
+          }
+          
+          /*
+           * Uses the Metadata API to get a list of available metadata types in the connected org.
+           * The org and its credentials are specified in the namedCredential parameter. 
+          */
+          $scope.getMetadataTypes = function(){
+              
+              Visualforce.remoting.Manager.invokeAction(
+                  '{!$RemoteAction.SRM_SelectMetadataExtension.getMetadataTypes}',
+                  $scope.namedCredential,
+                  function(result,event){
+                      $scope.mdTypes = $scope.mdTypes.concat(result);
+                      $scope.$apply();//forces the DOM to recognise the new elements that were added on the array above
+                  }
+              );         
+          }
+          
+          $scope.goBack = function(){
+              
+              var isLEX = UITheme.getUITheme === "Theme4d";
+              
+              if(isLEX){
+                  var parentId = {!parentId};
+                  sforce.one.navigateToSObject(parentId);
+              }
+              else{
+                 window.location="{!ReturnUrl}";
+              } 
+          }
+           
+          
+          /*
+          * Updates the list of available metadata members based on the Metadata Type selected in the UI.
+          * Uses the Metadata API by passing a namedCredential and the name of the Metadata Type.
+          */
+          $scope.updateMembers = function(){
+              
+              var selectTag = document.getElementById("mdTypesList");
+              var selectedValue = mdTypesList.options[mdTypesList.selectedIndex].text;
+              
+              
+              Visualforce.remoting.Manager.invokeAction(
+                  '{!$RemoteAction.SRM_SelectMetadataExtension.getFilteredMembers}',
+                  $scope.namedCredential,selectedValue,
+                  function(result,event){
+                      $scope.members = result; 
+                      $scope.$apply();
+                  }
+              );   
+          }
+          
+          /*
+          * Removes a specific SRM_Metadata__c record from the list of metadata members that should
+          * be created when hitting Save. 
+          */
+          $scope.removeEntry = function(metadataSObj){
+              
+              var index = $scope.metadataSObjects.indexOf(metadataSObj);
+              
+              if(index > -1){
+                    $scope.metadataSObjects.splice(index,1); 
+                    $scope.membersToCreate = $scope.metadataSObjects; 
+                 }   
+          }
+          
+          
+          /*
+          * Keeps track of the SRM_Metadata__c record that should be created. 
+          */
+          $scope.keepTrackOfEntries = function(){
+              
+              var selectedMembers = document.getElementById("memberList");
+                   
+              for(var i=0 ; i <= selectedMembers.options.length-1; i++){
+                  
+                  if(selectedMembers.options[i].selected){
+                      
+                      var selectedOption = selectedMembers.options[i];
+       
+                      if($scope.selectedMemberNames.indexOf(selectedOption.label) == -1){
+                          $scope.selectedMemberNames.push(selectedOption.label);
+                          
+                          var metadata = new SObjectModel.metadata();
+                          metadata.set('name',selectedOption.label);
+                          metadata.set('mdType',mdTypesList.options[mdTypesList.selectedIndex].text);
+                          metadata.set('parentId',"{!parentId}");
+                          $scope.metadataSObjects.push(metadata);
+                          
+                      }      
+                  }    
+              }
+              //we assign the array back to membersToCreate because Angular doesn't recognise
+              //that metadataSObjects was updated with new entries, but it does recognise this is we
+              //force an existing array to point to the values of another one.
+              $scope.membersToCreate = $scope.metadataSObjects;          
+          }
+          
+          /*
+          * Creates all the SRM_Metadata__c records. It does this one at a time because at the
+          * time of this writing (Feb 2019) Javascript remoting doesn't support bulk insert. Every
+          * create goes on it's own transaction so it's safe to do this.
+          */
+          $scope.performSave = function(){
+                  
+              for(var i=0; i < $scope.membersToCreate.length; i++){
+                  $scope.membersToCreate[i].create(function(error,results){
+                      //hack to return only when the last callback is executed
+                      if(i == $scope.membersToCreate.length){
+                          //window.location="{!ReturnUrl}";
+                          $scope.goBack();
+                      }
+                  });
+              }
+          }
+          
+      });
+   </script>
+</apex:page>

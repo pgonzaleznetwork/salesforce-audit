@@ -1,0 +1,8 @@
+salesforce.ListView SRM_Connected_Org__c_All {
+  fullName = "SRM_Connected_Org__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.SRM_Connected_Org__c,
+  ]
+}

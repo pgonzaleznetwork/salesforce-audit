@@ -1,0 +1,10 @@
+salesforce.LightningMessageChannel BoatMessageChannel {
+  fullName = "BoatMessageChannel"
+  description = "This is a sample Lightning Message Channel for the Lightning Web Components Superbadge."
+  isExposed = true
+  lightningMessageFields = {
+    description = "This is the record Id that changed"
+    fieldName = "recordId"
+  }
+  masterLabel = "BoatMessageChannel"
+}

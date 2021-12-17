@@ -1,0 +1,23 @@
+salesforce.ApexClass fflib_ArgumentCaptorTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_ArgumentCaptorTest"
+  content = file("salesforce/Records/ApexClass/fflib_ArgumentCaptorTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ArgumentCaptor
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_InOrder
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MyList
+    },
+  ]
+}

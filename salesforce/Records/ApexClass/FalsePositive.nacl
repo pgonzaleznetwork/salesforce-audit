@@ -1,0 +1,17 @@
+salesforce.ApexClass FalsePositive {
+  apiVersion = 51
+  status = "Active"
+  fullName = "FalsePositive"
+  content = file("salesforce/Records/ApexClass/FalsePositive.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.CustomerPriority__c
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

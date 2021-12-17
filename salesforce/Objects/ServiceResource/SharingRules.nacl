@@ -1,0 +1,6 @@
+salesforce.SharingRules ServiceResource {
+  fullName = "ServiceResource"
+  _parent = [
+    salesforce.ServiceResource,
+  ]
+}

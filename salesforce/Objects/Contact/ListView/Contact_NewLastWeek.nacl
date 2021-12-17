@@ -1,0 +1,15 @@
+salesforce.ListView Contact_NewLastWeek {
+  fullName = "Contact.NewLastWeek"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CONTACT.CREATED_DATE"
+      operation = "equals"
+      value = "LAST_WEEK"
+    },
+  ]
+  label = "New Last Week"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

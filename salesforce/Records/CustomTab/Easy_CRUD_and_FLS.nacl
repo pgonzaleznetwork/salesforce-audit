@@ -1,0 +1,11 @@
+salesforce.CustomTab Easy_CRUD_and_FLS {
+  fullName = "Easy_CRUD_and_FLS"
+  label = "Easy CRUD and FLS"
+  lwcComponent = "easyCrudAllObjects"
+  motif = "Custom69: Guitar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.easyCrudAllObjects
+    },
+  ]
+}

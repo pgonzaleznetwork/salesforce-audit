@@ -1,0 +1,12 @@
+salesforce.CustomTab Friend_Ships {
+  fullName = "Friend_Ships"
+  description = "Created by Lightning App Builder"
+  flexiPage = "Friend_Ships"
+  label = "Friend Ships"
+  motif = "Custom83: Pencil"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Friend_Ships
+    },
+  ]
+}

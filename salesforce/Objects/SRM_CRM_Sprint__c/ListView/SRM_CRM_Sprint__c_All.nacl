@@ -1,0 +1,15 @@
+salesforce.ListView SRM_CRM_Sprint__c_All {
+  fullName = "SRM_CRM_Sprint__c.All"
+  columns = [
+    "NAME",
+    "Total_Number_of_Tickets__c",
+    "Total_Metadata_Members__c",
+    "Number_of_Tickets_Deployed_to_Integratio__c",
+    "Total_Level_of_Effort_hours__c",
+  ]
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.SRM_CRM_Sprint__c,
+  ]
+}

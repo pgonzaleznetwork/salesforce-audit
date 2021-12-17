@@ -1,0 +1,10 @@
+salesforce.ValidationRule Opportunity_stage_as_error_field {
+  fullName = "Opportunity.stage_as_error_field"
+  active = false
+  errorConditionFormula = "isblank(Text(  Account.Industry  ))"
+  errorDisplayField = salesforce.Opportunity.field.StageName
+  errorMessage = "test"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

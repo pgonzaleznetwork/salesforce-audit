@@ -1,0 +1,33 @@
+type salesforce.LiveAgentConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableLiveChat {
+  }
+  boolean openNewAccountSubtab {
+  }
+  boolean openNewCaseSubtab {
+  }
+  boolean openNewContactSubtab {
+  }
+  boolean openNewLeadSubtab {
+  }
+  boolean openNewVFPageSubtab {
+  }
+  string pageNamesToOpen {
+  }
+  boolean showKnowledgeArticles {
+  }
+  metadataType = "LiveAgentConfig"
+}

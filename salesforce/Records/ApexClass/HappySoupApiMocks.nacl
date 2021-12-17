@@ -1,0 +1,11 @@
+salesforce.ApexClass HappySoupApiMocks {
+  apiVersion = 52
+  status = "Active"
+  fullName = "HappySoupApiMocks"
+  content = file("salesforce/Records/ApexClass/HappySoupApiMocks.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.HappySoupMetadataApi
+    },
+  ]
+}

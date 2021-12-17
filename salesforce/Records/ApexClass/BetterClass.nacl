@@ -1,0 +1,20 @@
+salesforce.ApexClass BetterClass {
+  apiVersion = 51
+  status = "Active"
+  fullName = "BetterClass"
+  content = file("salesforce/Records/ApexClass/BetterClass.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.AccountAverageCalculator
+    },
+    {
+      reference = salesforce.ApexClass.instance.ITrigger
+    },
+    {
+      reference = salesforce.Contact
+    },
+  ]
+}

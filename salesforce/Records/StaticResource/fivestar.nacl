@@ -1,0 +1,6 @@
+salesforce.StaticResource fivestar {
+  cacheControl = "Private"
+  contentType = "application/zip"
+  fullName = "fivestar"
+  content = file("salesforce/Records/StaticResource/fivestar.zip")
+}

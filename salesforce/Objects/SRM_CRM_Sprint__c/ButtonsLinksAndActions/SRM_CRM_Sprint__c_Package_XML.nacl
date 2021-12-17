@@ -1,0 +1,15 @@
+salesforce.WebLink SRM_CRM_Sprint__c_Package_XML {
+  fullName = "SRM_CRM_Sprint__c.Package_XML"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  height = 600
+  linkType = "url"
+  masterLabel = "Package XML"
+  openType = "sidebar"
+  protected = false
+  url = "/flow/Generate_Package_Xml?recordId={!SRM_CRM_Sprint__c.Id}&objectType=sprint"
+  _parent = [
+    salesforce.SRM_CRM_Sprint__c,
+  ]
+}

@@ -1,0 +1,36 @@
+type salesforce.ApexComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number apiVersion {
+  }
+  string content {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  "List<salesforce.PackageVersion>" packageVersions {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  suffix = "component"
+  dirName = "components"
+  metadataType = "ApexComponent"
+}

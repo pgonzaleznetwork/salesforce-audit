@@ -1,0 +1,17 @@
+salesforce.ApexClass UnitOfWorkTest {
+  apiVersion = 48
+  status = "Active"
+  fullName = "UnitOfWorkTest"
+  content = file("salesforce/Records/ApexClass/UnitOfWorkTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectUnitOfWork
+    },
+    {
+      reference = salesforce.Contact
+    },
+  ]
+}

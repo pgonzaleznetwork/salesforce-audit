@@ -1,0 +1,38 @@
+type salesforce.RecordType {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  string businessProcess {
+    foreignKeyDomain = [
+      salesforce.BusinessProcess,
+    ]
+  }
+  string compactLayoutAssignment {
+  }
+  string description {
+  }
+  string label {
+  }
+  "List<salesforce.RecordTypePicklistValue>" picklistValues {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "RecordType"
+}

@@ -1,0 +1,15 @@
+salesforce.ListView Opportunity_Private {
+  fullName = "Opportunity.Private"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "OPPORTUNITY.PRIVATE"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "Private"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

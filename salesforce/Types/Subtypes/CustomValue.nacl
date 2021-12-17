@@ -1,0 +1,29 @@
+type salesforce.CustomValue {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string color {
+  }
+  boolean default {
+  }
+  string description {
+  }
+  boolean isActive {
+  }
+  string label {
+  }
+  metadataType = "CustomValue"
+}

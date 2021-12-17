@@ -1,0 +1,35 @@
+salesforce.ApexClass SRM_SelectMetadataExtensionTests {
+  apiVersion = 48
+  status = "Active"
+  fullName = "SRM_SelectMetadataExtensionTests"
+  content = file("salesforce/Records/ApexClass/SRM_SelectMetadataExtensionTests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataApiMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.SRM_SelectMetadataExtension
+    },
+    {
+      reference = salesforce.ApexClass.instance.SRM_TestData
+    },
+    {
+      reference = salesforce.SRM_CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Connected_Org__c
+    },
+    {
+      reference = salesforce.SRM_Connected_Org__c.field.Named_Credential_Reference__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Connected_Org__c
+    },
+  ]
+}

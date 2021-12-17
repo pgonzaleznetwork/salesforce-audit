@@ -1,0 +1,142 @@
+salesforce.Flow test_builder {
+  fullName = "test_builder"
+  actionCalls = {
+    processMetadataValues = [
+      {
+        name = "emailAlertSelection"
+        value = {
+          stringValue = "my_email_alert"
+        }
+      },
+    ]
+    name = "myRule_1_A1"
+    label = "email"
+    locationX = 100
+    locationY = 200
+    actionName = salesforce.WorkflowAlert.instance.Boat__c_my_email_alert@uuvuu
+    actionType = "emailAlert"
+    inputParameters = [
+      {
+        name = "SObjectRowId"
+        value = {
+          elementReference = "myVariable_current.Id"
+        }
+      },
+    ]
+  }
+  apiVersion = 50
+  decisions = [
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 0
+        }
+      }
+      name = "myDecision"
+      label = "myDecision"
+      locationX = 50
+      locationY = 0
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              processMetadataValues = [
+                {
+                  name = "inputDataType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+                {
+                  name = "leftHandSideType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+                {
+                  name = "operatorDataType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+                {
+                  name = "rightHandSideType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+              ]
+              leftValueReference = "myVariable_current.Boat_Image__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "test"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "myRule_1_A1"
+          }
+          label = "field is true"
+        },
+      ]
+    },
+  ]
+  interviewLabel = "test_builder-1_InterviewLabel"
+  label = "test builder"
+  processMetadataValues = [
+    {
+      name = "ObjectType"
+      value = {
+        stringValue = "Boat__c"
+      }
+    },
+    {
+      name = "ObjectVariable"
+      value = {
+        elementReference = "myVariable_current"
+      }
+    },
+    {
+      name = "OldObjectVariable"
+      value = {
+        elementReference = "myVariable_old"
+      }
+    },
+    {
+      name = "TriggerType"
+      value = {
+        stringValue = "onCreateOnly"
+      }
+    },
+  ]
+  processType = "Workflow"
+  startElementReference = "myDecision"
+  status = "Active"
+  variables = [
+    {
+      name = "myVariable_current"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Boat__c
+    },
+    {
+      name = "myVariable_old"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Boat__c
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Boat__c.field.Boat_Image__c
+    },
+  ]
+}

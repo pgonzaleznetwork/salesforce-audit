@@ -1,0 +1,48 @@
+type salesforce.PlatformActionList {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionListContext {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActionDefinition",
+        "Assistant",
+        "BannerPhoto",
+        "Chatter",
+        "Dockable",
+        "FeedElement",
+        "Flexipage",
+        "Global",
+        "ListView",
+        "ListViewDefinition",
+        "ListViewRecord",
+        "Lookup",
+        "MruList",
+        "MruRow",
+        "ObjectHomeChart",
+        "Photo",
+        "Record",
+        "RecordEdit",
+        "RelatedList",
+        "RelatedListRecord",
+      ]
+    }
+  }
+  "List<salesforce.PlatformActionListItem>" platformActionListItems {
+  }
+  string relatedSourceEntity {
+  }
+  metadataType = "PlatformActionList"
+}

@@ -1,0 +1,30 @@
+type salesforce.InboundNetworkConnProperty {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string propertyName {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AwsVpcEndpointId",
+        "LinkId",
+        "Region",
+        "SourceIpRanges",
+      ]
+    }
+  }
+  string propertyValue {
+  }
+  metadataType = "InboundNetworkConnProperty"
+}

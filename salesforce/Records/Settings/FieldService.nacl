@@ -1,0 +1,5 @@
+salesforce.FieldServiceSettings {
+  fullName = "FieldService"
+  enableWorkOrders = false
+  fieldServiceOrgPref = false
+}

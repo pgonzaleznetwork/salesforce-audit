@@ -1,0 +1,47 @@
+type salesforce.WorkflowEmailRecipient {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+  }
+  string recipient {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "accountOwner",
+        "accountTeam",
+        "campaignMemberDerivedOwner",
+        "caseTeam",
+        "contactLookup",
+        "creator",
+        "customerPortalUser",
+        "email",
+        "group",
+        "opportunityTeam",
+        "owner",
+        "partnerUser",
+        "portalRole",
+        "portalRoleSubordinates",
+        "role",
+        "roleSubordinates",
+        "roleSubordinatesInternal",
+        "user",
+        "userLookup",
+      ]
+    }
+  }
+  metadataType = "WorkflowEmailRecipient"
+}

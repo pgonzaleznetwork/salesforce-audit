@@ -1,0 +1,35 @@
+type salesforce.DataCategoryGroup {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  salesforce.DataCategory dataCategory {
+  }
+  string description {
+  }
+  string label {
+  }
+  salesforce.ObjectUsage objectUsage {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "datacategorygroup"
+  dirName = "datacategorygroups"
+  metadataType = "DataCategoryGroup"
+}

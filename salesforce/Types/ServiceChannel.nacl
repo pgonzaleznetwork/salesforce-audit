@@ -1,0 +1,40 @@
+type salesforce.ServiceChannel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean doesMinimizeWidgetOnAccept {
+  }
+  string interactionComponent {
+    foreignKeyDomain = [
+      salesforce.CustomApplicationComponent,
+    ]
+  }
+  string label {
+  }
+  string relatedEntityType {
+  }
+  string secondaryRoutingPriorityField {
+  }
+  salesforce.ServiceChannelFieldPriority serviceChannelFieldPriorities {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "serviceChannel"
+  dirName = "serviceChannels"
+  metadataType = "ServiceChannel"
+}

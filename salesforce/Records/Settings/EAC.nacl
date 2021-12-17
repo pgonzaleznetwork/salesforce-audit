@@ -1,0 +1,8 @@
+salesforce.EACSettings {
+  fullName = "EAC"
+  enableEACForEveryonePref = true
+  enableInboxActivitySharing = false
+  enableInsightsInTimeline = true
+  enableInsightsInTimelineEacStd = false
+  provisionProductivityFeatures = false
+}

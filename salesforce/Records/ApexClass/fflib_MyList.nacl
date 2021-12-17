@@ -1,0 +1,11 @@
+salesforce.ApexClass fflib_MyList {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MyList"
+  content = file("salesforce/Records/ApexClass/fflib_MyList.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+  ]
+}

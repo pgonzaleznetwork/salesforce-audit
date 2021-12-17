@@ -1,0 +1,20 @@
+salesforce.ApexClass TriggerDispatcher {
+  apiVersion = 48
+  status = "Active"
+  fullName = "TriggerDispatcher"
+  content = file("salesforce/Records/ApexClass/TriggerDispatcher.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.TriggerArchitectureClass1
+    },
+    {
+      reference = salesforce.ApexClass.instance.TriggerDMLSupport
+    },
+    {
+      reference = salesforce.ApexClass.instance.WatchForStageUpdates
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

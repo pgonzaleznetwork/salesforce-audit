@@ -1,0 +1,70 @@
+salesforce.Layout AuthorizationForm_Authorization_Form_Layout@bss {
+  fullName = "AuthorizationForm-Authorization Form Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationForm.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationForm.field.EffectiveFromDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationForm.field.DefaultAuthFormTextId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationForm.field.RevisionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationForm.field.EffectiveToDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationForm.field.IsSignatureRequired
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Locale",
+      ]
+      relatedList = "AuthorizationFormTextRelatedList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AuthorizationForm,
+  ]
+}

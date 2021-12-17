@@ -1,0 +1,83 @@
+type salesforce.FlowApexPluginCallInputParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string name {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActiveStages",
+        "AppProcess",
+        "ContextRecord",
+        "CurrentDate",
+        "CurrentDateTime",
+        "CurrentRecord",
+        "CurrentStage",
+        "EventDescription",
+        "EventMessage",
+        "EventName",
+        "EventNumber",
+        "FaultMessage",
+        "FaultStackTrace",
+        "FormFactor",
+        "InterviewGuid",
+        "InterviewIdValue",
+        "InterviewStartTime",
+        "None",
+        "NullNumberValue",
+        "NullStringValue",
+        "SpaceIdValue",
+        "SparkIdValue",
+        "StringOperationNumber",
+        "StringOperationText",
+        "StringOperationVariant",
+        "UserIdValue",
+      ]
+    }
+    foreignKeyDomain = [
+      "InteractionActionCall",
+      "InteractionAllocator",
+      "InteractionApexCall",
+      "InteractionChoice",
+      "InteractionChoiceLookup",
+      "InteractionCollectionProc",
+      "InteractionConstant",
+      "InteractionDataInput",
+      "InteractionDataOutput",
+      "InteractionDecision",
+      "InteractionForm",
+      "InteractionFormula",
+      "InteractionLoop",
+      "InteractionQuestion",
+      "InteractionResource",
+      "InteractionRollback",
+      "InteractionStage",
+      "InteractionStatement",
+      "InteractionSteppedStage",
+      "InteractionSteppedStageItem",
+      "InteractionSwitch",
+      "InteractionTodo",
+      "InteractionValueList",
+      "InteractionVariable",
+      "InteractionWait",
+      "InteractionWaitEvent",
+      "Subinteraction",
+    ]
+  }
+  metadataType = "FlowApexPluginCallInputParameter"
+}

@@ -1,0 +1,103 @@
+salesforce.Layout Location_Location_Layout@bs {
+  fullName = "Location-Location Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "ParentLocationId"
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Location.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Location.field.LocationType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Location.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Location.field.ExternalReference
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Location.field.TimeZone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Location.field.DrivingDirections
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Location.field.ShouldSyncWithOci
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Location.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Location.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Location.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "ParentLocationId",
+    ]
+  }
+  relatedObjects = [
+    "ParentLocationId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Location,
+  ]
+}

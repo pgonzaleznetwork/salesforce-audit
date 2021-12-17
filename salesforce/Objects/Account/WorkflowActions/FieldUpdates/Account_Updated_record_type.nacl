@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate Account_Updated_record_type@vuu {
+  fullName = "Account.Updated_record_type"
+  field = salesforce.Account.field.RecordTypeId
+  lookupValue = "Internal"
+  lookupValueType = "RecordType"
+  name = "Updated record type"
+  notifyAssignee = false
+  operation = "LookupValue"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+}

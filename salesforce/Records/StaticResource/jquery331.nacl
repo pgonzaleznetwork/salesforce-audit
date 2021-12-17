@@ -1,0 +1,6 @@
+salesforce.StaticResource jquery331 {
+  cacheControl = "Private"
+  contentType = "text/javascript"
+  fullName = "jquery331"
+  content = file("salesforce/Records/StaticResource/jquery331.resource")
+}

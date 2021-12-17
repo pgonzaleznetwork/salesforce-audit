@@ -1,0 +1,41 @@
+type salesforce.ServiceCloudConsoleConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.AppComponentList componentList {
+  }
+  string detailPageRefreshMethod {
+  }
+  string footerColor {
+  }
+  string headerColor {
+  }
+  salesforce.KeyboardShortcuts keyboardShortcuts {
+  }
+  salesforce.ListPlacement listPlacement {
+  }
+  string listRefreshMethod {
+  }
+  salesforce.LiveAgentConfig liveAgentConfig {
+  }
+  string primaryTabColor {
+  }
+  salesforce.PushNotification pushNotifications {
+  }
+  salesforce.TabLimitConfig tabLimitConfig {
+  }
+  string whitelistedDomains {
+  }
+  metadataType = "ServiceCloudConsoleConfig"
+}

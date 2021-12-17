@@ -1,0 +1,35 @@
+salesforce.ApexClass fflib_InOrder {
+  apiVersion = 30
+  status = "Active"
+  fullName = "fflib_InOrder"
+  content = file("salesforce/Records/ApexClass/fflib_InOrder.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_InvocationOnMock
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodCountRecorder
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodVerifier
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_VerificationMode
+    },
+  ]
+}

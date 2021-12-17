@@ -1,0 +1,39 @@
+type salesforce.CallCenter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string adapterUrl {
+  }
+  string customSettings {
+  }
+  string displayName {
+  }
+  string displayNameLabel {
+  }
+  string internalNameLabel {
+  }
+  salesforce.CallCenterSection sections {
+  }
+  string version {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "callCenter"
+  dirName = "callCenters"
+  metadataType = "CallCenter"
+}

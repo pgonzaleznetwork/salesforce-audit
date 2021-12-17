@@ -1,0 +1,9 @@
+salesforce.WorkflowRule EmailMessage_Email_Message_2@vss {
+  fullName = "EmailMessage.Email Message 2"
+  active = false
+  formula = "ISPICKVAL(Parent.Status,\"New\")"
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.EmailMessage,
+  ]
+}

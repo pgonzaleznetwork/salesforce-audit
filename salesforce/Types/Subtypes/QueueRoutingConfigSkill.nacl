@@ -1,0 +1,22 @@
+type salesforce.QueueRoutingConfigSkill {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string skill {
+    foreignKeyDomain = [
+      salesforce.Skill,
+    ]
+  }
+  metadataType = "QueueRoutingConfigSkill"
+}

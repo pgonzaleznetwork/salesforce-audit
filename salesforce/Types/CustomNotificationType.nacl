@@ -1,0 +1,35 @@
+type salesforce.CustomNotificationType {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string customNotifTypeName {
+  }
+  string description {
+  }
+  boolean desktop {
+  }
+  string masterLabel {
+  }
+  boolean mobile {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "notiftype"
+  dirName = "notificationtypes"
+  metadataType = "CustomNotificationType"
+}

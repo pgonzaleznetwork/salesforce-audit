@@ -1,0 +1,31 @@
+salesforce.StandardValueSet EventSubject {
+  fullName = "EventSubject"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Call"
+      default = false
+      label = "Call"
+    },
+    {
+      fullName = "Email"
+      default = false
+      label = "Email"
+    },
+    {
+      fullName = "Meeting"
+      default = false
+      label = "Meeting"
+    },
+    {
+      fullName = "Send Letter/Quote"
+      default = false
+      label = "Send Letter/Quote"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

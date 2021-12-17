@@ -1,0 +1,43 @@
+salesforce.Flow Awesome_Flow {
+  fullName = "Awesome_Flow"
+  actionCalls = {
+    name = "call_apex"
+    label = "call apex"
+    locationX = 176
+    locationY = 158
+    actionName = salesforce.ApexClass.instance.TopLevelClass
+    actionType = "apex"
+  }
+  apiVersion = 53
+  interviewLabel = "Awesome Flow {!$Flow.CurrentDateTime}"
+  label = "Awesome Flow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "call_apex"
+    }
+  }
+  status = "Draft"
+}

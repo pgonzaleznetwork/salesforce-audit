@@ -1,0 +1,23 @@
+salesforce.ApexClass SRM_PackageXML_Tests {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_PackageXML_Tests"
+  content = file("salesforce/Records/ApexClass/SRM_PackageXML_Tests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_PackageXML
+    },
+    {
+      reference = salesforce.ApexClass.instance.SRM_TestData
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Name__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Type__c
+    },
+  ]
+}

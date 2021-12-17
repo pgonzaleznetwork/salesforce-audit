@@ -1,0 +1,27 @@
+salesforce.LightningComponentBundle fiveStarRating {
+  apiVersion = 48
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__AppPage",
+    ]
+  }
+  fullName = "fiveStarRating"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/fiveStarRating/fiveStarRating.html")
+        filePath = "lwc/fiveStarRating/fiveStarRating.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/fiveStarRating/fiveStarRating.js")
+        filePath = "lwc/fiveStarRating/fiveStarRating.js"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.StaticResource.instance.fivestar
+    },
+  ]
+}

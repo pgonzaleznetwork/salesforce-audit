@@ -1,0 +1,6 @@
+salesforce.ApexClass TriggerDMLSupport {
+  apiVersion = 48
+  status = "Active"
+  fullName = "TriggerDMLSupport"
+  content = file("salesforce/Records/ApexClass/TriggerDMLSupport.cls")
+}

@@ -1,0 +1,15 @@
+salesforce.ListView User_ActiveUsers {
+  fullName = "User.ActiveUsers"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CORE.USERS.ACTIVE"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "Active Users"
+  _parent = [
+    salesforce.User,
+  ]
+}

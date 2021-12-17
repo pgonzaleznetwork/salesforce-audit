@@ -1,0 +1,14 @@
+salesforce.WorkflowFieldUpdate EmailMessage_update_case_field@vuu {
+  fullName = "EmailMessage.update_case_field"
+  field = salesforce.EmailMessage.field.Status
+  literalValue = "New"
+  name = "update case field"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  targetObject = "ParentId"
+  _parent = [
+    salesforce.EmailMessage,
+  ]
+}

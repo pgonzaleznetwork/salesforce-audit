@@ -1,0 +1,289 @@
+type salesforce.Invoice {
+  serviceid Id {
+    apiName = "Invoice.Id"
+    label = "Invoice ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Invoice.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Invoice.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber DocumentNumber {
+    apiName = "Invoice.DocumentNumber"
+    label = "Document Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Invoice.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Invoice.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Invoice.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Invoice.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Invoice.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReferenceEntityId {
+    apiName = "Invoice.ReferenceEntityId"
+    label = "ReferenceEntity ID"
+    referenceTo = [
+      salesforce.Order,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "ReferenceEntity"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Text InvoiceNumber {
+    apiName = "Invoice.InvoiceNumber"
+    label = "Invoice Number"
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+  }
+  salesforce.Lookup BillingAccountId {
+    apiName = "Invoice.BillingAccountId"
+    label = "Account ID"
+    _required = true
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "BillingAccount"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Summary TotalAmount {
+    apiName = "Invoice.TotalAmount"
+    label = "Total Amount"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAmountWithTax {
+    apiName = "Invoice.TotalAmountWithTax"
+    label = "Total with Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalChargeAmount {
+    apiName = "Invoice.TotalChargeAmount"
+    label = "Total Charges"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalAdjustmentAmount {
+    apiName = "Invoice.TotalAdjustmentAmount"
+    label = "Total Adjustment Amount"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalTaxAmount {
+    apiName = "Invoice.TotalTaxAmount"
+    label = "Total Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Invoice.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = false
+        label = "Draft"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "Posted"
+        default = false
+        label = "Posted"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Error Posting"
+        default = false
+        label = "Error Posting"
+        isActive = true
+      },
+      {
+        fullName = "Error"
+        default = false
+        label = "Error"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date InvoiceDate {
+    apiName = "Invoice.InvoiceDate"
+    label = "Invoice Date"
+    _required = true
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date DueDate {
+    apiName = "Invoice.DueDate"
+    label = "Due Date"
+    _required = true
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup BillToContactId {
+    apiName = "Invoice.BillToContactId"
+    label = "Contact ID"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    createable = false
+    updateable = true
+    relationshipName = "BillToContact"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Text Description {
+    apiName = "Invoice.Description"
+    label = "Description"
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Currency TotalChargeTaxAmount {
+    apiName = "Invoice.TotalChargeTaxAmount"
+    label = "Total Charge Tax Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalChargeAmountWithTax {
+    apiName = "Invoice.TotalChargeAmountWithTax"
+    label = "Total Charge Amount with Tax"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAdjustmentTaxAmount {
+    apiName = "Invoice.TotalAdjustmentTaxAmount"
+    label = "Total Adjustment Tax Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAdjustmentAmountWithTax {
+    apiName = "Invoice.TotalAdjustmentAmountWithTax"
+    label = "Total Adjustment Amount with Tax"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+}

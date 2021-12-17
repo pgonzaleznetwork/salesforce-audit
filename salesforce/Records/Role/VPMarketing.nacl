@@ -1,0 +1,10 @@
+salesforce.Role VPMarketing {
+  fullName = "VPMarketing"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "VP, Marketing"
+  mayForecastManagerShare = false
+  name = "VP, Marketing"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.SVPSalesMarketing
+}

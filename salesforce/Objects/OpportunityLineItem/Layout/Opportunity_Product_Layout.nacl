@@ -1,0 +1,114 @@
+salesforce.Layout OpportunityLineItem_Opportunity_Product_Layout@bss {
+  fullName = "OpportunityLineItem-Opportunity Product Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Product Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.OpportunityLineItem.field.OpportunityId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OpportunityLineItem.field.Product2Id
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.OpportunityLineItem.field.ProductCode
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.OpportunityLineItem.field.ListPrice
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OpportunityLineItem.field.UnitPrice
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OpportunityLineItem.field.Quantity
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.OpportunityLineItem.field.ServiceDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.OpportunityLineItem.field.TotalPrice
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OpportunityLineItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OpportunityLineItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.OpportunityLineItem.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  multilineLayoutFields = [
+    "Product2Id",
+    "Quantity",
+    "UnitPrice",
+    "ServiceDate",
+    "Description",
+    "OpportunityId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.OpportunityLineItem,
+  ]
+}

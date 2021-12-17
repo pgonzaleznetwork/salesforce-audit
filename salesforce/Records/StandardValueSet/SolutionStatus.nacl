@@ -1,0 +1,24 @@
+salesforce.StandardValueSet SolutionStatus {
+  fullName = "SolutionStatus"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Draft"
+      default = true
+      label = "Draft"
+      reviewed = false
+    },
+    {
+      fullName = "Reviewed"
+      default = false
+      label = "Reviewed"
+      reviewed = true
+    },
+    {
+      fullName = "Duplicate"
+      default = false
+      label = "Duplicate"
+      reviewed = false
+    },
+  ]
+}

@@ -1,0 +1,15 @@
+type salesforce.Customer {
+  string CustomerStatusType {
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyId {
+    apiName = "Customer.PartyId"
+    _hidden_value = true
+  }
+  string TotalLifeTimeValue {
+    _hidden_value = true
+  }
+}

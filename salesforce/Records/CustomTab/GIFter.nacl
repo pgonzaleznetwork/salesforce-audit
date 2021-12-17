@@ -1,0 +1,12 @@
+salesforce.CustomTab GIFter {
+  fullName = "GIFter"
+  description = "Created by Lightning App Builder"
+  flexiPage = "GIFter"
+  label = "Search"
+  motif = "Custom67: Gears"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.GIFter
+    },
+  ]
+}

@@ -1,0 +1,4 @@
+salesforce.TrialOrgSettings {
+  fullName = "TrialOrg"
+  enableSampleDataDeleted = false
+}

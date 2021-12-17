@@ -1,0 +1,20 @@
+salesforce.ApexClass fflib_AnyOrderTest {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_AnyOrderTest"
+  content = file("salesforce/Records/ApexClass/fflib_AnyOrderTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MyList
+    },
+  ]
+}

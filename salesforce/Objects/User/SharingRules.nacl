@@ -1,0 +1,6 @@
+salesforce.SharingRules User {
+  fullName = "User"
+  _parent = [
+    salesforce.User,
+  ]
+}

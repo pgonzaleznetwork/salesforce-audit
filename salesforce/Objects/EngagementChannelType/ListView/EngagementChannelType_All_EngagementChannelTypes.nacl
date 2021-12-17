@@ -1,0 +1,8 @@
+salesforce.ListView EngagementChannelType_All_EngagementChannelTypes {
+  fullName = "EngagementChannelType.All_EngagementChannelTypes"
+  filterScope = "Everything"
+  label = "All Engagement Channel Types"
+  _parent = [
+    salesforce.EngagementChannelType,
+  ]
+}

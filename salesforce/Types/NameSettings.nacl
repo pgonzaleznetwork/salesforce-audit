@@ -1,0 +1,33 @@
+settings salesforce.NameSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableInformalName {
+  }
+  boolean enableMiddleName {
+  }
+  boolean enableNameSuffix {
+  }
+  boolean enableFormalName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "NameSettings"
+}

@@ -1,0 +1,23 @@
+type salesforce.FlowStageStepEntryActionInputParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string name {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  metadataType = "FlowStageStepEntryActionInputParameter"
+}

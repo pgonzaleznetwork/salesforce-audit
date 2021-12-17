@@ -1,0 +1,6230 @@
+type salesforce.DandBCompany {
+  serviceid Id {
+    apiName = "DandBCompany.Id"
+    label = "D&B Company ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DandBCompany.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "DandBCompany.Name"
+    label = "Primary Business Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DandBCompany.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DandBCompany.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DandBCompany.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DandBCompany.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DandBCompany.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DunsNumber {
+    apiName = "DandBCompany.DunsNumber"
+    label = "D-U-N-S Number"
+    _required = true
+    createable = true
+    updateable = true
+    unique = true
+    caseSensitive = true
+    length = 9
+    queryable = true
+  }
+  salesforce.Address Address {
+    apiName = "DandBCompany.Address"
+    label = "Primary Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Phone Phone {
+    apiName = "DandBCompany.Phone"
+    label = "Telephone Number"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Phone Fax {
+    apiName = "DandBCompany.Fax"
+    label = "Facsimile Number"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text CountryAccessCode {
+    apiName = "DandBCompany.CountryAccessCode"
+    label = "International Dialing Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Picklist PublicIndicator {
+    apiName = "DandBCompany.PublicIndicator"
+    label = "Ownership Type Indicator"
+    valueSet = [
+      {
+        fullName = "Y"
+        default = false
+        label = "Public"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = false
+        label = "Private"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text StockSymbol {
+    apiName = "DandBCompany.StockSymbol"
+    label = "Ticker Symbol"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text StockExchange {
+    apiName = "DandBCompany.StockExchange"
+    label = "Stock Exchange"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 16
+    queryable = true
+  }
+  salesforce.Number SalesVolume {
+    apiName = "DandBCompany.SalesVolume"
+    label = "Annual Sales Volume"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Url URL {
+    apiName = "DandBCompany.URL"
+    label = "URL"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist OutOfBusiness {
+    apiName = "DandBCompany.OutOfBusiness"
+    label = "Out Of Business Indicator"
+    valueSet = [
+      {
+        fullName = "Y"
+        default = false
+        label = "Out of Business"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = false
+        label = "Not Out of Business"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number EmployeesTotal {
+    apiName = "DandBCompany.EmployeesTotal"
+    label = "Number of Employees - Total"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Text FipsMsaCode {
+    apiName = "DandBCompany.FipsMsaCode"
+    label = "FIPS MSA Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 5
+    queryable = true
+  }
+  salesforce.Text FipsMsaDesc {
+    apiName = "DandBCompany.FipsMsaDesc"
+    label = "FIPS MSA Code Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text TradeStyle1 {
+    apiName = "DandBCompany.TradeStyle1"
+    label = "Primary Tradestyle"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text YearStarted {
+    apiName = "DandBCompany.YearStarted"
+    label = "Year Started"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Address MailingAddress {
+    apiName = "DandBCompany.MailingAddress"
+    label = "Mailing Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Latitude {
+    apiName = "DandBCompany.Latitude"
+    label = "Latitude"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 11
+    queryable = true
+  }
+  salesforce.Text Longitude {
+    apiName = "DandBCompany.Longitude"
+    label = "Longitude"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 11
+    queryable = true
+  }
+  salesforce.Text PrimarySic {
+    apiName = "DandBCompany.PrimarySic"
+    label = "Primary SIC Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Text PrimarySicDesc {
+    apiName = "DandBCompany.PrimarySicDesc"
+    label = "Primary SIC Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text SecondSic {
+    apiName = "DandBCompany.SecondSic"
+    label = "Second SIC Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Text SecondSicDesc {
+    apiName = "DandBCompany.SecondSicDesc"
+    label = "Second SIC Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text ThirdSic {
+    apiName = "DandBCompany.ThirdSic"
+    label = "Third SIC Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Text ThirdSicDesc {
+    apiName = "DandBCompany.ThirdSicDesc"
+    label = "Third SIC Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text FourthSic {
+    apiName = "DandBCompany.FourthSic"
+    label = "Fourth SIC Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Text FourthSicDesc {
+    apiName = "DandBCompany.FourthSicDesc"
+    label = "Fourth SIC Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text FifthSic {
+    apiName = "DandBCompany.FifthSic"
+    label = "Fifth SIC Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Text FifthSicDesc {
+    apiName = "DandBCompany.FifthSicDesc"
+    label = "Fifth SIC Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text SixthSic {
+    apiName = "DandBCompany.SixthSic"
+    label = "Sixth SIC Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 4
+    queryable = true
+  }
+  salesforce.Text SixthSicDesc {
+    apiName = "DandBCompany.SixthSicDesc"
+    label = "Sixth SIC Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text PrimaryNaics {
+    apiName = "DandBCompany.PrimaryNaics"
+    label = "Primary NAICS Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text PrimaryNaicsDesc {
+    apiName = "DandBCompany.PrimaryNaicsDesc"
+    label = "Primary NAICS Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.Text SecondNaics {
+    apiName = "DandBCompany.SecondNaics"
+    label = "Second NAICS Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text SecondNaicsDesc {
+    apiName = "DandBCompany.SecondNaicsDesc"
+    label = "Second NAICS Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.Text ThirdNaics {
+    apiName = "DandBCompany.ThirdNaics"
+    label = "Third NAICS Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text ThirdNaicsDesc {
+    apiName = "DandBCompany.ThirdNaicsDesc"
+    label = "Third NAICS Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.Text FourthNaics {
+    apiName = "DandBCompany.FourthNaics"
+    label = "Fourth NAICS Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text FourthNaicsDesc {
+    apiName = "DandBCompany.FourthNaicsDesc"
+    label = "Fourth NAICS Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.Text FifthNaics {
+    apiName = "DandBCompany.FifthNaics"
+    label = "Fifth NAICS Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text FifthNaicsDesc {
+    apiName = "DandBCompany.FifthNaicsDesc"
+    label = "Fifth NAICS Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.Text SixthNaics {
+    apiName = "DandBCompany.SixthNaics"
+    label = "Sixth NAICS Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 6
+    queryable = true
+  }
+  salesforce.Text SixthNaicsDesc {
+    apiName = "DandBCompany.SixthNaicsDesc"
+    label = "Sixth NAICS Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 120
+    queryable = true
+  }
+  salesforce.Picklist OwnOrRent {
+    apiName = "DandBCompany.OwnOrRent"
+    label = "Location Ownership Indicator"
+    valueSet = [
+      {
+        fullName = "0"
+        default = false
+        label = "Unknown or Not Applicable"
+        isActive = true
+      },
+      {
+        fullName = "1"
+        default = false
+        label = "Owns"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Rents"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number EmployeesHere {
+    apiName = "DandBCompany.EmployeesHere"
+    label = "Number of Employees - Location"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist EmployeesHereReliability {
+    apiName = "DandBCompany.EmployeesHereReliability"
+    label = "Number of Employees - Location Indicator"
+    valueSet = [
+      {
+        fullName = "0"
+        default = false
+        label = "Actual number"
+        isActive = true
+      },
+      {
+        fullName = "1"
+        default = false
+        label = "Low"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Estimated (for all records)"
+        isActive = true
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "Modeled (for non-US records)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist SalesVolumeReliability {
+    apiName = "DandBCompany.SalesVolumeReliability"
+    label = "Annual Sales Volume Indicator"
+    valueSet = [
+      {
+        fullName = "0"
+        default = false
+        label = "Actual number"
+        isActive = true
+      },
+      {
+        fullName = "1"
+        default = false
+        label = "Low"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Estimated (for all records)"
+        isActive = true
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "Modeled (for non-US records)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist CurrencyCode {
+    apiName = "DandBCompany.CurrencyCode"
+    label = "Local Currency Code"
+    valueSet = [
+      {
+        fullName = "0010"
+        default = false
+        label = "Canadian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0020"
+        default = false
+        label = "U.S. Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0030"
+        default = false
+        label = "Argentine Peso"
+        isActive = true
+      },
+      {
+        fullName = "0040"
+        default = false
+        label = "Aruban Florin"
+        isActive = true
+      },
+      {
+        fullName = "0050"
+        default = false
+        label = "Australian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0070"
+        default = false
+        label = "Barbados Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0075"
+        default = false
+        label = "St Helena Pound"
+        isActive = true
+      },
+      {
+        fullName = "0090"
+        default = false
+        label = "Bermudian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0095"
+        default = false
+        label = "Denar"
+        isActive = true
+      },
+      {
+        fullName = "0100"
+        default = false
+        label = "Brazilian Cruzeiro (old)"
+        isActive = true
+      },
+      {
+        fullName = "0105"
+        default = false
+        label = "Bosnia-Herzegovina Convertible Mark"
+        isActive = true
+      },
+      {
+        fullName = "0110"
+        default = false
+        label = "Chinese Yuan Renminbi"
+        isActive = true
+      },
+      {
+        fullName = "0120"
+        default = false
+        label = "Danish Krone"
+        isActive = true
+      },
+      {
+        fullName = "0140"
+        default = false
+        label = "Eastern Caribbean Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0150"
+        default = false
+        label = "Egyptian Pound"
+        isActive = true
+      },
+      {
+        fullName = "0155"
+        default = false
+        label = "Eritrean Nakfa"
+        isActive = true
+      },
+      {
+        fullName = "0160"
+        default = false
+        label = "Pound Sterling"
+        isActive = true
+      },
+      {
+        fullName = "0190"
+        default = false
+        label = "CFP Franc"
+        isActive = true
+      },
+      {
+        fullName = "0220"
+        default = false
+        label = "Hong Kong Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0230"
+        default = false
+        label = "Indian Rupee"
+        isActive = true
+      },
+      {
+        fullName = "0250"
+        default = false
+        label = "Israeli Sheqel (new)"
+        isActive = true
+      },
+      {
+        fullName = "0270"
+        default = false
+        label = "Jamaican Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0280"
+        default = false
+        label = "Yen"
+        isActive = true
+      },
+      {
+        fullName = "0290"
+        default = false
+        label = "Kenyan Shilling"
+        isActive = true
+      },
+      {
+        fullName = "0305"
+        default = false
+        label = "Mongolian Tugrik"
+        isActive = true
+      },
+      {
+        fullName = "0310"
+        default = false
+        label = "Moroccan Dirham"
+        isActive = true
+      },
+      {
+        fullName = "0320"
+        default = false
+        label = "New Zealand Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0330"
+        default = false
+        label = "Norwegian Krone"
+        isActive = true
+      },
+      {
+        fullName = "0370"
+        default = false
+        label = "Swedish Krona"
+        isActive = true
+      },
+      {
+        fullName = "0380"
+        default = false
+        label = "Swiss Franc"
+        isActive = true
+      },
+      {
+        fullName = "0390"
+        default = false
+        label = "New Taiwanese Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0400"
+        default = false
+        label = "Thai Baht"
+        isActive = true
+      },
+      {
+        fullName = "0410"
+        default = false
+        label = "Afghani"
+        isActive = true
+      },
+      {
+        fullName = "0420"
+        default = false
+        label = "Algerian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "0430"
+        default = false
+        label = "Bangladeshi Taka"
+        isActive = true
+      },
+      {
+        fullName = "0440"
+        default = false
+        label = "Bahraini Dinar"
+        isActive = true
+      },
+      {
+        fullName = "0450"
+        default = false
+        label = "Bahamian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0460"
+        default = false
+        label = "Belize Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0470"
+        default = false
+        label = "Bolivian Boliviano"
+        isActive = true
+      },
+      {
+        fullName = "0480"
+        default = false
+        label = "Botswani Pula"
+        isActive = true
+      },
+      {
+        fullName = "0490"
+        default = false
+        label = "Brunei Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0500"
+        default = false
+        label = "Bulgarian Lev"
+        isActive = true
+      },
+      {
+        fullName = "0520"
+        default = false
+        label = "Burundi Franc"
+        isActive = true
+      },
+      {
+        fullName = "0530"
+        default = false
+        label = "Cape Verde Escudo"
+        isActive = true
+      },
+      {
+        fullName = "0540"
+        default = false
+        label = "Cayman Islands Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0550"
+        default = false
+        label = "CFA Franc BCEAO"
+        isActive = true
+      },
+      {
+        fullName = "0552"
+        default = false
+        label = "CFA Franc (BEAC)"
+        isActive = true
+      },
+      {
+        fullName = "0560"
+        default = false
+        label = "Chilean Peso"
+        isActive = true
+      },
+      {
+        fullName = "0580"
+        default = false
+        label = "Colombian Peso"
+        isActive = true
+      },
+      {
+        fullName = "0585"
+        default = false
+        label = "Comoro Franc"
+        isActive = true
+      },
+      {
+        fullName = "0590"
+        default = false
+        label = "Costa Rican Colon"
+        isActive = true
+      },
+      {
+        fullName = "0595"
+        default = false
+        label = "Croatian Dinar (Old)"
+        isActive = true
+      },
+      {
+        fullName = "0600"
+        default = false
+        label = "Cuban Peso"
+        isActive = true
+      },
+      {
+        fullName = "0605"
+        default = false
+        label = "Cuban Peso Convertible"
+        isActive = true
+      },
+      {
+        fullName = "0620"
+        default = false
+        label = "Czech Koruna"
+        isActive = true
+      },
+      {
+        fullName = "0630"
+        default = false
+        label = "Djibouti Franc"
+        isActive = true
+      },
+      {
+        fullName = "0640"
+        default = false
+        label = "Dominican Peso"
+        isActive = true
+      },
+      {
+        fullName = "0650"
+        default = false
+        label = "Netherlands Antillean Guilder"
+        isActive = true
+      },
+      {
+        fullName = "0690"
+        default = false
+        label = "Ethiopian Bir"
+        isActive = true
+      },
+      {
+        fullName = "0700"
+        default = false
+        label = "Fiji Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0710"
+        default = false
+        label = "Dalasi"
+        isActive = true
+      },
+      {
+        fullName = "0720"
+        default = false
+        label = "Ghana Cedi"
+        isActive = true
+      },
+      {
+        fullName = "0730"
+        default = false
+        label = "Gibraltar Pound"
+        isActive = true
+      },
+      {
+        fullName = "0750"
+        default = false
+        label = "Guinean Franc"
+        isActive = true
+      },
+      {
+        fullName = "0760"
+        default = false
+        label = "Guyana Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0770"
+        default = false
+        label = "Gourde"
+        isActive = true
+      },
+      {
+        fullName = "0780"
+        default = false
+        label = "Lempira"
+        isActive = true
+      },
+      {
+        fullName = "0790"
+        default = false
+        label = "Forint"
+        isActive = true
+      },
+      {
+        fullName = "0800"
+        default = false
+        label = "Icelandic Krona"
+        isActive = true
+      },
+      {
+        fullName = "0820"
+        default = false
+        label = "Rupiah"
+        isActive = true
+      },
+      {
+        fullName = "0830"
+        default = false
+        label = "Iraqi Dinar"
+        isActive = true
+      },
+      {
+        fullName = "0840"
+        default = false
+        label = "Iranian Rial"
+        isActive = true
+      },
+      {
+        fullName = "0860"
+        default = false
+        label = "Jordanian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "0870"
+        default = false
+        label = "Kuwaiti Dinar"
+        isActive = true
+      },
+      {
+        fullName = "0880"
+        default = false
+        label = "Kip"
+        isActive = true
+      },
+      {
+        fullName = "0890"
+        default = false
+        label = "Lebanese Pound"
+        isActive = true
+      },
+      {
+        fullName = "0900"
+        default = false
+        label = "Loti"
+        isActive = true
+      },
+      {
+        fullName = "0910"
+        default = false
+        label = "Liberian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "0920"
+        default = false
+        label = "Libyan Dinar"
+        isActive = true
+      },
+      {
+        fullName = "0940"
+        default = false
+        label = "Malagasy Ariary"
+        isActive = true
+      },
+      {
+        fullName = "0960"
+        default = false
+        label = "Kwacha"
+        isActive = true
+      },
+      {
+        fullName = "0970"
+        default = false
+        label = "Malaysian Ringgit"
+        isActive = true
+      },
+      {
+        fullName = "1000"
+        default = false
+        label = "Ouguiya"
+        isActive = true
+      },
+      {
+        fullName = "1010"
+        default = false
+        label = "Mauritius Rupee"
+        isActive = true
+      },
+      {
+        fullName = "1020"
+        default = false
+        label = "Mozambique Metical"
+        isActive = true
+      },
+      {
+        fullName = "1030"
+        default = false
+        label = "Nepalese Rupee"
+        isActive = true
+      },
+      {
+        fullName = "1040"
+        default = false
+        label = "Cordoba Oro"
+        isActive = true
+      },
+      {
+        fullName = "1060"
+        default = false
+        label = "Rial Omani"
+        isActive = true
+      },
+      {
+        fullName = "1070"
+        default = false
+        label = "Pakistan Rupee"
+        isActive = true
+      },
+      {
+        fullName = "1080"
+        default = false
+        label = "Balboa"
+        isActive = true
+      },
+      {
+        fullName = "1090"
+        default = false
+        label = "Kina"
+        isActive = true
+      },
+      {
+        fullName = "2000"
+        default = false
+        label = "Guarani"
+        isActive = true
+      },
+      {
+        fullName = "2010"
+        default = false
+        label = "Neuvo Sol"
+        isActive = true
+      },
+      {
+        fullName = "2020"
+        default = false
+        label = "Philippine Peso"
+        isActive = true
+      },
+      {
+        fullName = "2040"
+        default = false
+        label = "Qatari Riyal"
+        isActive = true
+      },
+      {
+        fullName = "2060"
+        default = false
+        label = "Rwanda Franc"
+        isActive = true
+      },
+      {
+        fullName = "2070"
+        default = false
+        label = "Dobra"
+        isActive = true
+      },
+      {
+        fullName = "2080"
+        default = false
+        label = "Saudi Riyal"
+        isActive = true
+      },
+      {
+        fullName = "2090"
+        default = false
+        label = "Seychelles Rupee"
+        isActive = true
+      },
+      {
+        fullName = "3000"
+        default = false
+        label = "Singapore Dollar"
+        isActive = true
+      },
+      {
+        fullName = "3010"
+        default = false
+        label = "Solomon Islands Dollar"
+        isActive = true
+      },
+      {
+        fullName = "3020"
+        default = false
+        label = "Somali Shilling"
+        isActive = true
+      },
+      {
+        fullName = "3030"
+        default = false
+        label = "Rand"
+        isActive = true
+      },
+      {
+        fullName = "3040"
+        default = false
+        label = "Won"
+        isActive = true
+      },
+      {
+        fullName = "3060"
+        default = false
+        label = "Sri Lanka Rupee"
+        isActive = true
+      },
+      {
+        fullName = "3070"
+        default = false
+        label = "Sudanese Pound"
+        isActive = true
+      },
+      {
+        fullName = "3075"
+        default = false
+        label = "South Sudanese Pound"
+        isActive = true
+      },
+      {
+        fullName = "3085"
+        default = false
+        label = "Surinam Dollar"
+        isActive = true
+      },
+      {
+        fullName = "3090"
+        default = false
+        label = "Lilangeni"
+        isActive = true
+      },
+      {
+        fullName = "4000"
+        default = false
+        label = "Syrian Pound"
+        isActive = true
+      },
+      {
+        fullName = "4010"
+        default = false
+        label = "Tanzanian Shilling"
+        isActive = true
+      },
+      {
+        fullName = "4020"
+        default = false
+        label = "Pa'anga"
+        isActive = true
+      },
+      {
+        fullName = "4030"
+        default = false
+        label = "Trinidad & Tobago Dollar"
+        isActive = true
+      },
+      {
+        fullName = "4040"
+        default = false
+        label = "Tunisian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "4060"
+        default = false
+        label = "UAE Dirham"
+        isActive = true
+      },
+      {
+        fullName = "4070"
+        default = false
+        label = "Uganda Shilling"
+        isActive = true
+      },
+      {
+        fullName = "4090"
+        default = false
+        label = "Vatu"
+        isActive = true
+      },
+      {
+        fullName = "5005"
+        default = false
+        label = "Bolivar Fuerte"
+        isActive = true
+      },
+      {
+        fullName = "5010"
+        default = false
+        label = "Dong"
+        isActive = true
+      },
+      {
+        fullName = "5020"
+        default = false
+        label = "Yemenese Rial"
+        isActive = true
+      },
+      {
+        fullName = "5030"
+        default = false
+        label = "Tala"
+        isActive = true
+      },
+      {
+        fullName = "5040"
+        default = false
+        label = "Serbian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "5080"
+        default = false
+        label = "Euro"
+        isActive = true
+      },
+      {
+        fullName = "5090"
+        default = false
+        label = "Angolan Kwanza"
+        isActive = true
+      },
+      {
+        fullName = "6000"
+        default = false
+        label = "Leone"
+        isActive = true
+      },
+      {
+        fullName = "6030"
+        default = false
+        label = "Congolese Franc"
+        isActive = true
+      },
+      {
+        fullName = "6040"
+        default = false
+        label = "Peso Uruguayo"
+        isActive = true
+      },
+      {
+        fullName = "6050"
+        default = false
+        label = "Lari"
+        isActive = true
+      },
+      {
+        fullName = "6060"
+        default = false
+        label = "Hryvnia"
+        isActive = true
+      },
+      {
+        fullName = "6100"
+        default = false
+        label = "Bhutan Ngultrum"
+        isActive = true
+      },
+      {
+        fullName = "6200"
+        default = false
+        label = "Quetzal"
+        isActive = true
+      },
+      {
+        fullName = "6300"
+        default = false
+        label = "Cambodian Riel"
+        isActive = true
+      },
+      {
+        fullName = "6400"
+        default = false
+        label = "North Korean Won"
+        isActive = true
+      },
+      {
+        fullName = "6500"
+        default = false
+        label = "Rufiyaa"
+        isActive = true
+      },
+      {
+        fullName = "6600"
+        default = false
+        label = "Naira"
+        isActive = true
+      },
+      {
+        fullName = "6800"
+        default = false
+        label = "Croatian Kuna"
+        isActive = true
+      },
+      {
+        fullName = "6900"
+        default = false
+        label = "Falkland Islands Pound"
+        isActive = true
+      },
+      {
+        fullName = "7200"
+        default = false
+        label = "Pataca"
+        isActive = true
+      },
+      {
+        fullName = "7500"
+        default = false
+        label = "Mexican Peso (new)"
+        isActive = true
+      },
+      {
+        fullName = "7600"
+        default = false
+        label = "Albanian Lek"
+        isActive = true
+      },
+      {
+        fullName = "8000"
+        default = false
+        label = "Estonian Kroon"
+        isActive = true
+      },
+      {
+        fullName = "8100"
+        default = false
+        label = "Belarussian Ruble"
+        isActive = true
+      },
+      {
+        fullName = "8300"
+        default = false
+        label = "Moldovan Leu"
+        isActive = true
+      },
+      {
+        fullName = "8500"
+        default = false
+        label = "Armenian Dram"
+        isActive = true
+      },
+      {
+        fullName = "8700"
+        default = false
+        label = "Tenge"
+        isActive = true
+      },
+      {
+        fullName = "8800"
+        default = false
+        label = "Turkmenistan Manat"
+        isActive = true
+      },
+      {
+        fullName = "8900"
+        default = false
+        label = "Som"
+        isActive = true
+      },
+      {
+        fullName = "9000"
+        default = false
+        label = "Uzbekistan Sum"
+        isActive = true
+      },
+      {
+        fullName = "9100"
+        default = false
+        label = "Russian Ruble"
+        isActive = true
+      },
+      {
+        fullName = "9300"
+        default = false
+        label = "Brazilian Real"
+        isActive = true
+      },
+      {
+        fullName = "9410"
+        default = false
+        label = "Polish New Zloty"
+        isActive = true
+      },
+      {
+        fullName = "9430"
+        default = false
+        label = "Myanmar Kyat"
+        isActive = true
+      },
+      {
+        fullName = "9440"
+        default = false
+        label = "Turkish Lira (new)"
+        isActive = true
+      },
+      {
+        fullName = "9450"
+        default = false
+        label = "Romanian Leu (new)"
+        isActive = true
+      },
+      {
+        fullName = "9460"
+        default = false
+        label = "Azerbaijanian Manat (new)"
+        isActive = true
+      },
+      {
+        fullName = "9470"
+        default = false
+        label = "Namibia Dollar"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LegalStatus {
+    apiName = "DandBCompany.LegalStatus"
+    label = "Legal Structure"
+    valueSet = [
+      {
+        fullName = "100"
+        default = false
+        label = "Cooperative"
+        isActive = true
+      },
+      {
+        fullName = "101"
+        default = false
+        label = "Nonprofit organization"
+        isActive = true
+      },
+      {
+        fullName = "118"
+        default = false
+        label = "Local government body"
+        isActive = true
+      },
+      {
+        fullName = "012"
+        default = false
+        label = "Partnership of unknown type"
+        isActive = true
+      },
+      {
+        fullName = "120"
+        default = false
+        label = "Foreign company"
+        isActive = true
+      },
+      {
+        fullName = "013"
+        default = false
+        label = "Proprietorship"
+        isActive = true
+      },
+      {
+        fullName = "003"
+        default = false
+        label = "Corporation"
+        isActive = true
+      },
+      {
+        fullName = "050"
+        default = false
+        label = "Government body"
+        isActive = true
+      },
+      {
+        fullName = "008"
+        default = false
+        label = "Joint venture"
+        isActive = true
+      },
+      {
+        fullName = "000"
+        default = false
+        label = "Not available"
+        isActive = true
+      },
+      {
+        fullName = "009"
+        default = false
+        label = "Master limited partnership"
+        isActive = true
+      },
+      {
+        fullName = "010"
+        default = false
+        label = "General partnership"
+        isActive = true
+      },
+      {
+        fullName = "011"
+        default = false
+        label = "Limited partnership"
+        isActive = true
+      },
+      {
+        fullName = "014"
+        default = false
+        label = "Limited liability"
+        isActive = true
+      },
+      {
+        fullName = "015"
+        default = false
+        label = "Friendly society"
+        isActive = true
+      },
+      {
+        fullName = "030"
+        default = false
+        label = "Trust"
+        isActive = true
+      },
+      {
+        fullName = "070"
+        default = false
+        label = "Crown corporation"
+        isActive = true
+      },
+      {
+        fullName = "080"
+        default = false
+        label = "Institution"
+        isActive = true
+      },
+      {
+        fullName = "090"
+        default = false
+        label = "Estate"
+        isActive = true
+      },
+      {
+        fullName = "099"
+        default = false
+        label = "Industry cooperative"
+        isActive = true
+      },
+      {
+        fullName = "102"
+        default = false
+        label = "Private limited company"
+        isActive = true
+      },
+      {
+        fullName = "103"
+        default = false
+        label = "Partnership partially limited by shares"
+        isActive = true
+      },
+      {
+        fullName = "104"
+        default = false
+        label = "Temporary association"
+        isActive = true
+      },
+      {
+        fullName = "105"
+        default = false
+        label = "Registered proprietorship"
+        isActive = true
+      },
+      {
+        fullName = "106"
+        default = false
+        label = "Limited partnership with shares"
+        isActive = true
+      },
+      {
+        fullName = "107"
+        default = false
+        label = "Unregistered proprietorship"
+        isActive = true
+      },
+      {
+        fullName = "108"
+        default = false
+        label = "Community of goods"
+        isActive = true
+      },
+      {
+        fullName = "109"
+        default = false
+        label = "Reciprocal guarantee company"
+        isActive = true
+      },
+      {
+        fullName = "110"
+        default = false
+        label = "Cooperative society with limited liability"
+        isActive = true
+      },
+      {
+        fullName = "111"
+        default = false
+        label = "Civil company"
+        isActive = true
+      },
+      {
+        fullName = "112"
+        default = false
+        label = "De facto partnership"
+        isActive = true
+      },
+      {
+        fullName = "113"
+        default = false
+        label = "Foundation"
+        isActive = true
+      },
+      {
+        fullName = "114"
+        default = false
+        label = "Association"
+        isActive = true
+      },
+      {
+        fullName = "115"
+        default = false
+        label = "Public company"
+        isActive = true
+      },
+      {
+        fullName = "116"
+        default = false
+        label = "Civil law partnership"
+        isActive = true
+      },
+      {
+        fullName = "117"
+        default = false
+        label = "Incorporated by act of Parliament"
+        isActive = true
+      },
+      {
+        fullName = "119"
+        default = false
+        label = "Private unlimited company"
+        isActive = true
+      },
+      {
+        fullName = "121"
+        default = false
+        label = "Private company limited by guarantee"
+        isActive = true
+      },
+      {
+        fullName = "122"
+        default = false
+        label = "Civil partnership"
+        isActive = true
+      },
+      {
+        fullName = "125"
+        default = false
+        label = "Public limited company"
+        isActive = true
+      },
+      {
+        fullName = "126"
+        default = false
+        label = "Registered partnership"
+        isActive = true
+      },
+      {
+        fullName = "127"
+        default = false
+        label = "Society"
+        isActive = true
+      },
+      {
+        fullName = "128"
+        default = false
+        label = "Government-owned company"
+        isActive = true
+      },
+      {
+        fullName = "129"
+        default = false
+        label = "Government institute"
+        isActive = true
+      },
+      {
+        fullName = "130"
+        default = false
+        label = "Public institute"
+        isActive = true
+      },
+      {
+        fullName = "131"
+        default = false
+        label = "Plant"
+        isActive = true
+      },
+      {
+        fullName = "132"
+        default = false
+        label = "Hotel"
+        isActive = true
+      },
+      {
+        fullName = "133"
+        default = false
+        label = "Division"
+        isActive = true
+      },
+      {
+        fullName = "140"
+        default = false
+        label = "Joint shipping company"
+        isActive = true
+      },
+      {
+        fullName = "142"
+        default = false
+        label = "Limited-liability corporation"
+        isActive = true
+      },
+      {
+        fullName = "143"
+        default = false
+        label = "Branch"
+        isActive = true
+      },
+      {
+        fullName = "144"
+        default = false
+        label = "Concern address"
+        isActive = true
+      },
+      {
+        fullName = "145"
+        default = false
+        label = "Insurance company"
+        isActive = true
+      },
+      {
+        fullName = "146"
+        default = false
+        label = "Private foundation"
+        isActive = true
+      },
+      {
+        fullName = "147"
+        default = false
+        label = "County institution"
+        isActive = true
+      },
+      {
+        fullName = "148"
+        default = false
+        label = "Municipal institution"
+        isActive = true
+      },
+      {
+        fullName = "149"
+        default = false
+        label = "Vestry"
+        isActive = true
+      },
+      {
+        fullName = "150"
+        default = false
+        label = "Public undertaking"
+        isActive = true
+      },
+      {
+        fullName = "151"
+        default = false
+        label = "Faeroese company"
+        isActive = true
+      },
+      {
+        fullName = "152"
+        default = false
+        label = "Greenland limited"
+        isActive = true
+      },
+      {
+        fullName = "153"
+        default = false
+        label = "Greenland private limited"
+        isActive = true
+      },
+      {
+        fullName = "154"
+        default = false
+        label = "Sole proprietorship"
+        isActive = true
+      },
+      {
+        fullName = "155"
+        default = false
+        label = "Sole proprietorship or partnership"
+        isActive = true
+      },
+      {
+        fullName = "160"
+        default = false
+        label = "Unregistered partnership"
+        isActive = true
+      },
+      {
+        fullName = "161"
+        default = false
+        label = "Civil association"
+        isActive = true
+      },
+      {
+        fullName = "162"
+        default = false
+        label = "Association in participation"
+        isActive = true
+      },
+      {
+        fullName = "163"
+        default = false
+        label = "Mutual insurance association"
+        isActive = true
+      },
+      {
+        fullName = "164"
+        default = false
+        label = "Stock company with variable capital"
+        isActive = true
+      },
+      {
+        fullName = "166"
+        default = false
+        label = "Cooperative production society"
+        isActive = true
+      },
+      {
+        fullName = "167"
+        default = false
+        label = "Joint stock company"
+        isActive = true
+      },
+      {
+        fullName = "168"
+        default = false
+        label = "Limited responsibility cooperative society"
+        isActive = true
+      },
+      {
+        fullName = "169"
+        default = false
+        label = "National credit society"
+        isActive = true
+      },
+      {
+        fullName = "170"
+        default = false
+        label = "Offene erwerbsgesellschaft"
+        isActive = true
+      },
+      {
+        fullName = "171"
+        default = false
+        label = "Limited liability company with variable cap"
+        isActive = true
+      },
+      {
+        fullName = "180"
+        default = false
+        label = "Kommandit erwerbsgesellschaft"
+        isActive = true
+      },
+      {
+        fullName = "185"
+        default = false
+        label = "Public credit institution"
+        isActive = true
+      },
+      {
+        fullName = "186"
+        default = false
+        label = "Working group"
+        isActive = true
+      },
+      {
+        fullName = "190"
+        default = false
+        label = "Union"
+        isActive = true
+      },
+      {
+        fullName = "200"
+        default = false
+        label = "Personal partnership"
+        isActive = true
+      },
+      {
+        fullName = "202"
+        default = false
+        label = "Unlimited liability rural production company"
+        isActive = true
+      },
+      {
+        fullName = "204"
+        default = false
+        label = "Named collective company with variable capital"
+        isActive = true
+      },
+      {
+        fullName = "206"
+        default = false
+        label = "Individual with business activity"
+        isActive = true
+      },
+      {
+        fullName = "208"
+        default = false
+        label = "Association with shares in the stock market"
+        isActive = true
+      },
+      {
+        fullName = "210"
+        default = false
+        label = "Real estate partnership"
+        isActive = true
+      },
+      {
+        fullName = "212"
+        default = false
+        label = "Association with shares in the stock market with variable capital"
+        isActive = true
+      },
+      {
+        fullName = "214"
+        default = false
+        label = "Association with shares with variable capital (investment company)"
+        isActive = true
+      },
+      {
+        fullName = "216"
+        default = false
+        label = "Association with shares with variable capital (investment company with debt instruments)"
+        isActive = true
+      },
+      {
+        fullName = "218"
+        default = false
+        label = "Association with shares with variable capital investment company with variable rent)"
+        isActive = true
+      },
+      {
+        fullName = "220"
+        default = false
+        label = "Agricultural collective interest company"
+        isActive = true
+      },
+      {
+        fullName = "222"
+        default = false
+        label = "Association with shares with variable capital (financial company with limited object)"
+        isActive = true
+      },
+      {
+        fullName = "224"
+        default = false
+        label = "Association with shares with variable capital (financial company with multiple objects non-regulated entity)"
+        isActive = true
+      },
+      {
+        fullName = "226"
+        default = false
+        label = "Association with shares with variable capital (financial company with multiple objects regulated entity)"
+        isActive = true
+      },
+      {
+        fullName = "228"
+        default = false
+        label = "Association with shares investment promotor"
+        isActive = true
+      },
+      {
+        fullName = "230"
+        default = false
+        label = "Defacto business organization"
+        isActive = true
+      },
+      {
+        fullName = "232"
+        default = false
+        label = "Association with shares in the stock market (investment promotor)"
+        isActive = true
+      },
+      {
+        fullName = "234"
+        default = false
+        label = "Association with shares in the stock market (investment promotor with variable capital)"
+        isActive = true
+      },
+      {
+        fullName = "236"
+        default = false
+        label = "Association with shares with variable capital (investment promotor) "
+        isActive = true
+      },
+      {
+        fullName = "238"
+        default = false
+        label = "Association with shares (capital investment company)"
+        isActive = true
+      },
+      {
+        fullName = "240"
+        default = false
+        label = "Government/municipal establishment"
+        isActive = true
+      },
+      {
+        fullName = "242"
+        default = false
+        label = "Association with shares (investment company with debt instruments)"
+        isActive = true
+      },
+      {
+        fullName = "244"
+        default = false
+        label = "Association with shares (investment company with variable rent)"
+        isActive = true
+      },
+      {
+        fullName = "246"
+        default = false
+        label = "Association with shares (financial company with limited object)"
+        isActive = true
+      },
+      {
+        fullName = "248"
+        default = false
+        label = "Association with shares (financial company with multiple objects non-regulated entity)"
+        isActive = true
+      },
+      {
+        fullName = "250"
+        default = false
+        label = "Housing company"
+        isActive = true
+      },
+      {
+        fullName = "252"
+        default = false
+        label = "Association with shares (financial company with multiple objects regulated entity)"
+        isActive = true
+      },
+      {
+        fullName = "254"
+        default = false
+        label = "Cooperative production society of variable capital of limited Responsibility"
+        isActive = true
+      },
+      {
+        fullName = "256"
+        default = false
+        label = "Limited liability rural production company"
+        isActive = true
+      },
+      {
+        fullName = "260"
+        default = false
+        label = "Voluntary association"
+        isActive = true
+      },
+      {
+        fullName = "270"
+        default = false
+        label = "Mortgage association"
+        isActive = true
+      },
+      {
+        fullName = "280"
+        default = false
+        label = "Cooperative society"
+        isActive = true
+      },
+      {
+        fullName = "290"
+        default = false
+        label = "Cooperative bank"
+        isActive = true
+      },
+      {
+        fullName = "300"
+        default = false
+        label = "Savings bank"
+        isActive = true
+      },
+      {
+        fullName = "301"
+        default = false
+        label = "Small individual business"
+        isActive = true
+      },
+      {
+        fullName = "302"
+        default = false
+        label = "Private company"
+        isActive = true
+      },
+      {
+        fullName = "304"
+        default = false
+        label = "Unregistered"
+        isActive = true
+      },
+      {
+        fullName = "306"
+        default = false
+        label = "Government department/city council"
+        isActive = true
+      },
+      {
+        fullName = "308"
+        default = false
+        label = "State government"
+        isActive = true
+      },
+      {
+        fullName = "310"
+        default = false
+        label = "Economic association"
+        isActive = true
+      },
+      {
+        fullName = "312"
+        default = false
+        label = "Class order"
+        isActive = true
+      },
+      {
+        fullName = "314"
+        default = false
+        label = "Business name"
+        isActive = true
+      },
+      {
+        fullName = "316"
+        default = false
+        label = "Sole trader"
+        isActive = true
+      },
+      {
+        fullName = "318"
+        default = false
+        label = "Trustee company"
+        isActive = true
+      },
+      {
+        fullName = "320"
+        default = false
+        label = "Insurance limited company"
+        isActive = true
+      },
+      {
+        fullName = "322"
+        default = false
+        label = "Listed public company (limited)"
+        isActive = true
+      },
+      {
+        fullName = "324"
+        default = false
+        label = "Unlisted public company"
+        isActive = true
+      },
+      {
+        fullName = "326"
+        default = false
+        label = "limited by guarantee"
+        isActive = true
+      },
+      {
+        fullName = "328"
+        default = false
+        label = "Listed public company (no liability) "
+        isActive = true
+      },
+      {
+        fullName = "330"
+        default = false
+        label = "Government authority"
+        isActive = true
+      },
+      {
+        fullName = "332"
+        default = false
+        label = "Professional organization/association"
+        isActive = true
+      },
+      {
+        fullName = "334"
+        default = false
+        label = "Registered Australian body"
+        isActive = true
+      },
+      {
+        fullName = "336"
+        default = false
+        label = "Corporate partnership"
+        isActive = true
+      },
+      {
+        fullName = "338"
+        default = false
+        label = "Industrial and provident societies"
+        isActive = true
+      },
+      {
+        fullName = "340"
+        default = false
+        label = "Group"
+        isActive = true
+      },
+      {
+        fullName = "342"
+        default = false
+        label = "Charitable trust"
+        isActive = true
+      },
+      {
+        fullName = "344"
+        default = false
+        label = "Overseas company"
+        isActive = true
+      },
+      {
+        fullName = "346"
+        default = false
+        label = "Proprietary company"
+        isActive = true
+      },
+      {
+        fullName = "350"
+        default = false
+        label = "Housing cooperative society"
+        isActive = true
+      },
+      {
+        fullName = "360"
+        default = false
+        label = "Mutual assistance business organization"
+        isActive = true
+      },
+      {
+        fullName = "370"
+        default = false
+        label = "Provident business organization"
+        isActive = true
+      },
+      {
+        fullName = "380"
+        default = false
+        label = "Limited company"
+        isActive = true
+      },
+      {
+        fullName = "390"
+        default = false
+        label = "Simple partnership"
+        isActive = true
+      },
+      {
+        fullName = "410"
+        default = false
+        label = "Commercial collective company"
+        isActive = true
+      },
+      {
+        fullName = "420"
+        default = false
+        label = "Commercial company"
+        isActive = true
+      },
+      {
+        fullName = "430"
+        default = false
+        label = "Representative office"
+        isActive = true
+      },
+      {
+        fullName = "440"
+        default = false
+        label = "Bank"
+        isActive = true
+      },
+      {
+        fullName = "450"
+        default = false
+        label = "Industry and equity company"
+        isActive = true
+      },
+      {
+        fullName = "451"
+        default = false
+        label = "Trading society"
+        isActive = true
+      },
+      {
+        fullName = "452"
+        default = false
+        label = "Government institution"
+        isActive = true
+      },
+      {
+        fullName = "460"
+        default = false
+        label = "Open stock corporation"
+        isActive = true
+      },
+      {
+        fullName = "470"
+        default = false
+        label = "Trusteeship"
+        isActive = true
+      },
+      {
+        fullName = "480"
+        default = false
+        label = "Private business"
+        isActive = true
+      },
+      {
+        fullName = "490"
+        default = false
+        label = "Decentralized public organization"
+        isActive = true
+      },
+      {
+        fullName = "500"
+        default = false
+        label = "Stock company"
+        isActive = true
+      },
+      {
+        fullName = "502"
+        default = false
+        label = "Tenant owner's society"
+        isActive = true
+      },
+      {
+        fullName = "510"
+        default = false
+        label = "Civil society"
+        isActive = true
+      },
+      {
+        fullName = "520"
+        default = false
+        label = "Society for capitalization of savings"
+        isActive = true
+      },
+      {
+        fullName = "530"
+        default = false
+        label = "Limited cooperative company"
+        isActive = true
+      },
+      {
+        fullName = "540"
+        default = false
+        label = "Mutual insurance society"
+        isActive = true
+      },
+      {
+        fullName = "550"
+        default = false
+        label = "Simple limited partnership"
+        isActive = true
+      },
+      {
+        fullName = "560"
+        default = false
+        label = "Named collective company"
+        isActive = true
+      },
+      {
+        fullName = "570"
+        default = false
+        label = "Non-profit association"
+        isActive = true
+      },
+      {
+        fullName = "580"
+        default = false
+        label = "Corporation with variable capital"
+        isActive = true
+      },
+      {
+        fullName = "590"
+        default = false
+        label = "Joint corporation"
+        isActive = true
+      },
+      {
+        fullName = "600"
+        default = false
+        label = "Consortium"
+        isActive = true
+      },
+      {
+        fullName = "610"
+        default = false
+        label = "Personal firm"
+        isActive = true
+      },
+      {
+        fullName = "620"
+        default = false
+        label = "Corporation with authorized capital"
+        isActive = true
+      },
+      {
+        fullName = "630"
+        default = false
+        label = "Corporation with open capital"
+        isActive = true
+      },
+      {
+        fullName = "640"
+        default = false
+        label = "Bank for capitalization of savings"
+        isActive = true
+      },
+      {
+        fullName = "650"
+        default = false
+        label = "Closed stock corporation"
+        isActive = true
+      },
+      {
+        fullName = "660"
+        default = false
+        label = "Commercial and industrial corporation"
+        isActive = true
+      },
+      {
+        fullName = "670"
+        default = false
+        label = "Commercial corporation"
+        isActive = true
+      },
+      {
+        fullName = "680"
+        default = false
+        label = "Industrial corporation"
+        isActive = true
+      },
+      {
+        fullName = "690"
+        default = false
+        label = "Financial institution"
+        isActive = true
+      },
+      {
+        fullName = "700"
+        default = false
+        label = "Contract mining company"
+        isActive = true
+      },
+      {
+        fullName = "710"
+        default = false
+        label = "Contracting company"
+        isActive = true
+      },
+      {
+        fullName = "720"
+        default = false
+        label = "Non-profit international organization"
+        isActive = true
+      },
+      {
+        fullName = "730"
+        default = false
+        label = "International organization"
+        isActive = true
+      },
+      {
+        fullName = "740"
+        default = false
+        label = "Limited co auth capital-regd co open cap"
+        isActive = true
+      },
+      {
+        fullName = "750"
+        default = false
+        label = "Organization"
+        isActive = true
+      },
+      {
+        fullName = "755"
+        default = false
+        label = "Unlimited company"
+        isActive = true
+      },
+      {
+        fullName = "760"
+        default = false
+        label = "Farmer's association"
+        isActive = true
+      },
+      {
+        fullName = "770"
+        default = false
+        label = "Economic assoc/tenant owners' society"
+        isActive = true
+      },
+      {
+        fullName = "780"
+        default = false
+        label = "Mining company"
+        isActive = true
+      },
+      {
+        fullName = "790"
+        default = false
+        label = "Shipping company"
+        isActive = true
+      },
+      {
+        fullName = "800"
+        default = false
+        label = "Simple company"
+        isActive = true
+      },
+      {
+        fullName = "810"
+        default = false
+        label = "Private firm"
+        isActive = true
+      },
+      {
+        fullName = "820"
+        default = false
+        label = "Family foundation"
+        isActive = true
+      },
+      {
+        fullName = "830"
+        default = false
+        label = "County"
+        isActive = true
+      },
+      {
+        fullName = "840"
+        default = false
+        label = "County association"
+        isActive = true
+      },
+      {
+        fullName = "850"
+        default = false
+        label = "County council"
+        isActive = true
+      },
+      {
+        fullName = "860"
+        default = false
+        label = "Regional social insurance office"
+        isActive = true
+      },
+      {
+        fullName = "870"
+        default = false
+        label = "Unit within the Swedish church"
+        isActive = true
+      },
+      {
+        fullName = "880"
+        default = false
+        label = "Public corporation/institution"
+        isActive = true
+      },
+      {
+        fullName = "881"
+        default = false
+        label = "Statutory body"
+        isActive = true
+      },
+      {
+        fullName = "890"
+        default = false
+        label = "Mortgage/security association"
+        isActive = true
+      },
+      {
+        fullName = "891"
+        default = false
+        label = "Government agency"
+        isActive = true
+      },
+      {
+        fullName = "892"
+        default = false
+        label = "Mutual company"
+        isActive = true
+      },
+      {
+        fullName = "893"
+        default = false
+        label = "Special corporation"
+        isActive = true
+      },
+      {
+        fullName = "894"
+        default = false
+        label = "Central bank for agriculture & forestry"
+        isActive = true
+      },
+      {
+        fullName = "895"
+        default = false
+        label = "Austrian legal entity"
+        isActive = true
+      },
+      {
+        fullName = "896"
+        default = false
+        label = "Establishment"
+        isActive = true
+      },
+      {
+        fullName = "900"
+        default = false
+        label = "Supporting association"
+        isActive = true
+      },
+      {
+        fullName = "905"
+        default = false
+        label = "Administration"
+        isActive = true
+      },
+      {
+        fullName = "910"
+        default = false
+        label = "Unemployment office"
+        isActive = true
+      },
+      {
+        fullName = "915"
+        default = false
+        label = "Liaison office"
+        isActive = true
+      },
+      {
+        fullName = "920"
+        default = false
+        label = "Foreign legal person"
+        isActive = true
+      },
+      {
+        fullName = "925"
+        default = false
+        label = "Cooperative union with guaranteed liab"
+        isActive = true
+      },
+      {
+        fullName = "930"
+        default = false
+        label = "Swedish legal person"
+        isActive = true
+      },
+      {
+        fullName = "935"
+        default = false
+        label = "Cooperative union with limited liability"
+        isActive = true
+      },
+      {
+        fullName = "940"
+        default = false
+        label = "Unlimited partnership"
+        isActive = true
+      },
+      {
+        fullName = "945"
+        default = false
+        label = "Cooperative society with unlimited liability"
+        isActive = true
+      },
+      {
+        fullName = "950"
+        default = false
+        label = "Foreign branch"
+        isActive = true
+      },
+      {
+        fullName = "955"
+        default = false
+        label = "Cooperative society with guaranteed liability"
+        isActive = true
+      },
+      {
+        fullName = "960"
+        default = false
+        label = "Incorporated foundation"
+        isActive = true
+      },
+      {
+        fullName = "965"
+        default = false
+        label = "Business not formally registered"
+        isActive = true
+      },
+      {
+        fullName = "970"
+        default = false
+        label = "Incorporated non-profit association"
+        isActive = true
+      },
+      {
+        fullName = "971"
+        default = false
+        label = "State-owned enterprise"
+        isActive = true
+      },
+      {
+        fullName = "972"
+        default = false
+        label = "Free trade zone entp. proc. prvd. smpl."
+        isActive = true
+      },
+      {
+        fullName = "973"
+        default = false
+        label = "Limited holding company"
+        isActive = true
+      },
+      {
+        fullName = "974"
+        default = false
+        label = "Government department or non-profit organization"
+        isActive = true
+      },
+      {
+        fullName = "975"
+        default = false
+        label = "Government department"
+        isActive = true
+      },
+      {
+        fullName = "976"
+        default = false
+        label = "Collectively owned enterprise"
+        isActive = true
+      },
+      {
+        fullName = "977"
+        default = false
+        label = "Domestic and foreign joint venture"
+        isActive = true
+      },
+      {
+        fullName = "978"
+        default = false
+        label = "Domestic and foreign cooperative venture"
+        isActive = true
+      },
+      {
+        fullName = "980"
+        default = false
+        label = "Educational foundation"
+        isActive = true
+      },
+      {
+        fullName = "985"
+        default = false
+        label = "Unlimited company ltd. liab. shareholder"
+        isActive = true
+      },
+      {
+        fullName = "990"
+        default = false
+        label = "Medical corporation"
+        isActive = true
+      },
+      {
+        fullName = "991"
+        default = false
+        label = "Private limited liability company"
+        isActive = true
+      },
+      {
+        fullName = "992"
+        default = false
+        label = "Public limited liability company"
+        isActive = true
+      },
+      {
+        fullName = "993"
+        default = false
+        label = "Exempt limited liability company"
+        isActive = true
+      },
+      {
+        fullName = "994"
+        default = false
+        label = "Deemed public limited company"
+        isActive = true
+      },
+      {
+        fullName = "995"
+        default = false
+        label = "Private company limited by shares"
+        isActive = true
+      },
+      {
+        fullName = "999"
+        default = false
+        label = "Securities fund"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number GlobalUltimateTotalEmployees {
+    apiName = "DandBCompany.GlobalUltimateTotalEmployees"
+    label = "Number of Employees - Global"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist EmployeesTotalReliability {
+    apiName = "DandBCompany.EmployeesTotalReliability"
+    label = "Number of Employees - Total Indicator"
+    valueSet = [
+      {
+        fullName = "0"
+        default = false
+        label = "Actual number"
+        isActive = true
+      },
+      {
+        fullName = "1"
+        default = false
+        label = "Low"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Estimated (for all records)"
+        isActive = true
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "Modeled (for non-US records)"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist MinorityOwned {
+    apiName = "DandBCompany.MinorityOwned"
+    label = "Minority-Owned Indicator"
+    valueSet = [
+      {
+        fullName = "Y"
+        default = false
+        label = "Minority-owned"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = false
+        label = "Not minority-owned"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist WomenOwned {
+    apiName = "DandBCompany.WomenOwned"
+    label = "Woman-Owned Indicator"
+    valueSet = [
+      {
+        fullName = "Y"
+        default = false
+        label = "Owned by a woman"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = false
+        label = "Not owned by a woman or unknown"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist SmallBusiness {
+    apiName = "DandBCompany.SmallBusiness"
+    label = "Small Business Indicator"
+    valueSet = [
+      {
+        fullName = "Y"
+        default = false
+        label = "Small business site"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = false
+        label = "Not small business site"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist MarketingSegmentationCluster {
+    apiName = "DandBCompany.MarketingSegmentationCluster"
+    label = "Marketing Segmentation Cluster"
+    valueSet = [
+      {
+        fullName = "1"
+        default = false
+        label = "High-Tension Branches of Insurance/Utility Industries"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Bustling Manufacturers & Business Services"
+        isActive = true
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "The Withering Branch Company"
+        isActive = true
+      },
+      {
+        fullName = "4"
+        default = false
+        label = "Rapid-Growth Large Businesses"
+        isActive = true
+      },
+      {
+        fullName = "5"
+        default = false
+        label = "Sunny Branches of Insurance/Utility Industries"
+        isActive = true
+      },
+      {
+        fullName = "6"
+        default = false
+        label = "Labor-Intensive Giants"
+        isActive = true
+      },
+      {
+        fullName = "7"
+        default = false
+        label = "Entrepreneur & Co."
+        isActive = true
+      },
+      {
+        fullName = "8"
+        default = false
+        label = "Frugal & Associates"
+        isActive = true
+      },
+      {
+        fullName = "9"
+        default = false
+        label = "Spartans"
+        isActive = true
+      },
+      {
+        fullName = "10"
+        default = false
+        label = "Struggling Startups"
+        isActive = true
+      },
+      {
+        fullName = "11"
+        default = false
+        label = "The Hectic Venture Company"
+        isActive = true
+      },
+      {
+        fullName = "12"
+        default = false
+        label = "The Established Shingle Company"
+        isActive = true
+      },
+      {
+        fullName = "13"
+        default = false
+        label = "Industry, Inc."
+        isActive = true
+      },
+      {
+        fullName = "14"
+        default = false
+        label = "Landmark Business Services"
+        isActive = true
+      },
+      {
+        fullName = "15"
+        default = false
+        label = "The Test Of Time Company"
+        isActive = true
+      },
+      {
+        fullName = "16"
+        default = false
+        label = "Powerhouse 6000"
+        isActive = true
+      },
+      {
+        fullName = "17"
+        default = false
+        label = "In Good Hands"
+        isActive = true
+      },
+      {
+        fullName = "18"
+        default = false
+        label = "Sudden-Growth Giants"
+        isActive = true
+      },
+      {
+        fullName = "19"
+        default = false
+        label = "Active Traders"
+        isActive = true
+      },
+      {
+        fullName = "20"
+        default = false
+        label = "Old Core Proprietors"
+        isActive = true
+      },
+      {
+        fullName = "21"
+        default = false
+        label = "Solid & Sons"
+        isActive = true
+      },
+      {
+        fullName = "22"
+        default = false
+        label = "Main Street USA"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ImportExportAgent {
+    apiName = "DandBCompany.ImportExportAgent"
+    label = "Import/Export"
+    valueSet = [
+      {
+        fullName = "A"
+        default = false
+        label = "Importer/Exporter/Agent"
+        isActive = true
+      },
+      {
+        fullName = "B"
+        default = false
+        label = "Importer/Exporter"
+        isActive = true
+      },
+      {
+        fullName = "C"
+        default = false
+        label = "Importer"
+        isActive = true
+      },
+      {
+        fullName = "D"
+        default = false
+        label = "Importer/Agent"
+        isActive = true
+      },
+      {
+        fullName = "E"
+        default = false
+        label = "Exporter/Agent"
+        isActive = true
+      },
+      {
+        fullName = "F"
+        default = false
+        label = "Agent. Keeps no inventory and does not take title goods"
+        isActive = true
+      },
+      {
+        fullName = "G"
+        default = false
+        label = "None or Data Not Available"
+        isActive = true
+      },
+      {
+        fullName = "H"
+        default = false
+        label = "Exporter"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Subsidiary {
+    apiName = "DandBCompany.Subsidiary"
+    label = "Subsidiary Indicator"
+    valueSet = [
+      {
+        fullName = "0"
+        default = false
+        label = "Not subsidiary of another organization"
+        isActive = true
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "Subsidiary of another organization"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text TradeStyle2 {
+    apiName = "DandBCompany.TradeStyle2"
+    label = "Second Tradestyle"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text TradeStyle3 {
+    apiName = "DandBCompany.TradeStyle3"
+    label = "Third Tradestyle"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text TradeStyle4 {
+    apiName = "DandBCompany.TradeStyle4"
+    label = "Fourth Tradestyle"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text TradeStyle5 {
+    apiName = "DandBCompany.TradeStyle5"
+    label = "Fifth Tradestyle"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text NationalId {
+    apiName = "DandBCompany.NationalId"
+    label = "National Identification Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Picklist NationalIdType {
+    apiName = "DandBCompany.NationalIdType"
+    label = "National Identification System"
+    valueSet = [
+      {
+        fullName = "00010"
+        default = false
+        label = "Belgium Enterprise Number"
+        isActive = true
+      },
+      {
+        fullName = "00011"
+        default = false
+        label = "Belgium Branch Unit Number"
+        isActive = true
+      },
+      {
+        fullName = "00100"
+        default = false
+        label = "Tokyo Shoko Research Business Identifier"
+        isActive = true
+      },
+      {
+        fullName = "00102"
+        default = false
+        label = "Emc Entered Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00103"
+        default = false
+        label = "Emc Entered Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00104"
+        default = false
+        label = "Emc Entered Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00105"
+        default = false
+        label = "Emc Government Gazette Number"
+        isActive = true
+      },
+      {
+        fullName = "00106"
+        default = false
+        label = "Sweden Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00107"
+        default = false
+        label = "Finnish Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00108"
+        default = false
+        label = "Costa Rican Judicial Number"
+        isActive = true
+      },
+      {
+        fullName = "00109"
+        default = false
+        label = "El Salvadoran Patron"
+        isActive = true
+      },
+      {
+        fullName = "00110"
+        default = false
+        label = "Hungarian Tax Identifier"
+        isActive = true
+      },
+      {
+        fullName = "00111"
+        default = false
+        label = "Sweden Branch Number"
+        isActive = true
+      },
+      {
+        fullName = "00112"
+        default = false
+        label = "Jamaican Tax Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00113"
+        default = false
+        label = "Trinidadian Tax Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00115"
+        default = false
+        label = "Dominican Republic National Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00119"
+        default = false
+        label = "Peruvian Sole Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00012"
+        default = false
+        label = "UK Cro Number"
+        isActive = true
+      },
+      {
+        fullName = "00120"
+        default = false
+        label = "Hungarian Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00125"
+        default = false
+        label = "Venezuelan National Tributary ID Number"
+        isActive = true
+      },
+      {
+        fullName = "00127"
+        default = false
+        label = "Nicaraguan Sole Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00013"
+        default = false
+        label = "Ireland Cro Number"
+        isActive = true
+      },
+      {
+        fullName = "00130"
+        default = false
+        label = "Polish Tax Identifier"
+        isActive = true
+      },
+      {
+        fullName = "00135"
+        default = false
+        label = "Costa Rican Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00014"
+        default = false
+        label = "France Siren Number"
+        isActive = true
+      },
+      {
+        fullName = "00140"
+        default = false
+        label = "Polish Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00145"
+        default = false
+        label = "Colombian National Tributary ID Number"
+        isActive = true
+      },
+      {
+        fullName = "00155"
+        default = false
+        label = "El Salvadoran National Tributary ID Number"
+        isActive = true
+      },
+      {
+        fullName = "00016"
+        default = false
+        label = "Monte Carlo Siren Number"
+        isActive = true
+      },
+      {
+        fullName = "00165"
+        default = false
+        label = "Bolivian Sole Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00017"
+        default = false
+        label = "France Siret Number"
+        isActive = true
+      },
+      {
+        fullName = "00175"
+        default = false
+        label = "Ecuadorian Sole Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00018"
+        default = false
+        label = "Europe Standard VAT Number"
+        isActive = true
+      },
+      {
+        fullName = "00185"
+        default = false
+        label = "Sole Commercial Registry Nbr Unk Ctry"
+        isActive = true
+      },
+      {
+        fullName = "00019"
+        default = false
+        label = "Netherland Chamber Of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00195"
+        default = false
+        label = "National Tributary ID Number Unk Country"
+        isActive = true
+      },
+      {
+        fullName = "00020"
+        default = false
+        label = "Germany Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00200"
+        default = false
+        label = "Argentinian Unique Tax ID Key"
+        isActive = true
+      },
+      {
+        fullName = "00021"
+        default = false
+        label = "Italy Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00210"
+        default = false
+        label = "Paraguayan Unique Tax Registration"
+        isActive = true
+      },
+      {
+        fullName = "00211"
+        default = false
+        label = "Brazilian State Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00212"
+        default = false
+        label = "Brazilian Municipal Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00022"
+        default = false
+        label = "Taiwan Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00220"
+        default = false
+        label = "Uruguayan Unique Tax Registration"
+        isActive = true
+      },
+      {
+        fullName = "00230"
+        default = false
+        label = "Mexican Federal Tax Registration"
+        isActive = true
+      },
+      {
+        fullName = "00024"
+        default = false
+        label = "Spain Fiscal Code"
+        isActive = true
+      },
+      {
+        fullName = "00240"
+        default = false
+        label = "Chilean Unique Tax ID"
+        isActive = true
+      },
+      {
+        fullName = "00025"
+        default = false
+        label = "Andorra Fiscal Code"
+        isActive = true
+      },
+      {
+        fullName = "00250"
+        default = false
+        label = "Venezuelan Registry of Fiscal Info"
+        isActive = true
+      },
+      {
+        fullName = "00026"
+        default = false
+        label = "Portugal Fiscal Code"
+        isActive = true
+      },
+      {
+        fullName = "00260"
+        default = false
+        label = "Brazilian General Record of Taxpayers"
+        isActive = true
+      },
+      {
+        fullName = "00270"
+        default = false
+        label = "Norwegian Government Organization Number"
+        isActive = true
+      },
+      {
+        fullName = "00281"
+        default = false
+        label = "Hong Kong Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00282"
+        default = false
+        label = "Macao Cmcl Registry Company ID Number"
+        isActive = true
+      },
+      {
+        fullName = "00283"
+        default = false
+        label = "Macao Cmcl Registry Bus Regn Number"
+        isActive = true
+      },
+      {
+        fullName = "00284"
+        default = false
+        label = "So Korean St Cmcl Registry Bus Regn Number"
+        isActive = true
+      },
+      {
+        fullName = "00285"
+        default = false
+        label = "So Korean Trad Assn Expt/Impt Regn Number"
+        isActive = true
+      },
+      {
+        fullName = "00286"
+        default = false
+        label = "Czech Republic ICO"
+        isActive = true
+      },
+      {
+        fullName = "00290"
+        default = false
+        label = "Czech VAT Number"
+        isActive = true
+      },
+      {
+        fullName = "00030"
+        default = false
+        label = "CUSIP Number"
+        isActive = true
+      },
+      {
+        fullName = "00300"
+        default = false
+        label = "Bangladesh Company Incorporation Number"
+        isActive = true
+      },
+      {
+        fullName = "00301"
+        default = false
+        label = "Brunei Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00302"
+        default = false
+        label = "India Company Incorporation Number"
+        isActive = true
+      },
+      {
+        fullName = "00303"
+        default = false
+        label = "Indonesia Legalization Number"
+        isActive = true
+      },
+      {
+        fullName = "00304"
+        default = false
+        label = "Indonesia President Decree Number"
+        isActive = true
+      },
+      {
+        fullName = "00305"
+        default = false
+        label = "Malaysia Company Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00306"
+        default = false
+        label = "Malaysia Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00307"
+        default = false
+        label = "Nepal Company Incorporation Number"
+        isActive = true
+      },
+      {
+        fullName = "00308"
+        default = false
+        label = "Pakistan Company Incorporation Number"
+        isActive = true
+      },
+      {
+        fullName = "00309"
+        default = false
+        label = "Philippines Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00031"
+        default = false
+        label = "Australia Company Number"
+        isActive = true
+      },
+      {
+        fullName = "00310"
+        default = false
+        label = "Sri Lanka Company Incorporation Number"
+        isActive = true
+      },
+      {
+        fullName = "00311"
+        default = false
+        label = "Thailand Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00312"
+        default = false
+        label = "Vietnam Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00313"
+        default = false
+        label = "Vietnam Investment License Code"
+        isActive = true
+      },
+      {
+        fullName = "00314"
+        default = false
+        label = "Vietnam License for the Establishment"
+        isActive = true
+      },
+      {
+        fullName = "00315"
+        default = false
+        label = "Vietnam License Number"
+        isActive = true
+      },
+      {
+        fullName = "00316"
+        default = false
+        label = "Maldives Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00317"
+        default = false
+        label = "Bhutan Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00318"
+        default = false
+        label = "Myanmar Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00032"
+        default = false
+        label = "Singapore Registration File Number"
+        isActive = true
+      },
+      {
+        fullName = "00320"
+        default = false
+        label = "Hungarian VAT Number"
+        isActive = true
+      },
+      {
+        fullName = "00321"
+        default = false
+        label = "New Zealand National Company Number - Ncn"
+        isActive = true
+      },
+      {
+        fullName = "00322"
+        default = false
+        label = "Australia Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00323"
+        default = false
+        label = "Australian Business Number"
+        isActive = true
+      },
+      {
+        fullName = "00324"
+        default = false
+        label = "South African Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00325"
+        default = false
+        label = "Greek Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00033"
+        default = false
+        label = "Hong Kong Co Registry Company ID Number"
+        isActive = true
+      },
+      {
+        fullName = "00034"
+        default = false
+        label = "CINS Number"
+        isActive = true
+      },
+      {
+        fullName = "00035"
+        default = false
+        label = "Panamanian Sole Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00036"
+        default = false
+        label = "Portugal Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00040"
+        default = false
+        label = "Mexico Iva"
+        isActive = true
+      },
+      {
+        fullName = "00045"
+        default = false
+        label = "Israel Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00050"
+        default = false
+        label = "Israel VAT Number"
+        isActive = true
+      },
+      {
+        fullName = "00521"
+        default = false
+        label = "Denmark CVR Number"
+        isActive = true
+      },
+      {
+        fullName = "00522"
+        default = false
+        label = "United Arab Emirates Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00523"
+        default = false
+        label = "Bahrain Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00524"
+        default = false
+        label = "Iraq Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00525"
+        default = false
+        label = "Iran Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00526"
+        default = false
+        label = "Jordan Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00527"
+        default = false
+        label = "Kuwait Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00528"
+        default = false
+        label = "Lebanon Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00529"
+        default = false
+        label = "Oman Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00530"
+        default = false
+        label = "Qatar Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00531"
+        default = false
+        label = "Saudi Arabia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00532"
+        default = false
+        label = "Syria Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00533"
+        default = false
+        label = "Yemen Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00534"
+        default = false
+        label = "United Arab Emirates Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00535"
+        default = false
+        label = "Bahrain Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00536"
+        default = false
+        label = "Iran Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00537"
+        default = false
+        label = "Jordan Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00538"
+        default = false
+        label = "Kuwait Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00539"
+        default = false
+        label = "Lebanon Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00540"
+        default = false
+        label = "Oman Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00541"
+        default = false
+        label = "Qatar Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00542"
+        default = false
+        label = "Saudi Arabia Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00543"
+        default = false
+        label = "Syria Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00544"
+        default = false
+        label = "Yemen Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00545"
+        default = false
+        label = "Angola Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00546"
+        default = false
+        label = "Burkina Faso Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00547"
+        default = false
+        label = "Burundi Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00548"
+        default = false
+        label = "Benin Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00549"
+        default = false
+        label = "Central African Republic Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00055"
+        default = false
+        label = "Liechtenstein Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00550"
+        default = false
+        label = "Congo Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00551"
+        default = false
+        label = "Ivory Coast Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00552"
+        default = false
+        label = "Cameroon Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00553"
+        default = false
+        label = "Cape Verde Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00554"
+        default = false
+        label = "Djibouti Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00555"
+        default = false
+        label = "Algeria Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00556"
+        default = false
+        label = "Egypt Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00557"
+        default = false
+        label = "Eritrea Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00558"
+        default = false
+        label = "Ethiopia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00559"
+        default = false
+        label = "Falkland Islands Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00560"
+        default = false
+        label = "Gabon Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00561"
+        default = false
+        label = "Ghana Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00562"
+        default = false
+        label = "Gambia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00563"
+        default = false
+        label = "Guinea Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00564"
+        default = false
+        label = "Equatorial Guinea Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00565"
+        default = false
+        label = "Guinea-Bissau Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00566"
+        default = false
+        label = "Kenya Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00567"
+        default = false
+        label = "Comoros Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00568"
+        default = false
+        label = "Liberia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00569"
+        default = false
+        label = "Morocco Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00570"
+        default = false
+        label = "Madagascar Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00571"
+        default = false
+        label = "Mali Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00572"
+        default = false
+        label = "Mauritania Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00573"
+        default = false
+        label = "Mauritius Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00574"
+        default = false
+        label = "Malawi Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00575"
+        default = false
+        label = "Mozambique Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00576"
+        default = false
+        label = "Niger Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00577"
+        default = false
+        label = "Nigeria Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00578"
+        default = false
+        label = "Rwanda Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00579"
+        default = false
+        label = "Seychelles Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00580"
+        default = false
+        label = "Sudan Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00581"
+        default = false
+        label = "St Helena Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00582"
+        default = false
+        label = "Sierra Leone Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00583"
+        default = false
+        label = "Senegal Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00584"
+        default = false
+        label = "Somalia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00585"
+        default = false
+        label = "Chad Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00586"
+        default = false
+        label = "Togo Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00587"
+        default = false
+        label = "Tanzania Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00588"
+        default = false
+        label = "Uganda Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00589"
+        default = false
+        label = "Zambia Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00590"
+        default = false
+        label = "Ivory Coast Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00591"
+        default = false
+        label = "Cameroon Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00592"
+        default = false
+        label = "Algeria Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00593"
+        default = false
+        label = "Egypt Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00594"
+        default = false
+        label = "Gabon Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00595"
+        default = false
+        label = "Morocco Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00596"
+        default = false
+        label = "Seychelles Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00597"
+        default = false
+        label = "Senegal Chamber of Commerce Number"
+        isActive = true
+      },
+      {
+        fullName = "00598"
+        default = false
+        label = "Ivory Coast Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00599"
+        default = false
+        label = "Cameroon Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00060"
+        default = false
+        label = "Italy Fiscal Code"
+        isActive = true
+      },
+      {
+        fullName = "00600"
+        default = false
+        label = "Egypt Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00601"
+        default = false
+        label = "Gabon Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00602"
+        default = false
+        label = "Ghana Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00603"
+        default = false
+        label = "Morocco Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00604"
+        default = false
+        label = "Mauritius Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00605"
+        default = false
+        label = "Senegal Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00610"
+        default = false
+        label = "Botswana Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00620"
+        default = false
+        label = "Lesotho Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00630"
+        default = false
+        label = "Namibia Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00640"
+        default = false
+        label = "Swaziland Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00065"
+        default = false
+        label = "Denmark Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00650"
+        default = false
+        label = "South Africa Value Added Tax Number"
+        isActive = true
+      },
+      {
+        fullName = "00660"
+        default = false
+        label = "South Africa Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00670"
+        default = false
+        label = "South Africa Pay As You Earn Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00070"
+        default = false
+        label = "Austria Trade Register Number"
+        isActive = true
+      },
+      {
+        fullName = "00702"
+        default = false
+        label = "Switzerland Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00075"
+        default = false
+        label = "Zimbabwe Organization Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00080"
+        default = false
+        label = "Zimbabwe Individual Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00090"
+        default = false
+        label = "Guatemalan Sole Commercial Registry Number"
+        isActive = true
+      },
+      {
+        fullName = "00095"
+        default = false
+        label = "Colombian Registry of Fiscal Info"
+        isActive = true
+      },
+      {
+        fullName = "00042"
+        default = false
+        label = "Netherlands Branch Unit Number"
+        isActive = true
+      },
+      {
+        fullName = "00043"
+        default = false
+        label = "Netherlands Legal Entity And Partnership Information Number"
+        isActive = true
+      },
+      {
+        fullName = "00122"
+        default = false
+        label = "East Timor Tax Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00330"
+        default = false
+        label = "Philippines Securities & Exchange Commission Number"
+        isActive = true
+      },
+      {
+        fullName = "00335"
+        default = false
+        label = "India Society Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00340"
+        default = false
+        label = "India Trade Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00342"
+        default = false
+        label = "India Goods & Services (GST) ID"
+        isActive = true
+      },
+      {
+        fullName = "00345"
+        default = false
+        label = "Pakistan Securities & Exchange Commission Number"
+        isActive = true
+      },
+      {
+        fullName = "00350"
+        default = false
+        label = "Thailand Commercial Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00355"
+        default = false
+        label = "Thailand Securities & Exchange Commission Number"
+        isActive = true
+      },
+      {
+        fullName = "00360"
+        default = false
+        label = "Austria Association Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00400"
+        default = false
+        label = "Value Added Tax Number (IN)"
+        isActive = true
+      },
+      {
+        fullName = "00519"
+        default = false
+        label = "Value Added Tax Number (AE)"
+        isActive = true
+      },
+      {
+        fullName = "00520"
+        default = false
+        label = "Value Added Tax Number (SA)"
+        isActive = true
+      },
+      {
+        fullName = "00710"
+        default = false
+        label = "China National Organization Code"
+        isActive = true
+      },
+      {
+        fullName = "00711"
+        default = false
+        label = "United Social Credit Code"
+        isActive = true
+      },
+      {
+        fullName = "00712"
+        default = false
+        label = "Tax Identification Number (CN)"
+        isActive = true
+      },
+      {
+        fullName = "00715"
+        default = false
+        label = "China Business Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00720"
+        default = false
+        label = "Swiss Uniform Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00740"
+        default = false
+        label = "Slovakia ICO Number"
+        isActive = true
+      },
+      {
+        fullName = "00753"
+        default = false
+        label = "Tax Identification Number (IN)"
+        isActive = true
+      },
+      {
+        fullName = "00362"
+        default = false
+        label = "Monaco Trade & Industry Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00142"
+        default = false
+        label = "Polish National Court Council Number"
+        isActive = true
+      },
+      {
+        fullName = "00143"
+        default = false
+        label = "Polish License Number"
+        isActive = true
+      },
+      {
+        fullName = "00293"
+        default = false
+        label = "Czech Republic Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00735"
+        default = false
+        label = "Slovakia Tax Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00730"
+        default = false
+        label = "Slovakia Court Number of Registration"
+        isActive = true
+      },
+      {
+        fullName = "00099"
+        default = false
+        label = "Japan Corporate Number"
+        isActive = true
+      },
+      {
+        fullName = "00101"
+        default = false
+        label = "Japan Stock Exchange Number"
+        isActive = true
+      },
+      {
+        fullName = "00759"
+        default = false
+        label = "State plan committee number (IN)"
+        isActive = true
+      },
+      {
+        fullName = "00761"
+        default = false
+        label = "Law society number (IN)"
+        isActive = true
+      },
+      {
+        fullName = "00762"
+        default = false
+        label = "Vietnam Tax Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00766"
+        default = false
+        label = "New Zealand Business Number"
+        isActive = true
+      },
+      {
+        fullName = "00772"
+        default = false
+        label = "Philippines Tax Identification Number"
+        isActive = true
+      },
+      {
+        fullName = "00765"
+        default = false
+        label = "Luxembourg Rcs Registration Number"
+        isActive = true
+      },
+      {
+        fullName = "00824"
+        default = false
+        label = "Canada Federal Corporation Number"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text UsTaxId {
+    apiName = "DandBCompany.UsTaxId"
+    label = "US Tax ID Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+  }
+  salesforce.Picklist GeoCodeAccuracy {
+    apiName = "DandBCompany.GeoCodeAccuracy"
+    label = "Geocode Accuracy"
+    valueSet = [
+      {
+        fullName = "D"
+        default = false
+        label = "Rooftop level. Precise physical address"
+        isActive = true
+      },
+      {
+        fullName = "S"
+        default = false
+        label = "Street level. Correct street and within a range of street numbers. Accuracy .1 to .2 miles"
+        isActive = true
+      },
+      {
+        fullName = "B"
+        default = false
+        label = "Block level. (ZIP+4 Centroid) Correct street and within a range of blocks. Accuracy .2 to .4 miles"
+        isActive = true
+      },
+      {
+        fullName = "T"
+        default = false
+        label = "Census tract level. (ZIP+2 Centroid) Correct street and within a range of census tracts. Accuracy .4 to .6 miles"
+        isActive = true
+      },
+      {
+        fullName = "M"
+        default = false
+        label = "Mailing address level. Physical address not valid or not present"
+        isActive = true
+      },
+      {
+        fullName = "Z"
+        default = false
+        label = "ZIP code level. Correct 5-digit ZIP code"
+        isActive = true
+      },
+      {
+        fullName = "0"
+        default = false
+        label = "Geocode could not be assigned"
+        isActive = true
+      },
+      {
+        fullName = "C"
+        default = false
+        label = "Places the address in the correct city"
+        isActive = true
+      },
+      {
+        fullName = "N"
+        default = false
+        label = "Not matched"
+        isActive = true
+      },
+      {
+        fullName = "I"
+        default = false
+        label = "Street intersection"
+        isActive = true
+      },
+      {
+        fullName = "P"
+        default = false
+        label = "PO Box location"
+        isActive = true
+      },
+      {
+        fullName = "A"
+        default = false
+        label = "Non-US rooftop accuracy"
+        isActive = true
+      },
+      {
+        fullName = "H"
+        default = false
+        label = "State or Province Centroid"
+        isActive = true
+      },
+      {
+        fullName = "K"
+        default = false
+        label = "County Centroid"
+        isActive = true
+      },
+      {
+        fullName = "G"
+        default = false
+        label = "Sub Locality-Street Level"
+        isActive = true
+      },
+      {
+        fullName = "L"
+        default = false
+        label = "Locality Centroid"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number FamilyMembers {
+    apiName = "DandBCompany.FamilyMembers"
+    label = "Number of Business Family Members"
+    precision = 5
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist MarketingPreScreen {
+    apiName = "DandBCompany.MarketingPreScreen"
+    label = "Delinquency Risk"
+    valueSet = [
+      {
+        fullName = "L"
+        default = false
+        label = "Low risk of delinquency"
+        isActive = true
+      },
+      {
+        fullName = "M"
+        default = false
+        label = "Moderate risk of delinquency"
+        isActive = true
+      },
+      {
+        fullName = "H"
+        default = false
+        label = "High risk of delinquency"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text GlobalUltimateDunsNumber {
+    apiName = "DandBCompany.GlobalUltimateDunsNumber"
+    label = "Global Ultimate D-U-N-S Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+  }
+  salesforce.Text GlobalUltimateBusinessName {
+    apiName = "DandBCompany.GlobalUltimateBusinessName"
+    label = "Global Ultimate Business Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text ParentOrHqDunsNumber {
+    apiName = "DandBCompany.ParentOrHqDunsNumber"
+    label = "Parent Company D-U-N-S Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+  }
+  salesforce.Text ParentOrHqBusinessName {
+    apiName = "DandBCompany.ParentOrHqBusinessName"
+    label = "Parent Company Business Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text DomesticUltimateDunsNumber {
+    apiName = "DandBCompany.DomesticUltimateDunsNumber"
+    label = "Domestic Ultimate D-U-N-S Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 9
+    queryable = true
+  }
+  salesforce.Text DomesticUltimateBusinessName {
+    apiName = "DandBCompany.DomesticUltimateBusinessName"
+    label = "Domestic Ultimate Business Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Picklist LocationStatus {
+    apiName = "DandBCompany.LocationStatus"
+    label = "Location Type"
+    valueSet = [
+      {
+        fullName = "0"
+        default = false
+        label = "Single Location. No other entities report to the business"
+        isActive = true
+      },
+      {
+        fullName = "1"
+        default = false
+        label = "Headquarters/Parent. Branches and/or subsidiaries report to the business"
+        isActive = true
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "Branch. Secondary location to a headquarters location"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist CompanyCurrencyIsoCode {
+    apiName = "DandBCompany.CompanyCurrencyIsoCode"
+    label = "Local Currency ISO Code"
+    valueSet = [
+      {
+        fullName = "AED"
+        default = false
+        label = "AED - UAE Dirham"
+        isActive = true
+      },
+      {
+        fullName = "AFN"
+        default = false
+        label = "AFN - Afghanistan Afghani (New)"
+        isActive = true
+      },
+      {
+        fullName = "ALL"
+        default = false
+        label = "ALL - Albanian Lek"
+        isActive = true
+      },
+      {
+        fullName = "AMD"
+        default = false
+        label = "AMD - Armenian Dram"
+        isActive = true
+      },
+      {
+        fullName = "ANG"
+        default = false
+        label = "ANG - Neth Antilles Guilder"
+        isActive = true
+      },
+      {
+        fullName = "AOA"
+        default = false
+        label = "AOA - Angola Kwanza"
+        isActive = true
+      },
+      {
+        fullName = "ARS"
+        default = false
+        label = "ARS - Argentine Peso"
+        isActive = true
+      },
+      {
+        fullName = "AUD"
+        default = false
+        label = "AUD - Australian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "AWG"
+        default = false
+        label = "AWG - Aruba Florin"
+        isActive = true
+      },
+      {
+        fullName = "AZN"
+        default = false
+        label = "AZN - Azerbaijan Manat"
+        isActive = true
+      },
+      {
+        fullName = "BAM"
+        default = false
+        label = "BAM - Convertible Marks"
+        isActive = true
+      },
+      {
+        fullName = "BBD"
+        default = false
+        label = "BBD - Barbados Dollar"
+        isActive = true
+      },
+      {
+        fullName = "BDT"
+        default = false
+        label = "BDT - Bangladesh Taka"
+        isActive = true
+      },
+      {
+        fullName = "BGN"
+        default = false
+        label = "BGN - Bulgarian Lev"
+        isActive = true
+      },
+      {
+        fullName = "BHD"
+        default = false
+        label = "BHD - Bahraini Dinar"
+        isActive = true
+      },
+      {
+        fullName = "BIF"
+        default = false
+        label = "BIF - Burundi Franc"
+        isActive = true
+      },
+      {
+        fullName = "BMD"
+        default = false
+        label = "BMD - Bermuda Dollar"
+        isActive = true
+      },
+      {
+        fullName = "BND"
+        default = false
+        label = "BND - Brunei Dollar"
+        isActive = true
+      },
+      {
+        fullName = "BOB"
+        default = false
+        label = "BOB - Bolivian Boliviano"
+        isActive = true
+      },
+      {
+        fullName = "BOV"
+        default = false
+        label = "BOV - Bolivia Mvdol"
+        isActive = true
+      },
+      {
+        fullName = "BRB"
+        default = false
+        label = "BRB - Brazilian Cruzeiro (old)"
+        isActive = true
+      },
+      {
+        fullName = "BRL"
+        default = false
+        label = "BRL - Brazilian Real"
+        isActive = true
+      },
+      {
+        fullName = "BSD"
+        default = false
+        label = "BSD - Bahamian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "BTN"
+        default = false
+        label = "BTN - Bhutan Ngultrum"
+        isActive = true
+      },
+      {
+        fullName = "BWP"
+        default = false
+        label = "BWP - Botswana Pula"
+        isActive = true
+      },
+      {
+        fullName = "BYN"
+        default = false
+        label = "BYN - Belarusian Ruble"
+        isActive = true
+      },
+      {
+        fullName = "BYR"
+        default = false
+        label = "BYR - Belarusian Ruble"
+        isActive = true
+      },
+      {
+        fullName = "BZD"
+        default = false
+        label = "BZD - Belize Dollar"
+        isActive = true
+      },
+      {
+        fullName = "CAD"
+        default = false
+        label = "CAD - Canadian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "CDF"
+        default = false
+        label = "CDF - Franc Congolais"
+        isActive = true
+      },
+      {
+        fullName = "CHF"
+        default = false
+        label = "CHF - Swiss Franc"
+        isActive = true
+      },
+      {
+        fullName = "CLF"
+        default = false
+        label = "CLF - Unidades de fomento"
+        isActive = true
+      },
+      {
+        fullName = "CLP"
+        default = false
+        label = "CLP - Chilean Peso"
+        isActive = true
+      },
+      {
+        fullName = "CNH"
+        default = false
+        label = "CNH - Chinese Yuan (Offshore)"
+        isActive = true
+      },
+      {
+        fullName = "CNY"
+        default = false
+        label = "CNY - Chinese Yuan"
+        isActive = true
+      },
+      {
+        fullName = "COP"
+        default = false
+        label = "COP - Colombian Peso"
+        isActive = true
+      },
+      {
+        fullName = "CRC"
+        default = false
+        label = "CRC - Costa Rica Colon"
+        isActive = true
+      },
+      {
+        fullName = "CUC"
+        default = false
+        label = "CUC - Cuban Peso Convertible"
+        isActive = true
+      },
+      {
+        fullName = "CUP"
+        default = false
+        label = "CUP - Cuban Peso"
+        isActive = true
+      },
+      {
+        fullName = "CVE"
+        default = false
+        label = "CVE - Cape Verde Escudo"
+        isActive = true
+      },
+      {
+        fullName = "CZK"
+        default = false
+        label = "CZK - Czech Koruna"
+        isActive = true
+      },
+      {
+        fullName = "DJF"
+        default = false
+        label = "DJF - Dijibouti Franc"
+        isActive = true
+      },
+      {
+        fullName = "DKK"
+        default = false
+        label = "DKK - Danish Krone"
+        isActive = true
+      },
+      {
+        fullName = "DOP"
+        default = false
+        label = "DOP - Dominican Peso"
+        isActive = true
+      },
+      {
+        fullName = "DZD"
+        default = false
+        label = "DZD - Algerian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "EEK"
+        default = false
+        label = "EEK - Estonian Kroon"
+        isActive = true
+      },
+      {
+        fullName = "EGP"
+        default = false
+        label = "EGP - Egyptian Pound"
+        isActive = true
+      },
+      {
+        fullName = "ERN"
+        default = false
+        label = "ERN - Eritrea Nakfa"
+        isActive = true
+      },
+      {
+        fullName = "ETB"
+        default = false
+        label = "ETB - Ethiopian Birr"
+        isActive = true
+      },
+      {
+        fullName = "EUR"
+        default = false
+        label = "EUR - Euro"
+        isActive = true
+      },
+      {
+        fullName = "FJD"
+        default = false
+        label = "FJD - Fiji Dollar"
+        isActive = true
+      },
+      {
+        fullName = "FKP"
+        default = false
+        label = "FKP - Falkland Islands Pound"
+        isActive = true
+      },
+      {
+        fullName = "GBP"
+        default = false
+        label = "GBP - British Pound"
+        isActive = true
+      },
+      {
+        fullName = "GEL"
+        default = false
+        label = "GEL - Georgia Lari"
+        isActive = true
+      },
+      {
+        fullName = "GHS"
+        default = false
+        label = "GHS - Ghanaian Cedi"
+        isActive = true
+      },
+      {
+        fullName = "GIP"
+        default = false
+        label = "GIP - Gibraltar Pound"
+        isActive = true
+      },
+      {
+        fullName = "GMD"
+        default = false
+        label = "GMD - Gambian Dalasi"
+        isActive = true
+      },
+      {
+        fullName = "GNF"
+        default = false
+        label = "GNF - Guinean Franc"
+        isActive = true
+      },
+      {
+        fullName = "GTQ"
+        default = false
+        label = "GTQ - Guatemala Quetzal"
+        isActive = true
+      },
+      {
+        fullName = "GYD"
+        default = false
+        label = "GYD - Guyana Dollar"
+        isActive = true
+      },
+      {
+        fullName = "HKD"
+        default = false
+        label = "HKD - Hong Kong Dollar"
+        isActive = true
+      },
+      {
+        fullName = "HNL"
+        default = false
+        label = "HNL - Honduras Lempira"
+        isActive = true
+      },
+      {
+        fullName = "HRD"
+        default = false
+        label = "HRD - Croatian Dinar (Old)"
+        isActive = true
+      },
+      {
+        fullName = "HRK"
+        default = false
+        label = "HRK - Kuna"
+        isActive = true
+      },
+      {
+        fullName = "HTG"
+        default = false
+        label = "HTG - Haiti Gourde"
+        isActive = true
+      },
+      {
+        fullName = "HUF"
+        default = false
+        label = "HUF - Hungarian Forint"
+        isActive = true
+      },
+      {
+        fullName = "IDR"
+        default = false
+        label = "IDR - Indonesian Rupiah"
+        isActive = true
+      },
+      {
+        fullName = "ILS"
+        default = false
+        label = "ILS - Israeli Shekel"
+        isActive = true
+      },
+      {
+        fullName = "INR"
+        default = false
+        label = "INR - Indian Rupee"
+        isActive = true
+      },
+      {
+        fullName = "IQD"
+        default = false
+        label = "IQD - Iraqi Dinar"
+        isActive = true
+      },
+      {
+        fullName = "IRR"
+        default = false
+        label = "IRR - Iranian Rial"
+        isActive = true
+      },
+      {
+        fullName = "ISK"
+        default = false
+        label = "ISK - Iceland Krona"
+        isActive = true
+      },
+      {
+        fullName = "JMD"
+        default = false
+        label = "JMD - Jamaican Dollar"
+        isActive = true
+      },
+      {
+        fullName = "JOD"
+        default = false
+        label = "JOD - Jordanian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "JPY"
+        default = false
+        label = "JPY - Japanese Yen"
+        isActive = true
+      },
+      {
+        fullName = "KES"
+        default = false
+        label = "KES - Kenyan Shilling"
+        isActive = true
+      },
+      {
+        fullName = "KGS"
+        default = false
+        label = "KGS - Kyrgyzstan Som"
+        isActive = true
+      },
+      {
+        fullName = "KHR"
+        default = false
+        label = "KHR - Cambodia Riel"
+        isActive = true
+      },
+      {
+        fullName = "KMF"
+        default = false
+        label = "KMF - Comorian Franc"
+        isActive = true
+      },
+      {
+        fullName = "KPW"
+        default = false
+        label = "KPW - North Korean Won"
+        isActive = true
+      },
+      {
+        fullName = "KRW"
+        default = false
+        label = "KRW - Korean Won"
+        isActive = true
+      },
+      {
+        fullName = "KWD"
+        default = false
+        label = "KWD - Kuwaiti Dinar"
+        isActive = true
+      },
+      {
+        fullName = "KYD"
+        default = false
+        label = "KYD - Cayman Islands Dollar"
+        isActive = true
+      },
+      {
+        fullName = "KZT"
+        default = false
+        label = "KZT - Kazakhstan Tenge"
+        isActive = true
+      },
+      {
+        fullName = "LAK"
+        default = false
+        label = "LAK - Lao Kip"
+        isActive = true
+      },
+      {
+        fullName = "LBP"
+        default = false
+        label = "LBP - Lebanese Pound"
+        isActive = true
+      },
+      {
+        fullName = "LKR"
+        default = false
+        label = "LKR - Sri Lanka Rupee"
+        isActive = true
+      },
+      {
+        fullName = "LRD"
+        default = false
+        label = "LRD - Liberian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "LSL"
+        default = false
+        label = "LSL - Lesotho Loti"
+        isActive = true
+      },
+      {
+        fullName = "LYD"
+        default = false
+        label = "LYD - Libyan Dinar"
+        isActive = true
+      },
+      {
+        fullName = "MAD"
+        default = false
+        label = "MAD - Moroccan Dirham"
+        isActive = true
+      },
+      {
+        fullName = "MDL"
+        default = false
+        label = "MDL - Moldovan Leu"
+        isActive = true
+      },
+      {
+        fullName = "MGA"
+        default = false
+        label = "MGA - Malagasy Ariary"
+        isActive = true
+      },
+      {
+        fullName = "MKD"
+        default = false
+        label = "MKD - Macedonian Denar"
+        isActive = true
+      },
+      {
+        fullName = "MMK"
+        default = false
+        label = "MMK - Myanmar Kyat"
+        isActive = true
+      },
+      {
+        fullName = "MNT"
+        default = false
+        label = "MNT - Mongolian Tugrik"
+        isActive = true
+      },
+      {
+        fullName = "MOP"
+        default = false
+        label = "MOP - Macau Pataca"
+        isActive = true
+      },
+      {
+        fullName = "MRO"
+        default = false
+        label = "MRO - Mauritanian Ougulya"
+        isActive = true
+      },
+      {
+        fullName = "MRU"
+        default = false
+        label = "MRU - Mauritanian Ougulya"
+        isActive = true
+      },
+      {
+        fullName = "MUR"
+        default = false
+        label = "MUR - Mauritius Rupee"
+        isActive = true
+      },
+      {
+        fullName = "MVR"
+        default = false
+        label = "MVR - Maldives Rufiyaa"
+        isActive = true
+      },
+      {
+        fullName = "MWK"
+        default = false
+        label = "MWK - Malawi Kwacha"
+        isActive = true
+      },
+      {
+        fullName = "MXN"
+        default = false
+        label = "MXN - Mexican Peso"
+        isActive = true
+      },
+      {
+        fullName = "MXV"
+        default = false
+        label = "MXV - Mexican Unidad de Inversion (UDI)"
+        isActive = true
+      },
+      {
+        fullName = "MYR"
+        default = false
+        label = "MYR - Malaysian Ringgit"
+        isActive = true
+      },
+      {
+        fullName = "MZN"
+        default = false
+        label = "MZN - Mozambique New Metical"
+        isActive = true
+      },
+      {
+        fullName = "NAD"
+        default = false
+        label = "NAD - Namibian Dollar"
+        isActive = true
+      },
+      {
+        fullName = "NGN"
+        default = false
+        label = "NGN - Nigerian Naira"
+        isActive = true
+      },
+      {
+        fullName = "NIO"
+        default = false
+        label = "NIO - Nicaragua Cordoba"
+        isActive = true
+      },
+      {
+        fullName = "NOK"
+        default = false
+        label = "NOK - Norwegian Krone"
+        isActive = true
+      },
+      {
+        fullName = "NPR"
+        default = false
+        label = "NPR - Nepalese Rupee"
+        isActive = true
+      },
+      {
+        fullName = "NZD"
+        default = false
+        label = "NZD - New Zealand Dollar"
+        isActive = true
+      },
+      {
+        fullName = "OMR"
+        default = false
+        label = "OMR - Omani Rial"
+        isActive = true
+      },
+      {
+        fullName = "PAB"
+        default = false
+        label = "PAB - Panama Balboa"
+        isActive = true
+      },
+      {
+        fullName = "PEN"
+        default = false
+        label = "PEN - Peruvian Sol"
+        isActive = true
+      },
+      {
+        fullName = "PGK"
+        default = false
+        label = "PGK - Papua New Guinea Kina"
+        isActive = true
+      },
+      {
+        fullName = "PHP"
+        default = false
+        label = "PHP - Philippine Peso"
+        isActive = true
+      },
+      {
+        fullName = "PKR"
+        default = false
+        label = "PKR - Pakistani Rupee"
+        isActive = true
+      },
+      {
+        fullName = "PLN"
+        default = false
+        label = "PLN - Polish Zloty"
+        isActive = true
+      },
+      {
+        fullName = "PYG"
+        default = false
+        label = "PYG - Paraguayan Guarani"
+        isActive = true
+      },
+      {
+        fullName = "QAR"
+        default = false
+        label = "QAR - Qatar Rial"
+        isActive = true
+      },
+      {
+        fullName = "RON"
+        default = false
+        label = "RON - Romanian Leu"
+        isActive = true
+      },
+      {
+        fullName = "RSD"
+        default = false
+        label = "RSD - Serbian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "RUB"
+        default = false
+        label = "RUB - Russian Rouble"
+        isActive = true
+      },
+      {
+        fullName = "RWF"
+        default = false
+        label = "RWF - Rwanda Franc"
+        isActive = true
+      },
+      {
+        fullName = "SAR"
+        default = false
+        label = "SAR - Saudi Arabian Riyal"
+        isActive = true
+      },
+      {
+        fullName = "SBD"
+        default = false
+        label = "SBD - Solomon Islands Dollar"
+        isActive = true
+      },
+      {
+        fullName = "SCR"
+        default = false
+        label = "SCR - Seychelles Rupee"
+        isActive = true
+      },
+      {
+        fullName = "SDG"
+        default = false
+        label = "SDG - Sudanese Pound"
+        isActive = true
+      },
+      {
+        fullName = "SEK"
+        default = false
+        label = "SEK - Swedish Krona"
+        isActive = true
+      },
+      {
+        fullName = "SGD"
+        default = false
+        label = "SGD - Singapore Dollar"
+        isActive = true
+      },
+      {
+        fullName = "SHP"
+        default = false
+        label = "SHP - St Helena Pound"
+        isActive = true
+      },
+      {
+        fullName = "SLL"
+        default = false
+        label = "SLL - Sierra Leone Leone"
+        isActive = true
+      },
+      {
+        fullName = "SOS"
+        default = false
+        label = "SOS - Somali Shilling"
+        isActive = true
+      },
+      {
+        fullName = "SRD"
+        default = false
+        label = "SRD - Surinam Dollar"
+        isActive = true
+      },
+      {
+        fullName = "SSP"
+        default = false
+        label = "SSP - South Sudan Pound"
+        isActive = true
+      },
+      {
+        fullName = "STD"
+        default = false
+        label = "STD - São Tomé and Príncipe Dobra"
+        isActive = true
+      },
+      {
+        fullName = "STN"
+        default = false
+        label = "STN - São Tomé and Príncipe Dobra"
+        isActive = true
+      },
+      {
+        fullName = "SYP"
+        default = false
+        label = "SYP - Syrian Pound"
+        isActive = true
+      },
+      {
+        fullName = "SZL"
+        default = false
+        label = "SZL - Swaziland Lilageni"
+        isActive = true
+      },
+      {
+        fullName = "THB"
+        default = false
+        label = "THB - Thai Baht"
+        isActive = true
+      },
+      {
+        fullName = "TJS"
+        default = false
+        label = "TJS - Tajik Somoni"
+        isActive = true
+      },
+      {
+        fullName = "TMT"
+        default = false
+        label = "TMT - Turkmenistan New Manat"
+        isActive = true
+      },
+      {
+        fullName = "TND"
+        default = false
+        label = "TND - Tunisian Dinar"
+        isActive = true
+      },
+      {
+        fullName = "TOP"
+        default = false
+        label = "TOP - Tonga Pa'anga"
+        isActive = true
+      },
+      {
+        fullName = "TRY"
+        default = false
+        label = "TRY - Turkish Lira (New)"
+        isActive = true
+      },
+      {
+        fullName = "TTD"
+        default = false
+        label = "TTD - Trinidad&Tobago Dollar"
+        isActive = true
+      },
+      {
+        fullName = "TWD"
+        default = false
+        label = "TWD - Taiwan Dollar"
+        isActive = true
+      },
+      {
+        fullName = "TZS"
+        default = false
+        label = "TZS - Tanzanian Shilling"
+        isActive = true
+      },
+      {
+        fullName = "UAH"
+        default = false
+        label = "UAH - Ukraine Hryvnia"
+        isActive = true
+      },
+      {
+        fullName = "UGX"
+        default = false
+        label = "UGX - Ugandan Shilling"
+        isActive = true
+      },
+      {
+        fullName = "USD"
+        default = false
+        label = "USD - U.S. Dollar"
+        isActive = true
+      },
+      {
+        fullName = "UYU"
+        default = false
+        label = "UYU - Uruguayan Peso"
+        isActive = true
+      },
+      {
+        fullName = "UZS"
+        default = false
+        label = "UZS - Uzbekistan Sum"
+        isActive = true
+      },
+      {
+        fullName = "VEF"
+        default = false
+        label = "VEF - Venezuelan Bolivar Fuerte"
+        isActive = true
+      },
+      {
+        fullName = "VES"
+        default = false
+        label = "VES - Venezuelan Bolívar Soberano"
+        isActive = true
+      },
+      {
+        fullName = "VND"
+        default = false
+        label = "VND - Vietnam Dong"
+        isActive = true
+      },
+      {
+        fullName = "VUV"
+        default = false
+        label = "VUV - Vanuatu Vatu"
+        isActive = true
+      },
+      {
+        fullName = "WST"
+        default = false
+        label = "WST - Samoa Tala"
+        isActive = true
+      },
+      {
+        fullName = "XAF"
+        default = false
+        label = "XAF - CFA Franc (BEAC)"
+        isActive = true
+      },
+      {
+        fullName = "XCD"
+        default = false
+        label = "XCD - East Caribbean Dollar"
+        isActive = true
+      },
+      {
+        fullName = "XOF"
+        default = false
+        label = "XOF - CFA Franc (BCEAO)"
+        isActive = true
+      },
+      {
+        fullName = "XPF"
+        default = false
+        label = "XPF - Pacific Franc"
+        isActive = true
+      },
+      {
+        fullName = "YER"
+        default = false
+        label = "YER - Yemen Riyal"
+        isActive = true
+      },
+      {
+        fullName = "ZAR"
+        default = false
+        label = "ZAR - South African Rand"
+        isActive = true
+      },
+      {
+        fullName = "ZMW"
+        default = false
+        label = "ZMW - Zambian Kwacha (New)"
+        isActive = true
+      },
+      {
+        fullName = "ZWL"
+        default = false
+        label = "ZWL - Zimbabwe Dollar"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "DandBCompany.Description"
+    label = "Company Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Number FortuneRank {
+    apiName = "DandBCompany.FortuneRank"
+    label = "Fortune 1000 Rank"
+    precision = 4
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text IncludedInSnP500 {
+    apiName = "DandBCompany.IncludedInSnP500"
+    label = "S&P 500"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 10
+    queryable = true
+  }
+  salesforce.Number PremisesMeasure {
+    apiName = "DandBCompany.PremisesMeasure"
+    label = "Location Size"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text PremisesMeasureReliability {
+    apiName = "DandBCompany.PremisesMeasureReliability"
+    label = "Location Size Accuracy"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  salesforce.Text PremisesMeasureUnit {
+    apiName = "DandBCompany.PremisesMeasureUnit"
+    label = "Location Size Unit of Measure"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  salesforce.Number EmployeeQuantityGrowthRate {
+    apiName = "DandBCompany.EmployeeQuantityGrowthRate"
+    label = "Employee Growth"
+    precision = 18
+    scale = 6
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number SalesTurnoverGrowthRate {
+    apiName = "DandBCompany.SalesTurnoverGrowthRate"
+    label = "Annual Revenue Growth"
+    precision = 18
+    scale = 6
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Text PrimarySic8 {
+    apiName = "DandBCompany.PrimarySic8"
+    label = "Primary SIC8 Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text PrimarySic8Desc {
+    apiName = "DandBCompany.PrimarySic8Desc"
+    label = "Primary SIC8 Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text SecondSic8 {
+    apiName = "DandBCompany.SecondSic8"
+    label = "Second SIC8 Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text SecondSic8Desc {
+    apiName = "DandBCompany.SecondSic8Desc"
+    label = "Second SIC8 Description "
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text ThirdSic8 {
+    apiName = "DandBCompany.ThirdSic8"
+    label = "Third SIC8 Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text ThirdSic8Desc {
+    apiName = "DandBCompany.ThirdSic8Desc"
+    label = "Third SIC8 Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text FourthSic8 {
+    apiName = "DandBCompany.FourthSic8"
+    label = "Fourth SIC8 Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text FourthSic8Desc {
+    apiName = "DandBCompany.FourthSic8Desc"
+    label = "Fourth SIC8 Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text FifthSic8 {
+    apiName = "DandBCompany.FifthSic8"
+    label = "Fifth SIC8 Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text FifthSic8Desc {
+    apiName = "DandBCompany.FifthSic8Desc"
+    label = "Fifth SIC8 Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Text SixthSic8 {
+    apiName = "DandBCompany.SixthSic8"
+    label = "Sixth SIC8 Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+  }
+  salesforce.Text SixthSic8Desc {
+    apiName = "DandBCompany.SixthSic8Desc"
+    label = "Sixth SIC8 Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Number PriorYearEmployees {
+    apiName = "DandBCompany.PriorYearEmployees"
+    label = "Prior Year Number of Employees - Total"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number PriorYearRevenue {
+    apiName = "DandBCompany.PriorYearRevenue"
+    label = "Prior Year Revenue"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+}

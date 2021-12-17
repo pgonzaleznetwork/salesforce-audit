@@ -1,0 +1,4 @@
+salesforce.PicklistSettings {
+  fullName = "Picklist"
+  isPicklistApiNameEditDisabled = false
+}

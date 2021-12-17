@@ -1,0 +1,36 @@
+salesforce.StandardValueSet TaskStatus {
+  fullName = "TaskStatus"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Not Started"
+      default = true
+      label = "Not Started"
+      closed = false
+    },
+    {
+      fullName = "In Progress"
+      default = false
+      label = "In Progress"
+      closed = false
+    },
+    {
+      fullName = "Completed"
+      default = false
+      label = "Completed"
+      closed = true
+    },
+    {
+      fullName = "Waiting on someone else"
+      default = false
+      label = "Waiting on someone else"
+      closed = false
+    },
+    {
+      fullName = "Deferred"
+      default = false
+      label = "Deferred"
+      closed = false
+    },
+  ]
+}

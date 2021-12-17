@@ -1,0 +1,24 @@
+salesforce.ListView Case_AllClosedCases {
+  fullName = "Case.AllClosedCases"
+  columns = [
+    "CASES.CASE_NUMBER",
+    "NAME",
+    "CASES.SUBJECT",
+    "CASES.STATUS",
+    "CASES.PRIORITY",
+    "CASES.CREATED_DATE",
+    "CORE.USERS.ALIAS",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CASES.CLOSED"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "All Closed Cases"
+  _parent = [
+    salesforce.Case,
+  ]
+}

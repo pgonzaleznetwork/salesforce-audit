@@ -1,0 +1,605 @@
+type salesforce.FinanceBalanceSnapshot {
+  serviceid Id {
+    apiName = "FinanceBalanceSnapshot.Id"
+    label = "Finance Balance Snapshot ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "FinanceBalanceSnapshot.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FinanceBalanceSnapshot.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber FinanceBalanceSnapshotNumber {
+    apiName = "FinanceBalanceSnapshot.FinanceBalanceSnapshotNumber"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FinanceBalanceSnapshot.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FinanceBalanceSnapshot.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FinanceBalanceSnapshot.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FinanceBalanceSnapshot.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FinanceBalanceSnapshot.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup FinanceTransactionId {
+    apiName = "FinanceBalanceSnapshot.FinanceTransactionId"
+    label = "Finance Transaction ID"
+    referenceTo = [
+      salesforce.FinanceTransaction,
+    ]
+    inlineHelpText = "Parent finance transaction for the snapshot. The snapshot's fields inherit the transaction's values only if the finance transaction's reference entity type is an invoice, payment, credit memo, debit memo, or refund."
+    createable = false
+    updateable = false
+    relationshipName = "FinanceTransaction"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReferenceEntityId {
+    apiName = "FinanceBalanceSnapshot.ReferenceEntityId"
+    label = "ReferenceEntity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
+      salesforce.CreditMemoLine,
+      salesforce.Custom_Object__c,
+      salesforce.Invoice,
+      salesforce.InvoiceLine,
+      salesforce.Parent__c,
+      salesforce.Payment,
+      salesforce.PaymentLineInvoice,
+      salesforce.Refund,
+      salesforce.RefundLinePayment,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "The financial object that was created or updated as a result of a customer action"
+    createable = false
+    updateable = false
+    relationshipName = "ReferenceEntity"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ReferenceEntityType {
+    apiName = "FinanceBalanceSnapshot.ReferenceEntityType"
+    label = "Reference Entity Type"
+    valueSet = [
+      {
+        fullName = "Invoice"
+        default = false
+        label = "Invoice"
+        isActive = true
+      },
+      {
+        fullName = "Invoice line"
+        default = false
+        label = "Invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Invoice line tax"
+        default = false
+        label = "Invoice line tax"
+        isActive = true
+      },
+      {
+        fullName = "Sub invoice line"
+        default = false
+        label = "Sub invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Sub invoice line tax"
+        default = false
+        label = "Sub invoice line tax"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo"
+        default = false
+        label = "Credit memo"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line"
+        default = false
+        label = "Credit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line tax"
+        default = false
+        label = "Credit memo line tax"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line invoice application"
+        default = false
+        label = "Credit memo line invoice application"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line invoice line application"
+        default = false
+        label = "Credit memo line invoice line application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo"
+        default = false
+        label = "Debit memo"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line"
+        default = false
+        label = "Debit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line tax"
+        default = false
+        label = "Debit memo line tax"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line credit memo application"
+        default = false
+        label = "Debit memo line credit memo application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line credit memo line application"
+        default = false
+        label = "Debit memo line credit memo line application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line invoice application"
+        default = false
+        label = "Debit memo line invoice application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line invoice line application"
+        default = false
+        label = "Debit memo line invoice line application"
+        isActive = true
+      },
+      {
+        fullName = "Payment"
+        default = false
+        label = "Payment"
+        isActive = true
+      },
+      {
+        fullName = "Payment debit memo application"
+        default = false
+        label = "Payment debit memo application"
+        isActive = true
+      },
+      {
+        fullName = "Payment debit memo line application"
+        default = false
+        label = "Payment debit memo line application"
+        isActive = true
+      },
+      {
+        fullName = "Payment invoice application"
+        default = false
+        label = "Payment invoice application"
+        isActive = true
+      },
+      {
+        fullName = "Payment invoice line application"
+        default = false
+        label = "Payment invoice line application"
+        isActive = true
+      },
+      {
+        fullName = "Refund"
+        default = false
+        label = "Refund"
+        isActive = true
+      },
+      {
+        fullName = "Refund credit memo application"
+        default = false
+        label = "Refund credit memo application"
+        isActive = true
+      },
+      {
+        fullName = "Refund credit memo line application"
+        default = false
+        label = "Refund credit memo line application"
+        isActive = true
+      },
+      {
+        fullName = "Refund payment application"
+        default = false
+        label = "Refund payment application"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist EventType {
+    apiName = "FinanceBalanceSnapshot.EventType"
+    label = "Event Type"
+    valueSet = [
+      {
+        fullName = "Allocated"
+        default = false
+        label = "Allocated"
+        isActive = true
+      },
+      {
+        fullName = "Unallocated"
+        default = false
+        label = "Unallocated"
+        isActive = true
+      },
+      {
+        fullName = "Posted"
+        default = false
+        label = "Posted"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Changed"
+        default = false
+        label = "Changed"
+        isActive = true
+      },
+      {
+        fullName = "Void"
+        default = false
+        label = "Void"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency ChargeAmount {
+    apiName = "FinanceBalanceSnapshot.ChargeAmount"
+    label = "Charge Amount"
+    inlineHelpText = "The charge contributing to the transaction's subtotal"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency AdjustmentAmount {
+    apiName = "FinanceBalanceSnapshot.AdjustmentAmount"
+    label = "Adjustment Amount"
+    inlineHelpText = "The adjustment contributing to the transaction's subtotal"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency Subtotal {
+    apiName = "FinanceBalanceSnapshot.Subtotal"
+    label = "Subtotal"
+    inlineHelpText = "Total of the charge amount and adjustment. Doesn't include the tax amount."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TaxAmount {
+    apiName = "FinanceBalanceSnapshot.TaxAmount"
+    label = "Tax Amount"
+    inlineHelpText = "The total amount of tax for the change made to your reference entity as a result of the event action"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalAmountWithTax {
+    apiName = "FinanceBalanceSnapshot.TotalAmountWithTax"
+    label = "Total Amount With Tax"
+    inlineHelpText = "The subtotal plus the tax amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency ImpactAmount {
+    apiName = "FinanceBalanceSnapshot.ImpactAmount"
+    label = "Impact Amount"
+    inlineHelpText = "The finance transaction's impact on the customer's finances"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency Balance {
+    apiName = "FinanceBalanceSnapshot.Balance"
+    label = "Balance"
+    inlineHelpText = "Final balance of the snapshot's reference entity. Inherited from the finance transaction's resulting balance if the finance transaction's reference entity is a credit memo, debit memo, invoice, payment, or refund."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "FinanceBalanceSnapshot.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    inlineHelpText = "Parent account of the reference entity"
+    createable = false
+    updateable = false
+    relationshipName = "Account"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime TransactionDate {
+    apiName = "FinanceBalanceSnapshot.TransactionDate"
+    label = "Transaction Date"
+    _required = true
+    inlineHelpText = "The date when the finance transaction occurred"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "FinanceBalanceSnapshot.EffectiveDate"
+    label = "Effective Date"
+    _required = true
+    inlineHelpText = "The date when the financial transaction takes effect"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime DueDate {
+    apiName = "FinanceBalanceSnapshot.DueDate"
+    label = "Due Date"
+    inlineHelpText = "Date when the invoice is due"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text BaseCurrencyIsoCode {
+    apiName = "FinanceBalanceSnapshot.BaseCurrencyIsoCode"
+    label = "Base Currency ISO Code"
+    inlineHelpText = "Currency of the country defined for this account. Define this value to use later when you calculate currency conversions."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 3
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number BaseCurrencyFxRate {
+    apiName = "FinanceBalanceSnapshot.BaseCurrencyFxRate"
+    label = "Base Currency FX Rate"
+    precision = 18
+    scale = 2
+    inlineHelpText = "Rate of exchange according to the Base Currency FX Date. Define this value to use later when you calculate currency conversions."
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date BaseCurrencyFxDate {
+    apiName = "FinanceBalanceSnapshot.BaseCurrencyFxDate"
+    label = "Base Currency FX Date"
+    inlineHelpText = "Date used to determine the foreign exchange rate. Define this value to use later when you calculate currency conversions."
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency BaseCurrencyAmount {
+    apiName = "FinanceBalanceSnapshot.BaseCurrencyAmount"
+    label = "Base Currency Amount"
+    inlineHelpText = "Define this value based on any currency conversion needed for the total amount with tax."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency BaseCurrencyBalance {
+    apiName = "FinanceBalanceSnapshot.BaseCurrencyBalance"
+    label = "Base Currency Balance"
+    inlineHelpText = "Define this value based on any currency conversion needed for the resulting balance."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LegalEntityId {
+    apiName = "FinanceBalanceSnapshot.LegalEntityId"
+    label = "Legal Entity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.Custom_Object__c,
+      salesforce.LegalEntity,
+      salesforce.Parent__c,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "Legal entity associated with the finance transaction. This is an optional lookup that you can add to associate the finance transaction to GL rules for external ledger processing."
+    createable = false
+    updateable = false
+    relationshipName = "LegalEntity"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemIntegrationMode {
+    apiName = "FinanceBalanceSnapshot.FinanceSystemIntegrationMode"
+    inlineHelpText = "The type of the external financial system used to recognize the finance transaction."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemIntegrationStatus {
+    apiName = "FinanceBalanceSnapshot.FinanceSystemIntegrationStatus"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemName {
+    apiName = "FinanceBalanceSnapshot.FinanceSystemName"
+    inlineHelpText = "The name of the external financial system used to recognize the finance transaction."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemTransactionNumber {
+    apiName = "FinanceBalanceSnapshot.FinanceSystemTransactionNumber"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalEventType {
+    apiName = "FinanceBalanceSnapshot.OriginalEventType"
+    inlineHelpText = "The finance transaction's event type when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalReferenceEntityType {
+    apiName = "FinanceBalanceSnapshot.OriginalReferenceEntityType"
+    inlineHelpText = "The finance transaction's reference entity type when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

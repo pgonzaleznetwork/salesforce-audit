@@ -1,0 +1,11 @@
+salesforce.ApexClass SRM_MetadataApiMocks {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_MetadataApiMocks"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataApiMocks.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataAPI
+    },
+  ]
+}

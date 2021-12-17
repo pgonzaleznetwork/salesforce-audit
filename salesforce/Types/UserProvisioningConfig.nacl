@@ -1,0 +1,56 @@
+type salesforce.UserProvisioningConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string approvalRequired {
+  }
+  string connectedApp {
+    foreignKeyDomain = [
+      "ConnectedApplication",
+    ]
+  }
+  boolean enabled {
+  }
+  string enabledOperations {
+  }
+  string flow {
+    foreignKeyDomain = [
+      "FlowDefinition",
+    ]
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string namedCredential {
+    foreignKeyDomain = [
+      salesforce.NamedCredential,
+    ]
+  }
+  string notes {
+  }
+  string onUpdateAttributes {
+  }
+  string reconFilter {
+  }
+  string userAccountMapping {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "userProvisioningConfig"
+  dirName = "userProvisioningConfigs"
+  metadataType = "UserProvisioningConfig"
+}

@@ -1,0 +1,21 @@
+salesforce.StandardValueSet CaseOrigin {
+  fullName = "CaseOrigin"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Phone"
+      default = false
+      label = "Phone"
+    },
+    {
+      fullName = "Email"
+      default = false
+      label = "Email"
+    },
+    {
+      fullName = "Web"
+      default = false
+      label = "Web"
+    },
+  ]
+}

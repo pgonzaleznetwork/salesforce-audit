@@ -1,0 +1,42 @@
+type salesforce.FlowAssignmentItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string assignToReference {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Add",
+        "AddAtStart",
+        "AddItem",
+        "Assign",
+        "AssignCount",
+        "RemoveAfterFirst",
+        "RemoveAll",
+        "RemoveBeforeFirst",
+        "RemoveFirst",
+        "RemovePosition",
+        "RemoveUncommon",
+        "Subtract",
+      ]
+    }
+  }
+  metadataType = "FlowAssignmentItem"
+}

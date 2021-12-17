@@ -1,0 +1,10 @@
+salesforce.Role CustomerSupportNorthAmerica {
+  fullName = "CustomerSupportNorthAmerica"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Customer Support, North America"
+  mayForecastManagerShare = false
+  name = "Customer Support, North America"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.SVPCustomerServiceSupport
+}

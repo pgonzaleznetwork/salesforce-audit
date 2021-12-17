@@ -1,0 +1,41 @@
+type salesforce.FlowChoice {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string choiceText {
+  }
+  string description {
+  }
+  string name {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  salesforce.FlowChoiceUserInput userInput {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Currency",
+        "Date",
+        "Number",
+        "String",
+      ]
+    }
+  }
+  metadataType = "FlowChoice"
+}

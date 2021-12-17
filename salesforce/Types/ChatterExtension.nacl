@@ -1,0 +1,54 @@
+type salesforce.ChatterExtension {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string compositionComponent {
+  }
+  string description {
+  }
+  string extensionName {
+  }
+  serviceid fullName {
+  }
+  string headerText {
+  }
+  string hoverText {
+  }
+  string icon {
+    foreignKeyDomain = [
+      "ContentAsset",
+    ]
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string renderComponent {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Lightning",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "ChatterExtension"
+  dirName = "ChatterExtensions"
+  metadataType = "ChatterExtension"
+}

@@ -1,0 +1,23 @@
+salesforce.ApexClass fflib_Application {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_Application"
+  content = file("salesforce/Records/ApexClass/fflib_Application.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectSelector
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectUnitOfWork
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectUnitOfWork
+    },
+  ]
+}

@@ -1,0 +1,15 @@
+salesforce.ListView Campaign_AllActiveCampaigns {
+  fullName = "Campaign.AllActiveCampaigns"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "CAMPAIGN.ACTIVE"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "All Active Campaigns"
+  _parent = [
+    salesforce.Campaign,
+  ]
+}

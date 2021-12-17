@@ -1,0 +1,4 @@
+salesforce.KnowledgeSettings {
+  fullName = "Knowledge"
+  enableKnowledge = false
+}

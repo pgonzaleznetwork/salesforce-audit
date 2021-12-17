@@ -1,0 +1,57 @@
+type salesforce.CleanRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean bulkEnabled {
+  }
+  boolean bypassTriggers {
+  }
+  boolean bypassWorkflow {
+  }
+  string description {
+  }
+  string developerName {
+  }
+  "List<salesforce.FieldMapping>" fieldMappings {
+  }
+  string masterLabel {
+  }
+  string matchRule {
+  }
+  string sourceSobjectType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomEntityDefinition",
+        "DatacloudAddress",
+        "DatacloudDandBCompany",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Active",
+        "Inactive",
+      ]
+    }
+  }
+  string targetSobjectType {
+  }
+  metadataType = "CleanRule"
+}

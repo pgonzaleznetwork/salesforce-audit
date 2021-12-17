@@ -1,0 +1,27 @@
+type salesforce.ConnectedAppOauthAssetToken {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string assetAudiences {
+  }
+  boolean assetIncludeAttributes {
+  }
+  boolean assetIncludeCustomPerms {
+  }
+  string assetSigningCertId {
+  }
+  number assetValidityPeriod {
+  }
+  metadataType = "ConnectedAppOauthAssetToken"
+}

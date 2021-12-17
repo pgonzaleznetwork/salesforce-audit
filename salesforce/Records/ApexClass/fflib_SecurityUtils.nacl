@@ -1,0 +1,11 @@
+salesforce.ApexClass fflib_SecurityUtils {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SecurityUtils"
+  content = file("salesforce/Records/ApexClass/fflib_SecurityUtils.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDescribe
+    },
+  ]
+}

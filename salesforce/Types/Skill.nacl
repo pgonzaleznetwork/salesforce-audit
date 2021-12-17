@@ -1,0 +1,31 @@
+type salesforce.Skill {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.SkillAssignments assignments {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "skill"
+  dirName = "skills"
+  metadataType = "Skill"
+}

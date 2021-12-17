@@ -1,0 +1,206 @@
+salesforce.Layout FinanceBalanceSnapshot_Finance_Balance_Snapshot_Layout@bsss {
+  fullName = "FinanceBalanceSnapshot-Finance Balance Snapshot Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.FinanceTransactionId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.LegalEntityId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.ReferenceEntityType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.EventType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.ReferenceEntityId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceBalanceSnapshot.field.OriginalReferenceEntityType
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceBalanceSnapshot.field.OriginalEventType
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.TotalAmountWithTax
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.ChargeAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.Subtotal
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.ImpactAmount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.Balance
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.TaxAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DateInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.FinanceBalanceSnapshot.field.TransactionDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.DueDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.FinanceBalanceSnapshot.field.EffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "FinanceSystemIntegrationInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.FinanceSystemName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.FinanceSystemIntegrationMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.FinanceSystemTransactionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceBalanceSnapshot.field.FinanceSystemIntegrationStatus
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceBalanceSnapshot.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceBalanceSnapshot.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceBalanceSnapshot.field.LastModifiedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceBalanceSnapshot.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.FinanceBalanceSnapshot,
+  ]
+}

@@ -1,0 +1,8 @@
+salesforce.ListView Center__c_All {
+  fullName = "Center__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Center__c,
+  ]
+}

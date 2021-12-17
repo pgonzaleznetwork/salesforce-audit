@@ -1,0 +1,33 @@
+type salesforce.Country {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  string integrationValue {
+  }
+  string isoCode {
+  }
+  string label {
+  }
+  boolean orgDefault {
+  }
+  boolean standard {
+  }
+  "List<salesforce.State>" states {
+  }
+  boolean visible {
+  }
+  metadataType = "Country"
+}

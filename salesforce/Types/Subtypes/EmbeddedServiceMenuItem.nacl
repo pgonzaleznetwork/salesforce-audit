@@ -1,0 +1,60 @@
+type salesforce.EmbeddedServiceMenuItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string channel {
+    foreignKeyDomain = [
+      salesforce.EmbeddedServiceConfig,
+      "MessagingChannel",
+    ]
+  }
+  string channelType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomURL",
+        "EmbeddedServiceConfig",
+        "MessagingChannel",
+        "Phone",
+      ]
+    }
+  }
+  string customUrl {
+  }
+  number displayOrder {
+  }
+  salesforce.EmbeddedServiceCustomLabel embeddedServiceCustomLabels {
+  }
+  string iconUrl {
+  }
+  boolean isDisplayedOnPageLoad {
+  }
+  string itemName {
+  }
+  boolean osOptionsHideInIOS {
+  }
+  boolean osOptionsHideInLinuxOS {
+  }
+  boolean osOptionsHideInMacOS {
+  }
+  boolean osOptionsHideInOtherOS {
+  }
+  boolean osOptionsHideInWindowsOS {
+  }
+  string phoneNumber {
+  }
+  boolean shouldOpenUrlInSameTab {
+  }
+  metadataType = "EmbeddedServiceMenuItem"
+}

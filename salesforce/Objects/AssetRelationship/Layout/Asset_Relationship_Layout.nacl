@@ -1,0 +1,79 @@
+salesforce.Layout AssetRelationship_Asset_Relationship_Layout@bss {
+  fullName = "AssetRelationship-Asset Relationship Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AssetRelationship.field.AssetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssetRelationship.field.FromDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssetRelationship.field.RelationshipType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AssetRelationship.field.RelatedAssetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AssetRelationship.field.ToDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetRelationship.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.AssetRelationship.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AssetRelationship,
+  ]
+}

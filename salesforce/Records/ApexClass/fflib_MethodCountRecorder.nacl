@@ -1,0 +1,17 @@
+salesforce.ApexClass fflib_MethodCountRecorder {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_MethodCountRecorder"
+  content = file("salesforce/Records/ApexClass/fflib_MethodCountRecorder.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_InvocationOnMock
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+  ]
+}

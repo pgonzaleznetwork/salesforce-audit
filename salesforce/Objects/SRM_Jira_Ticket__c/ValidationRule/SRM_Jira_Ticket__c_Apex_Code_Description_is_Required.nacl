@@ -1,0 +1,11 @@
+salesforce.ValidationRule SRM_Jira_Ticket__c_Apex_Code_Description_is_Required {
+  fullName = "SRM_Jira_Ticket__c.Apex_Code_Description_is_Required"
+  active = false
+  description = "Forces the user to include short and friendly description of the changes you made to Apex code when closing the deployment (if it has apex code, which is determined by a trigger)."
+  errorConditionFormula = "ISPICKVAL(Status__c, \"Deployed\") && Fire_New_Apex_Notification__c = TRUE && ISBLANK(Friendly_description_of_Apex_changes__c)"
+  errorDisplayField = salesforce.SRM_Jira_Ticket__c.field.Friendly_description_of_Apex_changes__c
+  errorMessage = "You must include a short and friendly description of the changes you made to Apex code."
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_SObjectDescribe {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectDescribe"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectDescribe.cls")
+}

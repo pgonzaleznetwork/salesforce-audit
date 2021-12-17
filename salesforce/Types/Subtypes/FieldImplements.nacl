@@ -1,0 +1,21 @@
+type salesforce.FieldImplements {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+  }
+  string interfaceField {
+  }
+  metadataType = "FieldImplements"
+}

@@ -1,0 +1,21 @@
+type salesforce.PresenceConfigAssignments {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.PresenceConfigProfileAssignments profiles {
+  }
+  salesforce.PresenceConfigUserAssignments users {
+  }
+  metadataType = "PresenceConfigAssignments"
+}

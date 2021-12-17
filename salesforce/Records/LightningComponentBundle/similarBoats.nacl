@@ -1,0 +1,53 @@
+salesforce.LightningComponentBundle similarBoats {
+  apiVersion = 48
+  isExposed = true
+  masterLabel = "Similar boats"
+  description = "Similar Boats"
+  targets = {
+    target = [
+      "lightning__RecordPage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        property = {
+          name = "similarBy"
+          type = "String"
+          label = "Enter the property you want to compare by"
+          datasource = "Type,Price,Length"
+        }
+        objects = [
+          {
+            object = "Boat__c"
+          },
+        ]
+      },
+    ]
+  }
+  fullName = "similarBoats"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/similarBoats/similarBoats.html")
+        filePath = "lwc/similarBoats/similarBoats.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/similarBoats/similarBoats.js")
+        filePath = "lwc/similarBoats/similarBoats.js"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.BoatDataService
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatTile
+    },
+  ]
+}

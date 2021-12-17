@@ -1,0 +1,57 @@
+settings salesforce.FlowSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean doesFormulaEnforceDataAccess {
+  }
+  boolean doesFormulaGenerateHtmlOutput {
+  }
+  boolean enableFlowBREncodedFixEnabled {
+  }
+  boolean enableFlowDeployAsActiveEnabled {
+  }
+  boolean enableFlowFieldFilterEnabled {
+  }
+  boolean enableFlowFormulasFixEnabled {
+  }
+  boolean enableFlowInterviewSharingEnabled {
+  }
+  boolean enableFlowNullPreviousValueFix {
+  }
+  boolean enableFlowPauseEnabled {
+  }
+  boolean enableFlowUseApexExceptionEmail {
+  }
+  boolean enableInvocableFlowFixEnabled {
+  }
+  boolean enableLightningRuntimeEnabled {
+  }
+  boolean isAccessToInvokedApexRequired {
+  }
+  boolean isApexPluginAccessModifierRespected {
+  }
+  boolean isEnhancedFlowListViewVisible {
+  }
+  boolean isManageFlowRequiredForAutomationCharts {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "FlowSettings"
+}

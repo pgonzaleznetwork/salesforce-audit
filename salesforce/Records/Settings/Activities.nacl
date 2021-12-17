@@ -1,0 +1,26 @@
+salesforce.ActivitiesSettings {
+  fullName = "Activities"
+  allowUsersToRelateMultipleContactsToTasksAndEvents = false
+  autoRelateEventAttendees = false
+  enableActivityReminders = true
+  enableClickCreateEvents = false
+  enableDragAndDropScheduling = true
+  enableEmailTracking = true
+  enableGroupTasks = true
+  enableHideChildEventsPreference = false
+  enableListViewScheduling = false
+  enableLogNote = false
+  enableMLSingleClientProfile = false
+  enableMultidayEvents = true
+  enableRecurringEvents = true
+  enableRecurringTasks = true
+  enableRollUpActivToContactsAcct = true
+  enableSidebarCalendarShortcut = false
+  enableSimpleTaskCreateUI = true
+  enableUNSTaskDelegatedToNotifications = true
+  enableUserListViewCalendars = false
+  showCustomLogoMeetingRequests = false
+  showEventDetailsMultiUserCalendar = false
+  showHomePageHoverLinksForEvents = true
+  showMyTasksHoverLinks = true
+}

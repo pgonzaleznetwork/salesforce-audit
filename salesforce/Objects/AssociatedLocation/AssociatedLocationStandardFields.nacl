@@ -1,0 +1,123 @@
+type salesforce.AssociatedLocation {
+  serviceid Id {
+    apiName = "AssociatedLocation.Id"
+    label = "Associated Location ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssociatedLocation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AssociatedLocationNumber {
+    apiName = "AssociatedLocation.AssociatedLocationNumber"
+    label = "Associated Location Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssociatedLocation.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssociatedLocation.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssociatedLocation.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssociatedLocation.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssociatedLocation.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentRecordId {
+    apiName = "AssociatedLocation.ParentRecordId"
+    label = "Account Name ID"
+    _required = true
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ParentRecord"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup LocationId {
+    apiName = "AssociatedLocation.LocationId"
+    label = "Location ID"
+    _required = true
+    referenceTo = [
+      salesforce.Location,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Location"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Picklist Type {
+    apiName = "AssociatedLocation.Type"
+    label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.DateTime ActiveFrom {
+    apiName = "AssociatedLocation.ActiveFrom"
+    label = "Active From"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ActiveTo {
+    apiName = "AssociatedLocation.ActiveTo"
+    label = "Active To"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

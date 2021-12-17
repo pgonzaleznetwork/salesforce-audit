@@ -1,0 +1,96 @@
+salesforce.StandardValueSet OpportunityStage {
+  fullName = "OpportunityStage"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Prospecting"
+      default = false
+      label = "Prospecting"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 10
+      won = false
+    },
+    {
+      fullName = "Qualification"
+      default = false
+      label = "Qualification"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 10
+      won = false
+    },
+    {
+      fullName = "Needs Analysis"
+      default = false
+      label = "Needs Analysis"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 20
+      won = false
+    },
+    {
+      fullName = "Value Proposition"
+      default = false
+      label = "Value Proposition"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 50
+      won = false
+    },
+    {
+      fullName = "Id. Decision Makers"
+      default = false
+      label = "Id. Decision Makers"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 60
+      won = false
+    },
+    {
+      fullName = "Perception Analysis"
+      default = false
+      label = "Perception Analysis"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 70
+      won = false
+    },
+    {
+      fullName = "Proposal/Price Quote"
+      default = false
+      label = "Proposal/Price Quote"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 75
+      won = false
+    },
+    {
+      fullName = "Negotiation/Review"
+      default = false
+      label = "Negotiation/Review"
+      closed = false
+      forecastCategory = "Pipeline"
+      probability = 90
+      won = false
+    },
+    {
+      fullName = "Closed Won"
+      default = false
+      label = "Closed Won"
+      closed = true
+      forecastCategory = "Closed"
+      probability = 100
+      won = true
+    },
+    {
+      fullName = "Closed Lost"
+      default = false
+      label = "Closed Lost"
+      closed = true
+      forecastCategory = "Omitted"
+      probability = 0
+      won = false
+    },
+  ]
+}

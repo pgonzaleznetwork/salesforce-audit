@@ -1,0 +1,37 @@
+type salesforce.MyDomainDiscoverableLogin {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string apexHandler {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string executeApexHandlerAs {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  serviceid fullName {
+  }
+  string usernameLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "myDomainDiscoverableLogin"
+  dirName = "myDomainDiscoverableLogins"
+  metadataType = "MyDomainDiscoverableLogin"
+}

@@ -1,0 +1,33 @@
+type salesforce.BlacklistedConsumer {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean blockedByApiWhitelisting {
+  }
+  string consumerKey {
+  }
+  string consumerName {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "blacklistedConsumer"
+  dirName = "blacklistedConsumers"
+  metadataType = "BlacklistedConsumer"
+}

@@ -1,0 +1,15 @@
+salesforce.CustomMetadata SRM_Package_XML_Setting_Default@uuuv {
+  fullName = "SRM_Package_XML_Setting.Default"
+  label = "Default"
+  protected = false
+  values = [
+    {
+      field = "Api_Version__c"
+      value = "47.0"
+    },
+    {
+      field = "XML_Namespace__c"
+      value = "http://soap.sforce.com/2006/04/metadata"
+    },
+  ]
+}

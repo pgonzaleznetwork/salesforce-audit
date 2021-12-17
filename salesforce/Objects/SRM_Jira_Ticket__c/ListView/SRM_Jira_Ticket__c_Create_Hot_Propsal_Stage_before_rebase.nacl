@@ -1,0 +1,21 @@
+salesforce.ListView SRM_Jira_Ticket__c_Create_Hot_Propsal_Stage_before_rebase {
+  fullName = "SRM_Jira_Ticket__c.Create_Hot_Propsal_Stage_before_rebase"
+  columns = [
+    "NAME",
+    "CRM_Sprint__c",
+    "Status__c",
+    "Connected_Org__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Title__c"
+      operation = "equals"
+      value = "New Opportunity stage \"Late Stage Proposal\""
+    },
+  ]
+  label = "rabase:Create Late Stage Proposal"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

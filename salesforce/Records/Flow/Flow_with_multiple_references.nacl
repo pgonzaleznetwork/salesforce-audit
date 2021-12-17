@@ -1,0 +1,226 @@
+salesforce.Flow Flow_with_multiple_references {
+  fullName = "Flow_with_multiple_references"
+  apiVersion = 53
+  assignments = [
+    {
+      name = "assignment_label_goes_here"
+      label = "assignment label goes here"
+      locationX = 474
+      locationY = 460
+      assignmentItems = [
+        {
+          assignToReference = "accountVariable.CustomerPriority__c"
+          operator = "Assign"
+          value = {
+            stringValue = "Critical"
+          }
+        },
+        {
+          assignToReference = "accountVariable.Active__c"
+          operator = "Assign"
+        },
+      ]
+      connector = {
+        targetReference = "update_records_label_goes_here"
+      }
+    },
+  ]
+  decisions = [
+    {
+      name = "decision_label_goes_here"
+      label = "decision label goes here"
+      locationX = 168
+      locationY = 469
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "decision_one"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "accountVariable.CustomerPriority__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Critical"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "assignment_label_goes_here"
+          }
+          label = "decision one"
+        },
+        {
+          name = "decision_two"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "accountVariable.CustomerPriority__c"
+              operator = "EqualTo"
+            },
+          ]
+          label = "decision two"
+        },
+      ]
+    },
+  ]
+  dynamicChoiceSets = {
+    name = "picklist_choice_name_goes_here"
+    dataType = "Picklist"
+    picklistField = salesforce.Account.field.CustomerPriority__c
+    picklistObject = salesforce.Account
+  }
+  formulas = [
+    {
+      name = "formula_name_goes_here"
+      dataType = "String"
+      expression = "{!accountVariable.CustomerPriority__c}"
+    },
+  ]
+  interviewLabel = "Flow with multiple references {!$Flow.CurrentDateTime}"
+  label = "Flow with multiple references"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  recordCreates = [
+    {
+      name = "create_record_label_goes_here"
+      label = "create record label goes here"
+      locationX = 673
+      locationY = 176
+      inputAssignments = [
+        {
+          field = salesforce.Account.field.CustomerPriority__c
+          value = {
+            stringValue = "Medium"
+          }
+        },
+        {
+          field = salesforce.Account.field.Name
+          value = {
+            stringValue = "new name for creation"
+          }
+        },
+      ]
+      object = salesforce.Account
+      storeOutputAutomatically = true
+    },
+  ]
+  recordUpdates = [
+    {
+      name = "update_records_label_goes_here"
+      label = "update records label goes here"
+      locationX = 674
+      locationY = 385
+      connector = {
+        targetReference = "create_record_label_goes_here"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Account.field.CustomerPriority__c
+          operator = "EqualTo"
+          value = {
+            stringValue = "Medium"
+          }
+        },
+        {
+          field = salesforce.Account.field.Name
+          operator = "EqualTo"
+          value = {
+            stringValue = "condition for update"
+          }
+        },
+      ]
+      inputAssignments = [
+        {
+          field = salesforce.Account.field.CustomerPriority__c
+          value = {
+            stringValue = "Lowest"
+          }
+        },
+        {
+          field = salesforce.Account.field.Name
+        },
+      ]
+      object = salesforce.Account
+    },
+  ]
+  screens = {
+    name = "screen_name_goes_here"
+    label = "screen name goes here"
+    locationX = 176
+    locationY = 249
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    connector = {
+      targetReference = "decision_label_goes_here"
+    }
+    fields = [
+      {
+        name = "text_label_goes_here"
+        dataType = "String"
+        defaultValue = {
+          elementReference = "accountVariable.CustomerPriority__c"
+        }
+        fieldText = "text label goes here"
+        fieldType = "InputField"
+        isRequired = false
+      },
+      {
+        name = "display_text_goes_here"
+        fieldText = "<p>{!accountVariable.CustomerPriority__c}</p>"
+        fieldType = "DisplayText"
+      },
+    ]
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    locationX = 50
+    locationY = 50
+    connector = {
+      targetReference = "screen_name_goes_here"
+    }
+  }
+  status = "InvalidDraft"
+  textTemplates = {
+    name = "template_template_goes_here"
+    isViewedAsPlainText = false
+    text = "<p>text of the template is right here. Field reference: {!accountVariable.CustomerPriority__c}</p>"
+  }
+  variables = [
+    {
+      name = "accountVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Active__c
+    },
+  ]
+}

@@ -1,0 +1,15 @@
+salesforce.ListView Order_AllDraftOrders {
+  fullName = "Order.AllDraftOrders"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "ORDERS.STATUS_CODE"
+      operation = "equals"
+      value = "D"
+    },
+  ]
+  label = "All Draft Orders"
+  _parent = [
+    salesforce.Order,
+  ]
+}

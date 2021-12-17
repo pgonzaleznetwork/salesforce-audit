@@ -1,0 +1,220 @@
+type salesforce.ConsumptionSchedule {
+  serviceid Id {
+    apiName = "ConsumptionSchedule.Id"
+    label = "Consumption Schedule ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ConsumptionSchedule.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ConsumptionSchedule.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ConsumptionSchedule.Name"
+    label = "Consumption Schedule Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ConsumptionSchedule.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ConsumptionSchedule.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ConsumptionSchedule.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ConsumptionSchedule.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ConsumptionSchedule.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "ConsumptionSchedule.IsActive"
+    label = "Active"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ConsumptionSchedule.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Number BillingTerm {
+    apiName = "ConsumptionSchedule.BillingTerm"
+    label = "Billing Term"
+    _required = true
+    precision = 9
+    inlineHelpText = "Number of billing units that this consumption schedule applies to. For example, if the selected Billing Term Unit is Month, enter 12 to apply the consumption schedules for 12 months. Apply consumption schedules to as many as 20 quarters, 60 months, or 5 years."
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist BillingTermUnit {
+    apiName = "ConsumptionSchedule.BillingTermUnit"
+    label = "Billing Term Unit"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Month"
+        default = false
+        label = "Month"
+        isActive = true
+      },
+      {
+        fullName = "Quarter"
+        default = false
+        label = "Quarter"
+        isActive = true
+      },
+      {
+        fullName = "Year"
+        default = false
+        label = "Year"
+        isActive = true
+      },
+    ]
+    restricted = true
+    inlineHelpText = "The unit used with the billing term to determine the billing frequency."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "ConsumptionSchedule.Type"
+    label = "Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Range"
+        default = false
+        label = "Range"
+        isActive = true
+      },
+      {
+        fullName = "Slab"
+        default = false
+        label = "Slab"
+        isActive = true
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Range: The schedule prices only using the tier that applies to the usage quantity. Slab: Usage within a given bound receives pricing equal to its tier's value."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist UnitOfMeasure {
+    apiName = "ConsumptionSchedule.UnitOfMeasure"
+    label = "Unit of Measure"
+    inlineHelpText = "Usage quantities and rates apply to this unit of measurement."
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Picklist RatingMethod {
+    apiName = "ConsumptionSchedule.RatingMethod"
+    label = "Rating Method"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Tier"
+        default = false
+        label = "Tier"
+        isActive = true
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Choose a specific use case to rate usage against this schedule. This is a controlling picklist for the Type field."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text MatchingAttribute {
+    apiName = "ConsumptionSchedule.MatchingAttribute"
+    label = "Matching Attribute"
+    inlineHelpText = "Usage is matched with a consumption schedule if the records share the same Matching Attribute value."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Summary NumberOfRates {
+    apiName = "ConsumptionSchedule.NumberOfRates"
+    label = "Number of Consumption Rates"
+    precision = 9
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

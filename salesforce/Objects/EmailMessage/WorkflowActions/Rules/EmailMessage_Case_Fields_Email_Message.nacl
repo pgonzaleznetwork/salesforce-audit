@@ -1,0 +1,26 @@
+salesforce.WorkflowRule EmailMessage_Case_Fields_Email_Message@vsss {
+  fullName = "EmailMessage.Case Fields Email Message"
+  actions = [
+    {
+      name = salesforce.WorkflowFieldUpdate.instance.EmailMessage_update_case_field@vuu
+      type = "FieldUpdate"
+    },
+  ]
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.Case.field.Status
+      operation = "equals"
+      value = "New"
+    },
+    {
+      field = salesforce.Case.field.SLAViolation__c
+      operation = "equals"
+      value = "No"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.EmailMessage,
+  ]
+}

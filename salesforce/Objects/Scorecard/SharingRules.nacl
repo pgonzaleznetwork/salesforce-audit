@@ -1,0 +1,6 @@
+salesforce.SharingRules Scorecard {
+  fullName = "Scorecard"
+  _parent = [
+    salesforce.Scorecard,
+  ]
+}

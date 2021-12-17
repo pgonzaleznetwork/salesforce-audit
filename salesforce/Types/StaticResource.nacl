@@ -1,0 +1,41 @@
+type salesforce.StaticResource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string cacheControl {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Private",
+        "Public",
+      ]
+    }
+  }
+  string content {
+  }
+  string contentType {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  suffix = "resource"
+  dirName = "staticresources"
+  metadataType = "StaticResource"
+}

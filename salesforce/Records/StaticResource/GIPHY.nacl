@@ -1,0 +1,6 @@
+salesforce.StaticResource GIPHY {
+  cacheControl = "Private"
+  contentType = "text/javascript"
+  fullName = "GIPHY"
+  content = file("salesforce/Records/StaticResource/GIPHY.resource")
+}

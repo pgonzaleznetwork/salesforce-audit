@@ -1,0 +1,25 @@
+type salesforce.ListPlacement {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number height {
+  }
+  string location {
+  }
+  string units {
+  }
+  number width {
+  }
+  metadataType = "ListPlacement"
+}

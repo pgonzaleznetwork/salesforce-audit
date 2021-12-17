@@ -1,0 +1,91 @@
+type salesforce.SRM_Development_Task__c {
+  salesforce.FormulaText Case_Subject__c {
+    apiName = "SRM_Development_Task__c.Case_Subject__c"
+    externalId = false
+    formula = "Case__r.Subject"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Case Subject"
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Development_Task__c.field.Case__c
+      },
+    ]
+  }
+  salesforce.Lookup Case__c {
+    apiName = "SRM_Development_Task__c.Case__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Case"
+    referenceTo = [
+      salesforce.Case,
+    ]
+    relationshipLabel = "Development Tasks"
+    relationshipName = "Development_Tasks"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Html Description__c {
+    apiName = "SRM_Development_Task__c.Description__c"
+    externalId = false
+    label = "Description"
+    length = 32768
+    trackFeedHistory = false
+    trackTrending = false
+    visibleLines = 25
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Date Due_Date__c {
+    apiName = "SRM_Development_Task__c.Due_Date__c"
+    externalId = false
+    label = "Due Date"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Status__c {
+    apiName = "SRM_Development_Task__c.Status__c"
+    externalId = false
+    label = "Status"
+    trackFeedHistory = false
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Open"
+        default = true
+        label = "Open"
+      },
+      {
+        fullName = "Done"
+        default = false
+        label = "Done"
+      },
+      {
+        fullName = "Cancelled"
+        default = false
+        label = "Cancelled"
+      },
+    ]
+    sorted = false
+    restricted = true
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

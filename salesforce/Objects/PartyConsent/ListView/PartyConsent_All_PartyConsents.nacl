@@ -1,0 +1,8 @@
+salesforce.ListView PartyConsent_All_PartyConsents {
+  fullName = "PartyConsent.All_PartyConsents"
+  filterScope = "Everything"
+  label = "All Party Consents"
+  _parent = [
+    salesforce.PartyConsent,
+  ]
+}

@@ -1,0 +1,115 @@
+type salesforce.SRM_Metadata__c {
+  salesforce.MasterDetail Jira_Ticket__c {
+    apiName = "SRM_Metadata__c.Jira_Ticket__c"
+    label = "Jira Ticket"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = false
+    referenceTo = [
+      salesforce.SRM_Jira_Ticket__c,
+    ]
+    inlineHelpText = "The Jira Ticket (story, bug, etc.) that this metadata is relevant to."
+    createable = true
+    updateable = false
+    relationshipOrder = 0
+    relationshipName = "Metadata"
+    queryable = true
+    description = "The Jira Ticket (story, bug, etc.) that this metadata is relevant to."
+    externalId = false
+    relationshipLabel = "Relevant Metadata"
+    trackTrending = false
+  }
+  salesforce.Text Name__c {
+    apiName = "SRM_Metadata__c.Name__c"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 250
+    queryable = true
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist Deployment_Type__c {
+    apiName = "SRM_Metadata__c.Deployment_Type__c"
+    externalId = false
+    label = "Deployment Type"
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Brand new metadata"
+        default = true
+        label = "Brand new metadata"
+      },
+      {
+        fullName = "Existing, updated metadata"
+        default = false
+        label = "Existing, updated metadata"
+      },
+    ]
+    sorted = false
+    restricted = true
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Referenced_in__c {
+    apiName = "SRM_Metadata__c.Referenced_in__c"
+    externalId = false
+    label = "Referenced in"
+    length = 32768
+    trackTrending = false
+    visibleLines = 3
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox Referenced_in_another_ticket__c {
+    apiName = "SRM_Metadata__c.Referenced_in_another_ticket__c"
+    defaultValue = false
+    externalId = false
+    inlineHelpText = "This metadata is referenced in another ticket under the same Sprint. It might be worth reaching out to the ticket owner to avoid merge conflicts."
+    label = "Referenced in another ticket"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText Sprint_Id__c {
+    apiName = "SRM_Metadata__c.Sprint_Id__c"
+    externalId = false
+    formula = "Jira_Ticket__r.CRM_Sprint__r.Id"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Sprint Id"
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Jira_Ticket__c.field.CRM_Sprint__c
+      },
+      {
+        reference = salesforce.SRM_Metadata__c.field.Jira_Ticket__c
+      },
+    ]
+  }
+  salesforce.Text Type__c {
+    apiName = "SRM_Metadata__c.Type__c"
+    externalId = false
+    label = "Type"
+    length = 250
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

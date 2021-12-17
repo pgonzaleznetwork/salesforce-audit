@@ -1,0 +1,14 @@
+salesforce.ApexTrigger LeadTrigger {
+  apiVersion = 52
+  status = "Active"
+  fullName = "LeadTrigger"
+  content = file("salesforce/Records/ApexTrigger/LeadTrigger.trigger")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.LeadTriggerHandler
+    },
+    {
+      reference = salesforce.Lead
+    },
+  ]
+}

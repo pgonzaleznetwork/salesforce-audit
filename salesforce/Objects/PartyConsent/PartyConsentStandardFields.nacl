@@ -1,0 +1,284 @@
+type salesforce.PartyConsent {
+  serviceid Id {
+    apiName = "PartyConsent.Id"
+    label = "PartyConsent ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "PartyConsent.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "PartyConsent.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "PartyConsent.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "PartyConsent.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "PartyConsent.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "PartyConsent.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "PartyConsent.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "PartyConsent.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyId {
+    apiName = "PartyConsent.PartyId"
+    label = "Individual ID"
+    _required = true
+    referenceTo = [
+      salesforce.Individual,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Party"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Picklist Action {
+    apiName = "PartyConsent.Action"
+    label = "Action"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Target"
+        default = true
+        label = "Target"
+        isActive = true
+      },
+      {
+        fullName = "Segment"
+        default = false
+        label = "Segment"
+        isActive = true
+      },
+      {
+        fullName = "Data Collection"
+        default = false
+        label = "Data Collection"
+        isActive = true
+      },
+      {
+        fullName = "Cross Device"
+        default = false
+        label = "Cross Device"
+        isActive = true
+      },
+      {
+        fullName = "Reidentification"
+        default = false
+        label = "Reidentification"
+        isActive = true
+      },
+      {
+        fullName = "Share Data"
+        default = false
+        label = "Share Data"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist PrivacyConsentStatus {
+    apiName = "PartyConsent.PrivacyConsentStatus"
+    label = "Privacy Consent Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "NotSeen"
+        default = true
+        label = "Not Seen"
+        isActive = true
+      },
+      {
+        fullName = "Seen"
+        default = false
+        label = "Seen"
+        isActive = true
+      },
+      {
+        fullName = "OptIn"
+        default = false
+        label = "Opt In"
+        isActive = true
+      },
+      {
+        fullName = "OptOut"
+        default = false
+        label = "Opt Out"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CaptureDate {
+    apiName = "PartyConsent.CaptureDate"
+    label = "Consent Captured Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist CaptureContactPointType {
+    apiName = "PartyConsent.CaptureContactPointType"
+    label = "Consent Captured Contact Point Type"
+    valueSet = [
+      {
+        fullName = "Email"
+        default = false
+        label = "Email"
+        isActive = true
+      },
+      {
+        fullName = "Phone"
+        default = false
+        label = "Phone"
+        isActive = true
+      },
+      {
+        fullName = "Web"
+        default = false
+        label = "Web"
+        isActive = true
+      },
+      {
+        fullName = "Social"
+        default = false
+        label = "Social"
+        isActive = true
+      },
+      {
+        fullName = "MailingAddress"
+        default = false
+        label = "Mailing Address"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text CaptureSource {
+    apiName = "PartyConsent.CaptureSource"
+    label = "Consent Captured Source"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Lookup BusinessBrandId {
+    apiName = "PartyConsent.BusinessBrandId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown DoubleConsentCaptureDate {
+    apiName = "PartyConsent.DoubleConsentCaptureDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown EffectiveFrom {
+    apiName = "PartyConsent.EffectiveFrom"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown EffectiveTo {
+    apiName = "PartyConsent.EffectiveTo"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyRoleId {
+    apiName = "PartyConsent.PartyRoleId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,82 @@
+type salesforce.Topic {
+  serviceid Id {
+    apiName = "Topic.Id"
+    label = "Topic ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Text Name {
+    apiName = "Topic.Name"
+    label = "Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 99
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "Topic.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 1000
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Topic.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Topic.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number TalkingAbout {
+    apiName = "Topic.TalkingAbout"
+    label = "Talking About"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ManagedTopicType {
+    apiName = "Topic.ManagedTopicType"
+    label = "Enabled For"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 99
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Topic.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

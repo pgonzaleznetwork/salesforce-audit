@@ -1,0 +1,8 @@
+salesforce.ListView AssetAction_AssetAction {
+  fullName = "AssetAction.AssetAction"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.AssetAction,
+  ]
+}

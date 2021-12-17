@@ -1,0 +1,17 @@
+salesforce.ChatterSettings {
+  fullName = "Chatter"
+  allowChatterGroupArchiving = true
+  allowRecordsInChatterGroup = true
+  enableCaseFeedRelativeTimestamps = true
+  enableChatter = true
+  enableChatterEmoticons = false
+  enableFeedEdit = true
+  enableFeedPinning = true
+  enableFeedsDraftPosts = true
+  enableFeedsRichText = true
+  enableInviteCsnUsers = false
+  enableOutOfOfficeEnabledPref = false
+  enableRichLinkPreviewsInFeed = true
+  enableTodayRecsInFeed = true
+  unlistedGroupsEnabled = false
+}

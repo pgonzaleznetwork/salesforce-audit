@@ -1,0 +1,57 @@
+settings salesforce.FieldServiceSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean doesAllowEditSaForCrew {
+  }
+  boolean doesShareSaParentWoWithAr {
+  }
+  boolean doesShareSaWithAr {
+  }
+  boolean fieldServiceNotificationsOrgPref {
+  }
+  boolean fieldServiceOrgPref {
+  }
+  serviceid fullName {
+  }
+  boolean isGeoCodeSyncEnabled {
+  }
+  boolean isLocationHistoryEnabled {
+  }
+  number serviceAppointmentsDueDateOffsetOrgValue {
+  }
+  string workOrderDurationSource {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Custom",
+        "TotalFromWorkPlan",
+        "WorkType",
+      ]
+    }
+  }
+  string workOrderLineItemSearchFields {
+  }
+  string workOrderSearchFields {
+  }
+  boolean enableWorkOrders {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "FieldServiceSettings"
+}

@@ -1,0 +1,29 @@
+type salesforce.FlowStage {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  boolean isActive {
+  }
+  string label {
+  }
+  string name {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  number stageOrder {
+  }
+  metadataType = "FlowStage"
+}

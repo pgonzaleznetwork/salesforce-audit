@@ -1,0 +1,38 @@
+type salesforce.Document {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string content {
+  }
+  string description {
+  }
+  boolean internalUseOnly {
+  }
+  string keywords {
+  }
+  string name {
+  }
+  boolean public {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  folderType = "DocumentFolder"
+  dirName = "documents"
+  metadataType = "Document"
+}

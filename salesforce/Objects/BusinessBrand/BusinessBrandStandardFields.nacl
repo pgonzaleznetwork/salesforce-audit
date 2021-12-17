@@ -1,0 +1,12 @@
+type salesforce.BusinessBrand {
+  string Name {
+    _hidden_value = true
+  }
+  string OrgId {
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "BusinessBrand.ParentId"
+    _hidden_value = true
+  }
+}

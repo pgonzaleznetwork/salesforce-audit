@@ -1,0 +1,23 @@
+type salesforce.FlowActionCallInputParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string name {
+  }
+  "List<salesforce.FlowMetadataValue>" processMetadataValues {
+  }
+  salesforce.FlowElementReferenceOrValue value {
+  }
+  metadataType = "FlowActionCallInputParameter"
+}

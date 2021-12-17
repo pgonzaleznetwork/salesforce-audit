@@ -1,0 +1,318 @@
+salesforce.Layout Contact_Contact__28Support_29_Layout@bspps {
+  fullName = "Contact-Contact %28Support%29 Layout"
+  emailDefault = false
+  headers = [
+    "PersonalTagging",
+    "PublicTagging",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Contact Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Contact.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Title
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Department
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Languages__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Level__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.Age__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Phone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.HomePhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.MobilePhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.OtherPhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Fax
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Email
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.AssistantName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.AssistantPhone
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Address Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.MailingAddress
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.OtherAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Additional Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Birthdate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.LeadSource
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.ReportsToId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Contact.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Contact.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.RypplePost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewCase
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewNote
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.SendEmail
+      },
+    ]
+  }
+  relatedContent = {
+    relatedContentItems = [
+      {
+        layoutItem = {
+          behavior = "Readonly"
+          field = salesforce.Contact.field.AccountId
+        }
+      },
+      {
+        layoutItem = {
+          component = "runtime_sales_social:socialPanel"
+        }
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "CASES.CASE_NUMBER",
+        "CASES.SUBJECT",
+        "CASES.PRIORITY",
+        "CASES.CREATED_DATE",
+        "CASES.STATUS",
+        "OWNER_NAME",
+      ]
+      relatedList = "RelatedCaseList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHAT_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHAT_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      fields = [
+        "OPPORTUNITY.NAME",
+        "OPPORTUNITY.STAGE_NAME",
+        "OPPORTUNITY.AMOUNT",
+        "OPPORTUNITY.CLOSE_DATE",
+      ]
+      relatedList = "RelatedOpportunityList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      fields = [
+        "ACTIVITY.SUBJECT",
+        "EMAIL_STATUS.CREATED_DATE",
+        "EMAIL_STATUS.FIRST_OPEN_DATE",
+        "EMAIL_STATUS.TIMES_OPENED",
+        "EMAIL_STATUS.LAST_OPEN_DATE",
+      ]
+      relatedList = "RelatedEmailStatusList"
+    },
+  ]
+  relatedObjects = [
+    "AccountId",
+  ]
+  runAssignmentRulesDefault = false
+  showEmailCheckbox = true
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = true
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Contact,
+  ]
+}

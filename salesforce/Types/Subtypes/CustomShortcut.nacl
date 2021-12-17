@@ -1,0 +1,27 @@
+type salesforce.CustomShortcut {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string action {
+  }
+  boolean active {
+  }
+  string keyCommand {
+  }
+  string description {
+  }
+  string eventName {
+  }
+  metadataType = "CustomShortcut"
+}

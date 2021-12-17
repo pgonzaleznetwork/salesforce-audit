@@ -1,0 +1,104 @@
+type salesforce.EmailServicesFunction {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string apexClass {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string attachmentOption {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "All",
+        "BinaryOnly",
+        "NoContent",
+        "None",
+        "TextOnly",
+      ]
+    }
+  }
+  string authenticationFailureAction {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bounce",
+        "Discard",
+        "Requeue",
+        "UseSystemDefault",
+      ]
+    }
+  }
+  string authorizationFailureAction {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bounce",
+        "Discard",
+        "Requeue",
+        "UseSystemDefault",
+      ]
+    }
+  }
+  string authorizedSenders {
+  }
+  salesforce.EmailServicesAddress emailServicesAddresses {
+  }
+  string errorRoutingAddress {
+  }
+  string functionInactiveAction {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bounce",
+        "Discard",
+        "Requeue",
+        "UseSystemDefault",
+      ]
+    }
+  }
+  string functionName {
+  }
+  boolean isActive {
+  }
+  boolean isAuthenticationRequired {
+  }
+  boolean isErrorRoutingEnabled {
+  }
+  boolean isTextAttachmentsAsBinary {
+  }
+  boolean isTlsRequired {
+  }
+  string overLimitAction {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bounce",
+        "Discard",
+        "Requeue",
+        "UseSystemDefault",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "xml"
+  dirName = "emailservices"
+  metadataType = "EmailServicesFunction"
+}

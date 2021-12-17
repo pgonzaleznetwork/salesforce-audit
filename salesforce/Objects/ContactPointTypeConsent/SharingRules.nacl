@@ -1,0 +1,6 @@
+salesforce.SharingRules ContactPointTypeConsent {
+  fullName = "ContactPointTypeConsent"
+  _parent = [
+    salesforce.ContactPointTypeConsent,
+  ]
+}

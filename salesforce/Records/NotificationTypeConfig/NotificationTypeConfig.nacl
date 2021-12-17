@@ -1,0 +1,145 @@
+salesforce.NotificationTypeConfig NotificationTypeConfig {
+  fullName = "NotificationTypeConfig"
+  notificationTypeSettings = [
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "approval_request"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "chatter_comment_on_post"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "chatter_group_mention"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "chatter_mention"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "direct_message"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "einstein_agent_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "event_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "group_announce"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "group_post"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "mailapp_alert"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "optimizer_scan_results"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "personal_analytic"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "profile_post"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "reply_recommendation_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "security_center_alert"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "stream_post"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "task_delegated_to"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "task_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "voice_call_share"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = true
+      }
+      notificationType = "wave_condition"
+    },
+  ]
+}

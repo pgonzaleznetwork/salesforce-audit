@@ -1,0 +1,26 @@
+salesforce.ApexComponent SimilarBoatsComponent {
+  apiVersion = 48
+  label = "SimilarBoatsComponent"
+  fullName = "SimilarBoatsComponent"
+  content = file("salesforce/Records/ApexComponent/SimilarBoatsComponent.component")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SimilarBoatsController
+    },
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Length__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Picture__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Price__c
+    },
+    {
+      reference = salesforce.Boat__c.field.Year_Built__c
+    },
+  ]
+}

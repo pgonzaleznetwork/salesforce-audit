@@ -1,0 +1,15 @@
+salesforce.ListView Account_NewThisWeek {
+  fullName = "Account.NewThisWeek"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "ACCOUNT.CREATED_DATE"
+      operation = "equals"
+      value = "THIS_WEEK"
+    },
+  ]
+  label = "New This Week"
+  _parent = [
+    salesforce.Account,
+  ]
+}

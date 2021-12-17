@@ -1,0 +1,2 @@
+<apex:page standardController="SRM_Jira_Ticket__c" extensions="SRM_GeneratePackageListViewConttroller" recordSetVar="tickets" action="{!generatePackage}">
+</apex:page>

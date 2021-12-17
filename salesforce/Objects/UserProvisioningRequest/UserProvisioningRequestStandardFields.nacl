@@ -1,0 +1,368 @@
+type salesforce.UserProvisioningRequest {
+  serviceid Id {
+    apiName = "UserProvisioningRequest.Id"
+    label = "UserProvisioningRequest ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "UserProvisioningRequest.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "UserProvisioningRequest.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "UserProvisioningRequest.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "UserProvisioningRequest.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "UserProvisioningRequest.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "UserProvisioningRequest.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "UserProvisioningRequest.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "UserProvisioningRequest.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SalesforceUserId {
+    apiName = "UserProvisioningRequest.SalesforceUserId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "SalesforceUser"
+    queryable = true
+  }
+  salesforce.Text ExternalUserId {
+    apiName = "UserProvisioningRequest.ExternalUserId"
+    label = "External User Id"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 150
+    queryable = true
+  }
+  salesforce.Text AppName {
+    apiName = "UserProvisioningRequest.AppName"
+    label = "App Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 150
+    queryable = true
+  }
+  salesforce.Picklist State {
+    apiName = "UserProvisioningRequest.State"
+    label = "State"
+    _required = true
+    valueSet = [
+      {
+        fullName = "New"
+        default = false
+        label = "New"
+        isActive = true
+      },
+      {
+        fullName = "Requested"
+        default = false
+        label = "Requested"
+        isActive = true
+      },
+      {
+        fullName = "Completed"
+        default = false
+        label = "Completed"
+        isActive = true
+      },
+      {
+        fullName = "Failed"
+        default = false
+        label = "Failed"
+        isActive = true
+      },
+      {
+        fullName = "Collecting"
+        default = false
+        label = "Collecting"
+        isActive = true
+      },
+      {
+        fullName = "Collected"
+        default = false
+        label = "Collected"
+        isActive = true
+      },
+      {
+        fullName = "Analyzing"
+        default = false
+        label = "Analyzing"
+        isActive = true
+      },
+      {
+        fullName = "Analyzed"
+        default = false
+        label = "Analyzed"
+        isActive = true
+      },
+      {
+        fullName = "Committing"
+        default = false
+        label = "Committing"
+        isActive = true
+      },
+      {
+        fullName = "Retried"
+        default = false
+        label = "Retried"
+        isActive = true
+      },
+      {
+        fullName = "Manually Completed"
+        default = false
+        label = "Manually Completed"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Operation {
+    apiName = "UserProvisioningRequest.Operation"
+    label = "Operation"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Create"
+        default = false
+        label = "Create"
+        isActive = true
+      },
+      {
+        fullName = "Read"
+        default = false
+        label = "Read"
+        isActive = true
+      },
+      {
+        fullName = "Update"
+        default = false
+        label = "Update"
+        isActive = true
+      },
+      {
+        fullName = "Deactivate"
+        default = false
+        label = "Deactivate"
+        isActive = true
+      },
+      {
+        fullName = "Activate"
+        default = false
+        label = "Activate"
+        isActive = true
+      },
+      {
+        fullName = "Freeze"
+        default = false
+        label = "Freeze"
+        isActive = true
+      },
+      {
+        fullName = "Unfreeze"
+        default = false
+        label = "Unfreeze"
+        isActive = true
+      },
+      {
+        fullName = "Reconcile"
+        default = false
+        label = "Reconcile"
+        isActive = true
+      },
+      {
+        fullName = "Linking"
+        default = false
+        label = "Linking"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ScheduleDate {
+    apiName = "UserProvisioningRequest.ScheduleDate"
+    label = "Scheduled Provisioning Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ConnectedAppId {
+    apiName = "UserProvisioningRequest.ConnectedAppId"
+    label = "Connected App ID"
+    referenceTo = [
+      "ConnectedApplication",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ConnectedApp"
+    queryable = true
+  }
+  salesforce.Lookup UserProvConfigId {
+    apiName = "UserProvisioningRequest.UserProvConfigId"
+    label = "UserProvisioningConfig ID"
+    referenceTo = [
+      salesforce.UserProvisioningConfig,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "UserProvConfig"
+    queryable = true
+  }
+  salesforce.Lookup UserProvAccountId {
+    apiName = "UserProvisioningRequest.UserProvAccountId"
+    label = "User Provisioning Account ID"
+    referenceTo = [
+      "UserProvAccount",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "UserProvAccount"
+    queryable = true
+  }
+  salesforce.Picklist ApprovalStatus {
+    apiName = "UserProvisioningRequest.ApprovalStatus"
+    label = "Approval Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Required"
+        default = false
+        label = "Required"
+        isActive = true
+      },
+      {
+        fullName = "NotRequired"
+        default = false
+        label = "Not Required"
+        isActive = true
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+        isActive = true
+      },
+      {
+        fullName = "Denied"
+        default = false
+        label = "Denied"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ManagerId {
+    apiName = "UserProvisioningRequest.ManagerId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Manager"
+    queryable = true
+  }
+  salesforce.Number RetryCount {
+    apiName = "UserProvisioningRequest.RetryCount"
+    label = "Retry Count"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "UserProvisioningRequest.ParentId"
+    label = "UserProvisioningRequest ID"
+    referenceTo = [
+      salesforce.UserProvisioningRequest,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Parent"
+    queryable = true
+  }
+}

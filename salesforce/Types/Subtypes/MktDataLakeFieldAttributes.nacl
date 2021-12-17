@@ -1,0 +1,40 @@
+type salesforce.MktDataLakeFieldAttributes {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string dateFormat {
+  }
+  string definitionCreationType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bridge",
+        "Curated",
+        "Custom",
+        "Derived",
+        "Standard",
+        "System",
+      ]
+    }
+  }
+  string externalName {
+  }
+  boolean isEventDate {
+  }
+  boolean isInternalOrganization {
+  }
+  number primaryIndexOrder {
+  }
+  metadataType = "MktDataLakeFieldAttributes"
+}

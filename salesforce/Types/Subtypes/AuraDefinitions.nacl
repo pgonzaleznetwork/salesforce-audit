@@ -1,0 +1,19 @@
+type salesforce.AuraDefinitions {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.AuraDefinition auraDefinition {
+  }
+  metadataType = "AuraDefinitions"
+}

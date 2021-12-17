@@ -1,0 +1,68 @@
+type salesforce.LightningPageRegion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string appendable {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "disabled",
+        "enabled",
+      ]
+    }
+  }
+  "List<salesforce.ItemInstance>" itemInstances {
+  }
+  string mode {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Append",
+        "Prepend",
+        "Replace",
+      ]
+    }
+  }
+  string name {
+  }
+  string prependable {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "disabled",
+        "enabled",
+      ]
+    }
+  }
+  string replaceable {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "disabled",
+        "enabled",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Background",
+        "Facet",
+        "Region",
+      ]
+    }
+  }
+  metadataType = "FlexiPageRegion"
+}

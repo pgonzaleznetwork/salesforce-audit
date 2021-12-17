@@ -1,0 +1,169 @@
+salesforce.Layout CreditMemoLine_Credit_Memo_Line_Layout@bsss {
+  fullName = "CreditMemoLine-Credit Memo Line Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CreditMemoLine.field.CreditMemoId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CreditMemoLine.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.RelatedLineId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.ReferenceEntityItemType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.ReferenceEntityItemTypeCode
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CreditMemoLine.field.Type
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "CreditMemoLineAmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.ChargeAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.TaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemoLine.field.LineAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "TaxInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.TaxEffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.TaxName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.TaxRate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.TaxCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemoLine.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemoLine.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemoLine.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CreditMemoLine.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.CreditMemoLine,
+  ]
+}

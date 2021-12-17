@@ -1,0 +1,27 @@
+type salesforce.ValueSet {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string controllingField {
+  }
+  boolean restricted {
+  }
+  salesforce.ValueSetValuesDefinition valueSetDefinition {
+  }
+  string valueSetName {
+  }
+  salesforce.ValueSettings valueSettings {
+  }
+  metadataType = "ValueSet"
+}

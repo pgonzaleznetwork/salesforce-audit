@@ -1,0 +1,49 @@
+settings salesforce.UserInterfaceSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableAsyncRelatedLists {
+  }
+  boolean enableClickjackUserPageHeaderless {
+  }
+  boolean enableCollapsibleSections {
+  }
+  boolean enableCollapsibleSidebar {
+  }
+  boolean enableCustomObjectTruncate {
+  }
+  boolean enableCustomSidebarOnAllPages {
+  }
+  boolean enableDeleteFieldHistory {
+  }
+  boolean enableExternalObjectAsyncRelatedLists {
+  }
+  boolean enableHoverDetails {
+  }
+  boolean enableInlineEdit {
+  }
+  boolean enablePersonalCanvas {
+  }
+  boolean enableQuickCreate {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "UserInterfaceSettings"
+}

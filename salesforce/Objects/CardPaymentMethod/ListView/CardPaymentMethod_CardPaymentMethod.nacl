@@ -1,0 +1,8 @@
+salesforce.ListView CardPaymentMethod_CardPaymentMethod {
+  fullName = "CardPaymentMethod.CardPaymentMethod"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.CardPaymentMethod,
+  ]
+}

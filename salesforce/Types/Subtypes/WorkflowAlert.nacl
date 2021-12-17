@@ -1,0 +1,48 @@
+type salesforce.WorkflowAlert {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<string>" ccEmails {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  boolean protected {
+  }
+  "List<salesforce.WorkflowEmailRecipient>" recipients {
+  }
+  string senderAddress {
+  }
+  string senderType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CurrentUser",
+        "DefaultWorkflowUser",
+        "OrgWideEmailAddress",
+      ]
+    }
+  }
+  string template {
+    foreignKeyDomain = [
+      "EmailTemplate",
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "WorkflowAlert"
+}

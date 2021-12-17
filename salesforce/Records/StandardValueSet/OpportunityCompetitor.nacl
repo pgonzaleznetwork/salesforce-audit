@@ -1,0 +1,4 @@
+salesforce.StandardValueSet OpportunityCompetitor {
+  fullName = "OpportunityCompetitor"
+  sorted = false
+}

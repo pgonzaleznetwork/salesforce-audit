@@ -1,0 +1,23 @@
+salesforce.ApexClass fflib_SObjectDomainTest {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectDomainTest"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectDomainTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IDGenerator
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDomain
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+    {
+      reference = salesforce.User
+    },
+  ]
+}

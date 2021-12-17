@@ -1,0 +1,68 @@
+type salesforce.FeedFilterCriterion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string feedItemType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActivityEvent",
+        "AdvancedTextPost",
+        "AnnouncementPost",
+        "ApprovalPost",
+        "AttachArticleEvent",
+        "AttachExternalDocumentEvent",
+        "BasicTemplateFeedItem",
+        "CallLogPost",
+        "CanvasPost",
+        "CaseCommentPost",
+        "ChangeStatusPost",
+        "ChatTranscriptPost",
+        "CollaborationGroupCreated",
+        "CollaborationGroupUnarchived",
+        "ContentPost",
+        "CreateRecordEvent",
+        "DashboardComponentAlert",
+        "DashboardComponentSnapshot",
+        "EmailMessageEvent",
+        "FacebookPost",
+        "LinkPost",
+        "MilestoneEvent",
+        "PollPost",
+        "ProfileSkillPost",
+        "QuestionPost",
+        "ReplyPost",
+        "RypplePost",
+        "SocialPost",
+        "TestItem",
+        "TextPost",
+        "TrackedChange",
+        "Undefined",
+        "UserStatus",
+      ]
+    }
+  }
+  string feedItemVisibility {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AllUsers",
+        "InternalUsers",
+      ]
+    }
+  }
+  string relatedSObjectType {
+  }
+  metadataType = "FeedFilterCriterion"
+}

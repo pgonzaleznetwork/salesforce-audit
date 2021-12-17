@@ -1,0 +1,37 @@
+type salesforce.PathAssistant {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  string entityName {
+  }
+  string fieldName {
+  }
+  string masterLabel {
+  }
+  "List<salesforce.PathAssistantStep>" pathAssistantSteps {
+  }
+  string recordTypeName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "pathAssistant"
+  dirName = "pathAssistants"
+  metadataType = "PathAssistant"
+}

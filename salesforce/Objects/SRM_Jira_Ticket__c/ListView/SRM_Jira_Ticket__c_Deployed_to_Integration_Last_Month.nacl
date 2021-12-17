@@ -1,0 +1,21 @@
+salesforce.ListView SRM_Jira_Ticket__c_Deployed_to_Integration_Last_Month {
+  fullName = "SRM_Jira_Ticket__c.Deployed_to_Integration_Last_Month"
+  columns = [
+    "NAME",
+    "Title__c",
+    "Owner__c",
+    "Rebased_By__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Approx_Deployment_Date__c"
+      operation = "equals"
+      value = "LAST_MONTH"
+    },
+  ]
+  label = "Deployed to Production Last Month"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

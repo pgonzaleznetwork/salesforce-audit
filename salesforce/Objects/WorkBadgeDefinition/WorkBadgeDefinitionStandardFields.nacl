@@ -1,0 +1,177 @@
+type salesforce.WorkBadgeDefinition {
+  serviceid Id {
+    apiName = "WorkBadgeDefinition.Id"
+    label = "Badge ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkBadgeDefinition.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkBadgeDefinition.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "WorkBadgeDefinition.Name"
+    label = "Badge Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkBadgeDefinition.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkBadgeDefinition.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkBadgeDefinition.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkBadgeDefinition.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkBadgeDefinition.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsCompanyWide {
+    apiName = "WorkBadgeDefinition.IsCompanyWide"
+    label = "Company Badge"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "WorkBadgeDefinition.Description"
+    label = "Description"
+    _required = true
+    createable = true
+    updateable = true
+    length = 4000
+    queryable = true
+  }
+  salesforce.Url ImageUrl {
+    apiName = "WorkBadgeDefinition.ImageUrl"
+    label = "Image URL"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "WorkBadgeDefinition.IsActive"
+    label = "Active"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number LimitNumber {
+    apiName = "WorkBadgeDefinition.LimitNumber"
+    label = "Limit Number"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Checkbox IsLimitPerUser {
+    apiName = "WorkBadgeDefinition.IsLimitPerUser"
+    label = "Limit Per User"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date LimitStartDate {
+    apiName = "WorkBadgeDefinition.LimitStartDate"
+    label = "Limit Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number GivenBadgeCount {
+    apiName = "WorkBadgeDefinition.GivenBadgeCount"
+    label = "Given Badge Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsRewardBadge {
+    apiName = "WorkBadgeDefinition.IsRewardBadge"
+    label = "Reward Badge"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RewardFundId {
+    apiName = "WorkBadgeDefinition.RewardFundId"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

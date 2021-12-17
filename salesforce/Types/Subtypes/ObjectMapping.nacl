@@ -1,0 +1,29 @@
+type salesforce.ObjectMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string inputObject {
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  "List<salesforce.ObjectMappingField>" mappingFields {
+  }
+  string outputObject {
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  metadataType = "ObjectMapping"
+}

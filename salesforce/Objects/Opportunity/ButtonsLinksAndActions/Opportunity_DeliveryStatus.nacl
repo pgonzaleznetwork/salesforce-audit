@@ -1,0 +1,27 @@
+salesforce.WebLink Opportunity_DeliveryStatus {
+  fullName = "Opportunity.DeliveryStatus"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = true
+  hasScrollbars = true
+  hasToolbar = true
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Delivery Status"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = true
+  showsStatus = true
+  url = "http://www.fedex.com/cgi-bin/tracking?tracknumbers={!Opportunity_Tracking_Number}&action=track&language=english&cntry_code=us"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Opportunity.field.TrackingNumber__c
+    },
+  ]
+}

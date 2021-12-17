@@ -1,0 +1,39 @@
+salesforce.ManagedContentType news {
+  fullName = "news"
+  description = "A basic article format with rich text and image support."
+  developerName = "news"
+  managedContentNodeTypes = [
+    {
+      isLocalizable = true
+      isRequired = true
+      nodeLabel = "Title"
+      nodeName = "title"
+      nodeType = "NAMEFIELD"
+    },
+    {
+      isLocalizable = true
+      isRequired = false
+      nodeLabel = "Body"
+      nodeName = "body"
+      nodeType = "RTE"
+    },
+    {
+      helpText = "Images aren’t required, but they help your post get attention."
+      isLocalizable = false
+      isRequired = false
+      nodeLabel = "Banner Image"
+      nodeName = "bannerImage"
+      nodeType = "IMG"
+    },
+    {
+      helpText = "Excerpts display as summary or teaser text on compilation pages. Excerpts give your customers a quick sense of what your post is about so they can quickly decide whether or not to view the full article."
+      isLocalizable = true
+      isRequired = false
+      nodeLabel = "Excerpt"
+      nodeName = "excerpt"
+      nodeType = "MTEXT"
+      placeholderText = "Enter a summary or short description of your post..."
+    },
+  ]
+  masterLabel = "News"
+}

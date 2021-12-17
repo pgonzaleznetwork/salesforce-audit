@@ -1,0 +1,23 @@
+type salesforce.NotificationChannels {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean desktopEnabled {
+  }
+  boolean mobileEnabled {
+  }
+  boolean slackEnabled {
+  }
+  metadataType = "NotificationChannels"
+}

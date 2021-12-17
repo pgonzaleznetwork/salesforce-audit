@@ -1,0 +1,36 @@
+salesforce.AssignmentRules Lead {
+  assignmentRule = [
+    {
+      fullName = "Standard"
+      active = true
+      ruleEntry = [
+        {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Lead.Country"
+              operation = "equals"
+              value = "US,USA,United States,United States of America"
+            },
+          ]
+        },
+        {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToType = "User"
+          criteriaItems = [
+            {
+              field = "Lead.Country"
+              operation = "notEqual"
+              value = "US,USA,United States,United States of America"
+            },
+          ]
+        },
+      ]
+    },
+  ]
+  fullName = "Lead"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

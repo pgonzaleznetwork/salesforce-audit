@@ -1,0 +1,73 @@
+salesforce.Layout BoatReview__c_BoatReview_Layout@uubs {
+  fullName = "BoatReview__c-BoatReview Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.BoatReview__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.BoatReview__c.field.Rating__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.BoatReview__c.field.Comment__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.BoatReview__c.field.Boat__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.BoatReview__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.BoatReview__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.BoatReview__c,
+  ]
+}

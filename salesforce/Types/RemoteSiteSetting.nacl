@@ -1,0 +1,33 @@
+type salesforce.RemoteSiteSetting {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  boolean disableProtocolSecurity {
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  string url {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "remoteSite"
+  dirName = "remoteSiteSettings"
+  metadataType = "RemoteSiteSetting"
+}

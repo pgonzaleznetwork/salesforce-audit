@@ -1,0 +1,17 @@
+salesforce.ApexClass RightAClass {
+  apiVersion = 51
+  status = "Active"
+  fullName = "RightAClass"
+  content = file("salesforce/Records/ApexClass/RightAClass.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Lead_To_Oppty_Mapping__mdt
+    },
+    {
+      reference = salesforce.Lead_To_Oppty_Mapping__mdt.field.Lead_Field__c
+    },
+    {
+      reference = salesforce.Lead_To_Oppty_Mapping__mdt.field.Opportunity_Field__c
+    },
+  ]
+}

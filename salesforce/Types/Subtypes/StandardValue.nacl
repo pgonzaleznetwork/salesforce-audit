@@ -1,0 +1,61 @@
+type salesforce.StandardValue {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string color {
+  }
+  boolean default {
+  }
+  string description {
+  }
+  boolean isActive {
+  }
+  string label {
+  }
+  boolean allowEmail {
+  }
+  boolean closed {
+  }
+  boolean converted {
+  }
+  boolean cssExposed {
+  }
+  string groupingString {
+  }
+  boolean highPriority {
+  }
+  number probability {
+  }
+  string reverseRole {
+  }
+  boolean reviewed {
+  }
+  boolean won {
+  }
+  string forecastCategory {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BestCase",
+        "Closed",
+        "Forecast",
+        "Omitted",
+        "Pipeline",
+      ]
+    }
+  }
+  metadataType = "StandardValue"
+}

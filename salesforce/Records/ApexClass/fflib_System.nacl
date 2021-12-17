@@ -1,0 +1,17 @@
+salesforce.ApexClass fflib_System {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_System"
+  content = file("salesforce/Records/ApexClass/fflib_System.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IMatcher
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Match
+    },
+  ]
+}

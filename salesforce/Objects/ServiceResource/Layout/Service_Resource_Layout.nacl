@@ -1,0 +1,72 @@
+salesforce.Layout ServiceResource_Service_Resource_Layout@bss {
+  fullName = "ServiceResource-Service Resource Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = false
+      editHeading = false
+      label = "Fields"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResource.field.RelatedRecordId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResource.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResource.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResource.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResource.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResource.field.ResourceType
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "SkillMasterLabel",
+        "SkillLevel",
+        "EffectiveStartDate",
+        "EffectiveEndDate",
+      ]
+      relatedList = "ServiceResourceSkills"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h3h0000058Vbn"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.ServiceResource,
+  ]
+}

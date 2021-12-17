@@ -1,0 +1,28 @@
+type salesforce.Lead_To_Oppty_Mapping__mdt {
+  salesforce.Text Lead_Field__c {
+    apiName = "Lead_To_Oppty_Mapping__mdt.Lead_Field__c"
+    label = "Lead Field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text Opportunity_Field__c {
+    apiName = "Lead_To_Oppty_Mapping__mdt.Opportunity_Field__c"
+    label = "Opportunity Field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+}

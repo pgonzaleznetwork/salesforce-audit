@@ -1,0 +1,20 @@
+salesforce.ListView Opportunity_Won {
+  fullName = "Opportunity.Won"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "OPPORTUNITY.CLOSED"
+      operation = "equals"
+      value = "1"
+    },
+    {
+      field = "OPPORTUNITY.WON"
+      operation = "equals"
+      value = "1"
+    },
+  ]
+  label = "Won"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

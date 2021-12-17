@@ -1,0 +1,6 @@
+type salesforce.ActivityRecurrence2Exception {
+  salesforce.Picklist Type {
+    apiName = "ActivityRecurrence2Exception.Type"
+    _hidden_value = true
+  }
+}

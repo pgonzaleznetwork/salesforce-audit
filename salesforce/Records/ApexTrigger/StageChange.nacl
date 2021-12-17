@@ -1,0 +1,11 @@
+salesforce.ApexTrigger StageChange {
+  apiVersion = 51
+  status = "Inactive"
+  fullName = "StageChange"
+  content = file("salesforce/Records/ApexTrigger/StageChange.trigger")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

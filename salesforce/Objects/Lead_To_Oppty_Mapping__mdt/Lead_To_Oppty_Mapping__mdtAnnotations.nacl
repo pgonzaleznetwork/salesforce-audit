@@ -1,0 +1,99 @@
+type salesforce.Lead_To_Oppty_Mapping__mdt {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+    boolean allowInChatterGroups {
+    }
+    string customHelp {
+    }
+    string customHelpPage {
+    }
+    string customSettingsType {
+    }
+    string deploymentStatus {
+    }
+    boolean deprecated {
+    }
+    boolean enableActivities {
+    }
+    boolean enableBulkApi {
+    }
+    boolean enableReports {
+    }
+    boolean enableSearch {
+    }
+    boolean enableSharing {
+    }
+    boolean enableStreamingApi {
+    }
+    string gender {
+    }
+    salesforce.CustomField nameField {
+    }
+    string pluralLabel {
+    }
+    string sharingModel {
+    }
+    string startsWith {
+    }
+    string visibility {
+    }
+  }
+  apiName = "Lead_To_Oppty_Mapping__mdt"
+  metadataType = "CustomObject"
+  label = "Lead To Oppty Mapping"
+  pluralLabel = "Lead To Oppty Mappings"
+  visibility = "Public"
+}

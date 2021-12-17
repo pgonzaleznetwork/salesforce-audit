@@ -1,0 +1,25 @@
+type salesforce.FlowChoiceUserInput {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  boolean isRequired {
+  }
+  string promptText {
+  }
+  salesforce.FlowInputValidationRule validationRule {
+  }
+  metadataType = "FlowChoiceUserInput"
+}

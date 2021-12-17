@@ -1,0 +1,10 @@
+type salesforce.ScorecardAssociation {
+  salesforce.MasterDetail ScorecardId {
+    apiName = "ScorecardAssociation.ScorecardId"
+    _hidden_value = true
+  }
+  salesforce.Lookup TargetEntityId {
+    apiName = "ScorecardAssociation.TargetEntityId"
+    _hidden_value = true
+  }
+}

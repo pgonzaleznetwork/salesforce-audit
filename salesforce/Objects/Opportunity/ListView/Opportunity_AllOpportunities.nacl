@@ -1,0 +1,8 @@
+salesforce.ListView Opportunity_AllOpportunities {
+  fullName = "Opportunity.AllOpportunities"
+  filterScope = "Everything"
+  label = "All Opportunities"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

@@ -1,0 +1,68 @@
+salesforce.Flow Flow_using_picklist {
+  fullName = "Flow_using_picklist"
+  apiVersion = 53
+  decisions = [
+    {
+      name = "If_value_is_used"
+      label = "If value is used"
+      locationX = 228
+      locationY = 368
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Check"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "$Record.My_Broken_Picklist__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "ValueOne"
+              }
+            },
+          ]
+          label = "Check"
+        },
+      ]
+    },
+  ]
+  interviewLabel = "Flow using picklist {!$Flow.CurrentDateTime}"
+  label = "Flow using picklist"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 50
+    locationY = 50
+    connector = {
+      targetReference = "If_value_is_used"
+    }
+    object = salesforce.Account
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Draft"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.My_Broken_Picklist__c
+    },
+  ]
+}

@@ -1,0 +1,45 @@
+salesforce.QuickAction Case_NewChildCase@v {
+  fullName = "Case.NewChildCase"
+  optionsCreateFeedItem = true
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsLeftToRight"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = salesforce.Case.field.ContactId
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = salesforce.Case.field.Status
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = salesforce.Case.field.Subject
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = salesforce.Case.field.ParentId
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = salesforce.Case.field.Description
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+    ]
+  }
+  standardLabel = "NewChild"
+  targetObject = salesforce.Case
+  targetParentField = "Parent"
+  type = "Create"
+  _parent = [
+    salesforce.Case,
+  ]
+}

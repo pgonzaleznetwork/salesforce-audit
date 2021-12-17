@@ -1,0 +1,29 @@
+salesforce.ApexClass SRM_MdDeployTriggerHandlerTests {
+  apiVersion = 45
+  status = "Active"
+  fullName = "SRM_MdDeployTriggerHandlerTests"
+  content = file("salesforce/Records/ApexClass/SRM_MdDeployTriggerHandlerTests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_TestData
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Deployed_Apex_Names__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Fire_New_Apex_Notification__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Friendly_description_of_Apex_changes__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Git_Pull_Request_URL__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Status__c
+    },
+  ]
+}

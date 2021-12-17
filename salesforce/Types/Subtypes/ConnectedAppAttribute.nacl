@@ -1,0 +1,21 @@
+type salesforce.ConnectedAppAttribute {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string formula {
+  }
+  string key {
+  }
+  metadataType = "ConnectedAppAttribute"
+}

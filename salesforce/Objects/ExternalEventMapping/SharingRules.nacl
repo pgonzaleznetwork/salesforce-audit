@@ -1,0 +1,6 @@
+salesforce.SharingRules ExternalEventMapping {
+  fullName = "ExternalEventMapping"
+  _parent = [
+    salesforce.ExternalEventMapping,
+  ]
+}

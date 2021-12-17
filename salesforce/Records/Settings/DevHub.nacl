@@ -1,0 +1,6 @@
+salesforce.DevHubSettings {
+  fullName = "DevHub"
+  enablePackaging2 = true
+  enableScratchOrgManagementPref = true
+  enableShapeExportPref = "false"
+}

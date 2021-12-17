@@ -1,0 +1,10 @@
+salesforce.Role CFO {
+  fullName = "CFO"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "CFO"
+  mayForecastManagerShare = false
+  name = "CFO"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+}

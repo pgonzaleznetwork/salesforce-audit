@@ -1,0 +1,8 @@
+salesforce.CustomTab Child__c {
+  fullName = "Child__c"
+  customObject = true
+  motif = "Custom37: Bridge"
+  _parent = [
+    salesforce.Child__c,
+  ]
+}

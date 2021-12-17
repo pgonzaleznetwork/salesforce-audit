@@ -1,0 +1,281 @@
+type salesforce.User {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "User"
+  metadataType = "CustomObject"
+  label = "User"
+  actionOverrides = [
+    {
+      actionName = "CallHighlightAction"
+      type = "Default"
+    },
+    {
+      actionName = "CallHighlightAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CallHighlightAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteBannerPhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteBannerPhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteBannerPhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EditUserAction"
+      type = "Default"
+    },
+    {
+      actionName = "EditUserAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EditUserAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EmailHighlightAction"
+      type = "Default"
+    },
+    {
+      actionName = "EmailHighlightAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EmailHighlightAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "FreezeUserAction"
+      type = "Default"
+    },
+    {
+      actionName = "FreezeUserAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "FreezeUserAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "LinkToSetupUserDetailAction"
+      type = "Default"
+    },
+    {
+      actionName = "LinkToSetupUserDetailAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "LinkToSetupUserDetailAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ManagePermSetsAction"
+      type = "Default"
+    },
+    {
+      actionName = "ManagePermSetsAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ManagePermSetsAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "PasswordUnlockAction"
+      type = "Default"
+    },
+    {
+      actionName = "PasswordUnlockAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "PasswordUnlockAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ResetPasswordAction"
+      type = "Default"
+    },
+    {
+      actionName = "ResetPasswordAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ResetPasswordAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SmsHighlightAction"
+      type = "Default"
+    },
+    {
+      actionName = "SmsHighlightAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SmsHighlightAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "UpdateBannerPhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "UpdateBannerPhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "UpdateBannerPhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "UserActivationAction"
+      type = "Default"
+    },
+    {
+      actionName = "UserActivationAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "UserActivationAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+  ]
+  compactLayoutAssignment = "SYSTEM"
+  enableFeeds = true
+  externalSharingModel = "Private"
+  searchLayouts = {
+    lookupDialogsAdditionalFields = [
+      "FULL_NAME",
+      "CORE.USER_ROLE.NAME",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "FULL_NAME",
+      "CORE.USER_ROLE.NAME",
+      "CORE.USERS.PHONE",
+      "CORE.USERS.EXTENSION",
+      "CORE.USERS.CELL",
+    ]
+    searchResultsAdditionalFields = [
+      "FULL_NAME",
+      "CORE.USERS.TITLE",
+      "CORE.USERS.PHONE",
+      "CORE.USERS.EMAIL",
+    ]
+  }
+}

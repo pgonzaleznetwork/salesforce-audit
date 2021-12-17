@@ -1,0 +1,23 @@
+type salesforce.CustomHelpMenuItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string linkUrl {
+  }
+  string masterLabel {
+  }
+  number sortOrder {
+  }
+  metadataType = "CustomHelpMenuItem"
+}

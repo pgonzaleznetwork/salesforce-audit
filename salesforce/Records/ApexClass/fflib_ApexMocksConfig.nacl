@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_ApexMocksConfig {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_ApexMocksConfig"
+  content = file("salesforce/Records/ApexClass/fflib_ApexMocksConfig.cls")
+}

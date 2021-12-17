@@ -1,0 +1,43 @@
+salesforce.Flow Flow_using_apex_class {
+  fullName = "Flow_using_apex_class"
+  actionCalls = {
+    name = "call_apex"
+    label = "call apex"
+    locationX = 174
+    locationY = 356
+    actionName = salesforce.ApexClass.instance.FlowActionClass
+    actionType = "apex"
+  }
+  apiVersion = 53
+  interviewLabel = "Flow using apex class {!$Flow.CurrentDateTime}"
+  label = "Flow using apex class"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    locationX = 50
+    locationY = 50
+    connector = {
+      targetReference = "call_apex"
+    }
+  }
+  status = "Active"
+}

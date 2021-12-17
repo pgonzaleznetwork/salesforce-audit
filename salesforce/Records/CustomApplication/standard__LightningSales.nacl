@@ -1,0 +1,24 @@
+salesforce.CustomApplication standard__LightningSales {
+  fullName = "standard__LightningSales"
+  formFactors = [
+    "Small",
+    "Medium",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Sales"
+  navType = "Standard"
+  tabs = [
+    "standard-home",
+    "standard-Opportunity",
+    "standard-Lead",
+    salesforce.CustomTab.instance.Boat__c,
+    "standard-Account",
+    "standard-Task",
+    "standard-Contact",
+    "standard-Case",
+    "standard-Forecasting3",
+  ]
+  uiType = "Lightning"
+}

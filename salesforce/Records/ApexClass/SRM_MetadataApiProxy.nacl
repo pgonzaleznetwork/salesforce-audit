@@ -1,0 +1,29 @@
+salesforce.ApexClass SRM_MetadataApiProxy {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_MetadataApiProxy"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataApiProxy.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataAPI
+    },
+    {
+      reference = salesforce.SRM_API_Metadata_Client_Setting__mdt
+    },
+    {
+      reference = salesforce.SRM_API_Metadata_Client_Setting__mdt.field.Additional_Metadata_Types__c
+    },
+    {
+      reference = salesforce.SRM_API_Metadata_Client_Setting__mdt.field.Api_Version__c
+    },
+    {
+      reference = salesforce.SRM_API_Metadata_Client_Setting__mdt.field.Describe_Metadata_Exception__c
+    },
+    {
+      reference = salesforce.SRM_API_Metadata_Client_Setting__mdt.field.Endpoint__c
+    },
+    {
+      reference = salesforce.SRM_API_Metadata_Client_Setting__mdt.field.List_Metadata_Exception__c
+    },
+  ]
+}

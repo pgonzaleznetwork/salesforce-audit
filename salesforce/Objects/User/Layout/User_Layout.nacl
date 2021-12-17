@@ -1,0 +1,38 @@
+salesforce.Layout User_User_Layout@bs {
+  fullName = "User-User Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedObjects = [
+    "UserRoleId",
+    "ProfileId",
+    "DelegatedApproverId",
+    "ManagerId",
+    "ContactId",
+    "AccountId",
+    "CallCenterId",
+    "ProfilePhotoId",
+    "WorkspaceId",
+    "BannerPhotoId",
+    "IndividualId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.User,
+  ]
+}

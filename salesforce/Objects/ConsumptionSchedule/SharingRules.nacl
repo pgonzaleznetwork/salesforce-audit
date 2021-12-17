@@ -1,0 +1,6 @@
+salesforce.SharingRules ConsumptionSchedule {
+  fullName = "ConsumptionSchedule"
+  _parent = [
+    salesforce.ConsumptionSchedule,
+  ]
+}

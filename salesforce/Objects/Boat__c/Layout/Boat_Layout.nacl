@@ -1,0 +1,152 @@
+salesforce.Layout Boat__c_Boat_Layout@uubs {
+  fullName = "Boat__c-Boat Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Boat__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.Picture__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Boat__c.field.Boat_Image__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.Year_Built__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.Price__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.Length__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.Geolocation__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.Description__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Boat__c.field.BoatType__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Boat__c.field.Contact__c
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Boat__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Boat__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = false
+      editHeading = true
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  platformActionList = {
+    actionListContext = "Record"
+    platformActionListItems = [
+      {
+        actionName = "Similar_Boats"
+        actionType = "CustomButton"
+        sortOrder = 0
+      },
+      {
+        actionName = "Clone"
+        actionType = "StandardButton"
+        sortOrder = 1
+      },
+      {
+        actionName = "Delete"
+        actionType = "StandardButton"
+        sortOrder = 2
+      },
+      {
+        actionName = "ChangeRecordType"
+        actionType = "StandardButton"
+        sortOrder = 3
+      },
+      {
+        actionName = "ChangeOwnerOne"
+        actionType = "StandardButton"
+        sortOrder = 4
+      },
+      {
+        actionName = "Edit"
+        actionType = "StandardButton"
+        sortOrder = 5
+      },
+      {
+        actionName = "PrintableView"
+        actionType = "StandardButton"
+        sortOrder = 6
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "NAME",
+      ]
+      relatedList = salesforce.BoatReview__c.field.Boat__c
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00hB0000001bx11"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

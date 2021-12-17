@@ -1,0 +1,10 @@
+salesforce.Role SVPCustomerServiceSupport {
+  fullName = "SVPCustomerServiceSupport"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "SVP, Customer Service & Support"
+  mayForecastManagerShare = false
+  name = "SVP, Customer Service & Support"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+}

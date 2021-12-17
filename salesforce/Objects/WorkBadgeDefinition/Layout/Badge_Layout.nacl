@@ -1,0 +1,112 @@
+salesforce.Layout WorkBadgeDefinition_Badge_Layout@bs {
+  fullName = "WorkBadgeDefinition-Badge Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadgeDefinition.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.IsActive
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkBadgeDefinition.field.LastModifiedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.IsCompanyWide
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description_and_Image"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkBadgeDefinition.field.ImageUrl
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "LimitsAndRestrictions"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.LimitNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.LimitStartDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.IsLimitPerUser
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkBadgeDefinition.field.GivenBadgeCount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.WorkBadgeDefinition,
+  ]
+}

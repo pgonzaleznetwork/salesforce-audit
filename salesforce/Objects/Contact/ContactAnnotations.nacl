@@ -1,0 +1,423 @@
+type salesforce.Contact {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "Contact"
+  metadataType = "CustomObject"
+  label = "Contact"
+  actionOverrides = [
+    {
+      actionName = "AddCampaign"
+      type = "Default"
+    },
+    {
+      actionName = "AddCampaign"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "AddCampaign"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "AddToCampaign"
+      type = "Default"
+    },
+    {
+      actionName = "AddToCampaign"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "AddToCampaign"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "CallHighlightAction"
+      type = "Default"
+    },
+    {
+      actionName = "CallHighlightAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CallHighlightAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Clone"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Delete"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EmailHighlightAction"
+      type = "Default"
+    },
+    {
+      actionName = "EmailHighlightAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EmailHighlightAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EnableCustomerPortal"
+      type = "Default"
+    },
+    {
+      actionName = "EnableCustomerPortal"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EnableCustomerPortal"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EnablePartnerPortalUser"
+      type = "Default"
+    },
+    {
+      actionName = "EnablePartnerPortalUser"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EnablePartnerPortalUser"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "EnableSelfService"
+      type = "Default"
+    },
+    {
+      actionName = "EnableSelfService"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "EnableSelfService"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "List"
+      type = "Default"
+    },
+    {
+      actionName = "List"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "List"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ListClean"
+      type = "Default"
+    },
+    {
+      actionName = "ListClean"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ListClean"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Merge"
+      type = "Default"
+    },
+    {
+      actionName = "Merge"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Merge"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "NewContact"
+      type = "Default"
+    },
+    {
+      actionName = "NewContact"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "NewContact"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "RequestUpdate"
+      type = "Default"
+    },
+    {
+      actionName = "RequestUpdate"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "RequestUpdate"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SmsHighlightAction"
+      type = "Default"
+    },
+    {
+      actionName = "SmsHighlightAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SmsHighlightAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Tab"
+      type = "Default"
+    },
+    {
+      actionName = "Tab"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Tab"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "View"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ViewCustomerPortal"
+      type = "Default"
+    },
+    {
+      actionName = "ViewCustomerPortal"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ViewCustomerPortal"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ViewPartnerPortalUser"
+      type = "Default"
+    },
+    {
+      actionName = "ViewPartnerPortalUser"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ViewPartnerPortalUser"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ViewSelfService"
+      type = "Default"
+    },
+    {
+      actionName = "ViewSelfService"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ViewSelfService"
+      formFactor = "Small"
+      type = "Default"
+    },
+  ]
+  compactLayoutAssignment = "SYSTEM"
+  enableFeeds = true
+  enableHistory = false
+  externalSharingModel = "ControlledByParent"
+  searchLayouts = {
+    customTabListAdditionalFields = [
+      "FULL_NAME",
+      "ACCOUNT.NAME",
+      "CONTACT.PHONE1",
+    ]
+    lookupDialogsAdditionalFields = [
+      "FULL_NAME",
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "FULL_NAME",
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE",
+      "CONTACT.PHONE1",
+      "CONTACT.PHONE3",
+      "CONTACT.PHONE4",
+      "CONTACT.PHONE5",
+      "CONTACT.PHONE6",
+      "ACCOUNT.PHONE1",
+    ]
+    searchResultsAdditionalFields = [
+      "FULL_NAME",
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE",
+      "CONTACT.PHONE1",
+      "CONTACT.EMAIL",
+      "CORE.USERS.ALIAS",
+    ]
+  }
+  topicsForObjects = {
+    enableTopics = true
+  }
+}

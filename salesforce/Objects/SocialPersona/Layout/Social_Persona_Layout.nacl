@@ -1,0 +1,54 @@
+salesforce.Layout SocialPersona_Social_Persona_Layout@bss {
+  fullName = "SocialPersona-Social Persona Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Name"
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SocialPersona.field.ParentId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Provider"
+            },
+            {
+              behavior = "Edit"
+              field = "ExternalPictureURL"
+            },
+            {
+              behavior = "Edit"
+              field = "ProfileUrl"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.SocialPersona,
+  ]
+}

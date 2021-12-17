@@ -1,0 +1,29 @@
+type salesforce.FlowElementReferenceOrValue {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean booleanValue {
+  }
+  string dateTimeValue {
+  }
+  string dateValue {
+  }
+  string elementReference {
+  }
+  number numberValue {
+  }
+  string stringValue {
+  }
+  metadataType = "FlowElementReferenceOrValue"
+}

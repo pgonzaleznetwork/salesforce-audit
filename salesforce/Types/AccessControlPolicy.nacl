@@ -1,0 +1,74 @@
+type salesforce.AccessControlPolicy {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string content {
+  }
+  boolean active {
+  }
+  string deploymentStatus {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Deployed",
+        "New",
+        "Pending",
+      ]
+    }
+  }
+  string description {
+  }
+  string masterLabel {
+  }
+  string targetEntity {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "BoatReview__c",
+        "BoatType__c",
+        "Boat__c",
+        "Case",
+        "Center__c",
+        "Child__c",
+        "Contact",
+        "Contract",
+        "Custom_Object__c",
+        "Event",
+        "Lead",
+        "Opportunity",
+        "Parent__c",
+        "SRM_CRM_Sprint__c",
+        "SRM_Connected_Org__c",
+        "SRM_Development_Task__c",
+        "SRM_Jira_Ticket__c",
+        "SRM_Metadata__c",
+        "Task",
+        "User",
+      ]
+    }
+  }
+  number version {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  suffix = "policy"
+  dirName = "accessControlPolicies"
+  metadataType = "AccessControlPolicy"
+}

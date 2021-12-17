@@ -1,0 +1,24 @@
+salesforce.WorkflowAlert Account_account_alert@vu {
+  fullName = "Account.account_alert"
+  ccEmails = [
+    "emailone@gmail.com.notreal.invalid",
+    "emailtwo@gmail.com.notreal.invalid",
+  ]
+  description = "account alert"
+  protected = false
+  recipients = [
+    {
+      field = salesforce.Account.field.really_not_used__c
+      type = "email"
+    },
+    {
+      recipient = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+      type = "user"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "unfiled$public/MarketingProductInquiryResponse"
+  _parent = [
+    salesforce.Account,
+  ]
+}

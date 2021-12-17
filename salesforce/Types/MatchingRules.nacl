@@ -1,0 +1,27 @@
+type salesforce.MatchingRules {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  "List<salesforce.MatchingRule>" matchingRules {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "matchingRule"
+  dirName = "matchingRules"
+  metadataType = "MatchingRules"
+}

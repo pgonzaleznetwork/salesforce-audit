@@ -1,0 +1,37 @@
+type salesforce.HomePageComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string body {
+  }
+  serviceid fullName {
+  }
+  number height {
+  }
+  "List<string>" links {
+  }
+  string page {
+  }
+  boolean showLabel {
+  }
+  boolean showScrollbars {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "homePageComponent"
+  dirName = "homePageComponents"
+  metadataType = "HomePageComponent"
+}

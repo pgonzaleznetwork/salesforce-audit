@@ -1,0 +1,26 @@
+salesforce.StandardValueSet FiscalYearQuarterPrefix {
+  fullName = "FiscalYearQuarterPrefix"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Quarter"
+      default = true
+      label = "Quarter"
+    },
+    {
+      fullName = "FQ"
+      default = false
+      label = "FQ"
+    },
+    {
+      fullName = "Q"
+      default = false
+      label = "Q"
+    },
+    {
+      fullName = "Trimester"
+      default = false
+      label = "Trimester"
+    },
+  ]
+}

@@ -1,0 +1,6 @@
+salesforce.SharingRules Lead {
+  fullName = "Lead"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

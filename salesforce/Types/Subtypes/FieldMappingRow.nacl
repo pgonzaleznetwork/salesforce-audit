@@ -1,0 +1,36 @@
+type salesforce.FieldMappingRow {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string SObjectType {
+  }
+  "List<salesforce.FieldMappingField>" fieldMappingFields {
+  }
+  string fieldName {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+      "CustomFieldDataColumn",
+    ]
+  }
+  string mappingOperation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Autofill",
+        "Overwrite",
+      ]
+    }
+  }
+  metadataType = "FieldMappingRow"
+}

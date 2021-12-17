@@ -1,0 +1,64 @@
+type salesforce.MobileApplicationDetail {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string applicationBinaryFile {
+  }
+  string applicationBinaryFileName {
+  }
+  string applicationBundleIdentifier {
+  }
+  number applicationFileLength {
+  }
+  string applicationIconFile {
+  }
+  string applicationIconFileName {
+  }
+  string applicationInstallUrl {
+  }
+  string devicePlatform {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "android",
+        "ios",
+      ]
+    }
+  }
+  string deviceType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "minitablet",
+        "phone",
+        "tablet",
+      ]
+    }
+  }
+  string minimumOsVersion {
+  }
+  boolean privateApp {
+  }
+  string version {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "MobileApplicationDetail"
+  dirName = "MobileApplicationDetails"
+  metadataType = "MobileApplicationDetail"
+}

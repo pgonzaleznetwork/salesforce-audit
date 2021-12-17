@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_Inheritor {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_Inheritor"
+  content = file("salesforce/Records/ApexClass/fflib_Inheritor.cls")
+}

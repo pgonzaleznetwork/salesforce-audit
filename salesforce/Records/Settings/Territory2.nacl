@@ -1,0 +1,9 @@
+salesforce.Territory2Settings {
+  fullName = "Territory2"
+  defaultAccountAccessLevel = "Edit"
+  defaultCaseAccessLevel = "Edit"
+  defaultContactAccessLevel = "Edit"
+  defaultOpportunityAccessLevel = "Edit"
+  enableTerritoryManagement2 = false
+  t2ForecastAccessLevel = "Read"
+}

@@ -1,0 +1,33 @@
+type salesforce.LightningMessageChannel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string description {
+  }
+  boolean isExposed {
+  }
+  salesforce.LightningMessageField lightningMessageFields {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "messageChannel"
+  dirName = "messageChannels"
+  metadataType = "LightningMessageChannel"
+}

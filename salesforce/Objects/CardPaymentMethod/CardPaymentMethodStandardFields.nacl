@@ -1,0 +1,568 @@
+type salesforce.CardPaymentMethod {
+  serviceid Id {
+    apiName = "CardPaymentMethod.Id"
+    label = "Card Payment Method ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CardPaymentMethod.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber CardPaymentMethodNumber {
+    apiName = "CardPaymentMethod.CardPaymentMethodNumber"
+    label = "Card Payment Method Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CardPaymentMethod.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CardPaymentMethod.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CardPaymentMethod.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CardPaymentMethod.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CardPaymentMethod.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DisplayCardNumber {
+    apiName = "CardPaymentMethod.DisplayCardNumber"
+    label = "Display Card Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number ExpiryMonth {
+    apiName = "CardPaymentMethod.ExpiryMonth"
+    label = "Expiry Month"
+    precision = 2
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number ExpiryYear {
+    apiName = "CardPaymentMethod.ExpiryYear"
+    label = "Expiry Year"
+    precision = 4
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number StartMonth {
+    apiName = "CardPaymentMethod.StartMonth"
+    label = "Start Month"
+    precision = 2
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number StartYear {
+    apiName = "CardPaymentMethod.StartYear"
+    label = "Start Year"
+    precision = 4
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist CardType {
+    apiName = "CardPaymentMethod.CardType"
+    label = "Card Type"
+    valueSet = [
+      {
+        fullName = "Visa"
+        default = false
+        label = "Visa"
+        isActive = true
+      },
+      {
+        fullName = "Master Card"
+        default = false
+        label = "Master Card"
+        isActive = true
+      },
+      {
+        fullName = "American Express"
+        default = false
+        label = "American Express"
+        isActive = true
+      },
+      {
+        fullName = "Diners Club"
+        default = false
+        label = "Diners Club"
+        isActive = true
+      },
+      {
+        fullName = "JCB"
+        default = false
+        label = "JCB"
+        isActive = true
+      },
+      {
+        fullName = "Maestro"
+        default = false
+        label = "Maestro"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist CardTypeCategory {
+    apiName = "CardPaymentMethod.CardTypeCategory"
+    label = "Card Type Category"
+    valueSet = [
+      {
+        fullName = "Visa"
+        default = false
+        label = "Visa"
+        isActive = true
+      },
+      {
+        fullName = "MasterCard"
+        default = false
+        label = "Master Card"
+        isActive = true
+      },
+      {
+        fullName = "AmericanExpress"
+        default = false
+        label = "American Express"
+        isActive = true
+      },
+      {
+        fullName = "Jcb"
+        default = false
+        label = "JCB"
+        isActive = true
+      },
+      {
+        fullName = "DinersClub"
+        default = false
+        label = "Diners Club"
+        isActive = true
+      },
+      {
+        fullName = "Maestro"
+        default = false
+        label = "Maestro"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text AutoCardType {
+    apiName = "CardPaymentMethod.AutoCardType"
+    label = "Auto Card Type"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+  }
+  salesforce.Picklist CardCategory {
+    apiName = "CardPaymentMethod.CardCategory"
+    label = "Card Category"
+    valueSet = [
+      {
+        fullName = "CreditCard"
+        default = false
+        label = "Credit Card"
+        isActive = true
+      },
+      {
+        fullName = "DebitCard"
+        default = false
+        label = "Debit Card"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "CardPaymentMethod.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+  }
+  salesforce.Address PaymentMethodAddress {
+    apiName = "CardPaymentMethod.PaymentMethodAddress"
+    label = "Payment Method Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text NickName {
+    apiName = "CardPaymentMethod.NickName"
+    label = "Nickname"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text CardHolderName {
+    apiName = "CardPaymentMethod.CardHolderName"
+    label = "Card Holder Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Number CardBin {
+    apiName = "CardPaymentMethod.CardBin"
+    label = "Card BIN"
+    precision = 6
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number CardLastFour {
+    apiName = "CardPaymentMethod.CardLastFour"
+    label = "Card Last Four"
+    precision = 4
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Email Email {
+    apiName = "CardPaymentMethod.Email"
+    label = "Registered Card Email"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "CardPaymentMethod.Comments"
+    label = "Comments"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "CardPaymentMethod.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Active"
+        default = false
+        label = "Active"
+        isActive = true
+      },
+      {
+        fullName = "InActive"
+        default = false
+        label = "InActive"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text InputCardNumber {
+    apiName = "CardPaymentMethod.InputCardNumber"
+    label = "Input Card Number"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 20
+    queryable = true
+  }
+  salesforce.Text CardHolderFirstName {
+    apiName = "CardPaymentMethod.CardHolderFirstName"
+    label = "Card Holder First Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text CardHolderLastName {
+    apiName = "CardPaymentMethod.CardHolderLastName"
+    label = "Card Holder Last Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text CompanyName {
+    apiName = "CardPaymentMethod.CompanyName"
+    label = "Company Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text GatewayToken {
+    apiName = "CardPaymentMethod.GatewayToken"
+    label = "GatewayToken"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.LongTextArea GatewayTokenDetails {
+    apiName = "CardPaymentMethod.GatewayTokenDetails"
+    label = "Gateway Token Details"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  salesforce.Lookup PaymentGatewayId {
+    apiName = "CardPaymentMethod.PaymentGatewayId"
+    label = "Payment Gateway ID"
+    referenceTo = [
+      salesforce.PaymentGateway,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "PaymentGateway"
+    queryable = true
+  }
+  salesforce.Picklist ProcessingMode {
+    apiName = "CardPaymentMethod.ProcessingMode"
+    label = "Processing Mode"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Salesforce"
+        default = false
+        label = "Salesforce"
+        isActive = true
+      },
+      {
+        fullName = "External"
+        default = false
+        label = "External"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text MacAddress {
+    apiName = "CardPaymentMethod.MacAddress"
+    label = "MAC Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 32
+    queryable = true
+  }
+  salesforce.Phone Phone {
+    apiName = "CardPaymentMethod.Phone"
+    label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text IpAddress {
+    apiName = "CardPaymentMethod.IpAddress"
+    label = "IP Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 39
+    queryable = true
+  }
+  salesforce.Email AuditEmail {
+    apiName = "CardPaymentMethod.AuditEmail"
+    label = "Audit Email"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Text GatewayResultCode {
+    apiName = "CardPaymentMethod.GatewayResultCode"
+    label = "Gateway Result Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  salesforce.Text GatewayResultCodeDescription {
+    apiName = "CardPaymentMethod.GatewayResultCodeDescription"
+    label = "Gateway Result Code Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Picklist SfResultCode {
+    apiName = "CardPaymentMethod.SfResultCode"
+    label = "Salesforce Result Code"
+    valueSet = [
+      {
+        fullName = "Success"
+        default = false
+        label = "Success"
+        isActive = true
+      },
+      {
+        fullName = "PermanentFail"
+        default = false
+        label = "PermanentFail"
+        isActive = true
+      },
+      {
+        fullName = "Decline"
+        default = false
+        label = "Decline"
+        isActive = true
+      },
+      {
+        fullName = "RequiresReview"
+        default = false
+        label = "RequiresReview"
+        isActive = true
+      },
+      {
+        fullName = "Indeterminate"
+        default = false
+        label = "Indeterminate"
+        isActive = true
+      },
+      {
+        fullName = "SystemError"
+        default = false
+        label = "SystemError"
+        isActive = true
+      },
+      {
+        fullName = "ValidationError"
+        default = false
+        label = "ValidationError"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime GatewayDate {
+    apiName = "CardPaymentMethod.GatewayDate"
+    label = "Gateway Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown GatewayTokenEncrypted {
+    apiName = "CardPaymentMethod.GatewayTokenEncrypted"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,17 @@
+salesforce.ApexClass MyStandardFields {
+  apiVersion = 51
+  status = "Active"
+  fullName = "MyStandardFields"
+  content = file("salesforce/Records/ApexClass/MyStandardFields.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+  ]
+}

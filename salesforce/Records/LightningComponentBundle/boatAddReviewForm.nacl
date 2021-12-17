@@ -1,0 +1,27 @@
+salesforce.LightningComponentBundle boatAddReviewForm {
+  apiVersion = 48
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__AppPage",
+    ]
+  }
+  fullName = "boatAddReviewForm"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatAddReviewForm/boatAddReviewForm.html")
+        filePath = "lwc/boatAddReviewForm/boatAddReviewForm.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatAddReviewForm/boatAddReviewForm.js")
+        filePath = "lwc/boatAddReviewForm/boatAddReviewForm.js"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.fiveStarRating
+    },
+  ]
+}

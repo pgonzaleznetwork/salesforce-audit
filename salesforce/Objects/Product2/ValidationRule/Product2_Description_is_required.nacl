@@ -1,0 +1,9 @@
+salesforce.ValidationRule Product2_Description_is_required {
+  fullName = "Product2.Description_is_required"
+  active = true
+  errorConditionFormula = "ISBLANK(Description)"
+  errorMessage = "Description is required"
+  _parent = [
+    salesforce.Product2,
+  ]
+}

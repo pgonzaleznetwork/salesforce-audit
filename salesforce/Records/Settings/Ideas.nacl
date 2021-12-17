@@ -1,0 +1,11 @@
+salesforce.IdeasSettings {
+  fullName = "Ideas"
+  enableChatterProfile = true
+  enableHtmlIdea = true
+  enableIdeaMultipleCategory = true
+  enableIdeaThemes = false
+  enableIdeas = true
+  enableIdeasControllerExtensions = false
+  enableIdeasReputation = false
+  halfLife = 2
+}

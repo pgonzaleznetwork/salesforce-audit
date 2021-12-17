@@ -1,0 +1,6 @@
+salesforce.StaticResource CancelIcon {
+  cacheControl = "Private"
+  contentType = "image/png"
+  fullName = "CancelIcon"
+  content = file("salesforce/Records/StaticResource/CancelIcon.png")
+}

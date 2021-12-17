@@ -1,0 +1,26 @@
+salesforce.StandardValueSet CaseContactRole {
+  fullName = "CaseContactRole"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Technical Contact"
+      default = false
+      label = "Technical Contact"
+    },
+    {
+      fullName = "Business Contact"
+      default = false
+      label = "Business Contact"
+    },
+    {
+      fullName = "Decision Maker"
+      default = false
+      label = "Decision Maker"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

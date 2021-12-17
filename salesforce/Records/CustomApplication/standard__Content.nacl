@@ -1,0 +1,18 @@
+salesforce.CustomApplication standard__Content {
+  fullName = "standard__Content"
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-Workspace",
+    "standard-ContentSearch",
+    "standard-ContentSubscriptions",
+    salesforce.CustomTab.instance.Center__c,
+    salesforce.CustomTab.instance.Parent__c,
+    salesforce.CustomTab.instance.Child__c,
+  ]
+}

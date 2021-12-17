@@ -1,0 +1,17 @@
+salesforce.ApexClass SRM_MetadataTriggerHandler {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_MetadataTriggerHandler"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataTriggerHandler.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataConflict
+    },
+    {
+      reference = salesforce.ApexClass.instance.TriggerUtils_TriggerStatus
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+  ]
+}

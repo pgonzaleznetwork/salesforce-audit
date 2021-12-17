@@ -1,0 +1,9 @@
+salesforce.WorkflowRule Case_case_wf_rule@vsb {
+  fullName = "Case.case wf-rule"
+  active = false
+  formula = "true"
+  triggerType = "onCreateOnly"
+  _parent = [
+    salesforce.Case,
+  ]
+}

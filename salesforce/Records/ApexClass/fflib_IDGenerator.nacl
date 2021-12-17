@@ -1,0 +1,6 @@
+salesforce.ApexClass fflib_IDGenerator {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_IDGenerator"
+  content = file("salesforce/Records/ApexClass/fflib_IDGenerator.cls")
+}

@@ -1,0 +1,165 @@
+salesforce.Layout DigitalWallet_Digital_Wallet_Layout@bss {
+  fullName = "DigitalWallet-Digital Wallet Layout"
+  layoutSections = [
+    {
+      customLabel = true
+      detailHeading = true
+      editHeading = true
+      label = "Digital Wallet"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.NickName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.Customer
+            },
+            {
+              behavior = "Required"
+              field = salesforce.DigitalWallet.field.ProcessingMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.Email
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.DigitalWallet.field.Status
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.PaymentGatewayId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.GatewayTokenDetails
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.GatewayToken
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.CompanyName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.Comments
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.PaymentMethodAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.DigitalWallet.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.DigitalWallet.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.MacAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.DigitalWallet.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.DigitalWallet.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.DigitalWallet.field.AuditEmail
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.DigitalWallet,
+  ]
+}

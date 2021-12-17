@@ -1,0 +1,307 @@
+type salesforce.Location {
+  serviceid Id {
+    apiName = "Location.Id"
+    label = "Location ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Location.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Location.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Location.Name"
+    label = "Location Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Location.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Location.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Location.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Location.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Location.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LocationType {
+    apiName = "Location.LocationType"
+    label = "Location Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Building"
+        default = false
+        label = "Building"
+        isActive = true
+      },
+      {
+        fullName = "Warehouse"
+        default = false
+        label = "Warehouse"
+        isActive = true
+      },
+      {
+        fullName = "Site"
+        default = false
+        label = "Site"
+        isActive = true
+      },
+      {
+        fullName = "Plant"
+        default = false
+        label = "Plant"
+        isActive = true
+      },
+      {
+        fullName = "Store"
+        default = false
+        label = "Store"
+        isActive = true
+      },
+      {
+        fullName = "Campus"
+        default = false
+        label = "Campus"
+        isActive = true
+      },
+      {
+        fullName = "Floor"
+        default = false
+        label = "Floor"
+        isActive = true
+      },
+      {
+        fullName = "Space"
+        default = false
+        label = "Space"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsMobile {
+    apiName = "Location.IsMobile"
+    label = "Mobile Location"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsInventoryLocation {
+    apiName = "Location.IsInventoryLocation"
+    label = "Inventory Location"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RootLocationId {
+    apiName = "Location.RootLocationId"
+    label = "Root Location ID"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RootLocation"
+    queryable = true
+    trackHistory = "false"
+    _hidden_value = true
+  }
+  salesforce.Text ExternalReference {
+    apiName = "Location.ExternalReference"
+    label = "External Reference"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Lookup LogoId {
+    apiName = "Location.LogoId"
+    label = "Asset File ID"
+    referenceTo = [
+      "ContentAsset",
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Logo"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Unknown CloseDate {
+    apiName = "Location.CloseDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ConstructionEndDate {
+    apiName = "Location.ConstructionEndDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ConstructionStartDate {
+    apiName = "Location.ConstructionStartDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown Description {
+    apiName = "Location.Description"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown DrivingDirections {
+    apiName = "Location.DrivingDirections"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown Location {
+    apiName = "Location.Location"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown LocationLevel {
+    apiName = "Location.LocationLevel"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OpenDate {
+    apiName = "Location.OpenDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown PossessionDate {
+    apiName = "Location.PossessionDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown RemodelEndDate {
+    apiName = "Location.RemodelEndDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown RemodelStartDate {
+    apiName = "Location.RemodelStartDate"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ShouldSyncWithOci {
+    apiName = "Location.ShouldSyncWithOci"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown TimeZone {
+    apiName = "Location.TimeZone"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,45 @@
+type salesforce.ApprovalStep {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean allowDelegate {
+  }
+  salesforce.ApprovalAction approvalActions {
+  }
+  salesforce.ApprovalStepApprover assignedApprover {
+  }
+  string description {
+  }
+  salesforce.ApprovalEntryCriteria entryCriteria {
+  }
+  string ifCriteriaNotMet {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ApproveRecord",
+        "GotoNextStep",
+        "RejectRecord",
+      ]
+    }
+  }
+  string label {
+  }
+  string name {
+  }
+  salesforce.ApprovalStepRejectBehavior rejectBehavior {
+  }
+  salesforce.ApprovalAction rejectionActions {
+  }
+  metadataType = "ApprovalStep"
+}

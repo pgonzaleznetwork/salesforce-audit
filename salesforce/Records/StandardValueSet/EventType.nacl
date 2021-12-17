@@ -1,0 +1,26 @@
+salesforce.StandardValueSet EventType {
+  fullName = "EventType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Email"
+      default = false
+      label = "Email"
+    },
+    {
+      fullName = "Meeting"
+      default = false
+      label = "Meeting"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+    {
+      fullName = "Call"
+      default = false
+      label = "Call"
+    },
+  ]
+}

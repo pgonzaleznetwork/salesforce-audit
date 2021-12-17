@@ -1,0 +1,4 @@
+salesforce.ServicePresenceStatus Busy {
+  fullName = "Busy"
+  label = "Busy"
+}

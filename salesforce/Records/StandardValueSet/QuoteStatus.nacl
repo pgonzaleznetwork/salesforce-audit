@@ -1,0 +1,4 @@
+salesforce.StandardValueSet QuoteStatus {
+  fullName = "QuoteStatus"
+  sorted = false
+}

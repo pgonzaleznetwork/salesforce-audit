@@ -1,0 +1,21 @@
+salesforce.StandardValueSet QuickTextCategory {
+  fullName = "QuickTextCategory"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Greetings"
+      default = true
+      label = "Greetings"
+    },
+    {
+      fullName = "FAQ"
+      default = false
+      label = "FAQ"
+    },
+    {
+      fullName = "Closings"
+      default = false
+      label = "Closings"
+    },
+  ]
+}

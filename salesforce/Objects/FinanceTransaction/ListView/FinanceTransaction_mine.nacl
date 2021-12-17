@@ -1,0 +1,15 @@
+salesforce.ListView FinanceTransaction_mine {
+  fullName = "FinanceTransaction.mine"
+  columns = [
+    "Name",
+    "TotalAmountWithTax",
+    "ReferenceEntity",
+    "TransactionDate",
+    "EffectiveDate",
+  ]
+  filterScope = "Mine"
+  label = "My Finance Transactions"
+  _parent = [
+    salesforce.FinanceTransaction,
+  ]
+}

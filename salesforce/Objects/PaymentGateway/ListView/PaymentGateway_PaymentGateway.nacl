@@ -1,0 +1,8 @@
+salesforce.ListView PaymentGateway_PaymentGateway {
+  fullName = "PaymentGateway.PaymentGateway"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.PaymentGateway,
+  ]
+}

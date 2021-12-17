@@ -1,0 +1,24 @@
+type salesforce.Seller {
+  string ActiveFromDate {
+    _hidden_value = true
+  }
+  string ActiveToDate {
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyId {
+    apiName = "Seller.PartyId"
+    _hidden_value = true
+  }
+  string SalesAmount {
+    _hidden_value = true
+  }
+  string SellerTier {
+    _hidden_value = true
+  }
+  string SellerType {
+    _hidden_value = true
+  }
+}

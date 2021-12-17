@@ -1,0 +1,73 @@
+settings salesforce.ActivitiesSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean allowUsersToRelateMultipleContactsToTasksAndEvents {
+  }
+  boolean autoRelateEventAttendees {
+  }
+  boolean enableActivityReminders {
+  }
+  boolean enableClickCreateEvents {
+  }
+  boolean enableDragAndDropScheduling {
+  }
+  boolean enableEmailTracking {
+  }
+  boolean enableGroupTasks {
+  }
+  boolean enableHideChildEventsPreference {
+  }
+  boolean enableListViewScheduling {
+  }
+  boolean enableLogNote {
+  }
+  boolean enableMLSingleClientProfile {
+  }
+  boolean enableMultidayEvents {
+  }
+  boolean enableRecurringEvents {
+  }
+  boolean enableRecurringTasks {
+  }
+  boolean enableRollUpActivToContactsAcct {
+  }
+  boolean enableSidebarCalendarShortcut {
+  }
+  boolean enableSimpleTaskCreateUI {
+  }
+  boolean enableUNSTaskDelegatedToNotifications {
+  }
+  boolean enableUserListViewCalendars {
+  }
+  serviceid fullName {
+  }
+  string meetingRequestsLogo {
+  }
+  boolean showCustomLogoMeetingRequests {
+  }
+  boolean showEventDetailsMultiUserCalendar {
+  }
+  boolean showHomePageHoverLinksForEvents {
+  }
+  boolean showMyTasksHoverLinks {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ActivitiesSettings"
+}

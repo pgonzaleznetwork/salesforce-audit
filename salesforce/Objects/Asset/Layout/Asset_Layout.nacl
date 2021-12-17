@@ -1,0 +1,183 @@
+salesforce.Layout Asset_Asset_Layout@bs {
+  fullName = "Asset-Asset Layout"
+  headers = [
+    "PersonalTagging",
+    "PublicTagging",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Asset Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Asset.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.Product2Id
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Asset.field.ProductCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.SerialNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.InstallDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.Quantity
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.Price
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.ContactId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.IsCompetitorProduct
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.PurchaseDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.UsageEndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Asset.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Asset.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Description Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Asset.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Additional Information"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "CASES.CASE_NUMBER",
+        "NAME",
+        "CASES.SUBJECT",
+        "CASES.PRIORITY",
+        "CASES.CREATED_DATE",
+        "CASES.STATUS",
+        "OWNER_NAME",
+      ]
+      relatedList = "RelatedCaseList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE",
+      ]
+      relatedList = "RelatedHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+  ]
+  relatedObjects = [
+    "AccountId",
+    "ContactId",
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Asset,
+  ]
+}

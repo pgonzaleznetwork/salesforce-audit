@@ -1,0 +1,167 @@
+type salesforce.Opportunity {
+  salesforce.Picklist DeliveryInstallationStatus__c {
+    apiName = "Opportunity.DeliveryInstallationStatus__c"
+    label = "Delivery/Installation Status"
+    valueSet = [
+      {
+        fullName = "In progress"
+        default = false
+        label = "In progress"
+      },
+      {
+        fullName = "Yet to begin"
+        default = false
+        label = "Yet to begin"
+      },
+      {
+        fullName = "Completed"
+        default = false
+        label = "Completed"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Text TrackingNumber__c {
+    apiName = "Opportunity.TrackingNumber__c"
+    label = "Tracking Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 12
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text OrderNumber__c {
+    apiName = "Opportunity.OrderNumber__c"
+    label = "Order Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text CurrentGenerators__c {
+    apiName = "Opportunity.CurrentGenerators__c"
+    label = "Current Generator(s)"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text MainCompetitors__c {
+    apiName = "Opportunity.MainCompetitors__c"
+    label = "Main Competitor(s)"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 100
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaText account_name__c {
+    apiName = "Opportunity.account_name__c"
+    label = "account name"
+    formula = "TEXT(Account.UpsellOpportunity__c)"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Account.field.UpsellOpportunity__c
+      },
+    ]
+  }
+  salesforce.FormulaText Account_Priority__c {
+    apiName = "Opportunity.Account_Priority__c"
+    label = "Account Priority"
+    formula = "TEXT( Account.CustomerPriority__c )"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Account.field.CustomerPriority__c
+      },
+    ]
+  }
+  salesforce.Lookup Partner_Account__c {
+    apiName = "Opportunity.Partner_Account__c"
+    label = "Partner Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Opportunities"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    relationshipLabel = "Opportunities"
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup My_Lookup_Field__c {
+    apiName = "Opportunity.My_Lookup_Field__c"
+    label = "My Lookup Field"
+    referenceTo = [
+      salesforce.Custom_Object__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Opportunities"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    relationshipLabel = "Opportunities"
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist My_Picklist_Field__c {
+    apiName = "Opportunity.My_Picklist_Field__c"
+    label = "My Picklist Field"
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+    valueSetName = salesforce.GlobalValueSet.instance.My_Global_Value_Set
+  }
+}

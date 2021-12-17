@@ -1,0 +1,15 @@
+salesforce.ListView Solution_AllUnreviewedSolutions {
+  fullName = "Solution.AllUnreviewedSolutions"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "SOLUTION.STATUS_CODE"
+      operation = "equals"
+      value = "0"
+    },
+  ]
+  label = "All Unreviewed Solutions"
+  _parent = [
+    salesforce.Solution,
+  ]
+}

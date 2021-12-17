@@ -1,0 +1,35 @@
+salesforce.ApexClass SRM_GeneratePackageFlowActionTests {
+  apiVersion = 48
+  status = "Active"
+  fullName = "SRM_GeneratePackageFlowActionTests"
+  content = file("salesforce/Records/ApexClass/SRM_GeneratePackageFlowActionTests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_GeneratePackageFlowAction
+    },
+    {
+      reference = salesforce.ApexClass.instance.SRM_TestData
+    },
+    {
+      reference = salesforce.SRM_CRM_Sprint__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Name__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Sprint_Id__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Type__c
+    },
+  ]
+}

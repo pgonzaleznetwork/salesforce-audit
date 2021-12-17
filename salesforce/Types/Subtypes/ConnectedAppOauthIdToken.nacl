@@ -1,0 +1,27 @@
+type salesforce.ConnectedAppOauthIdToken {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string idTokenAudience {
+  }
+  boolean idTokenIncludeAttributes {
+  }
+  boolean idTokenIncludeCustomPerms {
+  }
+  boolean idTokenIncludeStandardClaims {
+  }
+  number idTokenValidity {
+  }
+  metadataType = "ConnectedAppOauthIdToken"
+}

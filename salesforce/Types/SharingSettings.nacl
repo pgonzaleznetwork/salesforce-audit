@@ -1,0 +1,57 @@
+settings salesforce.SharingSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean deferGroupMembership {
+  }
+  boolean deferSharingRules {
+  }
+  boolean enableRemoveTMGroupMembership {
+  }
+  boolean enableSecureGuestAccess {
+  }
+  serviceid fullName {
+  }
+  boolean enableAccountRoleOptimization {
+  }
+  boolean enableAssetSharing {
+  }
+  boolean enableCommunityUserVisibility {
+  }
+  boolean enableExternalSharingModel {
+  }
+  boolean enableManagerGroups {
+  }
+  boolean enableManualUserRecordSharing {
+  }
+  boolean enablePartnerSuperUserAccess {
+  }
+  boolean enablePortalUserCaseSharing {
+  }
+  boolean enablePortalUserVisibility {
+  }
+  boolean enableRestrictAccessLookupRecords {
+  }
+  boolean enableStandardReportVisibility {
+  }
+  boolean enableTerritoryForecastManager {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "SharingSettings"
+}

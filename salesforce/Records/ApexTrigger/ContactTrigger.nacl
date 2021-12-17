@@ -1,0 +1,14 @@
+salesforce.ApexTrigger ContactTrigger {
+  apiVersion = 51
+  status = "Active"
+  fullName = "ContactTrigger"
+  content = file("salesforce/Records/ApexTrigger/ContactTrigger.trigger")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.TriggerFactory
+    },
+    {
+      reference = salesforce.Contact
+    },
+  ]
+}

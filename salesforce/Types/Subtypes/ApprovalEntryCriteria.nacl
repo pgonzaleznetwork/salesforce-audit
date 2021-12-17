@@ -1,0 +1,23 @@
+type salesforce.ApprovalEntryCriteria {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string booleanFilter {
+  }
+  salesforce.FilterItem criteriaItems {
+  }
+  string formula {
+  }
+  metadataType = "ApprovalEntryCriteria"
+}

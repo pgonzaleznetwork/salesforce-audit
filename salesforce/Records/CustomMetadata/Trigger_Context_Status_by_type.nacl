@@ -1,0 +1,48 @@
+salesforce.CustomMetadata Trigger_Context_Status_by_type@uuvu {
+  fullName = "Trigger_Context_Status.by_type"
+  label = "by type"
+  protected = false
+  values = [
+    {
+      field = "Enable_After_Delete__c"
+      value = "true"
+    },
+    {
+      field = "Enable_After_Insert__c"
+      value = "true"
+    },
+    {
+      field = "Enable_After_Undelete__c"
+      value = "true"
+    },
+    {
+      field = "Enable_After_Update__c"
+      value = "true"
+    },
+    {
+      field = "Enable_Before_Delete__c"
+      value = "true"
+    },
+    {
+      field = "Enable_Before_Insert__c"
+      value = "true"
+    },
+    {
+      field = "Enable_Before_Update__c"
+      value = "true"
+    },
+    {
+      field = "instantiate_type__c"
+      value = "TriggerDMlsupporT"
+    },
+    {
+      field = "related_class__c"
+    },
+    {
+      field = "the_handler_to_call__c"
+    },
+    {
+      field = "the_instance__c"
+    },
+  ]
+}

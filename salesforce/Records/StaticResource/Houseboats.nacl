@@ -1,0 +1,6 @@
+salesforce.StaticResource Houseboats {
+  cacheControl = "Public"
+  contentType = "application/zip"
+  fullName = "Houseboats"
+  content = file("salesforce/Records/StaticResource/Houseboats.zip")
+}

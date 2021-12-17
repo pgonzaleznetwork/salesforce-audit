@@ -1,0 +1,22 @@
+salesforce.ListView SRM_Jira_Ticket__c_Deployed_to_Integration_Today {
+  fullName = "SRM_Jira_Ticket__c.Deployed_to_Integration_Today"
+  columns = [
+    "NAME",
+    "Title__c",
+    "Case_Subject__c",
+    "Owner__c",
+    "Rebased_By__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Approx_Deployment_Date__c"
+      operation = "equals"
+      value = "THIS_MONTH"
+    },
+  ]
+  label = "Deployed to Production This Month"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

@@ -1,0 +1,26 @@
+salesforce.ApexClass fflib_SObjectSelector {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectSelector"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectSelector.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectSelector
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QueryFactory
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDescribe
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SecurityUtils
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_StringBuilder
+    },
+  ]
+}

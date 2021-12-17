@@ -1,0 +1,33 @@
+type salesforce.CustomFeedFilter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FeedFilterCriterion criteria {
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string label {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "feedFilter"
+  dirName = "feedFilters"
+  metadataType = "CustomFeedFilter"
+}

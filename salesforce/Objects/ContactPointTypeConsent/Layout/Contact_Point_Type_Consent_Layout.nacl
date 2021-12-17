@@ -1,0 +1,83 @@
+salesforce.Layout ContactPointTypeConsent_Contact_Point_Type_Consent_Layout@bssss {
+  fullName = "ContactPointTypeConsent-Contact Point Type Consent Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.PartyId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointTypeConsent.field.DataUsePurposeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointTypeConsent.field.EffectiveFrom
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.CaptureSource
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.CaptureDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.ContactPointType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.PrivacyConsentStatus
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointTypeConsent.field.EffectiveTo
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointTypeConsent.field.CaptureContactPointType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointTypeConsent.field.DoubleConsentCaptureDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ContactPointTypeConsent,
+  ]
+}

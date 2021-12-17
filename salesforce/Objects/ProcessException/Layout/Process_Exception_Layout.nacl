@@ -1,0 +1,78 @@
+salesforce.Layout ProcessException_Process_Exception_Layout@bss {
+  fullName = "ProcessException-Process Exception Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "ProcessExceptionInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProcessException.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.Severity
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProcessException.field.AttachedToId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.CaseId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.ExternalReference
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProcessException.field.ProcessExceptionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.Category
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.Priority
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProcessException.field.Message
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProcessException.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ProcessException,
+  ]
+}

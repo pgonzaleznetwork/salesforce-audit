@@ -1,0 +1,57 @@
+settings salesforce.ChatterSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean allowChatterGroupArchiving {
+  }
+  boolean allowRecordsInChatterGroup {
+  }
+  boolean allowSharingInChatterGroup {
+  }
+  boolean enableApprovalRequest {
+  }
+  boolean enableCaseFeedRelativeTimestamps {
+  }
+  boolean enableChatter {
+  }
+  boolean enableChatterEmoticons {
+  }
+  boolean enableFeedEdit {
+  }
+  boolean enableFeedPinning {
+  }
+  boolean enableFeedsDraftPosts {
+  }
+  boolean enableFeedsRichText {
+  }
+  boolean enableInviteCsnUsers {
+  }
+  boolean enableOutOfOfficeEnabledPref {
+  }
+  boolean enableRichLinkPreviewsInFeed {
+  }
+  boolean enableTodayRecsInFeed {
+  }
+  boolean unlistedGroupsEnabled {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ChatterSettings"
+}

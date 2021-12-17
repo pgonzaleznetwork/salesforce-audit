@@ -1,0 +1,33 @@
+type salesforce.SharingRules {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  "List<salesforce.SharingCriteriaRule>" sharingCriteriaRules {
+  }
+  "List<salesforce.SharingGuestRule>" sharingGuestRules {
+  }
+  "List<salesforce.SharingOwnerRule>" sharingOwnerRules {
+  }
+  "List<salesforce.SharingTerritoryRule>" sharingTerritoryRules {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "sharingRules"
+  dirName = "sharingRules"
+  metadataType = "SharingRules"
+}

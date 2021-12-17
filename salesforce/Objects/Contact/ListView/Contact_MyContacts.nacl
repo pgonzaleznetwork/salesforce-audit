@@ -1,0 +1,8 @@
+salesforce.ListView Contact_MyContacts {
+  fullName = "Contact.MyContacts"
+  filterScope = "Mine"
+  label = "My Contacts"
+  _parent = [
+    salesforce.Contact,
+  ]
+}

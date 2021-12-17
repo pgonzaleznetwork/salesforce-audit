@@ -1,0 +1,17 @@
+salesforce.ApexClass LeadTriggerHandler {
+  apiVersion = 52
+  status = "Active"
+  fullName = "LeadTriggerHandler"
+  content = file("salesforce/Records/ApexClass/LeadTriggerHandler.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.TopLevelClass
+    },
+    {
+      reference = salesforce.ApexClass.instance.TriggerHandlerBase
+    },
+  ]
+}

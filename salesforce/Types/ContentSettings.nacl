@@ -1,0 +1,65 @@
+settings salesforce.ContentSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableChatterFileLink {
+  }
+  boolean enableCMSC2CConnections {
+  }
+  boolean enableContent {
+  }
+  boolean enableContentAutoAssign {
+  }
+  boolean enableContentDistForPortalUsers {
+  }
+  boolean enableContentDistPwOptionsBit1 {
+  }
+  boolean enableContentDistPwOptionsBit2 {
+  }
+  boolean enableContentDistribution {
+  }
+  boolean enableContentSupportMultiLanguage {
+  }
+  boolean enableContentWorkspaceAccess {
+  }
+  boolean enableDeleteFileInContentPacks {
+  }
+  boolean enableFileShareSetByRecord {
+  }
+  boolean enableFilesUsrShareNetRestricted {
+  }
+  boolean enableJPGPreviews {
+  }
+  boolean enableLibraryManagedFiles {
+  }
+  boolean enableShowChatterFilesInContent {
+  }
+  boolean enableSiteGuestUserToUploadFiles {
+  }
+  boolean enableUploadFilesOnAttachments {
+  }
+  boolean skipContentAssetTriggers {
+  }
+  boolean skipContentAssetTriggersOnDeploy {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ContentSettings"
+}

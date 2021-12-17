@@ -1,0 +1,9 @@
+salesforce.ValidationRule Case_case_reason {
+  fullName = "Case.case_reason"
+  active = true
+  errorConditionFormula = "ISPICKVAL( Reason ,\"exit\")"
+  errorMessage = "Reason cannot be exit"
+  _parent = [
+    salesforce.Case,
+  ]
+}

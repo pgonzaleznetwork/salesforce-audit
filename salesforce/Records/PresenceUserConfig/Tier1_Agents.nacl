@@ -1,0 +1,15 @@
+salesforce.PresenceUserConfig Tier1_Agents {
+  fullName = "Tier1_Agents"
+  assignments = {
+    users = {
+      user = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+    }
+  }
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = true
+  enableRequestSound = true
+  label = "Tier1 Agents"
+}

@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Opportunity_update_stage@vu {
+  fullName = "Opportunity.update_stage"
+  field = salesforce.Opportunity.field.StageName
+  literalValue = "Needs Analysis"
+  name = "update stage"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

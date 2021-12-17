@@ -1,0 +1,22 @@
+type salesforce.ChannelLayoutItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  metadataType = "ChannelLayoutItem"
+}

@@ -1,0 +1,37 @@
+settings salesforce.MyDomainSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean canOnlyLoginWithMyDomainUrl {
+  }
+  boolean doesApiLoginRequireOrgDomain {
+  }
+  boolean enableNativeBrowserForAuthOnAndroid {
+  }
+  boolean enableNativeBrowserForAuthOnIos {
+  }
+  boolean useStabilizedMyDomainHostnames {
+  }
+  boolean useStabilizedSandboxMyDomainHostnames {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "MyDomainSettings"
+}

@@ -1,0 +1,40 @@
+salesforce.ManagedContentType cms_document {
+  fullName = "cms_document"
+  description = "Add content using any file type or an external URL."
+  developerName = "cms_document"
+  managedContentNodeTypes = [
+    {
+      helpText = "Adds media to your content from a desktop file or URL link. Make sure the domain for your URL is allowed by your org so your users can access it."
+      isLocalizable = false
+      isRequired = true
+      nodeLabel = "Source"
+      nodeName = "source"
+      nodeType = "MEDIA"
+    },
+    {
+      helpText = "Links a thumbnail image to the content."
+      isLocalizable = false
+      isRequired = false
+      nodeLabel = "Link to Thumbnail"
+      nodeName = "thumbUrl"
+      nodeType = "URL"
+    },
+    {
+      helpText = "Enter the file name."
+      isLocalizable = true
+      isRequired = true
+      nodeLabel = "Title"
+      nodeName = "title"
+      nodeType = "NAMEFIELD"
+    },
+    {
+      helpText = "Enter a brief description of the document."
+      isLocalizable = true
+      isRequired = false
+      nodeLabel = "Alt Text"
+      nodeName = "altText"
+      nodeType = "MTEXT"
+    },
+  ]
+  masterLabel = "Document"
+}

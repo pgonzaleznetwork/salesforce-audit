@@ -1,0 +1,20 @@
+salesforce.ApexClass fflib_SObjectDescribeTest {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectDescribeTest"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectDescribeTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDescribe
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Lead
+    },
+  ]
+}

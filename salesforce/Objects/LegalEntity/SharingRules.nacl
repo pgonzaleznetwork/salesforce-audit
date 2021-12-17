@@ -1,0 +1,6 @@
+salesforce.SharingRules LegalEntity {
+  fullName = "LegalEntity"
+  _parent = [
+    salesforce.LegalEntity,
+  ]
+}

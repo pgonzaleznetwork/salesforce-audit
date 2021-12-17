@@ -1,0 +1,41 @@
+salesforce.StandardValueSet AccountType {
+  fullName = "AccountType"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Prospect"
+      default = false
+      label = "Prospect"
+    },
+    {
+      fullName = "Customer - Direct"
+      default = false
+      label = "Customer - Direct"
+    },
+    {
+      fullName = "Customer - Channel"
+      default = false
+      label = "Customer - Channel"
+    },
+    {
+      fullName = "Channel Partner / Reseller"
+      default = false
+      label = "Channel Partner / Reseller"
+    },
+    {
+      fullName = "Installation Partner"
+      default = false
+      label = "Installation Partner"
+    },
+    {
+      fullName = "Technology Partner"
+      default = false
+      label = "Technology Partner"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

@@ -1,0 +1,155 @@
+salesforce.Layout Individual_Individual_Layout@bs {
+  fullName = "Individual-Individual Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Individual.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.BirthDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.HasOptedOutProcessing
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.HasOptedOutSolicit
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.SendIndividualData
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.CanStorePiiElsewhere
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.HasOptedOutGeoTracking
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.HasOptedOutProfiling
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.HasOptedOutTracking
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.ShouldForget
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Individual.field.IndividualsAge
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Individual.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Individual.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Individual.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Individual.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "FULL_NAME",
+        "CONTACT.TITLE",
+        "CONTACT.EMAIL",
+        "CONTACT.PHONE1",
+      ]
+      relatedList = "RelatedContactListIndividual"
+    },
+    {
+      fields = [
+        "FULL_NAME",
+        "LEAD.TITLE",
+        "LEAD.EMAIL",
+        "LEAD.PHONE",
+      ]
+      relatedList = "RelatedLeadListIndividual"
+    },
+    {
+      fields = [
+        "EmailAddress",
+        "EmailMailBox",
+        "EmailDomain",
+      ]
+      relatedList = "ContactPointEmails"
+    },
+    {
+      fields = [
+        "TelephoneNumber",
+        "PhoneType",
+        "FormattedNationalPhoneNumber",
+        "IsPersonalPhone",
+      ]
+      relatedList = "ContactPointPhones"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Individual,
+  ]
+}

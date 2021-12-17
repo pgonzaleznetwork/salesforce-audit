@@ -1,0 +1,188 @@
+salesforce.Layout InvoiceLine_Invoice_Line_Layout@bss {
+  fullName = "InvoiceLine-Invoice Line Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.InvoiceLine.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.InvoiceLine.field.InvoiceLineStartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.ReferenceEntityItemId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.ReferenceEntityItemType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.RelatedLineId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.InvoiceLine.field.InvoiceId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.InvoiceLine.field.InvoiceLineEndDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.ReferenceEntityItemTypeCode
+            },
+            {
+              behavior = "Required"
+              field = salesforce.InvoiceLine.field.Type
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "InvoiceLineAmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.Quantity
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.UnitPrice
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.ChargeAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.AdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.InvoiceLine.field.LineAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.TaxAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "InvoiceLineAddressInformation"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "TaxInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.TaxName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.TaxEffectiveDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.TaxRate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.InvoiceLine.field.TaxCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.InvoiceLine.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.InvoiceLine.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.InvoiceLine.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.InvoiceLine.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.InvoiceLine,
+  ]
+}

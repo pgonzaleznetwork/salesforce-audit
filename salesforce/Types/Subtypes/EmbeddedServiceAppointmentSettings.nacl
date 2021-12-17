@@ -1,0 +1,29 @@
+type salesforce.EmbeddedServiceAppointmentSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string appointmentConfirmImg {
+  }
+  boolean enabled {
+  }
+  string homeImg {
+  }
+  string logoImg {
+  }
+  boolean shouldShowExistingAppointment {
+  }
+  boolean shouldShowNewAppointment {
+  }
+  metadataType = "EmbeddedServiceAppointmentSettings"
+}

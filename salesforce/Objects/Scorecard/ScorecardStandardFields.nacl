@@ -1,0 +1,12 @@
+type salesforce.Scorecard {
+  string Description {
+    _hidden_value = true
+  }
+  string Name {
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Scorecard.OwnerId"
+    _hidden_value = true
+  }
+}

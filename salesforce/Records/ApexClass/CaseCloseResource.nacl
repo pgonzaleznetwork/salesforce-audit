@@ -1,0 +1,11 @@
+salesforce.ApexClass CaseCloseResource {
+  apiVersion = 48
+  status = "Active"
+  fullName = "CaseCloseResource"
+  content = file("salesforce/Records/ApexClass/CaseCloseResource.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.CaseService
+    },
+  ]
+}

@@ -1,0 +1,237 @@
+salesforce.Layout Payment_Payment_Layout@bs {
+  fullName = "Payment-Payment Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.PaymentNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Payment.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.PaymentAuthorizationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.PaymentMethodId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Payment.field.ProcessingMode
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.Balance
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.TotalRefundApplied
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.Date
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Payment.field.Status
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Payment.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.PaymentGroupId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.EffectiveDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.Comments
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.TotalRefundUnapplied
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.NetRefundApplied
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.ImpactAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.CancellationDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.SfResultCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.CancellationSfResultCode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.CancellationEffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.PaymentGatewayId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.GatewayResultCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.GatewayRefNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.CancellationGatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.CancellationGatewayRefNumber
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.GatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.GatewayResultCodeDescription
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.GatewayRefDetails
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.CancellationGatewayResultCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.MacAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Payment.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Payment.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Payment,
+  ]
+}

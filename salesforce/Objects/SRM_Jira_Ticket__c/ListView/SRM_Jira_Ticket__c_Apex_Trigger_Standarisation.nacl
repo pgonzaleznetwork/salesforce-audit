@@ -1,0 +1,22 @@
+salesforce.ListView SRM_Jira_Ticket__c_Apex_Trigger_Standarisation {
+  fullName = "SRM_Jira_Ticket__c.Apex_Trigger_Standarisation"
+  columns = [
+    "NAME",
+    "Case_Subject__c",
+    "Rebased_By__c",
+    "Connected_Org__c",
+    "Git_Pull_Request_URL__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Case__c"
+      operation = "equals"
+      value = "00002022"
+    },
+  ]
+  label = "Apex Trigger Standarisation"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

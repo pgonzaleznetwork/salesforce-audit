@@ -1,0 +1,31 @@
+type salesforce.StrategyNodeIf {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string childNode {
+  }
+  string description {
+  }
+  string label {
+  }
+  string name {
+  }
+  number limit {
+  }
+  salesforce.IfExpression childNodeExpression {
+  }
+  boolean onlyFirstMatch {
+  }
+  metadataType = "StrategyNodeIf"
+}

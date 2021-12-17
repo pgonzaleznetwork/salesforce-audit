@@ -1,0 +1,89 @@
+salesforce.Layout Field_referencing__mdt_Field_referencing_Layout@uuubss {
+  fullName = "Field_referencing__mdt-Field referencing Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Field_referencing__mdt.field.MasterLabel
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Field_referencing__mdt.field.DeveloperName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Field_referencing__mdt.field.Related_Object__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Field_referencing__mdt.field.Related_Field__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Field_referencing__mdt.field.second_field__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "IsProtected"
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Field_referencing__mdt.field.NamespacePrefix
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "CreatedById"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "LastModifiedById"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Field_referencing__mdt,
+  ]
+}

@@ -1,0 +1,146 @@
+type salesforce.PromptVersion {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionButtonLabel {
+  }
+  string actionButtonLink {
+  }
+  string body {
+  }
+  string customApplication {
+    foreignKeyDomain = [
+      salesforce.CustomApplication,
+    ]
+  }
+  number delayDays {
+  }
+  string description {
+  }
+  string dismissButtonLabel {
+  }
+  string displayPosition {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BottomCenter",
+        "BottomLeft",
+        "BottomRight",
+        "MiddleCenter",
+        "MiddleLeft",
+        "MiddleRight",
+        "TopCenter",
+        "TopLeft",
+        "TopRight",
+      ]
+    }
+  }
+  string displayType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DockedComposer",
+        "FloatingPanel",
+        "Targeted",
+        "Walkthrough",
+      ]
+    }
+  }
+  string endDate {
+  }
+  string header {
+  }
+  string indexWithIsPublished {
+  }
+  string indexWithoutIsPublished {
+  }
+  boolean isPublished {
+  }
+  string masterLabel {
+  }
+  string publishedByUser {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  string publishedDate {
+  }
+  boolean shouldDisplayActionButton {
+  }
+  boolean shouldIgnoreGlobalDelay {
+  }
+  string startDate {
+  }
+  number stepNumber {
+  }
+  string targetAppDeveloperName {
+  }
+  string targetAppNamespacePrefix {
+  }
+  string targetPageKey1 {
+  }
+  string targetPageKey2 {
+  }
+  string targetPageType {
+  }
+  string themeColor {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Theme1",
+        "Theme2",
+        "Theme3",
+        "Theme4",
+      ]
+    }
+  }
+  string themeSaturation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Dark",
+        "Light",
+      ]
+    }
+  }
+  number timesToDisplay {
+  }
+  string title {
+  }
+  salesforce.UiFormulaRule uiFormulaRule {
+  }
+  string userAccess {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Everyone",
+        "SpecificPermissions",
+      ]
+    }
+  }
+  string userProfileAccess {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Everyone",
+        "SpecificProfiles",
+      ]
+    }
+  }
+  number versionNumber {
+  }
+  string videoLink {
+  }
+  metadataType = "PromptVersion"
+}

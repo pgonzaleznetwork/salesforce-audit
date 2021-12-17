@@ -1,0 +1,220 @@
+salesforce.CustomApplication standard__ServiceConsole {
+  fullName = "standard__ServiceConsole"
+  consoleConfig = {
+    detailPageRefreshMethod = "none"
+    keyboardShortcuts = {
+      defaultShortcuts = [
+        {
+          action = "FOCUS_CONSOLE"
+          active = true
+          keyCommand = "ESC"
+        },
+        {
+          action = "FOCUS_NAVIGATOR_TAB"
+          active = true
+          keyCommand = "V"
+        },
+        {
+          action = "FOCUS_DETAIL_VIEW"
+          active = true
+          keyCommand = "SHIFT+S"
+        },
+        {
+          action = "FOCUS_PRIMARY_TAB_PANEL"
+          active = true
+          keyCommand = "P"
+        },
+        {
+          action = "FOCUS_SUBTAB_PANEL"
+          active = true
+          keyCommand = "S"
+        },
+        {
+          action = "FOCUS_LIST_VIEW"
+          active = true
+          keyCommand = "N"
+        },
+        {
+          action = "FOCUS_FIRST_LIST_VIEW"
+          active = true
+          keyCommand = "SHIFT+F"
+        },
+        {
+          action = "FOCUS_SEARCH_INPUT"
+          active = true
+          keyCommand = "R"
+        },
+        {
+          action = "MOVE_LEFT"
+          active = true
+          keyCommand = "LEFT ARROW"
+        },
+        {
+          action = "MOVE_RIGHT"
+          active = true
+          keyCommand = "RIGHT ARROW"
+        },
+        {
+          action = "UP_ARROW"
+          active = true
+          keyCommand = "UP ARROW"
+        },
+        {
+          action = "DOWN_ARROW"
+          active = true
+          keyCommand = "DOWN ARROW"
+        },
+        {
+          action = "OPEN_TAB_SCROLLER_MENU"
+          active = true
+          keyCommand = "D"
+        },
+        {
+          action = "OPEN_TAB"
+          active = true
+          keyCommand = "T"
+        },
+        {
+          action = "CLOSE_TAB"
+          active = true
+          keyCommand = "C"
+        },
+        {
+          action = "REFRESH_TAB"
+          active = false
+          keyCommand = "SHIFT+R"
+        },
+        {
+          action = "ENTER"
+          active = true
+          keyCommand = "ENTER"
+        },
+        {
+          action = "EDIT"
+          active = true
+          keyCommand = "E"
+        },
+        {
+          action = "SAVE"
+          active = true
+          keyCommand = "CTRL+S"
+        },
+        {
+          action = "CONSOLE_LINK_DIALOG"
+          active = false
+          keyCommand = "U"
+        },
+        {
+          action = "HOTKEYS_PANEL"
+          active = false
+          keyCommand = "SHIFT+K"
+        },
+        {
+          action = "FOCUS_MACRO"
+          active = false
+          keyCommand = "M"
+        },
+        {
+          action = "FOCUS_FOOTER_PANEL"
+          active = false
+          keyCommand = "F"
+        },
+        {
+          action = "TOGGLE_LIST_VIEW"
+          active = false
+          keyCommand = "SHIFT+N"
+        },
+        {
+          action = "TOGGLE_LEFT_SIDEBAR"
+          active = false
+          keyCommand = "SHIFT+LEFT ARROW"
+        },
+        {
+          action = "TOGGLE_RIGHT_SIDEBAR"
+          active = false
+          keyCommand = "SHIFT+RIGHT ARROW"
+        },
+        {
+          action = "TOGGLE_TOP_SIDEBAR"
+          active = false
+          keyCommand = "SHIFT+UP ARROW"
+        },
+        {
+          action = "TOGGLE_BOTTOM_SIDEBAR"
+          active = false
+          keyCommand = "SHIFT+DOWN ARROW"
+        },
+        {
+          action = "TOGGLE_APP_LEVEL_COMPONENTS"
+          active = false
+          keyCommand = "Z"
+        },
+        {
+          action = "REOPEN_LAST_TAB"
+          active = false
+          keyCommand = "SHIFT+C"
+        },
+      ]
+    }
+    listPlacement = {
+      location = "full"
+    }
+    listRefreshMethod = "none"
+  }
+  defaultLandingTab = "standard-home"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isServiceCloudConsole = true
+  preferences = {
+    enableCustomizeMyTabs = false
+    enableKeyboardShortcuts = true
+    enableListViewHover = true
+    enableListViewReskin = true
+    enableMultiMonitorComponents = true
+    enablePinTabs = true
+    enableTabHover = false
+    enableTabLimits = false
+    saveUserSessions = true
+  }
+  tabs = [
+    "standard-Account",
+    "standard-Contact",
+    "standard-Case",
+    "standard-Opportunity",
+    "standard-Lead",
+    salesforce.CustomTab.instance.Center__c,
+    salesforce.CustomTab.instance.Parent__c,
+    salesforce.CustomTab.instance.Child__c,
+  ]
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.Center__c
+      },
+      {
+        tab = salesforce.CustomTab.instance.Child__c
+      },
+      {
+        tab = salesforce.CustomTab.instance.Parent__c
+      },
+      {
+        tab = "standard-Account"
+      },
+      {
+        fieldName = "AccountId"
+        tab = "standard-Case"
+      },
+      {
+        fieldName = "AccountId"
+        tab = "standard-Contact"
+      },
+      {
+        tab = "standard-Lead"
+      },
+      {
+        fieldName = "AccountId"
+        tab = "standard-Opportunity"
+      },
+    ]
+  }
+}

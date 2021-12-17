@@ -1,0 +1,229 @@
+salesforce.EscalationRules Case {
+  fullName = "Case"
+  escalationRule = {
+    fullName = "Standard"
+    active = true
+    ruleEntry = [
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "equals"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Platinum"
+          },
+          {
+            field = salesforce.Case.field.Priority
+            operation = "equals"
+            value = "High"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "120"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "equals"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Platinum"
+          },
+          {
+            field = salesforce.Case.field.Priority
+            operation = "equals"
+            value = "Medium,Low"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "360"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "equals"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Gold"
+          },
+          {
+            field = salesforce.Case.field.Priority
+            operation = "equals"
+            value = "High"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "240"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "equals"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Gold"
+          },
+          {
+            field = salesforce.Case.field.Priority
+            operation = "equals"
+            value = "Medium,Low"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "480"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "equals"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Silver"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "720"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "equals"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Bronze"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "1440"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "notEqual"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Gold,Platinum"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "360"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+      {
+        businessHoursSource = "Case"
+        criteriaItems = [
+          {
+            field = "Account.BillingCountry"
+            operation = "notEqual"
+            value = "US,USA,United States,United States of America"
+          },
+          {
+            field = salesforce.Account.field.SLA__c
+            operation = "equals"
+            value = "Silver,Bronze"
+          },
+        ]
+        escalationAction = {
+          assignedTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
+          assignedToType = "User"
+          minutesToEscalation = "1080"
+          notifyCaseOwner = "false"
+          notifyTo = "pgonzaleznetwork@brave-raccoon-mm7crl.com"
+          notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
+        }
+        escalationStartTime = "CaseCreation"
+      },
+    ]
+  }
+}

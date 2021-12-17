@@ -1,0 +1,167 @@
+type salesforce.CommSubscriptionTiming {
+  serviceid Id {
+    apiName = "CommSubscriptionTiming.Id"
+    label = "Communication Subscription Timing ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CommSubscriptionTiming.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "CommSubscriptionTiming.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CommSubscriptionTiming.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CommSubscriptionTiming.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CommSubscriptionTiming.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CommSubscriptionTiming.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CommSubscriptionTiming.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CommSubscriptionConsentId {
+    apiName = "CommSubscriptionTiming.CommSubscriptionConsentId"
+    label = "Communication Subscription Consent ID"
+    _required = true
+    referenceTo = [
+      salesforce.CommSubscriptionConsent,
+    ]
+    inlineHelpText = "The communication subscription consent record associated with the communication subscription timing."
+    createable = true
+    updateable = false
+    relationshipName = "CommSubscriptionConsent"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Picklist Unit {
+    apiName = "CommSubscriptionTiming.Unit"
+    label = "Unit"
+    _required = true
+    valueSet = [
+      {
+        fullName = "DayOfWeek"
+        default = false
+        label = "Day of Week"
+        isActive = true
+      },
+      {
+        fullName = "Hour"
+        default = false
+        label = "Hour"
+        isActive = true
+      },
+      {
+        fullName = "Day"
+        default = false
+        label = "Day"
+        isActive = true
+      },
+      {
+        fullName = "Week"
+        default = false
+        label = "Week"
+        isActive = true
+      },
+      {
+        fullName = "Month"
+        default = false
+        label = "Month"
+        isActive = true
+      },
+    ]
+    restricted = true
+    inlineHelpText = "The unit of time that works with Offset to determine the communication timing."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown Offset {
+    apiName = "CommSubscriptionTiming.Offset"
+    inlineHelpText = "The amount of time before or after an event or the specific day of the week that you should communicate with the contact point. Set the unit of time in Unit. For example, if you set Unit as \"Week\" and Offset as \"-4\" communicate with the contact point four weeks before the event. If you set Offset as \"4\" communicate with the contact point four weeks after the event. If you set Unit as \"Day of Week\" and Offset as \"1,\" communicate with the contact point on Monday. If you set Offset as \"7\" communicate with the contact point on Sunday."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown PreferredTimeEnd {
+    apiName = "CommSubscriptionTiming.PreferredTimeEnd"
+    inlineHelpText = "End of the preferred time span in which to reach the contact point."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown PreferredTimeStart {
+    apiName = "CommSubscriptionTiming.PreferredTimeStart"
+    inlineHelpText = "Start of the preferred time span in which to reach the contact point."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown PreferredTimeZone {
+    apiName = "CommSubscriptionTiming.PreferredTimeZone"
+    inlineHelpText = "Time zone of the preferred time span."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

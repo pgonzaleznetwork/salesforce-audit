@@ -1,0 +1,19 @@
+type salesforce.SearchSettingsByObject {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.ObjectSearchSetting>" searchSettingsByObject {
+  }
+  metadataType = "SearchSettingsByObject"
+}

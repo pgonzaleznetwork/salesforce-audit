@@ -1,0 +1,321 @@
+salesforce.Layout FinanceTransaction_Finance_Transaction_Layout@bss {
+  fullName = "FinanceTransaction-Finance Transaction Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.ReferenceEntityId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.FinanceTransaction.field.ReferenceEntityType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.EventAction
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.EventType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.LegalEntityId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.ParentReferenceEntityId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalReferenceEntityType
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalEventAction
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalEventType
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.FinanceTransaction.field.TotalAmountWithTax
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.ChargeAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.Subtotal
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.ImpactAmount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.ResultingBalance
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.AdjustmentAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.TaxAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "DateInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.FinanceTransaction.field.TransactionDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.DueDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.FinanceTransaction.field.EffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Allocations"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.SourceEntityId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.DestinationEntityId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GlInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalDebitGlAccountName
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalCreditGlAccountName
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalGlTreatmentName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalDebitGlAccountNumber
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalCreditGlAccountNumber
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalGlRuleName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "FinancePeriodInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalFinancePeriodName
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalFinancePeriodStartDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalFinanceBookName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalFinancePeriodStatus
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.OriginalFinancePeriodEndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "FinanceSystemIntegrationInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.FinanceSystemName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.FinanceSystemIntegrationMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.FinanceSystemTransactionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.FinanceTransaction.field.FinanceSystemIntegrationStatus
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.CreationMode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.LastModifiedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.FinanceTransaction.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.FinanceTransaction,
+  ]
+}

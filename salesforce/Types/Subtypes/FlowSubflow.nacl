@@ -1,0 +1,41 @@
+type salesforce.FlowSubflow {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string elementSubtype {
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  salesforce.FlowConnector connector {
+  }
+  string flowName {
+  }
+  salesforce.FlowSubflowInputAssignment inputAssignments {
+  }
+  salesforce.FlowSubflowOutputAssignment outputAssignments {
+  }
+  boolean storeOutputAutomatically {
+  }
+  metadataType = "FlowSubflow"
+}

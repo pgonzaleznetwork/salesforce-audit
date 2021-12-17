@@ -1,0 +1,14 @@
+salesforce.ApexClass AccountsSelector {
+  apiVersion = 48
+  status = "Active"
+  fullName = "AccountsSelector"
+  content = file("salesforce/Records/ApexClass/AccountsSelector.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectSelector
+    },
+  ]
+}

@@ -1,0 +1,23 @@
+salesforce.ApexClass fflib_SObjectMocks {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectMocks"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectMocks.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectSelector
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectUnitOfWork
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectUnitOfWork
+    },
+  ]
+}

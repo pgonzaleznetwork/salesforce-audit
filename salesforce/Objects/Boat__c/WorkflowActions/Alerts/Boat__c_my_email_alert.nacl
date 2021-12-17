@@ -1,0 +1,15 @@
+salesforce.WorkflowAlert Boat__c_my_email_alert@uuvuu {
+  fullName = "Boat__c.my_email_alert"
+  description = "my email alert"
+  protected = false
+  recipients = [
+    {
+      type = "accountOwner"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "unfiled$public/MarketingProductInquiryResponse"
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

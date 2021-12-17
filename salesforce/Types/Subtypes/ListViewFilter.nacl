@@ -1,0 +1,40 @@
+type salesforce.ListViewFilter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+  }
+  string value {
+  }
+  string operation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "contains",
+        "equals",
+        "excludes",
+        "greaterOrEqual",
+        "greaterThan",
+        "includes",
+        "lessOrEqual",
+        "lessThan",
+        "notContain",
+        "notEqual",
+        "startsWith",
+        "within",
+      ]
+    }
+  }
+  metadataType = "ListViewFilter"
+}

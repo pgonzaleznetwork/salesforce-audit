@@ -1,0 +1,6 @@
+salesforce.ApexClass RightBClass {
+  apiVersion = 51
+  status = "Active"
+  fullName = "RightBClass"
+  content = file("salesforce/Records/ApexClass/RightBClass.cls")
+}

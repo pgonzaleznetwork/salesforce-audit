@@ -1,0 +1,229 @@
+salesforce.Layout Refund_Refund_Layout@bs {
+  fullName = "Refund-Refund Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.RefundNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.AccountId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Refund.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.PaymentGroupId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Refund.field.ProcessingMode
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.TotalApplied
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.NetApplied
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.Date
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Refund.field.Status
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Refund.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.PaymentMethodId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.EffectiveDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.TotalUnapplied
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.Balance
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.Comments
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "AdditionalInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.ImpactAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.CancellationDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.SfResultCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.CancellationSfResultCode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.CancellationEffectiveDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "GatewayDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.PaymentGatewayId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.GatewayResultCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.GatewayRefNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.CancellationGatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.CancellationGatewayRefNumber
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.GatewayDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.GatewayResultCodeDescription
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.CancellationGatewayResultCode
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.CreatedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.MacAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.Phone
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Refund.field.LastModifiedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.IpAddress
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Refund.field.Email
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Refund,
+  ]
+}

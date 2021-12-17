@@ -1,0 +1,23 @@
+type salesforce.FlowDataTypeMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string typeName {
+  }
+  string typeValue {
+  }
+  metadataType = "FlowDataTypeMapping"
+}

@@ -1,0 +1,11 @@
+salesforce.ApexClass HappySoupMetadataApi {
+  apiVersion = 52
+  status = "Active"
+  fullName = "HappySoupMetadataApi"
+  content = file("salesforce/Records/ApexClass/HappySoupMetadataApi.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataAPI
+    },
+  ]
+}

@@ -1,0 +1,14 @@
+salesforce.ApexClass LeftClass {
+  apiVersion = 51
+  status = "Active"
+  fullName = "LeftClass"
+  content = file("salesforce/Records/ApexClass/LeftClass.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.LeftAClass
+    },
+    {
+      reference = salesforce.ApexClass.instance.LeftBClass
+    },
+  ]
+}

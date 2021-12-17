@@ -1,0 +1,45 @@
+type salesforce.QueueRoutingConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  number capacityPercentage {
+  }
+  number capacityWeight {
+  }
+  number dropAdditionalSkillsTimeout {
+  }
+  boolean isAttributeBased {
+  }
+  string label {
+  }
+  number pushTimeout {
+  }
+  string queueOverflowAssignee {
+  }
+  number routingPriority {
+  }
+  salesforce.QueueRoutingConfigSkill skills {
+  }
+  string userOverflowAssignee {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "queueRoutingConfig"
+  dirName = "queueRoutingConfigs"
+  metadataType = "QueueRoutingConfig"
+}

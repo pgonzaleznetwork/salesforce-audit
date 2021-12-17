@@ -1,0 +1,21 @@
+salesforce.WebLink Account_My_Button {
+  fullName = "Account.My_Button"
+  availability = "online"
+  displayType = "link"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "page"
+  masterLabel = "My Button"
+  openType = "newWindow"
+  page = salesforce.ApexPage.instance.SameName
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  _parent = [
+    salesforce.Account,
+  ]
+}

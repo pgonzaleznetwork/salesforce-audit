@@ -1,0 +1,44 @@
+type salesforce.AccessMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string accessLevel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Edit",
+        "Read",
+      ]
+    }
+  }
+  string object {
+  }
+  string objectField {
+  }
+  string userField {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "Account.Parent",
+        "Contact",
+        "Contact.Account",
+        "Contact.ReportsTo",
+        "Manager.Account",
+        "Manager.Contact",
+      ]
+    }
+  }
+  metadataType = "AccessMapping"
+}

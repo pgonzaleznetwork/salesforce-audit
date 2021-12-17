@@ -1,0 +1,166 @@
+salesforce.StandardValueSet Industry {
+  fullName = "Industry"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Agriculture"
+      default = false
+      label = "Agriculture"
+    },
+    {
+      fullName = "Apparel"
+      default = false
+      label = "Apparel"
+    },
+    {
+      fullName = "Banking"
+      default = false
+      label = "Banking"
+    },
+    {
+      fullName = "Biotechnology"
+      default = false
+      label = "Biotechnology"
+    },
+    {
+      fullName = "Chemicals"
+      default = false
+      label = "Chemicals"
+    },
+    {
+      fullName = "Communications"
+      default = false
+      label = "Communications"
+    },
+    {
+      fullName = "Construction"
+      default = false
+      label = "Construction"
+    },
+    {
+      fullName = "Consulting"
+      default = false
+      label = "Consulting"
+    },
+    {
+      fullName = "Education"
+      default = false
+      label = "Education"
+    },
+    {
+      fullName = "Electronics"
+      default = false
+      label = "Electronics"
+    },
+    {
+      fullName = "Energy"
+      default = false
+      label = "Energy"
+    },
+    {
+      fullName = "Engineering"
+      default = false
+      label = "Engineering"
+    },
+    {
+      fullName = "Entertainment"
+      default = false
+      label = "Entertainment"
+    },
+    {
+      fullName = "Environmental"
+      default = false
+      label = "Environmental"
+    },
+    {
+      fullName = "Finance"
+      default = false
+      label = "Finance"
+    },
+    {
+      fullName = "Food & Beverage"
+      default = false
+      label = "Food & Beverage"
+    },
+    {
+      fullName = "Government"
+      default = false
+      label = "Government"
+    },
+    {
+      fullName = "Healthcare"
+      default = false
+      label = "Healthcare"
+    },
+    {
+      fullName = "Hospitality"
+      default = false
+      label = "Hospitality"
+    },
+    {
+      fullName = "Insurance"
+      default = false
+      label = "Insurance"
+    },
+    {
+      fullName = "Machinery"
+      default = false
+      label = "Machinery"
+    },
+    {
+      fullName = "Manufacturing"
+      default = false
+      label = "Manufacturing"
+    },
+    {
+      fullName = "Media"
+      default = false
+      label = "Media"
+    },
+    {
+      fullName = "Not For Profit"
+      default = false
+      label = "Not For Profit"
+    },
+    {
+      fullName = "Recreation"
+      default = false
+      label = "Recreation"
+    },
+    {
+      fullName = "Retail"
+      default = false
+      label = "Retail"
+    },
+    {
+      fullName = "Shipping"
+      default = false
+      label = "Shipping"
+    },
+    {
+      fullName = "Technology"
+      default = false
+      label = "Technology"
+    },
+    {
+      fullName = "Telecommunications"
+      default = false
+      label = "Telecommunications"
+    },
+    {
+      fullName = "Transportation"
+      default = false
+      label = "Transportation"
+    },
+    {
+      fullName = "Utilities"
+      default = false
+      label = "Utilities"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

@@ -1,0 +1,51 @@
+settings salesforce.EntitlementSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean assetLookupLimitedToActiveEntitlementsOnAccount {
+  }
+  boolean assetLookupLimitedToActiveEntitlementsOnContact {
+  }
+  boolean assetLookupLimitedToSameAccount {
+  }
+  boolean assetLookupLimitedToSameContact {
+  }
+  boolean enableEntitlementVersioning {
+  }
+  boolean enableEntitlements {
+  }
+  boolean enableMilestoneFeedItem {
+  }
+  boolean enableMilestoneStoppedTime {
+  }
+  boolean entitlementLookupLimitedToActiveStatus {
+  }
+  boolean entitlementLookupLimitedToSameAccount {
+  }
+  boolean entitlementLookupLimitedToSameAsset {
+  }
+  boolean entitlementLookupLimitedToSameContact {
+  }
+  boolean ignoreMilestoneBusinessHours {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "EntitlementSettings"
+}

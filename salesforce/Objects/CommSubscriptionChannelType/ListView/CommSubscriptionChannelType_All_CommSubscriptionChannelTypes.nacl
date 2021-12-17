@@ -1,0 +1,8 @@
+salesforce.ListView CommSubscriptionChannelType_All_CommSubscriptionChannelTypes {
+  fullName = "CommSubscriptionChannelType.All_CommSubscriptionChannelTypes"
+  filterScope = "Everything"
+  label = "All Communication Subscription Channel Types"
+  _parent = [
+    salesforce.CommSubscriptionChannelType,
+  ]
+}

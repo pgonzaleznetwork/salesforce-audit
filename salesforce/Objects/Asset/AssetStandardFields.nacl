@@ -1,0 +1,439 @@
+type salesforce.Asset {
+  serviceid Id {
+    apiName = "Asset.Id"
+    label = "Asset ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup ContactId {
+    apiName = "Asset.ContactId"
+    label = "Contact ID"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contact"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup AccountId {
+    apiName = "Asset.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup ParentId {
+    apiName = "Asset.ParentId"
+    label = "Parent Asset ID"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Parent"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup RootAssetId {
+    apiName = "Asset.RootAssetId"
+    label = "Root Asset ID"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "RootAsset"
+    queryable = true
+    trackHistory = "false"
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "Asset.Product2Id"
+    label = "Product ID"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Product2"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Text ProductCode {
+    apiName = "Asset.ProductCode"
+    label = "Product Code"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsCompetitorProduct {
+    apiName = "Asset.IsCompetitorProduct"
+    label = "Competitor Asset"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Asset.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Asset.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Asset.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Asset.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Asset.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Asset.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Asset.Name"
+    label = "Asset Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text SerialNumber {
+    apiName = "Asset.SerialNumber"
+    label = "Serial Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 80
+    queryable = true
+  }
+  salesforce.Date InstallDate {
+    apiName = "Asset.InstallDate"
+    label = "Install Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date PurchaseDate {
+    apiName = "Asset.PurchaseDate"
+    label = "Purchase Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date UsageEndDate {
+    apiName = "Asset.UsageEndDate"
+    label = "Usage End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime LifecycleStartDate {
+    apiName = "Asset.LifecycleStartDate"
+    label = "Lifecycle Start Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LifecycleEndDate {
+    apiName = "Asset.LifecycleEndDate"
+    label = "Lifecycle End Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Asset.Status"
+    label = "Status"
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    trackHistory = "false"
+    valueSetName = salesforce.StandardValueSet.instance.AssetStatus
+  }
+  salesforce.Currency Price {
+    apiName = "Asset.Price"
+    label = "Price"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+  }
+  salesforce.Number Quantity {
+    apiName = "Asset.Quantity"
+    label = "Quantity"
+    precision = 12
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Asset.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Asset.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup AssetProvidedById {
+    apiName = "Asset.AssetProvidedById"
+    label = "Asset Provided By ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "AssetProvidedBy"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Lookup AssetServicedById {
+    apiName = "Asset.AssetServicedById"
+    label = "Asset Serviced By ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "AssetServicedBy"
+    queryable = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsInternal {
+    apiName = "Asset.IsInternal"
+    label = "Internal Asset"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number AssetLevel {
+    apiName = "Asset.AssetLevel"
+    label = "Asset Level"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text StockKeepingUnit {
+    apiName = "Asset.StockKeepingUnit"
+    label = "Product SKU"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 180
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox HasLifecycleManagement {
+    apiName = "Asset.HasLifecycleManagement"
+    label = "Has Lifecycle Management"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency CurrentMrr {
+    apiName = "Asset.CurrentMrr"
+    label = "Current Monthly Recurring Revenue"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CurrentLifecycleEndDate {
+    apiName = "Asset.CurrentLifecycleEndDate"
+    label = "Current Lifecycle End Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number CurrentQuantity {
+    apiName = "Asset.CurrentQuantity"
+    label = "Current Quantity"
+    precision = 14
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency CurrentAmount {
+    apiName = "Asset.CurrentAmount"
+    label = "Current Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ConsequenceOfFailure {
+    apiName = "Asset.ConsequenceOfFailure"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist DigitalAssetStatus {
+    apiName = "Asset.DigitalAssetStatus"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ExternalIdentifier {
+    apiName = "Asset.ExternalIdentifier"
+    inlineHelpText = "ID of matching record in an external system."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "Asset.LocationId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ManufactureDate {
+    apiName = "Asset.ManufactureDate"
+    inlineHelpText = "Date when the asset was manufactured."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ProductDescription {
+    apiName = "Asset.ProductDescription"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist ProductFamily {
+    apiName = "Asset.ProductFamily"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist StatusReason {
+    apiName = "Asset.StatusReason"
+    inlineHelpText = "Explanation of the device status."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalLifecycleAmount {
+    apiName = "Asset.TotalLifecycleAmount"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown Uuid {
+    apiName = "Asset.Uuid"
+    inlineHelpText = "Unique string identifying the asset."
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,11 @@
+salesforce.ApexClass CaseService {
+  apiVersion = 47
+  status = "Active"
+  fullName = "CaseService"
+  content = file("salesforce/Records/ApexClass/CaseService.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Case
+    },
+  ]
+}

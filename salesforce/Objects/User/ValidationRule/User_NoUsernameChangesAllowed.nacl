@@ -1,0 +1,11 @@
+salesforce.ValidationRule User_NoUsernameChangesAllowed {
+  fullName = "User.NoUsernameChangesAllowed"
+  active = true
+  description = "Changing usernames in this org may impact your ability to sign in automatically from Trailhead."
+  errorConditionFormula = "Username != PRIORVALUE(Username)"
+  errorDisplayField = salesforce.User.field.Username
+  errorMessage = "Please do not change usernames in the Trailhead Playground."
+  _parent = [
+    salesforce.User,
+  ]
+}

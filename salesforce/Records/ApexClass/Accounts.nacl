@@ -1,0 +1,14 @@
+salesforce.ApexClass Accounts {
+  apiVersion = 48
+  status = "Active"
+  fullName = "Accounts"
+  content = file("salesforce/Records/ApexClass/Accounts.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDomain
+    },
+  ]
+}

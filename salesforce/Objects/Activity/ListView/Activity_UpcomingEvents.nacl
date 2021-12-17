@@ -1,0 +1,20 @@
+salesforce.ListView Activity_UpcomingEvents {
+  fullName = "Activity.UpcomingEvents"
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "ACTIVITY.TASK"
+      operation = "equals"
+      value = "0"
+    },
+    {
+      field = "TASK.DUE_DATE"
+      operation = "greaterThan"
+      value = "YESTERDAY"
+    },
+  ]
+  label = "Upcoming Events"
+  _parent = [
+    salesforce.Activity,
+  ]
+}

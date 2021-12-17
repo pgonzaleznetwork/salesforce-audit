@@ -1,0 +1,31 @@
+type salesforce.CallCoachingMediaProvider {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  string providerDescription {
+  }
+  string providerName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "callCoachingMediaProvider"
+  dirName = "callCoachingMediaProviders"
+  metadataType = "CallCoachingMediaProvider"
+}

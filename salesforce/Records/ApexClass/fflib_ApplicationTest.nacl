@@ -1,0 +1,56 @@
+salesforce.ApexClass fflib_ApplicationTest {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_ApplicationTest"
+  content = file("salesforce/Records/ApexClass/fflib_ApplicationTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_Application
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_IDGenerator
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectSelector
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectUnitOfWork
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectDomain
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectSelector
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SObjectUnitOfWork
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+    {
+      reference = salesforce.OpportunityLineItem
+    },
+    {
+      reference = salesforce.Product2
+    },
+    {
+      reference = salesforce.User
+    },
+  ]
+}

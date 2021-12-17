@@ -1,0 +1,31 @@
+salesforce.StandardValueSet TaskSubject {
+  fullName = "TaskSubject"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Call"
+      default = false
+      label = "Call"
+    },
+    {
+      fullName = "Email"
+      default = false
+      label = "Email"
+    },
+    {
+      fullName = "Send Letter"
+      default = false
+      label = "Send Letter"
+    },
+    {
+      fullName = "Send Quote"
+      default = false
+      label = "Send Quote"
+    },
+    {
+      fullName = "Other"
+      default = false
+      label = "Other"
+    },
+  ]
+}

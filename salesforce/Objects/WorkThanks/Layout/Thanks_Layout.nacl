@@ -1,0 +1,54 @@
+salesforce.Layout WorkThanks_Thanks_Layout@bs {
+  fullName = "WorkThanks-Thanks Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkThanks.field.CreatedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkThanks.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkThanks.field.Message
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkThanks.field.LastModifiedById
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkThanks.field.GiverId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.WorkThanks,
+  ]
+}

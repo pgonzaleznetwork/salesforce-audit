@@ -1,0 +1,112 @@
+type salesforce.SamlSsoConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string attributeName {
+  }
+  string attributeNameIdFormat {
+  }
+  string decryptionCertificate {
+    foreignKeyDomain = [
+      salesforce.Certificate,
+    ]
+  }
+  string errorUrl {
+  }
+  string executionUserId {
+  }
+  string identityLocation {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Attribute",
+        "SubjectNameId",
+      ]
+    }
+  }
+  string identityMapping {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FederationId",
+        "UserId",
+        "Username",
+      ]
+    }
+  }
+  string issuer {
+  }
+  string loginUrl {
+  }
+  string logoutUrl {
+  }
+  string name {
+  }
+  string oauthTokenEndpoint {
+  }
+  boolean redirectBinding {
+  }
+  string requestSignatureMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "RSA-SHA1",
+        "RSA-SHA256",
+      ]
+    }
+  }
+  string requestSigningCertId {
+  }
+  string salesforceLoginUrl {
+  }
+  string samlEntityId {
+  }
+  string samlJitHandlerId {
+  }
+  string samlVersion {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "SAML1_1",
+        "SAML2_0",
+      ]
+    }
+  }
+  string singleLogoutBinding {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "PostBinding",
+        "RedirectBinding",
+      ]
+    }
+  }
+  string singleLogoutUrl {
+  }
+  boolean useConfigRequestMethod {
+  }
+  boolean userProvisioning {
+  }
+  string validationCert {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "samlssoconfig"
+  dirName = "samlssoconfigs"
+  metadataType = "SamlSsoConfig"
+}

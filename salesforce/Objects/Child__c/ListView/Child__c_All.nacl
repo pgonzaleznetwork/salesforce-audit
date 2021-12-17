@@ -1,0 +1,8 @@
+salesforce.ListView Child__c_All {
+  fullName = "Child__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Child__c,
+  ]
+}

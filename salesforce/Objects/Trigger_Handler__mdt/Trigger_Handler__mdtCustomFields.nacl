@@ -1,0 +1,15 @@
+type salesforce.Trigger_Handler__mdt {
+  salesforce.Text Class_Name__c {
+    apiName = "Trigger_Handler__mdt.Class_Name__c"
+    label = "Class Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,29 @@
+type salesforce.State {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  string integrationValue {
+  }
+  string isoCode {
+  }
+  string label {
+  }
+  boolean standard {
+  }
+  boolean visible {
+  }
+  metadataType = "State"
+}

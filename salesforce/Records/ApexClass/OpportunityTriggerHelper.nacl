@@ -1,0 +1,26 @@
+salesforce.ApexClass OpportunityTriggerHelper {
+  apiVersion = 52
+  status = "Active"
+  fullName = "OpportunityTriggerHelper"
+  content = file("salesforce/Records/ApexClass/OpportunityTriggerHelper.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.OpportunityService
+    },
+    {
+      reference = salesforce.Opportunity
+    },
+    {
+      reference = salesforce.Opportunity.field.Account_Priority__c
+    },
+    {
+      reference = salesforce.Opportunity.field.My_Lookup_Field__c
+    },
+    {
+      reference = salesforce.Opportunity.field.My_Picklist_Field__c
+    },
+  ]
+}

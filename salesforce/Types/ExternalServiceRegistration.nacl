@@ -1,0 +1,56 @@
+type salesforce.ExternalServiceRegistration {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string description {
+  }
+  string label {
+  }
+  string namedCredential {
+  }
+  salesforce.ExternalServiceOperation operations {
+  }
+  string schema {
+  }
+  string schemaType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "InteragentHyperSchema",
+        "OpenApi",
+        "OpenApi3",
+      ]
+    }
+  }
+  string schemaUrl {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Complete",
+        "Incomplete",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "externalServiceRegistration"
+  dirName = "externalServiceRegistrations"
+  metadataType = "ExternalServiceRegistration"
+}

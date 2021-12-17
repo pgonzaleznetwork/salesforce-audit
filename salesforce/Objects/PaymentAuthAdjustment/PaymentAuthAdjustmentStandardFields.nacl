@@ -1,0 +1,61 @@
+type salesforce.PaymentAuthAdjustment {
+  salesforce.Lookup AccountId {
+    apiName = "PaymentAuthAdjustment.AccountId"
+    _hidden_value = true
+  }
+  string Amount {
+    _hidden_value = true
+  }
+  string Comments {
+    _hidden_value = true
+  }
+  string Date {
+    _hidden_value = true
+  }
+  string EffectiveDate {
+    _hidden_value = true
+  }
+  string Email {
+    _hidden_value = true
+  }
+  string GatewayDate {
+    _hidden_value = true
+  }
+  string GatewayRefDetails {
+    _hidden_value = true
+  }
+  string GatewayRefNumber {
+    _hidden_value = true
+  }
+  string GatewayResultCode {
+    _hidden_value = true
+  }
+  string GatewayResultCodeDescription {
+    _hidden_value = true
+  }
+  string IpAddress {
+    _hidden_value = true
+  }
+  string MacAddress {
+    _hidden_value = true
+  }
+  salesforce.MasterDetail PaymentAuthorizationId {
+    apiName = "PaymentAuthAdjustment.PaymentAuthorizationId"
+    _hidden_value = true
+  }
+  string Phone {
+    _hidden_value = true
+  }
+  string ProcessingMode {
+    _hidden_value = true
+  }
+  string SfResultCode {
+    _hidden_value = true
+  }
+  string Status {
+    _hidden_value = true
+  }
+  string Type {
+    _hidden_value = true
+  }
+}

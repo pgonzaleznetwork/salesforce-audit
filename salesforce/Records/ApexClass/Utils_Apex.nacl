@@ -1,0 +1,6 @@
+salesforce.ApexClass Utils_Apex {
+  apiVersion = 48
+  status = "Active"
+  fullName = "Utils_Apex"
+  content = file("salesforce/Records/ApexClass/Utils_Apex.cls")
+}

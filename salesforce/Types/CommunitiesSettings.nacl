@@ -1,0 +1,61 @@
+settings salesforce.CommunitiesSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableGuestRecordReassignOrgPref {
+  }
+  serviceid fullName {
+  }
+  boolean canModerateAllFeedPosts {
+  }
+  boolean canModerateInternalFeedPosts {
+  }
+  boolean embeddedVisualforcePages {
+  }
+  boolean enableCommunityWorkspaces {
+  }
+  boolean enableCspContactVisibilityPref {
+  }
+  boolean enableCspNotesOnAccConPref {
+  }
+  boolean enableEnablePRM {
+  }
+  boolean enableExternalAccHierPref {
+  }
+  boolean enableInviteChatterGuestEnabled {
+  }
+  boolean enableNetPortalUserReportOpts {
+  }
+  boolean enableNetworksEnabled {
+  }
+  boolean enableOotbProfExtUserOpsEnable {
+  }
+  boolean enablePowerCustomerCaseStatus {
+  }
+  boolean enablePRMAccRelPref {
+  }
+  boolean enableRelaxPartnerAccountFieldPref {
+  }
+  boolean enableUnsupportedBrowserModalPref {
+  }
+  boolean enableUsernameUniqForOrgPref {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "CommunitiesSettings"
+}

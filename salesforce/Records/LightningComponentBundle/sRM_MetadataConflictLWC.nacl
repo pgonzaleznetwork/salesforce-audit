@@ -1,0 +1,42 @@
+salesforce.LightningComponentBundle sRM_MetadataConflictLWC {
+  apiVersion = 48
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__RecordPage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "SRM_Jira_Ticket__c"
+          },
+        ]
+      },
+    ]
+  }
+  fullName = "sRM_MetadataConflictLWC"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/sRM_MetadataConflictLWC/sRM_MetadataConflictLWC.js")
+        filePath = "lwc/sRM_MetadataConflictLWC/sRM_MetadataConflictLWC.js"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/sRM_MetadataConflictLWC/sRM_MetadataConflictLWC.html")
+        filePath = "lwc/sRM_MetadataConflictLWC/sRM_MetadataConflictLWC.html"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataConflictWarningController
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+  ]
+}

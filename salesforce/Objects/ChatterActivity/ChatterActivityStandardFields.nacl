@@ -1,0 +1,89 @@
+type salesforce.ChatterActivity {
+  serviceid Id {
+    apiName = "ChatterActivity.Id"
+    label = "Chatter Activity ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup ParentId {
+    apiName = "ChatterActivity.ParentId"
+    label = "Parent ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number PostCount {
+    apiName = "ChatterActivity.PostCount"
+    label = "Post Count"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number CommentCount {
+    apiName = "ChatterActivity.CommentCount"
+    label = "Comment Count"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number CommentReceivedCount {
+    apiName = "ChatterActivity.CommentReceivedCount"
+    label = "Comment Received Count"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number LikeReceivedCount {
+    apiName = "ChatterActivity.LikeReceivedCount"
+    label = "Like Received Count"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number InfluenceRawRank {
+    apiName = "ChatterActivity.InfluenceRawRank"
+    label = "Influence Raw Rank"
+    _required = true
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ChatterActivity.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

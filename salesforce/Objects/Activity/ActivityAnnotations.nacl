@@ -1,0 +1,185 @@
+type salesforce.Activity {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "Activity"
+  metadataType = "CustomObject"
+  label = "Activity"
+  actionOverrides = [
+    {
+      actionName = "CancelEdit"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ComposeGmail"
+      type = "Default"
+    },
+    {
+      actionName = "ComposeGmail"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ComposeGmail"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "LogCall"
+      type = "Default"
+    },
+    {
+      actionName = "LogCall"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "LogCall"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "MailMerge"
+      type = "Default"
+    },
+    {
+      actionName = "MailMerge"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "MailMerge"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "RequestUpdate"
+      type = "Default"
+    },
+    {
+      actionName = "RequestUpdate"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "RequestUpdate"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SendEmail"
+      type = "Default"
+    },
+    {
+      actionName = "SendEmail"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SendEmail"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ViewAll"
+      type = "Default"
+    },
+    {
+      actionName = "ViewAll"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ViewAll"
+      formFactor = "Small"
+      type = "Default"
+    },
+  ]
+  enableFeeds = false
+  searchLayouts = {
+    searchResultsAdditionalFields = [
+      "TASK.SUBJECT",
+      "TASK.WHO_NAME",
+      "TASK.WHAT_NAME",
+      "TASK.DUE_DATE",
+      "CORE.USERS.ALIAS",
+    ]
+  }
+}

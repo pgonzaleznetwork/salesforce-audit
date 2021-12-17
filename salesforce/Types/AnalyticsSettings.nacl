@@ -1,0 +1,121 @@
+settings salesforce.AnalyticsSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableWaveReplication {
+  }
+  boolean enableWaveSharingInheritance {
+  }
+  boolean enableWaveTemplate {
+  }
+  serviceid fullName {
+  }
+  number maxHoursAppInProgress {
+  }
+  boolean alwaysGenPreviews {
+  }
+  boolean analyticsAdoptionMetadata {
+  }
+  boolean canAccessAnalyticsViaAPI {
+  }
+  boolean canAnnotateDashboards {
+  }
+  boolean canEnableLiveMetrics {
+  }
+  boolean canEnableSavedView {
+  }
+  boolean canExploreDataConversationally {
+  }
+  boolean canShareAppsWithCommunities {
+  }
+  boolean canSubscribeDashboardWidgets {
+  }
+  boolean canViewThumbnailAssets {
+  }
+  boolean enableAnalyticsEncryption {
+  }
+  boolean enableAnalyticsSharingEnable {
+  }
+  boolean enableAutoCompleteCombo {
+  }
+  boolean enableC360GlobalProfileData {
+  }
+  boolean enableDashboardComponentSnapshot {
+  }
+  boolean enableDashboardFlexiTable {
+  }
+  boolean enableDashboardToPDFEnable {
+  }
+  boolean enableDataBlending {
+  }
+  boolean enableEmailReportsToPortalUsers {
+  }
+  boolean enableFirebirdEditor {
+  }
+  boolean enableFloatingReportHeaders {
+  }
+  boolean enableInsights {
+  }
+  boolean enableLightningReportBuilder {
+  }
+  boolean enableLotusNotesImages {
+  }
+  boolean enableMassEnableReportBuilder {
+  }
+  boolean enableNewChartsEngine {
+  }
+  boolean enableNullDimension {
+  }
+  boolean enablePowerInsights {
+  }
+  boolean enableQueryLiveConnectors {
+  }
+  boolean enableRemoveFooterForRepDisplay {
+  }
+  boolean enableRemoveFooterFromRepExp {
+  }
+  boolean enableReportFieldToFieldPref {
+  }
+  boolean enableReportNotificationsEnable {
+  }
+  boolean enableReportUniqueRowCountPref {
+  }
+  boolean enableS1AnalyticsEclairEnable {
+  }
+  boolean enableSFXJoinedReportsEnable {
+  }
+  boolean enableSmartDataDiscovery {
+  }
+  boolean enableUseOldChartsLookAndFeel {
+  }
+  boolean enableWaveRecordNavigation {
+  }
+  boolean enableWaveTrendedDatasetCleanup {
+  }
+  boolean inheritSharingForNonOpptyObjects {
+  }
+  boolean inheritSharingForOpptyObject {
+  }
+  boolean replaceBlankMeasuresWithNulls {
+  }
+  boolean turnOnTimeZones {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "AnalyticsSettings"
+}

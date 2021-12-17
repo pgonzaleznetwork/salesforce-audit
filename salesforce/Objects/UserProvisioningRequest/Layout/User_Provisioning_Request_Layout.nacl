@@ -1,0 +1,95 @@
+salesforce.Layout UserProvisioningRequest_User_Provisioning_Request_Layout@bsss {
+  fullName = "UserProvisioningRequest-User Provisioning Request Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.UserProvisioningRequest.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserProvisioningRequest.field.AppName
+            },
+            {
+              behavior = "Required"
+              field = salesforce.UserProvisioningRequest.field.Operation
+            },
+            {
+              behavior = "Required"
+              field = salesforce.UserProvisioningRequest.field.ApprovalStatus
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserProvisioningRequest.field.SalesforceUserId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.UserProvisioningRequest.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserProvisioningRequest.field.ConnectedAppId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.UserProvisioningRequest.field.State
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.UserProvisioningRequest.field.UserProvAccountId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.UserProvisioningRequest.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.UserProvisioningRequest.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.UserProvisioningRequest,
+  ]
+}

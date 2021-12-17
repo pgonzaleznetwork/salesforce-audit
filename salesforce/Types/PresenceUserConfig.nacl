@@ -1,0 +1,53 @@
+type salesforce.PresenceUserConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.PresenceConfigAssignments assignments {
+  }
+  number capacity {
+  }
+  string declineReasons {
+  }
+  boolean enableAutoAccept {
+  }
+  boolean enableDecline {
+  }
+  boolean enableDeclineReason {
+  }
+  boolean enableDisconnectSound {
+  }
+  boolean enableRequestSound {
+  }
+  string label {
+  }
+  string presenceStatusOnDecline {
+    foreignKeyDomain = [
+      salesforce.ServicePresenceStatus,
+    ]
+  }
+  string presenceStatusOnPushTimeout {
+    foreignKeyDomain = [
+      salesforce.ServicePresenceStatus,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "presenceUserConfig"
+  dirName = "presenceUserConfigs"
+  metadataType = "PresenceUserConfig"
+}

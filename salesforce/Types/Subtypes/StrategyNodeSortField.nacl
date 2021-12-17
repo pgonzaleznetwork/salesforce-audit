@@ -1,0 +1,21 @@
+type salesforce.StrategyNodeSortField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string name {
+  }
+  boolean nullsFirst {
+  }
+  metadataType = "StrategyNodeSortField"
+}

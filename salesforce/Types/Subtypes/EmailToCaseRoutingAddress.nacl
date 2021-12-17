@@ -1,0 +1,41 @@
+type salesforce.EmailToCaseRoutingAddress {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string authorizedSenders {
+  }
+  string caseOrigin {
+  }
+  string caseOwner {
+  }
+  string caseOwnerType {
+  }
+  string casePriority {
+  }
+  boolean createTask {
+  }
+  string emailAddress {
+  }
+  string emailServicesAddress {
+  }
+  boolean isVerified {
+  }
+  string routingName {
+  }
+  boolean saveEmailHeaders {
+  }
+  string taskStatus {
+  }
+  metadataType = "EmailToCaseRoutingAddress"
+}

@@ -1,0 +1,4 @@
+salesforce.IndustriesSettings {
+  fullName = "Industries"
+  enableAccountScoreEnabled = "false"
+}

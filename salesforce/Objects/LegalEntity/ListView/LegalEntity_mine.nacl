@@ -1,0 +1,14 @@
+salesforce.ListView LegalEntity_mine {
+  fullName = "LegalEntity.mine"
+  columns = [
+    "Name",
+    "CompanyName",
+    "Description",
+    "Status",
+  ]
+  filterScope = "Mine"
+  label = "My Legal Entities"
+  _parent = [
+    salesforce.LegalEntity,
+  ]
+}

@@ -1,0 +1,17 @@
+salesforce.ApexClass fflib_InvocationOnMock {
+  apiVersion = 37
+  status = "Active"
+  fullName = "fflib_InvocationOnMock"
+  content = file("salesforce/Records/ApexClass/fflib_InvocationOnMock.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ApexMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_MethodArgValues
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QualifiedMethod
+    },
+  ]
+}

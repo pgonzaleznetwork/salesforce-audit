@@ -1,0 +1,6 @@
+salesforce.SharingRules CreditMemo {
+  fullName = "CreditMemo"
+  _parent = [
+    salesforce.CreditMemo,
+  ]
+}

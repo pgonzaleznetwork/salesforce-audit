@@ -1,0 +1,45 @@
+type salesforce.FeedLayout {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean autocollapsePublisher {
+  }
+  boolean compactFeed {
+  }
+  string feedFilterPosition {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CenterDropDown",
+        "LeftFixed",
+        "LeftFloat",
+      ]
+    }
+  }
+  "List<salesforce.FeedLayoutFilter>" feedFilters {
+  }
+  boolean fullWidthFeed {
+  }
+  boolean hideSidebar {
+  }
+  boolean highlightExternalFeedItems {
+  }
+  salesforce.FeedLayoutComponent leftComponents {
+  }
+  "List<salesforce.FeedLayoutComponent>" rightComponents {
+  }
+  boolean useInlineFiltersInConsole {
+  }
+  metadataType = "FeedLayout"
+}

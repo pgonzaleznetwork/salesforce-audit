@@ -1,0 +1,77 @@
+salesforce.Layout PricebookEntry_Price_Book_Entry_Layout@bsss {
+  fullName = "PricebookEntry-Price Book Entry Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.PricebookEntry.field.Product2Id
+            },
+            {
+              behavior = "Required"
+              field = salesforce.PricebookEntry.field.Pricebook2Id
+            },
+            {
+              behavior = "Required"
+              field = salesforce.PricebookEntry.field.UnitPrice
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.PricebookEntry.field.UseStandardPrice
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.PricebookEntry.field.LastModifiedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.PricebookEntry.field.IsActive
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.PricebookEntry.field.ProductCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.PricebookEntry.field.StandardPrice
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.PricebookEntry.field.CreatedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  multilineLayoutFields = [
+    "Product2Id",
+    "Pricebook2Id",
+    "IsActive",
+    "UnitPrice",
+    "ProductCode",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.PricebookEntry,
+  ]
+}

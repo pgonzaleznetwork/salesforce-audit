@@ -1,0 +1,21 @@
+type salesforce.ReputationLevels {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.ChatterAnswersReputationLevel chatterAnswersReputationLevels {
+  }
+  salesforce.IdeaReputationLevel ideaReputationLevels {
+  }
+  metadataType = "ReputationLevels"
+}

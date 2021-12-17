@@ -1,0 +1,58 @@
+type salesforce.EmbeddedServiceFlow {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string flow {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "omnichannel_chat__QueuesChat",
+        "omnichannel_chat__SkillsChat",
+        "omnichannel_messaging__MsgRouting",
+        "omnichannel_voice__VoiceRouting",
+        "runtime_appointmentbooking__Flow",
+        "runtime_appointmentbooking__Guest_Flow",
+        "runtime_appointmentbooking__In_Cancel",
+        "runtime_appointmentbooking__In_Modify",
+        "runtime_appointmentbooking__In_New",
+        "runtime_appointmentbooking__Out_Modify",
+        "runtime_commerce_oms__Cancel_Item",
+        "runtime_commerce_oms__Create_OS",
+        "runtime_commerce_oms__Create_PE",
+        "runtime_commerce_oms__Return_Item",
+        "setup_service_experience__Create_Case",
+        "setup_service_experience__Reset_Pwd",
+        "setup_service_experience__Verify_Cust",
+      ]
+    }
+    foreignKeyDomain = [
+      "FlowDefinition",
+    ]
+  }
+  string flowType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FL_Flow",
+        "FS_CancelAppointment",
+        "FS_ModifyAppointment",
+        "FS_NewAppointment",
+        "LA_Survey",
+      ]
+    }
+  }
+  boolean isAuthenticationRequired {
+  }
+  metadataType = "EmbeddedServiceFlow"
+}

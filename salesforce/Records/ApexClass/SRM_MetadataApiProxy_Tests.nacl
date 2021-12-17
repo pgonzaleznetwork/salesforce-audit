@@ -1,0 +1,14 @@
+salesforce.ApexClass SRM_MetadataApiProxy_Tests {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_MetadataApiProxy_Tests"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataApiProxy_Tests.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataApiMocks
+    },
+    {
+      reference = salesforce.ApexClass.instance.SRM_MetadataApiProxy
+    },
+  ]
+}

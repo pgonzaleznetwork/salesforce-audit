@@ -1,0 +1,6 @@
+salesforce.SharingRules ExchangeUserMapping {
+  fullName = "ExchangeUserMapping"
+  _parent = [
+    salesforce.ExchangeUserMapping,
+  ]
+}

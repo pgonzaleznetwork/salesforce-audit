@@ -1,0 +1,35 @@
+type salesforce.Field_referencing__mdt {
+  salesforce.Text Related_Object__c {
+    apiName = "Field_referencing__mdt.Related_Object__c"
+    label = "Related Object"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Related_Field__c {
+    apiName = "Field_referencing__mdt.Related_Field__c"
+    label = "Related Field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text second_field__c {
+    apiName = "Field_referencing__mdt.second_field__c"
+    label = "second field"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+}

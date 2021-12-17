@@ -1,0 +1,30 @@
+type salesforce.EmailServicesAddress {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string authorizedSenders {
+  }
+  string developerName {
+  }
+  boolean isActive {
+  }
+  string localPart {
+  }
+  string runAsUser {
+    foreignKeyDomain = [
+      salesforce.User,
+    ]
+  }
+  metadataType = "EmailServicesAddress"
+}

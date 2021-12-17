@@ -1,0 +1,131 @@
+type salesforce.Trigger_Context_Status__mdt {
+  salesforce.Checkbox Enable_After_Delete__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_After_Delete__c"
+    label = "Enable After Delete"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Checkbox Enable_After_Insert__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_After_Insert__c"
+    label = "Enable After Insert"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Checkbox Enable_After_Undelete__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_After_Undelete__c"
+    label = "Enable After Undelete"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Checkbox Enable_After_Update__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_After_Update__c"
+    label = "Enable After Update"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Checkbox Enable_Before_Delete__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_Before_Delete__c"
+    label = "Enable Before Delete"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Checkbox Enable_Before_Insert__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_Before_Insert__c"
+    label = "Enable Before Insert"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Checkbox Enable_Before_Update__c {
+    apiName = "Trigger_Context_Status__mdt.Enable_Before_Update__c"
+    label = "Enable Before Update"
+    defaultValue = true
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text related_class__c {
+    apiName = "Trigger_Context_Status__mdt.related_class__c"
+    label = "related class"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text the_handler_to_call__c {
+    apiName = "Trigger_Context_Status__mdt.the_handler_to_call__c"
+    label = "the handler to call"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text instantiate_type__c {
+    apiName = "Trigger_Context_Status__mdt.instantiate_type__c"
+    label = "instantiate type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+  salesforce.Text the_instance__c {
+    apiName = "Trigger_Context_Status__mdt.the_instance__c"
+    label = "the instance"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    _hidden_value = true
+  }
+}

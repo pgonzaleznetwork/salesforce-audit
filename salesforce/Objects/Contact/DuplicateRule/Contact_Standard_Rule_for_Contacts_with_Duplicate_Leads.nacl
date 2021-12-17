@@ -1,0 +1,69 @@
+salesforce.DuplicateRule Contact_Standard_Rule_for_Contacts_with_Duplicate_Leads@vuuuuuu {
+  fullName = "Contact.Standard_Rule_for_Contacts_with_Duplicate_Leads"
+  actionOnInsert = "Allow"
+  actionOnUpdate = "Allow"
+  alertText = "Use one of these records?"
+  description = "Identify contacts with duplicate leads."
+  duplicateRuleMatchRules = [
+    {
+      matchRuleSObjectType = salesforce.Lead
+      matchingRule = "Standard_Lead_Match_Rule_v1_0"
+      objectMapping = [
+        {
+          inputObject = salesforce.Contact
+          mappingFields = [
+            {
+              inputField = salesforce.Contact.field.AccountId
+              outputField = salesforce.Lead.field.Company
+            },
+            {
+              inputField = salesforce.Contact.field.Email
+              outputField = salesforce.Lead.field.Email
+            },
+            {
+              inputField = "FirstName"
+              outputField = "FirstName"
+            },
+            {
+              inputField = "LastName"
+              outputField = "LastName"
+            },
+            {
+              inputField = "MailingCity"
+              outputField = "City"
+            },
+            {
+              inputField = "MailingPostalCode"
+              outputField = "PostalCode"
+            },
+            {
+              inputField = "MailingStreet"
+              outputField = "Street"
+            },
+            {
+              inputField = salesforce.Contact.field.Phone
+              outputField = salesforce.Lead.field.Phone
+            },
+            {
+              inputField = salesforce.Contact.field.Title
+              outputField = salesforce.Lead.field.Title
+            },
+          ]
+          outputObject = salesforce.Lead
+        },
+      ]
+    },
+  ]
+  isActive = false
+  masterLabel = "Standard Rule for Contacts with Duplicate Leads"
+  operationsOnInsert = [
+    "Alert",
+    "Report",
+  ]
+  operationsOnUpdate = "Report"
+  securityOption = "EnforceSharingRules"
+  sortOrder = 1
+  _parent = [
+    salesforce.Contact,
+  ]
+}

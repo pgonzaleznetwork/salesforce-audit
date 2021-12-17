@@ -1,0 +1,26 @@
+salesforce.ApexClass SRM_PackageXML {
+  apiVersion = 36
+  status = "Active"
+  fullName = "SRM_PackageXML"
+  content = file("salesforce/Records/ApexClass/SRM_PackageXML.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Name__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Type__c
+    },
+    {
+      reference = salesforce.SRM_Package_XML_Setting__mdt
+    },
+    {
+      reference = salesforce.SRM_Package_XML_Setting__mdt.field.Api_Version__c
+    },
+    {
+      reference = salesforce.SRM_Package_XML_Setting__mdt.field.XML_Namespace__c
+    },
+  ]
+}

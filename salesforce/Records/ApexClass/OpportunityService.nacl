@@ -1,0 +1,20 @@
+salesforce.ApexClass OpportunityService {
+  apiVersion = 52
+  status = "Active"
+  fullName = "OpportunityService"
+  content = file("salesforce/Records/ApexClass/OpportunityService.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Case
+    },
+    {
+      reference = salesforce.Case.field.Original_Deal__c
+    },
+    {
+      reference = salesforce.Field_referencing__mdt
+    },
+    {
+      reference = salesforce.Field_referencing__mdt.field.Related_Field__c
+    },
+  ]
+}

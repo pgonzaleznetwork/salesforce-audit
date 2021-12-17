@@ -1,0 +1,34 @@
+salesforce.LightningPage Testing {
+  fullName = "Testing"
+  flexiPageRegions = [
+    {
+      name = "region1"
+      type = "Region"
+    },
+    {
+      name = "region2"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "boatSearch"
+          }
+        },
+      ]
+      name = "region3"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Testing"
+  template = {
+    name = "flexipage:appHomeTemplateHeaderTwoColumnsLeftSidebar"
+  }
+  type = "AppPage"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatSearch
+    },
+  ]
+}

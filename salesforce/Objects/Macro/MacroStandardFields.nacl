@@ -1,0 +1,554 @@
+type salesforce.Macro {
+  serviceid Id {
+    apiName = "Macro.Id"
+    label = "Macro ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Macro.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Macro.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Macro.Name"
+    label = "Macro Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Macro.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Macro.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Macro.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Macro.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Macro.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Html Description {
+    apiName = "Macro.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 4096
+    queryable = true
+  }
+  salesforce.Checkbox IsAlohaSupported {
+    apiName = "Macro.IsAlohaSupported"
+    label = "Supports Classic"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsLightningSupported {
+    apiName = "Macro.IsLightningSupported"
+    label = "Supports Lightning"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist StartingContext {
+    apiName = "Macro.StartingContext"
+    label = "Apply To"
+    valueSet = [
+      {
+        fullName = "Account"
+        default = false
+        label = "Account"
+        isActive = true
+      },
+      {
+        fullName = "ActiveScratchOrg"
+        default = false
+        label = "Active Scratch Org"
+        isActive = true
+      },
+      {
+        fullName = "AlternativePaymentMethod"
+        default = false
+        label = "Alternative Payment Method"
+        isActive = true
+      },
+      {
+        fullName = "ApiAnomalyEventStore"
+        default = false
+        label = "API Anomaly Event Store"
+        isActive = true
+      },
+      {
+        fullName = "Asset"
+        default = false
+        label = "Asset"
+        isActive = true
+      },
+      {
+        fullName = "AssetRelationship"
+        default = false
+        label = "Asset Relationship"
+        isActive = true
+      },
+      {
+        fullName = "AuthorizationForm"
+        default = false
+        label = "Authorization Form"
+        isActive = true
+      },
+      {
+        fullName = "AuthorizationFormConsent"
+        default = false
+        label = "Authorization Form Consent"
+        isActive = true
+      },
+      {
+        fullName = "AuthorizationFormDataUse"
+        default = false
+        label = "Authorization Form Data Use"
+        isActive = true
+      },
+      {
+        fullName = "AuthorizationFormText"
+        default = false
+        label = "Authorization Form Text"
+        isActive = true
+      },
+      {
+        fullName = "Boat__c"
+        default = false
+        label = "Boat"
+        isActive = true
+      },
+      {
+        fullName = "BoatReview__c"
+        default = false
+        label = "BoatReview"
+        isActive = true
+      },
+      {
+        fullName = "BoatType__c"
+        default = false
+        label = "Boat Type"
+        isActive = true
+      },
+      {
+        fullName = "CardPaymentMethod"
+        default = false
+        label = "Card Payment Method"
+        isActive = true
+      },
+      {
+        fullName = "Case"
+        default = false
+        label = "Case"
+        isActive = true
+      },
+      {
+        fullName = "Center__c"
+        default = false
+        label = "Center"
+        isActive = true
+      },
+      {
+        fullName = "Child__c"
+        default = false
+        label = "Child"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscription"
+        default = false
+        label = "Communication Subscription"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscriptionChannelType"
+        default = false
+        label = "Communication Subscription Channel Type"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscriptionConsent"
+        default = false
+        label = "Communication Subscription Consent"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscriptionTiming"
+        default = false
+        label = "Communication Subscription Timing"
+        isActive = true
+      },
+      {
+        fullName = "SRM_Connected_Org__c"
+        default = false
+        label = "Connected Org"
+        isActive = true
+      },
+      {
+        fullName = "ConsumptionSchedule"
+        default = false
+        label = "Consumption Schedule"
+        isActive = true
+      },
+      {
+        fullName = "Contact"
+        default = false
+        label = "Contact"
+        isActive = true
+      },
+      {
+        fullName = "ContactPointAddress"
+        default = false
+        label = "Contact Point Address"
+        isActive = true
+      },
+      {
+        fullName = "ContactPointEmail"
+        default = false
+        label = "Contact Point Email"
+        isActive = true
+      },
+      {
+        fullName = "ContactPointPhone"
+        default = false
+        label = "Contact Point Phone"
+        isActive = true
+      },
+      {
+        fullName = "Contract"
+        default = false
+        label = "Contract"
+        isActive = true
+      },
+      {
+        fullName = "CredentialStuffingEventStore"
+        default = false
+        label = "Credential Stuffing Event Store"
+        isActive = true
+      },
+      {
+        fullName = "CreditMemo"
+        default = false
+        label = "Credit Memo"
+        isActive = true
+      },
+      {
+        fullName = "SRM_CRM_Sprint__c"
+        default = false
+        label = "CRM Sprint"
+        isActive = true
+      },
+      {
+        fullName = "Custom_Object__c"
+        default = false
+        label = "Custom Object"
+        isActive = true
+      },
+      {
+        fullName = "DataUsePurpose"
+        default = false
+        label = "Data Use Purpose"
+        isActive = true
+      },
+      {
+        fullName = "SRM_Development_Task__c"
+        default = false
+        label = "Development Task"
+        isActive = true
+      },
+      {
+        fullName = "DigitalWallet"
+        default = false
+        label = "Digital Wallet"
+        isActive = true
+      },
+      {
+        fullName = "EngagementChannelType"
+        default = false
+        label = "Engagement Channel Type"
+        isActive = true
+      },
+      {
+        fullName = "Event"
+        default = false
+        label = "Event"
+        isActive = true
+      },
+      {
+        fullName = "FeedItem"
+        default = false
+        label = "Feed Item"
+        isActive = true
+      },
+      {
+        fullName = "CollaborationGroup"
+        default = false
+        label = "Group"
+        isActive = true
+      },
+      {
+        fullName = "Image"
+        default = false
+        label = "Image"
+        isActive = true
+      },
+      {
+        fullName = "Individual"
+        default = false
+        label = "Individual"
+        isActive = true
+      },
+      {
+        fullName = "Invoice"
+        default = false
+        label = "Invoice"
+        isActive = true
+      },
+      {
+        fullName = "Lead"
+        default = false
+        label = "Lead"
+        isActive = true
+      },
+      {
+        fullName = "LegalEntity"
+        default = false
+        label = "Legal Entity"
+        isActive = true
+      },
+      {
+        fullName = "Location"
+        default = false
+        label = "Location"
+        isActive = true
+      },
+      {
+        fullName = "LocationGroup"
+        default = false
+        label = "Location Group"
+        isActive = true
+      },
+      {
+        fullName = "SRM_Metadata__c"
+        default = false
+        label = "Metadata"
+        isActive = true
+      },
+      {
+        fullName = "SRM_Jira_Ticket__c"
+        default = false
+        label = "Metadata Deployment"
+        isActive = true
+      },
+      {
+        fullName = "NamespaceRegistry"
+        default = false
+        label = "Namespace Registry"
+        isActive = true
+      },
+      {
+        fullName = "Opportunity"
+        default = false
+        label = "Opportunity"
+        isActive = true
+      },
+      {
+        fullName = "OpportunityContactRole"
+        default = false
+        label = "Opportunity Contact Role"
+        isActive = true
+      },
+      {
+        fullName = "Order"
+        default = false
+        label = "Order"
+        isActive = true
+      },
+      {
+        fullName = "Parent__c"
+        default = false
+        label = "Parent"
+        isActive = true
+      },
+      {
+        fullName = "PartyConsent"
+        default = false
+        label = "Party Consent"
+        isActive = true
+      },
+      {
+        fullName = "Payment"
+        default = false
+        label = "Payment"
+        isActive = true
+      },
+      {
+        fullName = "PaymentAuthorization"
+        default = false
+        label = "Payment Authorization"
+        isActive = true
+      },
+      {
+        fullName = "PaymentAuthAdjustment"
+        default = false
+        label = "Payment Authorization Adjustment"
+        isActive = true
+      },
+      {
+        fullName = "PaymentGateway"
+        default = false
+        label = "Payment Gateway"
+        isActive = true
+      },
+      {
+        fullName = "PaymentGatewayLog"
+        default = false
+        label = "Payment Gateway Log"
+        isActive = true
+      },
+      {
+        fullName = "PaymentLineInvoice"
+        default = false
+        label = "Payment Line Invoice"
+        isActive = true
+      },
+      {
+        fullName = "Product2"
+        default = false
+        label = "Product"
+        isActive = true
+      },
+      {
+        fullName = "ContentDocumentListViewMapping"
+        default = false
+        label = "Quip Document from List View"
+        isActive = true
+      },
+      {
+        fullName = "Refund"
+        default = false
+        label = "Refund"
+        isActive = true
+      },
+      {
+        fullName = "RefundLinePayment"
+        default = false
+        label = "Refund Line Payment"
+        isActive = true
+      },
+      {
+        fullName = "ReportAnomalyEventStore"
+        default = false
+        label = "Report Anomaly Event Store"
+        isActive = true
+      },
+      {
+        fullName = "ScratchOrgInfo"
+        default = false
+        label = "Scratch Org Info"
+        isActive = true
+      },
+      {
+        fullName = "ServiceResource"
+        default = false
+        label = "Service Resource"
+        isActive = true
+      },
+      {
+        fullName = "SessionHijackingEventStore"
+        default = false
+        label = "Session Hijacking Event Store"
+        isActive = true
+      },
+      {
+        fullName = "Task"
+        default = false
+        label = "Task"
+        isActive = true
+      },
+      {
+        fullName = "ThreatDetectionFeedback"
+        default = false
+        label = "Threat Detection Feedback"
+        isActive = true
+      },
+      {
+        fullName = "User"
+        default = false
+        label = "User"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

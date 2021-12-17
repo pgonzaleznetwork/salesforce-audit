@@ -1,0 +1,46 @@
+salesforce.LightningComponentBundle boatMap {
+  fqn = "boatMap"
+  apiVersion = 48
+  masterLabel = "Boat Map Component"
+  description = "Component to display a given boat's location!"
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__RecordPage",
+      "lightning__AppPage",
+    ]
+  }
+  targetConfigs = {
+    targetConfig = [
+      {
+        targets = "lightning__RecordPage"
+        objects = [
+          {
+            object = "Boat__c"
+          },
+        ]
+      },
+    ]
+  }
+  fullName = "boatMap"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatMap/boatMap.html")
+        filePath = "lwc/boatMap/boatMap.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatMap/boatMap.js")
+        filePath = "lwc/boatMap/boatMap.js"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.Boat__c
+    },
+    {
+      reference = salesforce.LightningMessageChannel.instance.BoatMessageChannel
+    },
+  ]
+}

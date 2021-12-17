@@ -1,0 +1,47 @@
+type salesforce.MatchingRuleItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string blankValueBehavior {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "MatchBlanks",
+        "NullNotAllowed",
+      ]
+    }
+  }
+  string fieldName {
+  }
+  string matchingMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "City",
+        "CompanyName",
+        "Exact",
+        "FirstName",
+        "LastName",
+        "Phone",
+        "Street",
+        "Title",
+        "Zip",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  metadataType = "MatchingRuleItem"
+}

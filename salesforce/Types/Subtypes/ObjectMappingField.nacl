@@ -1,0 +1,29 @@
+type salesforce.ObjectMappingField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string inputField {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+      "CustomFieldDataColumn",
+    ]
+  }
+  string outputField {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+      "CustomFieldDataColumn",
+    ]
+  }
+  metadataType = "ObjectMappingField"
+}

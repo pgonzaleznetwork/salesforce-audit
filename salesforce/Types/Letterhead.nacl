@@ -1,0 +1,45 @@
+type salesforce.Letterhead {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean available {
+  }
+  string backgroundColor {
+  }
+  string bodyColor {
+  }
+  salesforce.LetterheadLine bottomLine {
+  }
+  string description {
+  }
+  salesforce.LetterheadHeaderFooter footer {
+  }
+  salesforce.LetterheadHeaderFooter header {
+  }
+  salesforce.LetterheadLine middleLine {
+  }
+  string name {
+  }
+  salesforce.LetterheadLine topLine {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "letter"
+  dirName = "letterhead"
+  metadataType = "Letterhead"
+}

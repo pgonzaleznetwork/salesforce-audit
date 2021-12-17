@@ -1,0 +1,24 @@
+type salesforce.LightningBoltImages {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string image {
+    foreignKeyDomain = [
+      "ContentAsset",
+    ]
+  }
+  number order {
+  }
+  metadataType = "LightningBoltImages"
+}

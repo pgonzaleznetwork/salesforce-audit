@@ -1,0 +1,23 @@
+salesforce.WebLink Campaign_ViewCampaignInfluenceReport {
+  fullName = "Campaign.ViewCampaignInfluenceReport"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 500
+  isResizable = true
+  linkType = "url"
+  masterLabel = "View Campaign Influence Report"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "/00O?rt=117&break0=CAN&scope=1&scopeid_lkid={!Campaign.Id}&scopeid={!Campaign_Name}&c=CAN&c=MR&c=PCS&c=CFN&c=RN&c=ON&c=OA&c=OS&c=OCD&c=AN&s=OA&duel0=CAN%2CMR%2CCFN%2CRN%2CAN%2CON%2CPCS%2COS%2COCD%2COA&details=yes&format=t"
+  width = 500
+  _parent = [
+    salesforce.Campaign,
+  ]
+}

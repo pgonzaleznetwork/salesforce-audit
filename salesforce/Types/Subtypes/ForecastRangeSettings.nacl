@@ -1,0 +1,32 @@
+type salesforce.ForecastRangeSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number beginning {
+  }
+  number displaying {
+  }
+  string periodType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Month",
+        "Quarter",
+        "Week",
+        "Year",
+      ]
+    }
+  }
+  metadataType = "ForecastRangeSettings"
+}

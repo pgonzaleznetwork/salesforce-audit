@@ -1,0 +1,44 @@
+type salesforce.MatchingRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string booleanFilter {
+  }
+  string description {
+  }
+  string label {
+  }
+  salesforce.MatchingRuleItem matchingRuleItems {
+  }
+  string ruleStatus {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Activating",
+        "ActivationFailed",
+        "Active",
+        "Deactivating",
+        "DeactivationFailed",
+        "Inactive",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "MatchingRule"
+}

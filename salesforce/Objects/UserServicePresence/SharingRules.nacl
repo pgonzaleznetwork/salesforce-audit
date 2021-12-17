@@ -1,0 +1,6 @@
+salesforce.SharingRules UserServicePresence {
+  fullName = "UserServicePresence"
+  _parent = [
+    salesforce.UserServicePresence,
+  ]
+}

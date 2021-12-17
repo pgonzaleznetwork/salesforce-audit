@@ -1,0 +1,20 @@
+salesforce.ListView Opportunity_ClosingNextMonth {
+  fullName = "Opportunity.ClosingNextMonth"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "OPPORTUNITY.CLOSED"
+      operation = "equals"
+      value = "0"
+    },
+    {
+      field = "OPPORTUNITY.CLOSE_DATE"
+      operation = "equals"
+      value = "NEXT_MONTH"
+    },
+  ]
+  label = "Closing Next Month"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

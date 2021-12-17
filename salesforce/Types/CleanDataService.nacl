@@ -1,0 +1,33 @@
+type salesforce.CleanDataService {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  "List<salesforce.CleanRule>" cleanRules {
+  }
+  string description {
+  }
+  string masterLabel {
+  }
+  string matchEngine {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "cleanDataService"
+  dirName = "cleanDataServices"
+  metadataType = "CleanDataService"
+}

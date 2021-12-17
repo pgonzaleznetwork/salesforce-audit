@@ -1,0 +1,21 @@
+salesforce.ListView SRM_Development_Task__c_My_Open_Tasks {
+  fullName = "SRM_Development_Task__c.My_Open_Tasks"
+  columns = [
+    "NAME",
+    "Case_Subject__c",
+    "Description__c",
+    "Status__c",
+  ]
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "Status__c"
+      operation = "equals"
+      value = "Open"
+    },
+  ]
+  label = "My Open Tasks"
+  _parent = [
+    salesforce.SRM_Development_Task__c,
+  ]
+}

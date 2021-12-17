@@ -1,0 +1,6 @@
+salesforce.SharingRules Macro {
+  fullName = "Macro"
+  _parent = [
+    salesforce.Macro,
+  ]
+}

@@ -1,0 +1,20 @@
+salesforce.ApexClass SameName {
+  apiVersion = 50
+  status = "Active"
+  fullName = "SameName"
+  content = file("salesforce/Records/ApexClass/SameName.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.CustomerPriority__c
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Lead
+    },
+  ]
+}

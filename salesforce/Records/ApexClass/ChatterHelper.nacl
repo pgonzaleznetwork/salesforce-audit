@@ -1,0 +1,14 @@
+salesforce.ApexClass ChatterHelper {
+  apiVersion = 50
+  status = "Active"
+  fullName = "ChatterHelper"
+  content = file("salesforce/Records/ApexClass/ChatterHelper.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ContentVersion
+    },
+    {
+      reference = salesforce.FeedItem
+    },
+  ]
+}

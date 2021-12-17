@@ -1,0 +1,15 @@
+salesforce.ListView Opportunity_Default_Opportunity_Pipeline {
+  fullName = "Opportunity.Default_Opportunity_Pipeline"
+  filterScope = "Mine"
+  filters = [
+    {
+      field = "OPPORTUNITY.CLOSE_DATE"
+      operation = "greaterOrEqual"
+      value = "LAST_N_MONTHS:3"
+    },
+  ]
+  label = "Opportunity Pipeline"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

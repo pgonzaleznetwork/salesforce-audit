@@ -1,0 +1,29 @@
+type salesforce.BusinessProcess {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  "List<salesforce.PicklistValue>" values {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  metadataType = "BusinessProcess"
+}

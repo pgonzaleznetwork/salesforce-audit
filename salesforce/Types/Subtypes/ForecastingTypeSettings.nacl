@@ -1,0 +1,68 @@
+type salesforce.ForecastingTypeSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  salesforce.AdjustmentsSettings adjustmentsSettings {
+  }
+  "List<string>" displayedCategoryApiNames {
+  }
+  salesforce.ForecastRangeSettings forecastRangeSettings {
+  }
+  "List<string>" forecastedCategoryApiNames {
+  }
+  string forecastingDateType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "OLIMeasureCloseDateOnly",
+        "OpportunityCloseDate",
+        "ProductDate",
+        "ProductDateOnly",
+        "ScheduleDate",
+        "ScheduleDateOnly",
+      ]
+    }
+  }
+  boolean hasProductFamily {
+  }
+  boolean isAmount {
+  }
+  boolean isAvailable {
+  }
+  boolean isQuantity {
+  }
+  string managerAdjustableCategoryApiNames {
+  }
+  string masterLabel {
+  }
+  string name {
+  }
+  "List<salesforce.OpportunityListFieldsLabelMapping>" opportunityListFieldsLabelMappings {
+  }
+  salesforce.OpportunityListFieldsSelectedSettings opportunityListFieldsSelectedSettings {
+  }
+  salesforce.OpportunityListFieldsUnselectedSettings opportunityListFieldsUnselectedSettings {
+  }
+  string opportunitySplitName {
+  }
+  string ownerAdjustableCategoryApiNames {
+  }
+  salesforce.QuotasSettings quotasSettings {
+  }
+  string territory2ModelName {
+  }
+  metadataType = "ForecastingTypeSettings"
+}

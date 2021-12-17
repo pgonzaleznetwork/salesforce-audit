@@ -1,0 +1,31 @@
+salesforce.LightningComponentBundle boatSearchResults {
+  apiVersion = 48
+  isExposed = false
+  fullName = "boatSearchResults"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatSearchResults/boatSearchResults.html")
+        filePath = "lwc/boatSearchResults/boatSearchResults.html"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/boatSearchResults/boatSearchResults.js")
+        filePath = "lwc/boatSearchResults/boatSearchResults.js"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.BoatDataService
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatTile
+    },
+    {
+      reference = salesforce.LightningComponentBundle.instance.boatsNearMe
+    },
+    {
+      reference = salesforce.LightningMessageChannel.instance.BoatMessageChannel
+    },
+  ]
+}

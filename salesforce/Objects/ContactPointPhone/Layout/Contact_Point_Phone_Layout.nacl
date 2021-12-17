@@ -1,0 +1,88 @@
+salesforce.Layout ContactPointPhone_Contact_Point_Phone_Layout@bsss {
+  fullName = "ContactPointPhone-Contact Point Phone Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.IsPrimary
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ContactPointPhone.field.TelephoneNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.AreaCode
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.PhoneType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.IsPersonalPhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.IsSmsCapable
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.ParentId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.ExtensionNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.IsBusinessPhone
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ContactPointPhone.field.IsFaxCapable
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "ContactPoint",
+        "DataUsePurpose",
+        "PrivacyConsentStatus",
+      ]
+      relatedList = "ContactPointConsents"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ContactPointPhone,
+  ]
+}

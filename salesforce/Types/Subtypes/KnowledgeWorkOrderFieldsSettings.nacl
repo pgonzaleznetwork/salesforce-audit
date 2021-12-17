@@ -1,0 +1,19 @@
+type salesforce.KnowledgeWorkOrderFieldsSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.KnowledgeWorkOrderField>" field {
+  }
+  metadataType = "KnowledgeWorkOrderFieldsSettings"
+}

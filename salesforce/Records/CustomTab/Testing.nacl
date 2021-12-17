@@ -1,0 +1,12 @@
+salesforce.CustomTab Testing {
+  fullName = "Testing"
+  description = "Created by Lightning App Builder"
+  flexiPage = "Testing"
+  label = "Testing"
+  motif = "Custom84: Presenter"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.Testing
+    },
+  ]
+}

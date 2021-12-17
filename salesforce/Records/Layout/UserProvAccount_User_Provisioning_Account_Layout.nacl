@@ -1,0 +1,96 @@
+salesforce.Layout UserProvAccount_User_Provisioning_Account_Layout@bsss {
+  fullName = "UserProvAccount-User Provisioning Account Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Name"
+            },
+            {
+              behavior = "Required"
+              field = "Status"
+            },
+            {
+              behavior = "Required"
+              field = "SalesforceUserId"
+            },
+            {
+              behavior = "Edit"
+              field = "ExternalUsername"
+            },
+            {
+              behavior = "Edit"
+              field = "ExternalFirstName"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "ConnectedAppId"
+            },
+            {
+              behavior = "Required"
+              field = "LinkState"
+            },
+            {
+              behavior = "Edit"
+              field = "ExternalUserId"
+            },
+            {
+              behavior = "Edit"
+              field = "ExternalEmail"
+            },
+            {
+              behavior = "Edit"
+              field = "ExternalLastName"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "CreatedById"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "LastModifiedById"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+}

@@ -1,0 +1,35 @@
+salesforce.ApexClass SRM_MetadataConflictWarningController {
+  apiVersion = 44
+  status = "Active"
+  fullName = "SRM_MetadataConflictWarningController"
+  content = file("salesforce/Records/ApexClass/SRM_MetadataConflictWarningController.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c.field.Status__c
+    },
+    {
+      reference = salesforce.SRM_Metadata_Conflict_Warning__mdt
+    },
+    {
+      reference = salesforce.SRM_Metadata_Conflict_Warning__mdt.field.Friendly_Message__c
+    },
+    {
+      reference = salesforce.SRM_Metadata_Conflict_Warning__mdt.field.Warning__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Jira_Ticket__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Referenced_in_another_ticket__c
+    },
+    {
+      reference = salesforce.SRM_Metadata__c.field.Type__c
+    },
+  ]
+}

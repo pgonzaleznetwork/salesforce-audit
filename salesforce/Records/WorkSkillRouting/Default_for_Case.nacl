@@ -1,0 +1,13 @@
+salesforce.WorkSkillRouting Default_for_Case {
+  fullName = "Default_for_Case"
+  isActive = true
+  masterLabel = "Default for Case"
+  relatedEntity = "Case"
+  workSkillRoutingAttributes = {
+    field = salesforce.Case.field.Origin
+    isAdditionalSkill = false
+    skill = salesforce.Skill.instance.Spanish
+    skillLevel = 1
+    value = "Phone"
+  }
+}

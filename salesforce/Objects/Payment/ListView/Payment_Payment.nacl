@@ -1,0 +1,8 @@
+salesforce.ListView Payment_Payment {
+  fullName = "Payment.Payment"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Payment,
+  ]
+}

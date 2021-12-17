@@ -1,0 +1,31 @@
+salesforce.StandardValueSet Salutation {
+  fullName = "Salutation"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Mr."
+      default = false
+      label = "Mr."
+    },
+    {
+      fullName = "Ms."
+      default = false
+      label = "Ms."
+    },
+    {
+      fullName = "Mrs."
+      default = false
+      label = "Mrs."
+    },
+    {
+      fullName = "Dr."
+      default = false
+      label = "Dr."
+    },
+    {
+      fullName = "Prof."
+      default = false
+      label = "Prof."
+    },
+  ]
+}

@@ -1,0 +1,399 @@
+type salesforce.SRM_Jira_Ticket__c {
+  salesforce.MasterDetail CRM_Sprint__c {
+    apiName = "SRM_Jira_Ticket__c.CRM_Sprint__c"
+    label = "CRM Sprint"
+    writeRequiresMasterRead = false
+    reparentableMasterDetail = true
+    referenceTo = [
+      salesforce.SRM_CRM_Sprint__c,
+    ]
+    createable = true
+    updateable = true
+    relationshipOrder = 0
+    relationshipName = "Jira_Tickets"
+    queryable = true
+    externalId = false
+    relationshipLabel = "Metadata Deployments"
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.DateTime Approx_Deployment_Date__c {
+    apiName = "SRM_Jira_Ticket__c.Approx_Deployment_Date__c"
+    externalId = false
+    label = "Production Deployment Date"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText Case_Number__c {
+    apiName = "SRM_Jira_Ticket__c.Case_Number__c"
+    externalId = false
+    formula = "Case__r.CaseNumber"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Case Number"
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Jira_Ticket__c.field.Case__c
+      },
+    ]
+  }
+  salesforce.FormulaText Case_Subject__c {
+    apiName = "SRM_Jira_Ticket__c.Case_Subject__c"
+    externalId = false
+    formula = "Case__r.Subject"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Case Subject"
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Jira_Ticket__c.field.Case__c
+      },
+    ]
+  }
+  salesforce.Lookup Case__c {
+    apiName = "SRM_Jira_Ticket__c.Case__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Case"
+    referenceTo = [
+      salesforce.Case,
+    ]
+    relationshipName = "Deployment_Information"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup Connected_Org__c {
+    apiName = "SRM_Jira_Ticket__c.Connected_Org__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Source Org"
+    referenceTo = [
+      salesforce.SRM_Connected_Org__c,
+    ]
+    relationshipName = "Jira_Tickets"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.LongTextArea Deployed_Apex_Names__c {
+    apiName = "SRM_Jira_Ticket__c.Deployed_Apex_Names__c"
+    externalId = false
+    label = "Deployed Apex Names"
+    length = 32768
+    trackFeedHistory = false
+    trackTrending = false
+    visibleLines = 3
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox Deployed_to_Integration_Environment__c {
+    apiName = "SRM_Jira_Ticket__c.Deployed_to_Integration_Environment__c"
+    defaultValue = false
+    externalId = false
+    label = "Deployed to Integration Environment"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox Fire_New_Apex_Notification__c {
+    apiName = "SRM_Jira_Ticket__c.Fire_New_Apex_Notification__c"
+    defaultValue = false
+    externalId = false
+    label = "Fire New Apex Notification"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.TextArea Friendly_description_of_Apex_changes__c {
+    apiName = "SRM_Jira_Ticket__c.Friendly_description_of_Apex_changes__c"
+    description = "Enter a short and friendly description of what changes you made to Apex code. This will be included in an email notification that goes out to the CRM team when the deployment contains apex code."
+    externalId = false
+    inlineHelpText = "Enter a short and friendly description of what changes you made to Apex code. This will be included in an email notification that goes out to the CRM team when the deployment contains apex code."
+    label = "Friendly description of Apex changes"
+    trackFeedHistory = false
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText Generate_Session_ID__c {
+    apiName = "SRM_Jira_Ticket__c.Generate_Session_ID__c"
+    externalId = false
+    formula = "$Api.Session_ID"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "Generate Session ID"
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Text Git_Pull_Request_URL__c {
+    apiName = "SRM_Jira_Ticket__c.Git_Pull_Request_URL__c"
+    caseSensitive = false
+    externalId = false
+    inlineHelpText = "The URL generated by the \"git push -u origin <branch_name> command, for example https://github.com/websummit/sfdc/pull/new/CRM-516-517v2"
+    label = "Git Pull Request URL"
+    length = 255
+    trackFeedHistory = false
+    trackTrending = false
+    unique = true
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Number Level_of_Effort_hours__c {
+    apiName = "SRM_Jira_Ticket__c.Level_of_Effort_hours__c"
+    externalId = false
+    label = "Level of Effort (hours)"
+    precision = 11
+    scale = 1
+    trackFeedHistory = false
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Summary Metadata_Members_to_be_Created__c {
+    apiName = "SRM_Jira_Ticket__c.Metadata_Members_to_be_Created__c"
+    externalId = false
+    label = "Metadata Members to be Created"
+    summaryFilterItems = [
+      {
+        field = "SRM_Metadata__c.Deployment_Type__c"
+        operation = "equals"
+        value = "Brand new metadata"
+      },
+    ]
+    summaryForeignKey = "SRM_Metadata__c.Jira_Ticket__c"
+    summaryOperation = "count"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Metadata__c.field.Deployment_Type__c
+      },
+    ]
+  }
+  salesforce.Summary Metadata_Members_to_be_Updated__c {
+    apiName = "SRM_Jira_Ticket__c.Metadata_Members_to_be_Updated__c"
+    externalId = false
+    label = "Metadata Members to be Updated"
+    summaryFilterItems = [
+      {
+        field = "SRM_Metadata__c.Deployment_Type__c"
+        operation = "equals"
+        value = "\"Existing, updated metadata\""
+      },
+    ]
+    summaryForeignKey = "SRM_Metadata__c.Jira_Ticket__c"
+    summaryOperation = "count"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Metadata__c.field.Deployment_Type__c
+      },
+    ]
+  }
+  salesforce.Picklist Owner__c {
+    apiName = "SRM_Jira_Ticket__c.Owner__c"
+    externalId = false
+    label = "Owner"
+    trackFeedHistory = true
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "David"
+        default = false
+        label = "David"
+      },
+      {
+        fullName = "Kasia"
+        default = false
+        label = "Kasia"
+      },
+      {
+        fullName = "Pablo"
+        default = false
+        label = "Pablo"
+      },
+    ]
+    sorted = false
+    restricted = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Text Rebased_By__c {
+    apiName = "SRM_Jira_Ticket__c.Rebased_By__c"
+    externalId = false
+    label = "Rebased By"
+    length = 250
+    trackFeedHistory = false
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist Status__c {
+    apiName = "SRM_Jira_Ticket__c.Status__c"
+    externalId = false
+    label = "Status"
+    trackFeedHistory = true
+    trackTrending = false
+    valueSet = [
+      {
+        fullName = "Awaiting Deployment"
+        default = true
+        label = "Awaiting Deployment"
+      },
+      {
+        fullName = "Deployed"
+        default = false
+        label = "Deployed"
+      },
+      {
+        fullName = "Done"
+        default = false
+        isActive = false
+        label = "Done"
+      },
+      {
+        fullName = "In Design"
+        default = false
+        isActive = false
+        label = "In Design"
+      },
+      {
+        fullName = "In QA"
+        default = false
+        isActive = false
+        label = "In QA"
+      },
+      {
+        fullName = "New"
+        default = false
+        isActive = false
+        label = "New"
+      },
+      {
+        fullName = "Prioritized"
+        default = false
+        isActive = false
+        label = "Prioritized"
+      },
+      {
+        fullName = "Ready for Deployment"
+        default = false
+        isActive = false
+        label = "Ready for Deployment"
+      },
+      {
+        fullName = "Ready for Development"
+        default = false
+        isActive = false
+        label = "Ready for Development"
+      },
+      {
+        fullName = "Ready for QA"
+        default = false
+        isActive = false
+        label = "Ready for QA"
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        isActive = false
+        label = "Rejected"
+      },
+    ]
+    sorted = false
+    restricted = true
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Text Title__c {
+    apiName = "SRM_Jira_Ticket__c.Title__c"
+    externalId = false
+    label = "Title"
+    length = 250
+    trackFeedHistory = false
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Summary Total_Metadata_Members__c {
+    apiName = "SRM_Jira_Ticket__c.Total_Metadata_Members__c"
+    externalId = false
+    label = "Total Metadata Members"
+    summaryForeignKey = "SRM_Metadata__c.Jira_Ticket__c"
+    summaryOperation = "count"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.FormulaText View_in_Jira__c {
+    apiName = "SRM_Jira_Ticket__c.View_in_Jira__c"
+    externalId = false
+    formula = "HYPERLINK(\"https://cilabs.atlassian.net/browse/\" &  Name , Name)"
+    formulaTreatBlanksAs = "BlankAsZero"
+    label = "View in Jira"
+    trackTrending = false
+    unique = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

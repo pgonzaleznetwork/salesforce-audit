@@ -1,0 +1,64 @@
+type salesforce.SRM_CRM_Sprint__c {
+  salesforce.Summary Number_of_Tickets_Deployed_to_Integratio__c {
+    apiName = "SRM_CRM_Sprint__c.Number_of_Tickets_Deployed_to_Integratio__c"
+    externalId = false
+    label = "Num. of Tickets Deployed to Integration"
+    summaryFilterItems = [
+      {
+        field = "SRM_Jira_Ticket__c.Deployed_to_Integration_Environment__c"
+        operation = "equals"
+        value = "True"
+      },
+    ]
+    summaryForeignKey = "SRM_Jira_Ticket__c.CRM_Sprint__c"
+    summaryOperation = "count"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.SRM_Jira_Ticket__c.field.Deployed_to_Integration_Environment__c
+      },
+    ]
+  }
+  salesforce.Summary Total_Level_of_Effort_hours__c {
+    apiName = "SRM_CRM_Sprint__c.Total_Level_of_Effort_hours__c"
+    externalId = false
+    label = "Total Level of Effort (hours)"
+    summarizedField = "SRM_Jira_Ticket__c.Level_of_Effort_hours__c"
+    summaryForeignKey = "SRM_Jira_Ticket__c.CRM_Sprint__c"
+    summaryOperation = "sum"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Summary Total_Metadata_Members__c {
+    apiName = "SRM_CRM_Sprint__c.Total_Metadata_Members__c"
+    externalId = false
+    label = "Total Metadata Members"
+    summarizedField = "SRM_Jira_Ticket__c.Total_Metadata_Members__c"
+    summaryForeignKey = "SRM_Jira_Ticket__c.CRM_Sprint__c"
+    summaryOperation = "sum"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Summary Total_Number_of_Tickets__c {
+    apiName = "SRM_CRM_Sprint__c.Total_Number_of_Tickets__c"
+    externalId = false
+    label = "Total Number of Tickets"
+    summaryForeignKey = "SRM_Jira_Ticket__c.CRM_Sprint__c"
+    summaryOperation = "count"
+    trackTrending = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

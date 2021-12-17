@@ -1,0 +1,11 @@
+salesforce.ApexClass fflib_SObjectUnitOfWork {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_SObjectUnitOfWork"
+  content = file("salesforce/Records/ApexClass/fflib_SObjectUnitOfWork.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.fflib_ISObjectUnitOfWork
+    },
+  ]
+}

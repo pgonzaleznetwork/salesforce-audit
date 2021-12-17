@@ -1,0 +1,21 @@
+type salesforce.TabLimitConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string maxNumberOfPrimaryTabs {
+  }
+  string maxNumberOfSubTabs {
+  }
+  metadataType = "TabLimitConfig"
+}

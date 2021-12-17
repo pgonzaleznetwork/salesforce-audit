@@ -1,0 +1,3 @@
+salesforce.MatchingRules Lead {
+  fullName = "Lead"
+}

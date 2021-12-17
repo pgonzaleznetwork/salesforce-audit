@@ -1,0 +1,18 @@
+salesforce.ListView Lead_ViewCustom1 {
+  fullName = "Lead.ViewCustom1"
+  columns = [
+    "FULL_NAME",
+    "LEAD.COMPANY",
+    "LEAD.STATE",
+    "LEAD.EMAIL",
+    "LEAD.STATUS",
+    "LEAD.CREATED_DATE",
+    "CORE.USERS.ALIAS",
+    "LEAD.UNREAD",
+  ]
+  filterScope = "Everything"
+  label = "View - Custom 1"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

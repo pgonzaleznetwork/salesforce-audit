@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Account_update_priority_below@vuu {
+  fullName = "Account.update_priority_below"
+  field = salesforce.Account.field.CustomerPriority__c
+  literalValue = "High"
+  name = "Set to null"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+}

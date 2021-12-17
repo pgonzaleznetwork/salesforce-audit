@@ -1,0 +1,504 @@
+salesforce.CleanDataService DataCloudGeoLocation {
+  fullName = "DataCloudGeoLocation"
+  cleanRules = [
+    {
+      bulkEnabled = true
+      bypassTriggers = true
+      bypassWorkflow = true
+      description = "Adds geocodes for Billing Address"
+      developerName = "Account_Geo_Clean_Rule_for_Billing_Address"
+      fieldMappings = [
+        {
+          SObjectType = "DatacloudAddress"
+          developerName = "Account_Geo_Clean_Rule_for_Billing_AddressInputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "BillingStreet"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "AddressLine1"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "BillingCity"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "City"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "BillingCountry"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "Country"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "BillingPostalCode"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "PostalCode"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "BillingState"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "State"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "AccountBillingInputMapping"
+        },
+        {
+          SObjectType = "Account"
+          developerName = "Account_Geo_Clean_Rule_for_Billing_AddressOutputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "Account"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "GeoAccuracyNum"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "BillingGeocodeAccuracy"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Account"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Latitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "BillingLatitude"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Account"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Longitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "BillingLongitude"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "AccountBillingOutputMapping"
+        },
+      ]
+      masterLabel = "Geocodes for Account Billing Address"
+      matchRule = "DatacloudAddressMatchRule"
+      sourceSobjectType = "DatacloudAddress"
+      status = "Inactive"
+      targetSobjectType = "Account"
+    },
+    {
+      bulkEnabled = true
+      bypassTriggers = true
+      bypassWorkflow = true
+      description = "Adds geocodes for Shipping Address"
+      developerName = "Account_Geo_Clean_Rule_for_Shipping_Address"
+      fieldMappings = [
+        {
+          SObjectType = "DatacloudAddress"
+          developerName = "Account_Geo_Clean_Rule_for_Shipping_AddressInputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "ShippingStreet"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "AddressLine1"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "ShippingCity"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "City"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "ShippingCountry"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "Country"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "ShippingPostalCode"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "PostalCode"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "ShippingState"
+                  dataServiceObjectName = "Account"
+                  priority = 1
+                },
+              ]
+              fieldName = "State"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "AccountShippingInputMapping"
+        },
+        {
+          SObjectType = "Account"
+          developerName = "Account_Geo_Clean_Rule_for_Shipping_AddressOutputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "Account"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "GeoAccuracyNum"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "ShippingGeocodeAccuracy"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Account"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Latitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "ShippingLatitude"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Account"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Longitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "ShippingLongitude"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "AccountShippingOutputMapping"
+        },
+      ]
+      masterLabel = "Geocodes for Account Shipping Address"
+      matchRule = "DatacloudAddressMatchRule"
+      sourceSobjectType = "DatacloudAddress"
+      status = "Inactive"
+      targetSobjectType = "Account"
+    },
+    {
+      bulkEnabled = true
+      bypassTriggers = true
+      bypassWorkflow = true
+      description = "Adds geocodes for Mailing Address"
+      developerName = "Contact_Geo_Clean_Rule_for_Mailing_Address"
+      fieldMappings = [
+        {
+          SObjectType = "DatacloudAddress"
+          developerName = "Contact_Geo_Clean_Rule_for_Mailing_AddressInputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "MailingStreet"
+                  dataServiceObjectName = "Contact"
+                  priority = 1
+                },
+              ]
+              fieldName = "AddressLine1"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "MailingCity"
+                  dataServiceObjectName = "Contact"
+                  priority = 1
+                },
+              ]
+              fieldName = "City"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "MailingCountry"
+                  dataServiceObjectName = "Contact"
+                  priority = 1
+                },
+              ]
+              fieldName = "Country"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "MailingPostalCode"
+                  dataServiceObjectName = "Contact"
+                  priority = 1
+                },
+              ]
+              fieldName = "PostalCode"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "MailingState"
+                  dataServiceObjectName = "Contact"
+                  priority = 1
+                },
+              ]
+              fieldName = "State"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "ContactInputMapping"
+        },
+        {
+          SObjectType = "Contact"
+          developerName = "Contact_Geo_Clean_Rule_for_Mailing_AddressOutputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "Contact"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "GeoAccuracyNum"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "MailingGeocodeAccuracy"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Contact"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Latitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "MailingLatitude"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Contact"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Longitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "MailingLongitude"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "ContactOutputMapping"
+        },
+      ]
+      masterLabel = "Geocodes for Contact Mailing Address"
+      matchRule = "DatacloudAddressMatchRule"
+      sourceSobjectType = "DatacloudAddress"
+      status = "Inactive"
+      targetSobjectType = "Contact"
+    },
+    {
+      bulkEnabled = true
+      bypassTriggers = true
+      bypassWorkflow = true
+      description = "Adds geocodes for Address"
+      developerName = "Lead_Geo_Clean_Rule_for_Address"
+      fieldMappings = [
+        {
+          SObjectType = "DatacloudAddress"
+          developerName = "Lead_Geo_Clean_Rule_for_AddressInputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Street"
+                  dataServiceObjectName = "Lead"
+                  priority = 1
+                },
+              ]
+              fieldName = "AddressLine1"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "City"
+                  dataServiceObjectName = "Lead"
+                  priority = 1
+                },
+              ]
+              fieldName = "City"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Country"
+                  dataServiceObjectName = "Lead"
+                  priority = 1
+                },
+              ]
+              fieldName = "Country"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "PostalCode"
+                  dataServiceObjectName = "Lead"
+                  priority = 1
+                },
+              ]
+              fieldName = "PostalCode"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "DatacloudAddress"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "State"
+                  dataServiceObjectName = "Lead"
+                  priority = 1
+                },
+              ]
+              fieldName = "State"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "LeadInputMapping"
+        },
+        {
+          SObjectType = "Lead"
+          developerName = "Lead_Geo_Clean_Rule_for_AddressOutputMapping"
+          fieldMappingRows = [
+            {
+              SObjectType = "Lead"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "GeoAccuracyNum"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "GeocodeAccuracy"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Lead"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Latitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "Latitude"
+              mappingOperation = "Autofill"
+            },
+            {
+              SObjectType = "Lead"
+              fieldMappingFields = [
+                {
+                  dataServiceField = "Longitude"
+                  dataServiceObjectName = "DatacloudAddress"
+                  priority = 1
+                },
+              ]
+              fieldName = "Longitude"
+              mappingOperation = "Autofill"
+            },
+          ]
+          masterLabel = "LeadOutputMapping"
+        },
+      ]
+      masterLabel = "Geocodes for Lead Address"
+      matchRule = "DatacloudAddressMatchRule"
+      sourceSobjectType = "DatacloudAddress"
+      status = "Inactive"
+      targetSobjectType = "Lead"
+    },
+  ]
+  description = "Data.com Geo"
+  masterLabel = "Data.com Geo"
+  matchEngine = "DatacloudAddressMatchEngine"
+}

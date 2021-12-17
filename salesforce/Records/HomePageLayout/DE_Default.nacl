@@ -1,0 +1,14 @@
+salesforce.HomePageLayout DE_Default@s {
+  fullName = "DE Default"
+  narrowComponents = [
+    "standard-CreateNew",
+    "standard-StandardSearch",
+    "standard-Tags",
+    "standard-RecentItems",
+  ]
+  wideComponents = [
+    "standard-Calendar",
+    "standard-Tasks",
+    "standard-ProcessWorkitems",
+  ]
+}

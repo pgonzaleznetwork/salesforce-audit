@@ -1,0 +1,39 @@
+settings salesforce.CampaignSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number aiAttributionTimeframe {
+  }
+  serviceid fullName {
+  }
+  boolean enableAutoCampInfluenceDisabled {
+  }
+  boolean enableB2bmaCampaignInfluence2 {
+  }
+  boolean enableCampaignHistoryTrackEnabled {
+  }
+  boolean enableCampaignInfluence2 {
+  }
+  boolean enableCampaignMemberTWCF {
+  }
+  boolean enableSuppressNoValueCI2 {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "CampaignSettings"
+}

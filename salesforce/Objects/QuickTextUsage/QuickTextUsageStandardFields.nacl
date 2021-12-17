@@ -1,0 +1,266 @@
+type salesforce.QuickTextUsage {
+  serviceid Id {
+    apiName = "QuickTextUsage.Id"
+    label = "Quick Text Usage ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "QuickTextUsage.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "QuickTextUsage.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "QuickTextUsage.Name"
+    label = "Quick Text Usage Name"
+    _required = true
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "QuickTextUsage.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "QuickTextUsage.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "QuickTextUsage.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "QuickTextUsage.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "QuickTextUsage.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup QuickTextId {
+    apiName = "QuickTextUsage.QuickTextId"
+    label = "Quick Text ID"
+    _required = true
+    referenceTo = [
+      salesforce.QuickText,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "QuickText"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Channel {
+    apiName = "QuickTextUsage.Channel"
+    label = "Channel"
+    valueSet = [
+      {
+        fullName = "Generic"
+        default = false
+        label = "Generic"
+        isActive = true
+      },
+      {
+        fullName = "Email"
+        default = false
+        label = "Email"
+        isActive = true
+      },
+      {
+        fullName = "Portal"
+        default = false
+        label = "Portal"
+        isActive = true
+      },
+      {
+        fullName = "Live Agent"
+        default = false
+        label = "Live Agent"
+        isActive = true
+      },
+      {
+        fullName = "Phone"
+        default = false
+        label = "Phone"
+        isActive = true
+      },
+      {
+        fullName = "Internal"
+        default = false
+        label = "Internal"
+        isActive = true
+      },
+      {
+        fullName = "Social"
+        default = false
+        label = "Social"
+        isActive = true
+      },
+      {
+        fullName = "Knowledge"
+        default = false
+        label = "Knowledge"
+        isActive = true
+      },
+      {
+        fullName = "Event"
+        default = false
+        label = "Event"
+        isActive = true
+      },
+      {
+        fullName = "Task"
+        default = false
+        label = "Task"
+        isActive = true
+      },
+      {
+        fullName = "Messaging"
+        default = false
+        label = "Messaging"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist LaunchSource {
+    apiName = "QuickTextUsage.LaunchSource"
+    label = "Launch Source"
+    valueSet = [
+      {
+        fullName = "Keyboard shortcut"
+        default = false
+        label = "Keyboard shortcut"
+        isActive = true
+      },
+      {
+        fullName = "Floater"
+        default = false
+        label = "Floater"
+        isActive = true
+      },
+      {
+        fullName = "Toolbar"
+        default = false
+        label = "Toolbar"
+        isActive = true
+      },
+      {
+        fullName = "Macro"
+        default = false
+        label = "Macro"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LoggedTime {
+    apiName = "QuickTextUsage.LoggedTime"
+    label = "Logged Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup UserId {
+    apiName = "QuickTextUsage.UserId"
+    label = "User ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "User"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist AppContext {
+    apiName = "QuickTextUsage.AppContext"
+    label = "App Context"
+    valueSet = [
+      {
+        fullName = "Aloha"
+        default = false
+        label = "Aloha"
+        isActive = true
+      },
+      {
+        fullName = "Lightning"
+        default = false
+        label = "Lightning"
+        isActive = true
+      },
+      {
+        fullName = "Unknown"
+        default = false
+        label = "Unknown"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

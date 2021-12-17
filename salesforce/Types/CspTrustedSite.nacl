@@ -1,0 +1,59 @@
+type salesforce.CspTrustedSite {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string context {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "All",
+        "Communities",
+        "FieldServiceMobileExtension",
+        "LEX",
+      ]
+    }
+  }
+  string description {
+  }
+  string endpointUrl {
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  boolean isApplicableToConnectSrc {
+  }
+  boolean isApplicableToFontSrc {
+  }
+  boolean isApplicableToFrameSrc {
+  }
+  boolean isApplicableToImgSrc {
+  }
+  boolean isApplicableToMediaSrc {
+  }
+  boolean isApplicableToStyleSrc {
+  }
+  string mobileExtension {
+    foreignKeyDomain = [
+      "FieldServiceMobileExtension",
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "cspTrustedSite"
+  dirName = "cspTrustedSites"
+  metadataType = "CspTrustedSite"
+}

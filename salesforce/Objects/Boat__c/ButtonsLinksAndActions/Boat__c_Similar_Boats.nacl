@@ -1,0 +1,22 @@
+salesforce.WebLink Boat__c_Similar_Boats {
+  fullName = "Boat__c.Similar_Boats"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  hasMenubar = false
+  hasScrollbars = true
+  hasToolbar = false
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Similar Boats"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = false
+  showsStatus = false
+  url = "{! URLFOR( \"/apex/SimilarBoats\", null, [id=Boat__c.Id] ) }"
+  _parent = [
+    salesforce.Boat__c,
+  ]
+}

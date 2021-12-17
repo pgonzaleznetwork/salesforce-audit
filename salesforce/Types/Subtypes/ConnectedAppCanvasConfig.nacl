@@ -1,0 +1,69 @@
+type salesforce.ConnectedAppCanvasConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string accessMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Get",
+        "Post",
+      ]
+    }
+  }
+  string canvasUrl {
+  }
+  string lifecycleClass {
+  }
+  "List<string>" locations {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AppLauncher",
+        "Aura",
+        "Chatter",
+        "ChatterFeed",
+        "MobileNav",
+        "None",
+        "OpenCTI",
+        "PageLayout",
+        "Publisher",
+        "ServiceDesk",
+        "UserProfile",
+        "Visualforce",
+      ]
+    }
+  }
+  string options {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "HideHeader",
+        "HideShare",
+        "PersonalEnabled",
+      ]
+    }
+  }
+  string samlInitiationMethod {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "IdpInitiated",
+        "None",
+        "SpInitiated",
+      ]
+    }
+  }
+  metadataType = "ConnectedAppCanvasConfig"
+}

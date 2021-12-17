@@ -1,0 +1,26 @@
+salesforce.ApexClass fflib_QueryFactoryTest {
+  apiVersion = 47
+  status = "Active"
+  fullName = "fflib_QueryFactoryTest"
+  content = file("salesforce/Records/ApexClass/fflib_QueryFactoryTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_QueryFactory
+    },
+    {
+      reference = salesforce.ApexClass.instance.fflib_SecurityUtils
+    },
+    {
+      reference = salesforce.Contact
+    },
+    {
+      reference = salesforce.Task
+    },
+    {
+      reference = salesforce.User
+    },
+  ]
+}

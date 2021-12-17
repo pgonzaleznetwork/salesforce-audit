@@ -1,0 +1,15 @@
+salesforce.ListView Account_PlatinumandGoldSLACustomers {
+  fullName = "Account.PlatinumandGoldSLACustomers"
+  columns = [
+    "ACCOUNT.NAME",
+    "ACCOUNT.SITE",
+    "ACCOUNT.ADDRESS1_STATE",
+    "ACCOUNT.PHONE1",
+    "CORE.USERS.ALIAS",
+  ]
+  filterScope = "Everything"
+  label = "Platinum and Gold SLA Customers"
+  _parent = [
+    salesforce.Account,
+  ]
+}

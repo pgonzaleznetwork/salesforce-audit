@@ -1,0 +1,11 @@
+salesforce.ApexClass AccountRecordTypeName {
+  apiVersion = 53
+  status = "Active"
+  fullName = "AccountRecordTypeName"
+  content = file("salesforce/Records/ApexClass/AccountRecordTypeName.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+  ]
+}

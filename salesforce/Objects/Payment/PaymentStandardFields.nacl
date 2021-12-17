@@ -1,0 +1,513 @@
+type salesforce.Payment {
+  serviceid Id {
+    apiName = "Payment.Id"
+    label = "Payment ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Payment.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber PaymentNumber {
+    apiName = "Payment.PaymentNumber"
+    label = "Payment Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Payment.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Payment.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Payment.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Payment.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Payment.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PaymentGroupId {
+    apiName = "Payment.PaymentGroupId"
+    label = "Payment Group ID"
+    referenceTo = [
+      salesforce.PaymentGroup,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentGroup"
+    queryable = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "Payment.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Account"
+    queryable = true
+  }
+  salesforce.Lookup PaymentAuthorizationId {
+    apiName = "Payment.PaymentAuthorizationId"
+    label = "Payment Authorization ID"
+    referenceTo = [
+      salesforce.PaymentAuthorization,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentAuthorization"
+    queryable = true
+  }
+  salesforce.DateTime Date {
+    apiName = "Payment.Date"
+    label = "Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CancellationDate {
+    apiName = "Payment.CancellationDate"
+    label = "Cancellation Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency Amount {
+    apiName = "Payment.Amount"
+    label = "Amount"
+    _required = true
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Payment.Status"
+    label = "Status"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = false
+        label = "Draft"
+        isActive = true
+      },
+      {
+        fullName = "Processed"
+        default = false
+        label = "Processed"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+        isActive = true
+      },
+      {
+        fullName = "Failed"
+        default = false
+        label = "Failed"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "Payment.Type"
+    label = "Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Sale"
+        default = false
+        label = "Sale"
+        isActive = true
+      },
+      {
+        fullName = "Capture"
+        default = false
+        label = "Capture"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ProcessingMode {
+    apiName = "Payment.ProcessingMode"
+    label = "Processing Mode"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Salesforce"
+        default = false
+        label = "Salesforce"
+        isActive = true
+      },
+      {
+        fullName = "External"
+        default = false
+        label = "External"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text GatewayRefNumber {
+    apiName = "Payment.GatewayRefNumber"
+    label = "Gateway Reference Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.LongTextArea ClientContext {
+    apiName = "Payment.ClientContext"
+    label = "Client Context"
+    createable = false
+    updateable = false
+    length = 2000
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text GatewayResultCode {
+    apiName = "Payment.GatewayResultCode"
+    label = "Gateway ResultCode"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  salesforce.Picklist SfResultCode {
+    apiName = "Payment.SfResultCode"
+    label = "Salesforce ResultCode"
+    valueSet = [
+      {
+        fullName = "Success"
+        default = false
+        label = "Success"
+        isActive = true
+      },
+      {
+        fullName = "PermanentFail"
+        default = false
+        label = "PermanentFail"
+        isActive = true
+      },
+      {
+        fullName = "Decline"
+        default = false
+        label = "Decline"
+        isActive = true
+      },
+      {
+        fullName = "RequiresReview"
+        default = false
+        label = "RequiresReview"
+        isActive = true
+      },
+      {
+        fullName = "Indeterminate"
+        default = false
+        label = "Indeterminate"
+        isActive = true
+      },
+      {
+        fullName = "SystemError"
+        default = false
+        label = "SystemError"
+        isActive = true
+      },
+      {
+        fullName = "ValidationError"
+        default = false
+        label = "ValidationError"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime GatewayDate {
+    apiName = "Payment.GatewayDate"
+    label = "Gateway Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text CancellationGatewayRefNumber {
+    apiName = "Payment.CancellationGatewayRefNumber"
+    label = "Cancellation Gateway Reference Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text CancellationGatewayResultCode {
+    apiName = "Payment.CancellationGatewayResultCode"
+    label = "Cancellation Gateway ResultCode"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  salesforce.Text CancellationSfResultCode {
+    apiName = "Payment.CancellationSfResultCode"
+    label = "Cancellation Salesforce ResultCode"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 64
+    queryable = true
+  }
+  salesforce.DateTime CancellationGatewayDate {
+    apiName = "Payment.CancellationGatewayDate"
+    label = "Cancellation Gateway Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Comments {
+    apiName = "Payment.Comments"
+    label = "Comments"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  salesforce.Summary ImpactAmount {
+    apiName = "Payment.ImpactAmount"
+    label = "Impact Amount"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "Payment.EffectiveDate"
+    label = "Effective Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CancellationEffectiveDate {
+    apiName = "Payment.CancellationEffectiveDate"
+    label = "Cancellation Effective Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text GatewayResultCodeDescription {
+    apiName = "Payment.GatewayResultCodeDescription"
+    label = "Gateway ResultCode Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.LongTextArea GatewayRefDetails {
+    apiName = "Payment.GatewayRefDetails"
+    label = "Gateway Reference Details"
+    createable = true
+    updateable = true
+    length = 1000
+    queryable = true
+  }
+  salesforce.Text IpAddress {
+    apiName = "Payment.IpAddress"
+    label = "IP Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 39
+    queryable = true
+  }
+  salesforce.Text MacAddress {
+    apiName = "Payment.MacAddress"
+    label = "MAC Address"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 32
+    queryable = true
+  }
+  salesforce.Phone Phone {
+    apiName = "Payment.Phone"
+    label = "Phone"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Email Email {
+    apiName = "Payment.Email"
+    label = "Audit Email"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup PaymentGatewayId {
+    apiName = "Payment.PaymentGatewayId"
+    label = "Payment Gateway ID"
+    referenceTo = [
+      salesforce.PaymentGateway,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentGateway"
+    queryable = true
+  }
+  salesforce.Lookup PaymentMethodId {
+    apiName = "Payment.PaymentMethodId"
+    label = "Payment Method ID"
+    referenceTo = [
+      salesforce.PaymentMethod,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "PaymentMethod"
+    queryable = true
+  }
+  salesforce.Currency TotalApplied {
+    apiName = "Payment.TotalApplied"
+    label = "Total Applied"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalUnapplied {
+    apiName = "Payment.TotalUnapplied"
+    label = "Total Unapplied"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency NetApplied {
+    apiName = "Payment.NetApplied"
+    label = "Net Applied"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency Balance {
+    apiName = "Payment.Balance"
+    label = "Balance"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalRefundApplied {
+    apiName = "Payment.TotalRefundApplied"
+    label = "Total Refund Applied"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalRefundUnapplied {
+    apiName = "Payment.TotalRefundUnapplied"
+    label = "Total Refund Unapplied"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary NetRefundApplied {
+    apiName = "Payment.NetRefundApplied"
+    label = "Net Refund Applied"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

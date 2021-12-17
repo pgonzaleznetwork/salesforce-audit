@@ -1,0 +1,37 @@
+type salesforce.AnalyticsCloudComponentLayoutItem {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string assetType {
+  }
+  string devName {
+  }
+  string error {
+  }
+  string filter {
+  }
+  number height {
+  }
+  boolean hideOnError {
+  }
+  boolean showHeader {
+  }
+  boolean showSharing {
+  }
+  boolean showTitle {
+  }
+  string width {
+  }
+  metadataType = "AnalyticsCloudComponentLayoutItem"
+}

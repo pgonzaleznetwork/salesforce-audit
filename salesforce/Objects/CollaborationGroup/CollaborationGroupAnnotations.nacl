@@ -1,0 +1,191 @@
+type salesforce.CollaborationGroup {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    hidden_string keyPrefix {
+    }
+    salesforce.ActionOverride actionOverrides {
+    }
+    string compactLayoutAssignment {
+    }
+    string description {
+    }
+    boolean enableDataTranslation {
+    }
+    boolean enableDivisions {
+    }
+    boolean enableEnhancedLookup {
+    }
+    boolean enableFeeds {
+    }
+    boolean enableHistory {
+    }
+    boolean enableLicensing {
+    }
+    boolean enablePublishStatusTracking {
+    }
+    string externalDataSource {
+    }
+    string externalName {
+    }
+    string externalRepository {
+    }
+    salesforce.HistoryRetentionPolicy historyRetentionPolicy {
+    }
+    salesforce.MktDataLakeAttributes mktDataLakeAttributes {
+    }
+    salesforce.MktDataModelAttributes mktDataModelAttributes {
+    }
+    salesforce.ProfileSearchLayouts profileSearchLayouts {
+    }
+    boolean recordTypeTrackFeedHistory {
+    }
+    boolean recordTypeTrackHistory {
+    }
+    salesforce.SearchLayouts searchLayouts {
+    }
+    salesforce.SharingRecalculation sharingRecalculations {
+    }
+    string externalSharingModel {
+    }
+    hidden_string internalId {
+    }
+  }
+  apiName = "CollaborationGroup"
+  metadataType = "CustomObject"
+  label = "Group"
+  actionOverrides = [
+    {
+      actionName = "AddMembersAction"
+      type = "Default"
+    },
+    {
+      actionName = "AddMembersAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "AddMembersAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteBannerPhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteBannerPhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "DeleteBannerPhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "DeletePhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "DeletePhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "DeletePhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "JoinGroup"
+      type = "Default"
+    },
+    {
+      actionName = "JoinGroup"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "JoinGroup"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "UpdateBannerPhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "UpdateBannerPhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "UpdateBannerPhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "UpdatePhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "UpdatePhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "UpdatePhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "ViewPhotoAction"
+      type = "Default"
+    },
+    {
+      actionName = "ViewPhotoAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "ViewPhotoAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+  ]
+  compactLayoutAssignment = "SYSTEM"
+  enableFeeds = true
+}

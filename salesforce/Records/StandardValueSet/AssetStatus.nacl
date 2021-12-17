@@ -1,0 +1,31 @@
+salesforce.StandardValueSet AssetStatus {
+  fullName = "AssetStatus"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "Shipped"
+      default = false
+      label = "Shipped"
+    },
+    {
+      fullName = "Installed"
+      default = false
+      label = "Installed"
+    },
+    {
+      fullName = "Registered"
+      default = false
+      label = "Registered"
+    },
+    {
+      fullName = "Obsolete"
+      default = false
+      label = "Obsolete"
+    },
+    {
+      fullName = "Purchased"
+      default = false
+      label = "Purchased"
+    },
+  ]
+}

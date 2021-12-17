@@ -1,0 +1,22 @@
+salesforce.AuraDefinitionBundle SearchGIPHY {
+  apiVersion = 50
+  description = "A Lightning Component Bundle"
+  fullName = "SearchGIPHY"
+  type = "Component"
+  markup = file("salesforce/Records/AuraDefinitionBundle/SearchGIPHY/SearchGIPHY.cmp")
+  SVGContent = file("salesforce/Records/AuraDefinitionBundle/SearchGIPHY/SearchGIPHY.svg")
+  styleContent = file("salesforce/Records/AuraDefinitionBundle/SearchGIPHY/SearchGIPHY.css")
+  helperContent = file("salesforce/Records/AuraDefinitionBundle/SearchGIPHY/SearchGIPHYHelper.js")
+  controllerContent = file("salesforce/Records/AuraDefinitionBundle/SearchGIPHY/SearchGIPHYController.js")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.ChatterHelper
+    },
+    {
+      reference = salesforce.StaticResource.instance.GIPHY
+    },
+    {
+      reference = salesforce.StaticResource.instance.jquery331
+    },
+  ]
+}

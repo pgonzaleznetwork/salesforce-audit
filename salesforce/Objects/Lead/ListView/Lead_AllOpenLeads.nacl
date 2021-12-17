@@ -1,0 +1,15 @@
+salesforce.ListView Lead_AllOpenLeads {
+  fullName = "Lead.AllOpenLeads"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "LEAD.STATUS"
+      operation = "notContain"
+      value = "closed"
+    },
+  ]
+  label = "All Open Leads"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

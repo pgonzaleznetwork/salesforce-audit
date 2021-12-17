@@ -1,0 +1,37 @@
+type salesforce.EmailToCaseSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableE2CAttachmentAsFile {
+  }
+  boolean enableE2CSourceTracking {
+  }
+  boolean enableEmailToCase {
+  }
+  boolean enableHtmlEmail {
+  }
+  boolean enableOnDemandEmailToCase {
+  }
+  boolean enableThreadIDInBody {
+  }
+  boolean enableThreadIDInSubject {
+  }
+  boolean notifyOwnerOnNewCaseEmail {
+  }
+  boolean preQuoteSignature {
+  }
+  salesforce.EmailToCaseRoutingAddress routingAddresses {
+  }
+  metadataType = "EmailToCaseSettings"
+}

@@ -1,0 +1,6 @@
+salesforce.SharingRules WorkThanks {
+  fullName = "WorkThanks"
+  _parent = [
+    salesforce.WorkThanks,
+  ]
+}

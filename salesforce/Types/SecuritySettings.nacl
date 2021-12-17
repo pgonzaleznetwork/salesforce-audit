@@ -1,0 +1,47 @@
+settings salesforce.SecuritySettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.NetworkAccess networkAccess {
+  }
+  salesforce.PasswordPolicies passwordPolicies {
+  }
+  salesforce.SessionSettings sessionSettings {
+  }
+  salesforce.SingleSignOnSettings singleSignOnSettings {
+  }
+  boolean canUsersGrantLoginAccess {
+  }
+  boolean enableAdminLoginAsAnyUser {
+  }
+  boolean enableAuditFieldsInactiveOwner {
+  }
+  boolean enableAuraSecureEvalPref {
+  }
+  boolean enableRequireHttpsConnection {
+  }
+  boolean isTLSv12Required {
+  }
+  boolean isTLSv12RequiredCommunities {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "SecuritySettings"
+}

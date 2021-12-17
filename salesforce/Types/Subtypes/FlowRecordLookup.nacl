@@ -1,0 +1,75 @@
+type salesforce.FlowRecordLookup {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  string description {
+  }
+  string name {
+  }
+  string elementSubtype {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
+        "SortCollectionProcessor",
+      ]
+    }
+    foreignKeyDomain = [
+      "FlowElementSubtypeDefinition",
+    ]
+  }
+  string label {
+  }
+  number locationX {
+  }
+  number locationY {
+  }
+  boolean assignNullValuesIfNoRecordsFound {
+  }
+  salesforce.FlowConnector connector {
+  }
+  salesforce.FlowConnector faultConnector {
+  }
+  string filterLogic {
+  }
+  "List<salesforce.FlowRecordFilter>" filters {
+  }
+  boolean getFirstRecordOnly {
+  }
+  string object {
+  }
+  "List<salesforce.FlowOutputFieldAssignment>" outputAssignments {
+  }
+  string outputReference {
+  }
+  "List<string>" queriedFields {
+  }
+  string sortField {
+  }
+  boolean storeOutputAutomatically {
+  }
+  string sortOrder {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Asc",
+        "Desc",
+      ]
+    }
+  }
+  metadataType = "FlowRecordLookup"
+}

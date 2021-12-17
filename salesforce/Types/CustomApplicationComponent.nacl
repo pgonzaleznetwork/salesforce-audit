@@ -1,0 +1,48 @@
+type salesforce.CustomApplicationComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string buttonIconUrl {
+  }
+  string buttonStyle {
+  }
+  string buttonText {
+  }
+  number buttonWidth {
+  }
+  number height {
+  }
+  boolean isHeightFixed {
+  }
+  boolean isHidden {
+  }
+  boolean isWidthFixed {
+  }
+  string visualforcePage {
+    foreignKeyDomain = [
+      salesforce.ApexPage,
+    ]
+  }
+  number width {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "customApplicationComponent"
+  dirName = "customApplicationComponents"
+  metadataType = "CustomApplicationComponent"
+}

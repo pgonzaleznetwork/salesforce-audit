@@ -1,0 +1,142 @@
+type salesforce.AgentWorkSkill {
+  serviceid Id {
+    apiName = "AgentWorkSkill.Id"
+    label = "Agent Work Skill ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AgentWorkSkill.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AgentWorkSkill.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AgentWorkSkill.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AgentWorkSkill.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AgentWorkSkill.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AgentWorkSkill.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AgentWorkSkill.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AgentWorkId {
+    apiName = "AgentWorkSkill.AgentWorkId"
+    label = "Agent Work ID"
+    _required = true
+    referenceTo = [
+      salesforce.AgentWork,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "AgentWork"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SkillId {
+    apiName = "AgentWorkSkill.SkillId"
+    label = "Skill ID"
+    _required = true
+    referenceTo = [
+      salesforce.Skill,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Skill"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SkillLevel {
+    apiName = "AgentWorkSkill.SkillLevel"
+    label = "SkillLevel"
+    _required = true
+    precision = 4
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsAdditionalSkill {
+    apiName = "AgentWorkSkill.IsAdditionalSkill"
+    label = "Is Additional Skill"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox WasDropped {
+    apiName = "AgentWorkSkill.WasDropped"
+    label = "Was Dropped"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number SkillPriority {
+    apiName = "AgentWorkSkill.SkillPriority"
+    label = "Skill Priority"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+}

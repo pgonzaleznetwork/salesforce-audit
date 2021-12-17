@@ -1,0 +1,1059 @@
+type salesforce.FinanceTransaction {
+  serviceid Id {
+    apiName = "FinanceTransaction.Id"
+    label = "Finance Transaction ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "FinanceTransaction.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FinanceTransaction.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber FinanceTransactionNumber {
+    apiName = "FinanceTransaction.FinanceTransactionNumber"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FinanceTransaction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FinanceTransaction.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FinanceTransaction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FinanceTransaction.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FinanceTransaction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReferenceEntityId {
+    apiName = "FinanceTransaction.ReferenceEntityId"
+    label = "ReferenceEntity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
+      salesforce.CreditMemoLine,
+      salesforce.Custom_Object__c,
+      salesforce.Invoice,
+      salesforce.InvoiceLine,
+      salesforce.Parent__c,
+      salesforce.Payment,
+      salesforce.PaymentLineInvoice,
+      salesforce.Refund,
+      salesforce.RefundLinePayment,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "The financial object that was created or updated as a result of a customer action"
+    createable = true
+    updateable = false
+    relationshipName = "ReferenceEntity"
+    queryable = true
+  }
+  salesforce.Picklist ReferenceEntityType {
+    apiName = "FinanceTransaction.ReferenceEntityType"
+    label = "Reference Entity Type"
+    valueSet = [
+      {
+        fullName = "Invoice"
+        default = false
+        label = "Invoice"
+        isActive = true
+      },
+      {
+        fullName = "Invoice line"
+        default = false
+        label = "Invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Invoice line tax"
+        default = false
+        label = "Invoice line tax"
+        isActive = true
+      },
+      {
+        fullName = "Sub invoice line"
+        default = false
+        label = "Sub invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Sub invoice line tax"
+        default = false
+        label = "Sub invoice line tax"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo"
+        default = false
+        label = "Credit memo"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line"
+        default = false
+        label = "Credit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line tax"
+        default = false
+        label = "Credit memo line tax"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line invoice application"
+        default = false
+        label = "Credit memo line invoice application"
+        isActive = true
+      },
+      {
+        fullName = "Credit memo line invoice line application"
+        default = false
+        label = "Credit memo line invoice line application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo"
+        default = false
+        label = "Debit memo"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line"
+        default = false
+        label = "Debit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line tax"
+        default = false
+        label = "Debit memo line tax"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line credit memo application"
+        default = false
+        label = "Debit memo line credit memo application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line credit memo line application"
+        default = false
+        label = "Debit memo line credit memo line application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line invoice application"
+        default = false
+        label = "Debit memo line invoice application"
+        isActive = true
+      },
+      {
+        fullName = "Debit memo line invoice line application"
+        default = false
+        label = "Debit memo line invoice line application"
+        isActive = true
+      },
+      {
+        fullName = "Payment"
+        default = false
+        label = "Payment"
+        isActive = true
+      },
+      {
+        fullName = "Payment debit memo application"
+        default = false
+        label = "Payment debit memo application"
+        isActive = true
+      },
+      {
+        fullName = "Payment debit memo line application"
+        default = false
+        label = "Payment debit memo line application"
+        isActive = true
+      },
+      {
+        fullName = "Payment invoice application"
+        default = false
+        label = "Payment invoice application"
+        isActive = true
+      },
+      {
+        fullName = "Payment invoice line application"
+        default = false
+        label = "Payment invoice line application"
+        isActive = true
+      },
+      {
+        fullName = "Refund"
+        default = false
+        label = "Refund"
+        isActive = true
+      },
+      {
+        fullName = "Refund credit memo application"
+        default = false
+        label = "Refund credit memo application"
+        isActive = true
+      },
+      {
+        fullName = "Refund credit memo line application"
+        default = false
+        label = "Refund credit memo line application"
+        isActive = true
+      },
+      {
+        fullName = "Refund payment application"
+        default = false
+        label = "Refund payment application"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist EventAction {
+    apiName = "FinanceTransaction.EventAction"
+    label = "Event Action"
+    valueSet = [
+      {
+        fullName = "Post an invoice"
+        default = false
+        label = "Post an invoice"
+        isActive = true
+      },
+      {
+        fullName = "Void an invoice"
+        default = false
+        label = "Void an invoice"
+        isActive = true
+      },
+      {
+        fullName = "Cancel & rebill"
+        default = false
+        label = "Cancel & rebill"
+        isActive = true
+      },
+      {
+        fullName = "Convert negative invoice lines"
+        default = false
+        label = "Convert negative invoice lines"
+        isActive = true
+      },
+      {
+        fullName = "Subtotal change on sub invoice line"
+        default = false
+        label = "Subtotal change on sub invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Tax change on sub invoice line"
+        default = false
+        label = "Tax change on sub invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Invoice line reference changed on sub invoice line"
+        default = false
+        label = "Invoice line reference changed on sub invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Currency change on sub invoice line"
+        default = false
+        label = "Currency change on sub invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Credit invoice header"
+        default = false
+        label = "Credit invoice header"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate credit from invoice header"
+        default = false
+        label = "Unallocate credit from invoice header"
+        isActive = true
+      },
+      {
+        fullName = "Credit invoice line"
+        default = false
+        label = "Credit invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate credit from invoice line"
+        default = false
+        label = "Unallocate credit from invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Pay invoice header"
+        default = false
+        label = "Pay invoice header"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate payment from invoice header"
+        default = false
+        label = "Unallocate payment from invoice header"
+        isActive = true
+      },
+      {
+        fullName = "Pay invoice line"
+        default = false
+        label = "Pay invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate payment from invoice line"
+        default = false
+        label = "Unallocate payment from invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Debit invoice header"
+        default = false
+        label = "Debit invoice header"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate debit from invoice header"
+        default = false
+        label = "Unallocate debit from invoice header"
+        isActive = true
+      },
+      {
+        fullName = "Debit invoice line"
+        default = false
+        label = "Debit invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate debit from invoice line"
+        default = false
+        label = "Unallocate debit from invoice line"
+        isActive = true
+      },
+      {
+        fullName = "Issue a standalone credit"
+        default = false
+        label = "Issue a standalone credit"
+        isActive = true
+      },
+      {
+        fullName = "Void a standalone credit"
+        default = false
+        label = "Void a standalone credit"
+        isActive = true
+      },
+      {
+        fullName = "Refund a credit memo header"
+        default = false
+        label = "Refund a credit memo header"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate refund from credit memo header"
+        default = false
+        label = "Unallocate refund from credit memo header"
+        isActive = true
+      },
+      {
+        fullName = "Refund a credit memo line"
+        default = false
+        label = "Refund a credit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate refund from credit memo line"
+        default = false
+        label = "Unallocate refund from credit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Debit credit memo header"
+        default = false
+        label = "Debit credit memo header"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate debit from credit memo header"
+        default = false
+        label = "Unallocate debit from credit memo header"
+        isActive = true
+      },
+      {
+        fullName = "Debit credit memo line"
+        default = false
+        label = "Debit credit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate debit from credit memo line"
+        default = false
+        label = "Unallocate debit from credit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Post a standalone payment"
+        default = false
+        label = "Post a standalone payment"
+        isActive = true
+      },
+      {
+        fullName = "Void a standalone payment"
+        default = false
+        label = "Void a standalone payment"
+        isActive = true
+      },
+      {
+        fullName = "Refund a payment"
+        default = false
+        label = "Refund a payment"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate refund from payment"
+        default = false
+        label = "Unallocate refund from payment"
+        isActive = true
+      },
+      {
+        fullName = "Issue a standalone refund"
+        default = false
+        label = "Issue a standalone refund"
+        isActive = true
+      },
+      {
+        fullName = "Void a standalone refund"
+        default = false
+        label = "Void a standalone refund"
+        isActive = true
+      },
+      {
+        fullName = "Issue a standalone debit"
+        default = false
+        label = "Issue a standalone debit"
+        isActive = true
+      },
+      {
+        fullName = "Void a standalone debit"
+        default = false
+        label = "Void a standalone debit"
+        isActive = true
+      },
+      {
+        fullName = "Pay debit memo header"
+        default = false
+        label = "Pay debit memo header"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate payment from debit memo header"
+        default = false
+        label = "Unallocate payment from debit memo header"
+        isActive = true
+      },
+      {
+        fullName = "Pay debit memo line"
+        default = false
+        label = "Pay debit memo line"
+        isActive = true
+      },
+      {
+        fullName = "Unallocate payment from debit line"
+        default = false
+        label = "Unallocate payment from debit line"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The financial action that caused the finance transaction"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist EventType {
+    apiName = "FinanceTransaction.EventType"
+    label = "Event Type"
+    valueSet = [
+      {
+        fullName = "Allocated"
+        default = false
+        label = "Allocated"
+        isActive = true
+      },
+      {
+        fullName = "Unallocated"
+        default = false
+        label = "Unallocated"
+        isActive = true
+      },
+      {
+        fullName = "Posted"
+        default = false
+        label = "Posted"
+        isActive = true
+      },
+      {
+        fullName = "Canceled"
+        default = false
+        label = "Canceled"
+        isActive = true
+      },
+      {
+        fullName = "Changed"
+        default = false
+        label = "Changed"
+        isActive = true
+      },
+      {
+        fullName = "Void"
+        default = false
+        label = "Void"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Currency ChargeAmount {
+    apiName = "FinanceTransaction.ChargeAmount"
+    label = "Charge Amount"
+    inlineHelpText = "The charge contributing to the transaction's subtotal"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency AdjustmentAmount {
+    apiName = "FinanceTransaction.AdjustmentAmount"
+    label = "Adjustment Amount"
+    inlineHelpText = "The adjustment contributing to the transaction's subtotal"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency Subtotal {
+    apiName = "FinanceTransaction.Subtotal"
+    label = "Subtotal"
+    inlineHelpText = "Total of the charge amount and adjustment. Doesn't include the tax amount."
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency TaxAmount {
+    apiName = "FinanceTransaction.TaxAmount"
+    label = "Tax Amount"
+    inlineHelpText = "The total amount of tax for the change made to your reference entity as a result of the event action"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency TotalAmountWithTax {
+    apiName = "FinanceTransaction.TotalAmountWithTax"
+    label = "Total Amount With Tax"
+    _required = true
+    inlineHelpText = "The subtotal plus the tax amount"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency ImpactAmount {
+    apiName = "FinanceTransaction.ImpactAmount"
+    label = "Impact Amount"
+    inlineHelpText = "The finance transaction's impact on the customer's finances"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency ResultingBalance {
+    apiName = "FinanceTransaction.ResultingBalance"
+    label = "Resulting Balance"
+    inlineHelpText = "The balance of your reference entity as a result of the event action"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "FinanceTransaction.AccountId"
+    label = "Account ID"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    inlineHelpText = "Parent account of the reference entity"
+    createable = true
+    updateable = false
+    relationshipName = "Account"
+    queryable = true
+  }
+  salesforce.Lookup SourceEntityId {
+    apiName = "FinanceTransaction.SourceEntityId"
+    label = "SourceEntity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
+      salesforce.CreditMemoLine,
+      salesforce.Custom_Object__c,
+      salesforce.Invoice,
+      salesforce.InvoiceLine,
+      salesforce.Parent__c,
+      salesforce.Payment,
+      salesforce.PaymentLineInvoice,
+      salesforce.Refund,
+      salesforce.RefundLinePayment,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "Source entity for reference entities that have made allocations"
+    createable = true
+    updateable = false
+    relationshipName = "SourceEntity"
+    queryable = true
+  }
+  salesforce.Lookup DestinationEntityId {
+    apiName = "FinanceTransaction.DestinationEntityId"
+    label = "DestinationEntity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
+      salesforce.CreditMemoLine,
+      salesforce.Custom_Object__c,
+      salesforce.Invoice,
+      salesforce.InvoiceLine,
+      salesforce.Parent__c,
+      salesforce.Payment,
+      salesforce.PaymentLineInvoice,
+      salesforce.Refund,
+      salesforce.RefundLinePayment,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "Target entity for reference entities that have made allocations"
+    createable = true
+    updateable = false
+    relationshipName = "DestinationEntity"
+    queryable = true
+  }
+  salesforce.DateTime TransactionDate {
+    apiName = "FinanceTransaction.TransactionDate"
+    label = "Transaction Date"
+    _required = true
+    inlineHelpText = "The date when the finance transaction occurred"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "FinanceTransaction.EffectiveDate"
+    label = "Effective Date"
+    _required = true
+    inlineHelpText = "The date when the financial transaction takes effect"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime DueDate {
+    apiName = "FinanceTransaction.DueDate"
+    label = "Due Date"
+    inlineHelpText = "Date when the invoice is due"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text BaseCurrencyIsoCode {
+    apiName = "FinanceTransaction.BaseCurrencyIsoCode"
+    label = "Base Currency ISO Code"
+    inlineHelpText = "Currency of the country defined for this account. Define this value to use later when you calculate currency conversions."
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 3
+    queryable = true
+  }
+  salesforce.Number BaseCurrencyFxRate {
+    apiName = "FinanceTransaction.BaseCurrencyFxRate"
+    label = "Base Currency FX Rate"
+    precision = 18
+    scale = 2
+    inlineHelpText = "Rate of exchange according to the Base Currency FX Date. Define this value to use later when you calculate currency conversions."
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Date BaseCurrencyFxDate {
+    apiName = "FinanceTransaction.BaseCurrencyFxDate"
+    label = "Base Currency FX Date"
+    inlineHelpText = "Date used to determine the foreign exchange rate. Define this value to use later when you calculate currency conversions."
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Currency BaseCurrencyAmount {
+    apiName = "FinanceTransaction.BaseCurrencyAmount"
+    label = "Base Currency Amount"
+    inlineHelpText = "Define this value based on any currency conversion needed for the total amount with tax."
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency BaseCurrencyBalance {
+    apiName = "FinanceTransaction.BaseCurrencyBalance"
+    label = "Base Currency Balance"
+    inlineHelpText = "Define this value based on any currency conversion needed for the resulting balance."
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Lookup LegalEntityId {
+    apiName = "FinanceTransaction.LegalEntityId"
+    label = "Legal Entity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.Custom_Object__c,
+      salesforce.LegalEntity,
+      salesforce.Parent__c,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "Legal entity associated with the finance transaction. This is an optional lookup that you can add to associate the finance transaction to GL rules for external ledger processing."
+    createable = true
+    updateable = false
+    relationshipName = "LegalEntity"
+    queryable = true
+  }
+  salesforce.Picklist CreationMode {
+    apiName = "FinanceTransaction.CreationMode"
+    label = "Creation Mode"
+    _required = true
+    valueSet = [
+      {
+        fullName = "Salesforce"
+        default = false
+        label = "Salesforce"
+        isActive = true
+      },
+      {
+        fullName = "External"
+        default = false
+        label = "External"
+        isActive = true
+      },
+    ]
+    restricted = true
+    inlineHelpText = "The process used to create the finance transactions"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentReferenceEntityId {
+    apiName = "FinanceTransaction.ParentReferenceEntityId"
+    label = "ParentReferenceEntity ID"
+    referenceTo = [
+      salesforce.BoatReview__c,
+      salesforce.BoatType__c,
+      salesforce.Boat__c,
+      salesforce.Center__c,
+      salesforce.Child__c,
+      salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
+      salesforce.CreditMemoLine,
+      salesforce.Custom_Object__c,
+      salesforce.Invoice,
+      salesforce.InvoiceLine,
+      salesforce.Parent__c,
+      salesforce.Payment,
+      salesforce.PaymentLineInvoice,
+      salesforce.Refund,
+      salesforce.RefundLinePayment,
+      salesforce.SRM_CRM_Sprint__c,
+      salesforce.SRM_Connected_Org__c,
+      salesforce.SRM_Development_Task__c,
+      salesforce.SRM_Jira_Ticket__c,
+      salesforce.SRM_Metadata__c,
+    ]
+    inlineHelpText = "The parent object of the reference entity"
+    createable = true
+    updateable = false
+    relationshipName = "ParentReferenceEntity"
+    queryable = true
+  }
+  salesforce.Unknown FinanceSystemIntegrationMode {
+    apiName = "FinanceTransaction.FinanceSystemIntegrationMode"
+    inlineHelpText = "The type of the external financial system used to recognize the finance transaction."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemIntegrationStatus {
+    apiName = "FinanceTransaction.FinanceSystemIntegrationStatus"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemName {
+    apiName = "FinanceTransaction.FinanceSystemName"
+    inlineHelpText = "The name of the external financial system used to recognize the finance transaction."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FinanceSystemTransactionNumber {
+    apiName = "FinanceTransaction.FinanceSystemTransactionNumber"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalCreditGlAccountName {
+    apiName = "FinanceTransaction.OriginalCreditGlAccountName"
+    inlineHelpText = "The finance transaction's credit GL account name when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalCreditGlAccountNumber {
+    apiName = "FinanceTransaction.OriginalCreditGlAccountNumber"
+    inlineHelpText = "The finance transaction's credit GL account number when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalDebitGlAccountName {
+    apiName = "FinanceTransaction.OriginalDebitGlAccountName"
+    inlineHelpText = "The finance transaction's debit GL account name when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalDebitGlAccountNumber {
+    apiName = "FinanceTransaction.OriginalDebitGlAccountNumber"
+    inlineHelpText = "The finance transaction's debit GL account number when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalEventAction {
+    apiName = "FinanceTransaction.OriginalEventAction"
+    inlineHelpText = "The finance transaction's event action when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalEventType {
+    apiName = "FinanceTransaction.OriginalEventType"
+    inlineHelpText = "The finance transaction's event type when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalFinanceBookName {
+    apiName = "FinanceTransaction.OriginalFinanceBookName"
+    inlineHelpText = "The finance transaction's finance book name when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalFinancePeriodEndDate {
+    apiName = "FinanceTransaction.OriginalFinancePeriodEndDate"
+    inlineHelpText = "The finance transaction's finance period end date when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalFinancePeriodName {
+    apiName = "FinanceTransaction.OriginalFinancePeriodName"
+    inlineHelpText = "The finance transaction's finance period name when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalFinancePeriodStartDate {
+    apiName = "FinanceTransaction.OriginalFinancePeriodStartDate"
+    inlineHelpText = "The finance transaction's finance period start date when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalFinancePeriodStatus {
+    apiName = "FinanceTransaction.OriginalFinancePeriodStatus"
+    inlineHelpText = "The finance transaction's finance period status when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalGlRuleName {
+    apiName = "FinanceTransaction.OriginalGlRuleName"
+    inlineHelpText = "The finance transaction's GL rule name when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalGlTreatmentName {
+    apiName = "FinanceTransaction.OriginalGlTreatmentName"
+    inlineHelpText = "The finance transaction's GL treatment name when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown OriginalReferenceEntityType {
+    apiName = "FinanceTransaction.OriginalReferenceEntityType"
+    inlineHelpText = "The finance transaction's reference entity type when the finance transaction was created."
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+}

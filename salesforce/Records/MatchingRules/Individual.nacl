@@ -1,0 +1,3 @@
+salesforce.MatchingRules Individual {
+  fullName = "Individual"
+}

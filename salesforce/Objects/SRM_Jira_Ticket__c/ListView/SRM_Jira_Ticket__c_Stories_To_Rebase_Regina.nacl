@@ -1,0 +1,35 @@
+salesforce.ListView SRM_Jira_Ticket__c_Stories_To_Rebase_Regina {
+  fullName = "SRM_Jira_Ticket__c.Stories_To_Rebase_Regina"
+  columns = [
+    "NAME",
+    "Case_Subject__c",
+    "Approx_Deployment_Date__c",
+    "Owner__c",
+    "Rebased_By__c",
+    "Status__c",
+    "Friendly_description_of_Apex_changes__c",
+    "Git_Pull_Request_URL__c",
+  ]
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "Status__c"
+      operation = "equals"
+      value = "Done,Deployed"
+    },
+    {
+      field = "Owner__c"
+      operation = "notEqual"
+      value = "Regina"
+    },
+    {
+      field = "Rebased_By__c"
+      operation = "notContain"
+      value = "Regina"
+    },
+  ]
+  label = "Stories To Rebase - Regina"
+  _parent = [
+    salesforce.SRM_Jira_Ticket__c,
+  ]
+}

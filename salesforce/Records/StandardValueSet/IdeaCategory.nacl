@@ -1,0 +1,4 @@
+salesforce.StandardValueSet IdeaCategory {
+  fullName = "IdeaCategory"
+  sorted = false
+}

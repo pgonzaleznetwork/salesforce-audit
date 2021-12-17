@@ -1,0 +1,16 @@
+salesforce.WorkDotComSettings {
+  fullName = "WorkDotCom"
+  enableCoachingManagerGroupAccess = "false"
+  enableGoalManagerGroupAccess = "false"
+  enableProfileSkills = "false"
+  enableProfileSkillsAddFeedPost = "false"
+  enableProfileSkillsAutoSuggest = "false"
+  enableProfileSkillsUsePlatform = "false"
+  enableWorkBadgeDefRestrictPref = "false"
+  enableWorkCalibration = "false"
+  enableWorkCanvasPref = "false"
+  enableWorkCertification = "false"
+  enableWorkCertificationNotification = "false"
+  enableWorkRewardsPref = "false"
+  enableWorkThanksPref = "true"
+}

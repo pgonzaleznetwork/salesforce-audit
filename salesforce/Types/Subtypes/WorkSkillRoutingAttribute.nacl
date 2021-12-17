@@ -1,0 +1,183 @@
+type salesforce.WorkSkillRoutingAttribute {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "BoatType__c.CloneSourceId",
+        "BoatType__c.CreatedById",
+        "BoatType__c.Id",
+        "BoatType__c.IsDeleted",
+        "BoatType__c.LastModifiedById",
+        "BoatType__c.OwnerId",
+        "BoatType__c.UserRecordAccessId",
+        "Case.AccountId",
+        "Case.AssetId",
+        "Case.BusinessHoursId",
+        "Case.CloneSourceId",
+        "Case.ClosedOnCreate",
+        "Case.ContactId",
+        "Case.CreatedById",
+        "Case.Id",
+        "Case.IsClosed",
+        "Case.IsClosedOnCreate",
+        "Case.IsDeleted",
+        "Case.IsEscalated",
+        "Case.LastModifiedById",
+        "Case.MasterRecordId",
+        "Case.Origin",
+        "Case.Original_Deal__c",
+        "Case.OwnerId",
+        "Case.ParentId",
+        "Case.PotentialLiability__c",
+        "Case.Priority",
+        "Case.Product__c",
+        "Case.Reason",
+        "Case.RuleFilterId",
+        "Case.SLAViolation__c",
+        "Case.Status",
+        "Case.Type",
+        "Case.UserRecordAccessId",
+        "Center__c.CloneSourceId",
+        "Center__c.CreatedById",
+        "Center__c.Id",
+        "Center__c.IsDeleted",
+        "Center__c.LastModifiedById",
+        "Center__c.Lookup_Field_to_Parent_Obj__c",
+        "Center__c.Lookup_Field_to_Self__c",
+        "Center__c.OwnerId",
+        "Center__c.UserRecordAccessId",
+        "ContactRequest.CloneSourceId",
+        "ContactRequest.CreatedById",
+        "ContactRequest.Id",
+        "ContactRequest.IsDeleted",
+        "ContactRequest.LastModifiedById",
+        "ContactRequest.OwnerId",
+        "ContactRequest.PreferredChannel",
+        "ContactRequest.RequestReason",
+        "ContactRequest.Status",
+        "ContactRequest.UserRecordAccessId",
+        "ContactRequest.WhatId",
+        "ContactRequest.WhoId",
+        "Custom_Object__c.CloneSourceId",
+        "Custom_Object__c.CreatedById",
+        "Custom_Object__c.Id",
+        "Custom_Object__c.IsDeleted",
+        "Custom_Object__c.LastModifiedById",
+        "Custom_Object__c.OwnerId",
+        "Custom_Object__c.UserRecordAccessId",
+        "Lead.CampaignId",
+        "Lead.CampaignMemberStatus",
+        "Lead.CleanStatus",
+        "Lead.CloneSourceId",
+        "Lead.Connected_Org__c",
+        "Lead.ConvertedAccountId",
+        "Lead.ConvertedContactId",
+        "Lead.ConvertedOpportunityId",
+        "Lead.CreatedById",
+        "Lead.DandbCompanyId",
+        "Lead.DoNotCall",
+        "Lead.HasOptedOutOfEmail",
+        "Lead.HasOptedOutOfFax",
+        "Lead.Id",
+        "Lead.IndividualId",
+        "Lead.Industry",
+        "Lead.InternalSource",
+        "Lead.IsConverted",
+        "Lead.IsDeleted",
+        "Lead.IsUnreadByOwner",
+        "Lead.LastModifiedById",
+        "Lead.LeadSource",
+        "Lead.MasterRecordId",
+        "Lead.OwnerId",
+        "Lead.Primary__c",
+        "Lead.ProductInterest__c",
+        "Lead.Rating",
+        "Lead.Status",
+        "Lead.UserRecordAccessId",
+        "Order.AccountId",
+        "Order.ActivatedById",
+        "Order.BillToContactId",
+        "Order.CloneSourceId",
+        "Order.CompanyAuthorizedById",
+        "Order.ContractId",
+        "Order.CreatedById",
+        "Order.CustomerAuthorizedById",
+        "Order.Id",
+        "Order.IsDeleted",
+        "Order.IsReductionOrder",
+        "Order.LastModifiedById",
+        "Order.OpportunityId",
+        "Order.OriginalOrderId",
+        "Order.OwnerId",
+        "Order.Pricebook2Id",
+        "Order.ShipToContactId",
+        "Order.Status",
+        "Order.StatusCode",
+        "Order.Type",
+        "Order.UserRecordAccessId",
+        "Parent__c.CloneSourceId",
+        "Parent__c.CreatedById",
+        "Parent__c.Id",
+        "Parent__c.IsDeleted",
+        "Parent__c.LastModifiedById",
+        "Parent__c.OwnerId",
+        "Parent__c.UserRecordAccessId",
+        "SRM_CRM_Sprint__c.CloneSourceId",
+        "SRM_CRM_Sprint__c.CreatedById",
+        "SRM_CRM_Sprint__c.Id",
+        "SRM_CRM_Sprint__c.IsDeleted",
+        "SRM_CRM_Sprint__c.LastModifiedById",
+        "SRM_CRM_Sprint__c.OwnerId",
+        "SRM_CRM_Sprint__c.UserRecordAccessId",
+        "SRM_Connected_Org__c.CloneSourceId",
+        "SRM_Connected_Org__c.CreatedById",
+        "SRM_Connected_Org__c.Id",
+        "SRM_Connected_Org__c.IsDeleted",
+        "SRM_Connected_Org__c.LastModifiedById",
+        "SRM_Connected_Org__c.OwnerId",
+        "SRM_Connected_Org__c.UserRecordAccessId",
+        "SRM_Development_Task__c.Case__c",
+        "SRM_Development_Task__c.CloneSourceId",
+        "SRM_Development_Task__c.CreatedById",
+        "SRM_Development_Task__c.Id",
+        "SRM_Development_Task__c.IsDeleted",
+        "SRM_Development_Task__c.LastModifiedById",
+        "SRM_Development_Task__c.OwnerId",
+        "SRM_Development_Task__c.Status__c",
+        "SRM_Development_Task__c.UserRecordAccessId",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.CustomField,
+      "CustomFieldDataColumn",
+    ]
+  }
+  boolean isAdditionalSkill {
+  }
+  string skill {
+    foreignKeyDomain = [
+      salesforce.Skill,
+    ]
+  }
+  number skillLevel {
+  }
+  number skillPriority {
+  }
+  string value {
+  }
+  metadataType = "WorkSkillRoutingAttribute"
+}

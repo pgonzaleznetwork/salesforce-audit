@@ -1,0 +1,28 @@
+salesforce.ApexPage SRM_GeneragePackageXMLListView {
+  apiVersion = 44
+  availableInTouch = false
+  confirmationTokenRequired = false
+  label = "SRM_GeneragePackageXMLListView"
+  packageVersions = [
+    {
+      majorNumber = 1
+      minorNumber = 7
+      namespace = "sf_com_apps"
+    },
+    {
+      majorNumber = 1
+      minorNumber = 0
+      namespace = "trlhdtips"
+    },
+  ]
+  fullName = "SRM_GeneragePackageXMLListView"
+  content = file("salesforce/Records/ApexPage/SRM_GeneragePackageXMLListView.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SRM_GeneratePackageListViewConttroller
+    },
+    {
+      reference = salesforce.SRM_Jira_Ticket__c
+    },
+  ]
+}

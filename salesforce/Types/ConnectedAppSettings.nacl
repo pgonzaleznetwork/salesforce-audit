@@ -1,0 +1,31 @@
+settings salesforce.ConnectedAppSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean enableAdminApprovedAppsOnly {
+  }
+  boolean enableAdminApprovedAppsOnlyForExternalUser {
+  }
+  boolean enableSkipUserProvisioningWizardWelcomePage {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "ConnectedAppSettings"
+}

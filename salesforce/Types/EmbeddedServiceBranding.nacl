@@ -1,0 +1,52 @@
+type salesforce.EmbeddedServiceBranding {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string contrastInvertedColor {
+  }
+  string contrastPrimaryColor {
+  }
+  string embeddedServiceConfig {
+    foreignKeyDomain = [
+      salesforce.EmbeddedServiceConfig,
+    ]
+  }
+  string font {
+  }
+  number height {
+  }
+  string masterLabel {
+  }
+  string navBarColor {
+  }
+  string navBarTextColor {
+  }
+  string primaryColor {
+  }
+  string secondaryColor {
+  }
+  string secondaryNavBarColor {
+  }
+  number width {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "EmbeddedServiceBranding"
+  dirName = "EmbeddedServiceBranding"
+  metadataType = "EmbeddedServiceBranding"
+}

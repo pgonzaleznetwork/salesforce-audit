@@ -1,0 +1,171 @@
+type salesforce.OrgMetricScanResult {
+  serviceid Id {
+    apiName = "OrgMetricScanResult.Id"
+    label = "Org Metric Scan Result ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "OrgMetricScanResult.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "OrgMetricScanResult.Name"
+    label = "Org Metric Scan Result"
+    _required = true
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "OrgMetricScanResult.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "OrgMetricScanResult.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "OrgMetricScanResult.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "OrgMetricScanResult.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "OrgMetricScanResult.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OrgMetricScanSummaryId {
+    apiName = "OrgMetricScanResult.OrgMetricScanSummaryId"
+    label = "Org Metric Scan ID"
+    _required = true
+    referenceTo = [
+      salesforce.OrgMetricScanSummary,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "OrgMetricScanSummary"
+    queryable = true
+  }
+  salesforce.Url Url {
+    apiName = "OrgMetricScanResult.Url"
+    label = "Url"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Object {
+    apiName = "OrgMetricScanResult.Object"
+    label = "Object"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime Date {
+    apiName = "OrgMetricScanResult.Date"
+    label = "Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Type {
+    apiName = "OrgMetricScanResult.Type"
+    label = "Type"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Number Profile {
+    apiName = "OrgMetricScanResult.Profile"
+    label = "Profile"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text User {
+    apiName = "OrgMetricScanResult.User"
+    label = "User"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Number Quantity {
+    apiName = "OrgMetricScanResult.Quantity"
+    label = "Quantity"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist ItemStatus {
+    apiName = "OrgMetricScanResult.ItemStatus"
+    label = "Status"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number Flags {
+    apiName = "OrgMetricScanResult.Flags"
+    label = "Flags"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+}

@@ -1,0 +1,6 @@
+salesforce.SharingRules ContactRequest {
+  fullName = "ContactRequest"
+  _parent = [
+    salesforce.ContactRequest,
+  ]
+}

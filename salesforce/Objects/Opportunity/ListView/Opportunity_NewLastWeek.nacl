@@ -1,0 +1,15 @@
+salesforce.ListView Opportunity_NewLastWeek {
+  fullName = "Opportunity.NewLastWeek"
+  filterScope = "Everything"
+  filters = [
+    {
+      field = "OPPORTUNITY.CREATED_DATE"
+      operation = "equals"
+      value = "LAST_WEEK"
+    },
+  ]
+  label = "New Last Week"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

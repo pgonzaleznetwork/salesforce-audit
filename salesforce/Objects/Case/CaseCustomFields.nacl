@@ -1,0 +1,165 @@
+type salesforce.Case {
+  salesforce.Text EngineeringReqNumber__c {
+    apiName = "Case.EngineeringReqNumber__c"
+    label = "Engineering Req Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 12
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    trackTrending = false
+  }
+  salesforce.Picklist SLAViolation__c {
+    apiName = "Case.SLAViolation__c"
+    label = "SLA Violation"
+    valueSet = [
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist Product__c {
+    apiName = "Case.Product__c"
+    label = "Product"
+    valueSet = [
+      {
+        fullName = "GC1040"
+        default = false
+        label = "GC1040"
+      },
+      {
+        fullName = "GC1060"
+        default = false
+        label = "GC1060"
+      },
+      {
+        fullName = "GC3020"
+        default = false
+        label = "GC3020"
+      },
+      {
+        fullName = "GC3040"
+        default = false
+        label = "GC3040"
+      },
+      {
+        fullName = "GC3060"
+        default = false
+        label = "GC3060"
+      },
+      {
+        fullName = "GC5020"
+        default = false
+        label = "GC5020"
+      },
+      {
+        fullName = "GC5040"
+        default = false
+        label = "GC5040"
+      },
+      {
+        fullName = "GC5060"
+        default = false
+        label = "GC5060"
+      },
+      {
+        fullName = "GC1020"
+        default = false
+        label = "GC1020"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Picklist PotentialLiability__c {
+    apiName = "Case.PotentialLiability__c"
+    label = "Potential Liability"
+    valueSet = [
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.Lookup Original_Deal__c {
+    apiName = "Case.Original_Deal__c"
+    label = "Original Deal"
+    referenceTo = [
+      salesforce.Opportunity,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Cases"
+    queryable = true
+    deleteConstraint = "SetNull"
+    externalId = false
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "Opportunity.DeliveryInstallationStatus__c"
+          operation = "equals"
+          value = "Completed"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Cases"
+    trackFeedHistory = false
+    trackHistory = "false"
+    trackTrending = false
+  }
+  salesforce.Date CustomDate__c {
+    apiName = "Case.CustomDate__c"
+    label = "CustomDate"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    trackTrending = false
+  }
+}

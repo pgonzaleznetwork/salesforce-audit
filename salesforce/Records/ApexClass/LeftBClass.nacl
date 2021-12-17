@@ -1,0 +1,6 @@
+salesforce.ApexClass LeftBClass {
+  apiVersion = 51
+  status = "Active"
+  fullName = "LeftBClass"
+  content = file("salesforce/Records/ApexClass/LeftBClass.cls")
+}

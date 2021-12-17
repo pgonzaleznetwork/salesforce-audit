@@ -1,0 +1,6 @@
+salesforce.SharingRules OrgDeleteRequest {
+  fullName = "OrgDeleteRequest"
+  _parent = [
+    salesforce.OrgDeleteRequest,
+  ]
+}

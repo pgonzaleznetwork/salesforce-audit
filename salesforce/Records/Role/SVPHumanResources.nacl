@@ -1,0 +1,10 @@
+salesforce.Role SVPHumanResources {
+  fullName = "SVPHumanResources"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "SVP, Human Resources"
+  mayForecastManagerShare = false
+  name = "SVP, Human Resources"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.CEO
+}

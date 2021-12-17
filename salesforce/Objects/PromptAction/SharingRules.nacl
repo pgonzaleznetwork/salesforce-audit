@@ -1,0 +1,6 @@
+salesforce.SharingRules PromptAction {
+  fullName = "PromptAction"
+  _parent = [
+    salesforce.PromptAction,
+  ]
+}

@@ -1,0 +1,21 @@
+salesforce.CustomApplication standard__Service {
+  fullName = "standard__Service"
+  defaultLandingTab = "standard-home"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  tabs = [
+    "standard-Chatter",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Case",
+    "standard-Solution",
+    "standard-report",
+    "standard-Dashboard",
+    salesforce.CustomTab.instance.Center__c,
+    salesforce.CustomTab.instance.Parent__c,
+    salesforce.CustomTab.instance.Child__c,
+  ]
+}

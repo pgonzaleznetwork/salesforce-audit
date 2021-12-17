@@ -1,0 +1,9 @@
+salesforce.WorkflowRule Account_normal_name__@vssu {
+  fullName = "Account.normal name _"
+  active = false
+  formula = "NOT(ISBLANK(TEXT(CustomerPriority__c)))"
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Account,
+  ]
+}

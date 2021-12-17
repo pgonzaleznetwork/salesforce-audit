@@ -1,0 +1,75 @@
+type salesforce.RestrictionRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  string description {
+  }
+  string enforcementType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FieldRestrict",
+        "Restrict",
+        "Scoping",
+      ]
+    }
+  }
+  string masterLabel {
+  }
+  string recordFilter {
+  }
+  string targetEntity {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "BoatReview__c",
+        "BoatType__c",
+        "Boat__c",
+        "Case",
+        "Center__c",
+        "Child__c",
+        "Contact",
+        "Contract",
+        "Custom_Object__c",
+        "Event",
+        "Lead",
+        "Opportunity",
+        "Parent__c",
+        "SRM_CRM_Sprint__c",
+        "SRM_Connected_Org__c",
+        "SRM_Development_Task__c",
+        "SRM_Jira_Ticket__c",
+        "SRM_Metadata__c",
+        "Task",
+        "User",
+      ]
+    }
+  }
+  string userCriteria {
+  }
+  number version {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "rule"
+  dirName = "restrictionRules"
+  metadataType = "RestrictionRule"
+}

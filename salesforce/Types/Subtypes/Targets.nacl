@@ -1,0 +1,19 @@
+type salesforce.Targets {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<string>" target {
+  }
+  metadataType = "Targets"
+}

@@ -1,0 +1,6 @@
+salesforce.ApexClass ITrigger {
+  apiVersion = 51
+  status = "Active"
+  fullName = "ITrigger"
+  content = file("salesforce/Records/ApexClass/ITrigger.cls")
+}

@@ -1,0 +1,79 @@
+salesforce.Layout ServiceResourceSkill_Service_Resource_Skill_Layout@bsss {
+  fullName = "ServiceResourceSkill-Service Resource Skill Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ServiceResourceSkill.field.SkillNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResourceSkill.field.ServiceResourceId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResourceSkill.field.SkillId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResourceSkill.field.SkillLevel
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResourceSkill.field.EffectiveStartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResourceSkill.field.EffectiveEndDate
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ServiceResourceSkill.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ServiceResourceSkill.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.ServiceResourceSkill,
+  ]
+}

@@ -1,0 +1,143 @@
+salesforce.Layout Invoice_Invoice_Layout@bs {
+  fullName = "Invoice-Invoice Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.DocumentNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Invoice.field.InvoiceNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Invoice.field.BillingAccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Invoice.field.ReferenceEntityId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Invoice.field.BillToContactId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Invoice.field.InvoiceDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Invoice.field.DueDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Invoice.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Invoice.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "InvoiceAmountInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.TotalChargeAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.TotalAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.TotalTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.TotalAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.TotalAmountWithTax
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PaymentInformation"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Invoice.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.Invoice,
+  ]
+}

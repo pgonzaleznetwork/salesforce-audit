@@ -1,0 +1,70 @@
+type salesforce.Community {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  string chatterAnswersFacebookSsoUrl {
+  }
+  string communityFeedPage {
+  }
+  string dataCategoryName {
+  }
+  string description {
+  }
+  string emailFooterDocument {
+    foreignKeyDomain = [
+      salesforce.Document,
+    ]
+  }
+  string emailHeaderDocument {
+    foreignKeyDomain = [
+      salesforce.Document,
+    ]
+  }
+  string emailNotificationUrl {
+  }
+  boolean enableChatterAnswers {
+  }
+  boolean enablePrivateQuestions {
+  }
+  string expertsGroup {
+    foreignKeyDomain = [
+      salesforce.Queue,
+    ]
+  }
+  serviceid fullName {
+  }
+  string portal {
+    foreignKeyDomain = [
+      "Portal",
+    ]
+  }
+  salesforce.ReputationLevels reputationLevels {
+  }
+  boolean showInPortal {
+  }
+  string site {
+    foreignKeyDomain = [
+      salesforce.CustomSite,
+    ]
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "community"
+  dirName = "communities"
+  metadataType = "Community"
+}

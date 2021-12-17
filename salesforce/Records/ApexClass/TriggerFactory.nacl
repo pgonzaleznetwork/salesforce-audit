@@ -1,0 +1,17 @@
+salesforce.ApexClass TriggerFactory {
+  apiVersion = 51
+  status = "Active"
+  fullName = "TriggerFactory"
+  content = file("salesforce/Records/ApexClass/TriggerFactory.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.ContactTriggerHandlerV2
+    },
+    {
+      reference = salesforce.ApexClass.instance.ITrigger
+    },
+    {
+      reference = salesforce.Contact
+    },
+  ]
+}

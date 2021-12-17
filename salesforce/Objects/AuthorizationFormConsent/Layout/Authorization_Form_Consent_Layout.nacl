@@ -1,0 +1,76 @@
+salesforce.Layout AuthorizationFormConsent_Authorization_Form_Consent_Layout@bsss {
+  fullName = "AuthorizationFormConsent-Authorization Form Consent Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationFormConsent.field.Status
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormConsent.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormConsent.field.AuthorizationFormTextId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormConsent.field.ConsentCapturedSourceType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormConsent.field.ConsentCapturedDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.AuthorizationFormConsent.field.DocumentVersionId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormConsent.field.ConsentGiverId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.AuthorizationFormConsent.field.ConsentCapturedSource
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Status",
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.AuthorizationFormConsent,
+  ]
+}

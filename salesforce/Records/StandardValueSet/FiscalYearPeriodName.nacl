@@ -1,0 +1,4 @@
+salesforce.StandardValueSet FiscalYearPeriodName {
+  fullName = "FiscalYearPeriodName"
+  sorted = false
+}

@@ -1,0 +1,24 @@
+salesforce.StandardValueSet TaskPriority {
+  fullName = "TaskPriority"
+  sorted = false
+  standardValue = [
+    {
+      fullName = "High"
+      default = false
+      label = "High"
+      highPriority = true
+    },
+    {
+      fullName = "Normal"
+      default = true
+      label = "Normal"
+      highPriority = false
+    },
+    {
+      fullName = "Low"
+      default = false
+      label = "Low"
+      highPriority = false
+    },
+  ]
+}

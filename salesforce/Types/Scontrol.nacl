@@ -1,0 +1,65 @@
+type salesforce.Scontrol {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string content {
+  }
+  string contentSource {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "HTML",
+        "Snippet",
+        "URL",
+      ]
+    }
+  }
+  string description {
+  }
+  string encodingKey {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Big5",
+        "Big5-HKSCS",
+        "EUC-JP",
+        "GB2312",
+        "ISO-2022-JP",
+        "ISO-8859-1",
+        "Shift_JIS",
+        "UTF-8",
+        "ks_c_5601-1987",
+        "x-SJIS_0213",
+      ]
+    }
+  }
+  string fileContent {
+  }
+  string fileName {
+  }
+  string name {
+  }
+  boolean supportsCaching {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  suffix = "scf"
+  dirName = "scontrols"
+  metadataType = "Scontrol"
+}

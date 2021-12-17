@@ -1,0 +1,7 @@
+salesforce.SchemaSettings {
+  fullName = "Schema"
+  enableAdvancedCMTSecurity = true
+  enableAdvancedCSSecurity = true
+  enableListCustomSettingCreation = false
+  enableSOSLOnCustomSettings = false
+}

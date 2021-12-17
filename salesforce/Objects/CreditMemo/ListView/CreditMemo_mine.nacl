@@ -1,0 +1,19 @@
+salesforce.ListView CreditMemo_mine {
+  fullName = "CreditMemo.mine"
+  columns = [
+    "Name",
+    "CreditMemoNumber",
+    "BillingAccount",
+    "Status",
+    "TotalAmount",
+    "TotalChargeAmount",
+    "TotalAdjustmentAmount",
+    "TotalTaxAmount",
+    "CreditDate",
+  ]
+  filterScope = "Mine"
+  label = "My Credit Memos"
+  _parent = [
+    salesforce.CreditMemo,
+  ]
+}

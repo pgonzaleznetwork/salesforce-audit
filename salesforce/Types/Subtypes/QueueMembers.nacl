@@ -1,0 +1,27 @@
+type salesforce.QueueMembers {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.PublicGroups publicGroups {
+  }
+  salesforce.RoleAndSubordinates roleAndSubordinates {
+  }
+  salesforce.RoleAndSubordinatesInternal roleAndSubordinatesInternal {
+  }
+  salesforce.Roles roles {
+  }
+  salesforce.Users users {
+  }
+  metadataType = "QueueMembers"
+}

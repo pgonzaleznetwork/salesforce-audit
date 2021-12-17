@@ -1,0 +1,8 @@
+salesforce.ListView CommSubscriptionTiming_All_CommSubscriptionTimings {
+  fullName = "CommSubscriptionTiming.All_CommSubscriptionTimings"
+  filterScope = "Everything"
+  label = "All Communication Subscription Timings"
+  _parent = [
+    salesforce.CommSubscriptionTiming,
+  ]
+}

@@ -1,0 +1,205 @@
+type salesforce.AssetActionSource {
+  serviceid Id {
+    apiName = "AssetActionSource.Id"
+    label = "Asset Action Source ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssetActionSource.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AssetActionSourceNumber {
+    apiName = "AssetActionSource.AssetActionSourceNumber"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssetActionSource.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssetActionSource.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssetActionSource.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssetActionSource.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssetActionSource.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AssetActionId {
+    apiName = "AssetActionSource.AssetActionId"
+    label = "Asset Action ID"
+    _required = true
+    referenceTo = [
+      salesforce.AssetAction,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "AssetAction"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReferenceEntityItemId {
+    apiName = "AssetActionSource.ReferenceEntityItemId"
+    label = "Reference Entity Item ID"
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "ReferenceEntityItem"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency ProductAmount {
+    apiName = "AssetActionSource.ProductAmount"
+    label = "Product Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency AdjustmentAmount {
+    apiName = "AssetActionSource.AdjustmentAmount"
+    label = "Adjustment Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency EstimatedTax {
+    apiName = "AssetActionSource.EstimatedTax"
+    label = "Estimated Tax"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency ActualTax {
+    apiName = "AssetActionSource.ActualTax"
+    label = "Actual Tax"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary Subtotal {
+    apiName = "AssetActionSource.Subtotal"
+    label = "Subtotal"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartDate {
+    apiName = "AssetActionSource.StartDate"
+    label = "Start Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EndDate {
+    apiName = "AssetActionSource.EndDate"
+    label = "End Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Quantity {
+    apiName = "AssetActionSource.Quantity"
+    label = "Quantity"
+    precision = 14
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime TransactionDate {
+    apiName = "AssetActionSource.TransactionDate"
+    label = "Transaction Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalReference {
+    apiName = "AssetActionSource.ExternalReference"
+    label = "External Reference"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalReferenceDataSource {
+    apiName = "AssetActionSource.ExternalReferenceDataSource"
+    label = "External Reference Data Source"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    _hidden_value = true
+  }
+}

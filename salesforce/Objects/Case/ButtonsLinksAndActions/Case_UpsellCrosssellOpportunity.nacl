@@ -1,0 +1,22 @@
+salesforce.WebLink Case_UpsellCrosssellOpportunity {
+  fullName = "Case.UpsellCrosssellOpportunity"
+  availability = "online"
+  displayType = "link"
+  encodingKey = "UTF-8"
+  hasMenubar = true
+  hasScrollbars = true
+  hasToolbar = true
+  height = 600
+  isResizable = true
+  linkType = "url"
+  masterLabel = "Up-sell / Cross-sell Opportunity"
+  openType = "newWindow"
+  position = "none"
+  protected = false
+  showsLocation = true
+  showsStatus = true
+  url = "https://na1.salesforce.com/opp/oppedit.jsp?accid={!Account_ID}&opp3=Up-sell+/+Cross-sell&opp5=Existing+Customer&opp6=Customer+Support"
+  _parent = [
+    salesforce.Case,
+  ]
+}

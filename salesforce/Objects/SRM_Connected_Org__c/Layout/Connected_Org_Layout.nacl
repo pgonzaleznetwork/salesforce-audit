@@ -1,0 +1,88 @@
+salesforce.Layout SRM_Connected_Org__c_Connected_Org_Layout@uuuubss {
+  fullName = "SRM_Connected_Org__c-Connected Org Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.SRM_Connected_Org__c.field.Named_Credential_Reference__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SRM_Connected_Org__c.field.Name
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.SRM_Connected_Org__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SRM_Connected_Org__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SRM_Connected_Org__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "Named_Credential_Reference__c",
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "FULL_NAME",
+        "LEAD.COMPANY",
+        "LEAD.PHONE",
+      ]
+      relatedList = salesforce.Lead.field.Connected_Org__c
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.SRM_Connected_Org__c,
+  ]
+}

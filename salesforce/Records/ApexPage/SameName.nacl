@@ -1,0 +1,28 @@
+salesforce.ApexPage SameName {
+  apiVersion = 50
+  availableInTouch = false
+  confirmationTokenRequired = false
+  label = "SameName"
+  packageVersions = [
+    {
+      majorNumber = 1
+      minorNumber = 7
+      namespace = "sf_com_apps"
+    },
+    {
+      majorNumber = 1
+      minorNumber = 0
+      namespace = "trlhdtips"
+    },
+  ]
+  fullName = "SameName"
+  content = file("salesforce/Records/ApexPage/SameName.page")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.SLA__c
+    },
+    {
+      reference = salesforce.ApexClass.instance.SameName
+    },
+  ]
+}

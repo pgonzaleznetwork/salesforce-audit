@@ -1,0 +1,43 @@
+salesforce.Flow New_Flow_using_field_as_criteria {
+  fullName = "New_Flow_using_field_as_criteria"
+  apiVersion = 51
+  interviewLabel = "New Flow using field as criteria {!$Flow.CurrentDateTime}"
+  label = "New Flow using field as criteria"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    locationX = 50
+    locationY = 0
+    filterLogic = "and"
+    filters = {
+      field = salesforce.Account.field.CustomerPriority__c
+      operator = "EqualTo"
+      value = {
+        stringValue = "High"
+      }
+    }
+    object = salesforce.Account
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "InvalidDraft"
+}
