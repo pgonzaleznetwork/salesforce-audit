@@ -317,4 +317,5 @@ salesforce.RecordType Account_Customer {
   _parent = [
     salesforce.Account,
   ]
+  description = "Any type of customer"
 }
