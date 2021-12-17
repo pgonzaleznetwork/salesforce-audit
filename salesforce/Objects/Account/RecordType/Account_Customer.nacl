@@ -32,6 +32,10 @@ salesforce.RecordType Account_Customer {
       picklist = salesforce.Account.field.Active__c
       values = [
         {
+          fullName = "Maybe"
+          default = false
+        },
+        {
           fullName = "No"
           default = false
         },

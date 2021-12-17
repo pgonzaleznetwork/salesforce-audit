@@ -10,6 +10,7 @@ type salesforce.Lead {
     queryable = true
     externalId = false
     trackFeedHistory = false
+    trackHistory = "false"
   }
   salesforce.Picklist ProductInterest__c {
     apiName = "Lead.ProductInterest__c"
@@ -55,6 +56,7 @@ type salesforce.Lead {
         },
       ]
     }
+    trackHistory = "false"
   }
   salesforce.Picklist Primary__c {
     apiName = "Lead.Primary__c"
@@ -78,6 +80,7 @@ type salesforce.Lead {
     externalId = false
     trackFeedHistory = false
     sorted = false
+    trackHistory = "false"
   }
   salesforce.Text CurrentGenerators__c {
     apiName = "Lead.CurrentGenerators__c"
@@ -90,6 +93,7 @@ type salesforce.Lead {
     queryable = true
     externalId = false
     trackFeedHistory = false
+    trackHistory = "false"
   }
   salesforce.Number NumberofLocations__c {
     apiName = "Lead.NumberofLocations__c"
@@ -102,6 +106,7 @@ type salesforce.Lead {
     queryable = true
     externalId = false
     trackFeedHistory = false
+    trackHistory = "false"
   }
   salesforce.Lookup Connected_Org__c {
     apiName = "Lead.Connected_Org__c"
@@ -117,5 +122,6 @@ type salesforce.Lead {
     externalId = false
     relationshipLabel = "Leads"
     trackFeedHistory = false
+    trackHistory = "false"
   }
 }

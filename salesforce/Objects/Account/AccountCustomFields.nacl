@@ -87,6 +87,11 @@ type salesforce.Account {
         default = false
         label = "Yes"
       },
+      {
+        fullName = "Maybe"
+        default = false
+        label = "Maybe"
+      },
     ]
     restricted = false
     createable = true
@@ -241,7 +246,7 @@ type salesforce.Account {
     queryable = true
     externalId = false
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = "true"
   }
   salesforce.Text saltoQuickStartField__c {
     apiName = "Account.saltoQuickStartField__c"

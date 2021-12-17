@@ -4,7 +4,7 @@ salesforce.LeadConfigSettings {
   doesHideOpportunityInConvertLeadWindow = false
   doesPreserveLeadStatus = true
   doesSelectNoOpportunityOnConvertLead = false
-  doesTrackHistory = false
+  doesTrackHistory = true
   enableConversionsOnMobile = false
   enableOrgWideMergeAndDelete = true
   shouldLeadConvertRequireValidation = true

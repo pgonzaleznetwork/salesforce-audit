@@ -314,7 +314,7 @@ type salesforce.Lead {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = true
-  enableHistory = false
+  enableHistory = true
   externalSharingModel = "Private"
   searchLayouts = {
     customTabListAdditionalFields = [
