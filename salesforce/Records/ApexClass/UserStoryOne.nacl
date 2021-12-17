@@ -1,0 +1,6 @@
+salesforce.ApexClass UserStoryOne {
+  apiVersion = 53
+  status = "Active"
+  fullName = "UserStoryOne"
+  content = file("salesforce/Records/ApexClass/UserStoryOne.cls")
+}
