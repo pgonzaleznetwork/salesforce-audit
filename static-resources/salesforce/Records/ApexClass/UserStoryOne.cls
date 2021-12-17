@@ -1,6 +1,8 @@
 public class UserStoryOne {
 
-    public static void doSomething(){
-    }
+    
+    
+    
+    public static void thisIsBetter(){}
 
 }
