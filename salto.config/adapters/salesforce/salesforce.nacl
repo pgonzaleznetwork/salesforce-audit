@@ -1,0 +1,59 @@
+salesforce {
+  fetch = {
+    metadata = {
+      include = [
+        {
+          metadataType = ".*"
+          namespace = ""
+          name = ".*"
+        },
+      ]
+      exclude = [
+        {
+          metadataType = "Report"
+        },
+        {
+          metadataType = "ReportType"
+        },
+        {
+          metadataType = "ReportFolder"
+        },
+        {
+          metadataType = "Dashboard"
+        },
+        {
+          metadataType = "DashboardFolder"
+        },
+        {
+          metadataType = "Profile"
+        },
+        {
+          metadataType = "PermissionSet"
+        },
+        {
+          metadataType = "SiteDotCom"
+        },
+        {
+          metadataType = "EmailTemplate"
+        },
+        {
+          metadataType = "ContentAsset"
+        },
+        {
+          metadataType = "CustomObjectTranslation"
+        },
+        {
+          metadataType = "StandardValueSet"
+          name = "^(AddressCountryCode)|(AddressStateCode)$"
+          namespace = ""
+        },
+        {
+          metadataType = "Layout"
+          name = "CollaborationGroup-Group Layout"
+        },
+      ]
+    }
+    fetchAllCustomSettings = false
+  }
+  maxItemsInRetrieveRequest = 2500
+}
