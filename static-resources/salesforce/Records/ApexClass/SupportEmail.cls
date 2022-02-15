@@ -4,7 +4,7 @@ public class SupportEmail {
         Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
 
         // Strings to hold the email addresses to which you are sending the email.
-        String[] toAddresses = new String[] {'sla-emails@company.com'}; 
+        String[] toAddresses = new String[] {'sla-notifications@company.com'}; 
             
         // Assign the addresses for the To and CC lists to the mail object.
         mail.setToAddresses(toAddresses);

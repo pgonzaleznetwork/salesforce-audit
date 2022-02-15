@@ -165,7 +165,7 @@ type salesforce.Case {
   salesforce.FormulaText Target_Email__c {
     apiName = "Case.Target_Email__c"
     label = "Target Email"
-    formula = "IF(ISPICKVAl( Origin ,\"Web\"), \"sla-emails@company.com\", null)"
+    formula = "IF(ISPICKVAl( Origin ,\"Web\"), \"sla-notifications@company.com\", null)"
     createable = false
     updateable = false
     unique = false

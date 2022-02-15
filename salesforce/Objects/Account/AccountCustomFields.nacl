@@ -20,7 +20,7 @@ type salesforce.Account {
       },
     ]
     restricted = false
-    inlineHelpText = "This field is used to trigger automatic notifications to sla-emails@company.com"
+    inlineHelpText = "This field is used to trigger automatic notifications to sla-notifications@company.com"
     createable = true
     updateable = true
     queryable = true
@@ -91,7 +91,7 @@ type salesforce.Account {
     trackFeedHistory = false
     trackHistory = false
     sorted = false
-    description = "Description of the field goes here"
+    description = "Is the account active or not?"
   }
   salesforce.Number NumberofLocations__c {
     apiName = "Account.NumberofLocations__c"

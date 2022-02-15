@@ -38,7 +38,7 @@ salesforce.CustomLabels CustomLabels {
       language = "en_US"
       protected = true
       shortDescription = "Priority Email"
-      value = "sla-emails@company.com"
+      value = "sla-notifications@company.com"
     },
     {
       fullName = "Reviews"
