@@ -83,7 +83,7 @@ type salesforce.AssetRelationship {
     updateable = false
     relationshipName = "Asset"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup RelatedAssetId {
     apiName = "AssetRelationship.RelatedAssetId"
@@ -96,7 +96,7 @@ type salesforce.AssetRelationship {
     updateable = true
     relationshipName = "RelatedAsset"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.DateTime FromDate {
     apiName = "AssetRelationship.FromDate"
@@ -139,6 +139,6 @@ type salesforce.AssetRelationship {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

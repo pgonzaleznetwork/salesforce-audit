@@ -19,7 +19,7 @@ type salesforce.CommSubscriptionConsent {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CommSubscriptionConsent.IsDeleted"
@@ -103,7 +103,7 @@ type salesforce.CommSubscriptionConsent {
     updateable = true
     relationshipName = "ConsentGiver"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup ContactPointId {
     apiName = "CommSubscriptionConsent.ContactPointId"
@@ -119,7 +119,7 @@ type salesforce.CommSubscriptionConsent {
     updateable = true
     relationshipName = "ContactPoint"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Date EffectiveFromDate {
     apiName = "CommSubscriptionConsent.EffectiveFromDate"
@@ -161,11 +161,11 @@ type salesforce.CommSubscriptionConsent {
     updateable = true
     relationshipName = "CommSubscriptionChannelType"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup BusinessBrandId {
     apiName = "CommSubscriptionConsent.BusinessBrandId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -174,7 +174,7 @@ type salesforce.CommSubscriptionConsent {
   salesforce.Unknown EffectiveToDate {
     apiName = "CommSubscriptionConsent.EffectiveToDate"
     inlineHelpText = "Date when consent ends."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -182,7 +182,7 @@ type salesforce.CommSubscriptionConsent {
   }
   salesforce.Lookup PartyRoleId {
     apiName = "CommSubscriptionConsent.PartyRoleId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

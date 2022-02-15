@@ -32,7 +32,7 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     {
       notificationChannels = {
         desktopEnabled = true
-        mobileEnabled = false
+        mobileEnabled = true
       }
       notificationType = "direct_message"
     },
@@ -119,6 +119,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = true
       }
       notificationType = "task_delegated_to"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "task_easy_importer"
     },
     {
       notificationChannels = {

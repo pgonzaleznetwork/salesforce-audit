@@ -34,4 +34,6 @@ type salesforce.SharingCriteriaRule {
     localOnly = true
   }
   metadataType = "SharingCriteriaRule"
+  boolean includeRecordsOwnedByAll {
+  }
 }

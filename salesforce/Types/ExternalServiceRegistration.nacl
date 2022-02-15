@@ -29,7 +29,6 @@ type salesforce.ExternalServiceRegistration {
     _restriction = {
       enforce_value = false
       values = [
-        "InteragentHyperSchema",
         "OpenApi",
         "OpenApi3",
       ]

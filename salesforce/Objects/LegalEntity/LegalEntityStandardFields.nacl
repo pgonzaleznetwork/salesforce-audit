@@ -19,7 +19,7 @@ type salesforce.LegalEntity {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "LegalEntity.IsDeleted"

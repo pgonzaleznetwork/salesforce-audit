@@ -59,7 +59,7 @@ type salesforce.Solution {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
     valueSetName = salesforce.StandardValueSet.instance.SolutionStatus
   }
   salesforce.Checkbox IsReviewed {

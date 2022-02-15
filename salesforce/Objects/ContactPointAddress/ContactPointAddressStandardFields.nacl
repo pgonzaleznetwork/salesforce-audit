@@ -99,7 +99,7 @@ type salesforce.ContactPointAddress {
     updateable = true
     relationshipName = "Parent"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Date ActiveFromDate {
     apiName = "ContactPointAddress.ActiveFromDate"
@@ -158,12 +158,6 @@ type salesforce.ContactPointAddress {
         isActive = true
       },
       {
-        fullName = "Pacific/Fiji"
-        default = false
-        label = "(GMT+13:00) Fiji Summer Time (Pacific/Fiji)"
-        isActive = true
-      },
-      {
         fullName = "Pacific/Tongatapu"
         default = false
         label = "(GMT+13:00) Tonga Standard Time (Pacific/Tongatapu)"
@@ -173,6 +167,12 @@ type salesforce.ContactPointAddress {
         fullName = "Asia/Kamchatka"
         default = false
         label = "(GMT+12:00) Petropavlovsk-Kamchatski Standard Time (Asia/Kamchatka)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Fiji"
+        default = false
+        label = "(GMT+12:00) Fiji Standard Time (Pacific/Fiji)"
         isActive = true
       },
       {
@@ -751,7 +751,7 @@ type salesforce.ContactPointAddress {
     updateable = true
     relationshipName = "ContactPointPhone"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist AddressType {
     apiName = "ContactPointAddress.AddressType"
@@ -774,7 +774,7 @@ type salesforce.ContactPointAddress {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Address Address {
     apiName = "ContactPointAddress.Address"
@@ -808,6 +808,6 @@ type salesforce.ContactPointAddress {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

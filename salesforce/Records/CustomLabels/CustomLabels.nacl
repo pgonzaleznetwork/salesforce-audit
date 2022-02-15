@@ -34,6 +34,13 @@ salesforce.CustomLabels CustomLabels {
       value = "Please select a boat :)"
     },
     {
+      fullName = "Priority_Email"
+      language = "en_US"
+      protected = true
+      shortDescription = "Priority Email"
+      value = "sla-emails@company.com"
+    },
+    {
       fullName = "Reviews"
       categories = "LWC Labels"
       language = "en_US"

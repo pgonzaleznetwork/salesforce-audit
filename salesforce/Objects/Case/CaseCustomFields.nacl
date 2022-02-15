@@ -10,7 +10,7 @@ type salesforce.Case {
     queryable = true
     externalId = false
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
   }
   salesforce.Picklist SLAViolation__c {
@@ -34,7 +34,7 @@ type salesforce.Case {
     queryable = true
     externalId = false
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
     sorted = false
   }
@@ -94,7 +94,7 @@ type salesforce.Case {
     queryable = true
     externalId = false
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
     sorted = false
   }
@@ -119,7 +119,7 @@ type salesforce.Case {
     queryable = true
     externalId = false
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
     sorted = false
   }
@@ -148,7 +148,7 @@ type salesforce.Case {
     }
     relationshipLabel = "Cases"
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
   }
   salesforce.Date CustomDate__c {
@@ -159,7 +159,57 @@ type salesforce.Case {
     queryable = true
     externalId = false
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.FormulaText Target_Email__c {
+    apiName = "Case.Target_Email__c"
+    label = "Target Email"
+    formula = "IF(ISPICKVAl( Origin ,\"Web\"), \"sla-emails@company.com\", null)"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = false
+    trackTrending = false
+    _hidden_value = true
+  }
+  salesforce.Date new_date_field__c {
+    apiName = "Case.new_date_field__c"
+    label = "new date field"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Email indicentResponseEmail__c {
+    apiName = "Case.indicentResponseEmail__c"
+    label = "indicentResponseEmail"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = false
+    trackTrending = false
+  }
+  salesforce.Date reopenDate__c {
+    apiName = "Case.reopenDate__c"
+    label = "reopenDate"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = false
     trackTrending = false
   }
 }

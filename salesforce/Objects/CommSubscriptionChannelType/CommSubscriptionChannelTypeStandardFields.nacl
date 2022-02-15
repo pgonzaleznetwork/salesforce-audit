@@ -19,7 +19,7 @@ type salesforce.CommSubscriptionChannelType {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CommSubscriptionChannelType.IsDeleted"
@@ -101,7 +101,7 @@ type salesforce.CommSubscriptionChannelType {
     updateable = true
     relationshipName = "CommunicationSubscription"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "CommSubscriptionChannelType.EngagementChannelTypeId"
@@ -115,6 +115,6 @@ type salesforce.CommSubscriptionChannelType {
     updateable = true
     relationshipName = "EngagementChannelType"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

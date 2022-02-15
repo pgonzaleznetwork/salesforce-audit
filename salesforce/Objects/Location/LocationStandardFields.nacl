@@ -19,7 +19,7 @@ type salesforce.Location {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Location.IsDeleted"
@@ -147,7 +147,7 @@ type salesforce.Location {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsMobile {
     apiName = "Location.IsMobile"
@@ -175,7 +175,7 @@ type salesforce.Location {
     updateable = false
     relationshipName = "RootLocation"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
   salesforce.Text ExternalReference {
@@ -198,11 +198,11 @@ type salesforce.Location {
     updateable = true
     relationshipName = "Logo"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Unknown CloseDate {
     apiName = "Location.CloseDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -210,7 +210,7 @@ type salesforce.Location {
   }
   salesforce.Unknown ConstructionEndDate {
     apiName = "Location.ConstructionEndDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -218,7 +218,7 @@ type salesforce.Location {
   }
   salesforce.Unknown ConstructionStartDate {
     apiName = "Location.ConstructionStartDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -226,7 +226,7 @@ type salesforce.Location {
   }
   salesforce.Unknown Description {
     apiName = "Location.Description"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -234,7 +234,7 @@ type salesforce.Location {
   }
   salesforce.Unknown DrivingDirections {
     apiName = "Location.DrivingDirections"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -242,7 +242,7 @@ type salesforce.Location {
   }
   salesforce.Unknown Location {
     apiName = "Location.Location"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -250,7 +250,7 @@ type salesforce.Location {
   }
   salesforce.Unknown LocationLevel {
     apiName = "Location.LocationLevel"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -258,7 +258,7 @@ type salesforce.Location {
   }
   salesforce.Unknown OpenDate {
     apiName = "Location.OpenDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -266,7 +266,7 @@ type salesforce.Location {
   }
   salesforce.Unknown PossessionDate {
     apiName = "Location.PossessionDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -274,7 +274,7 @@ type salesforce.Location {
   }
   salesforce.Unknown RemodelEndDate {
     apiName = "Location.RemodelEndDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -282,7 +282,7 @@ type salesforce.Location {
   }
   salesforce.Unknown RemodelStartDate {
     apiName = "Location.RemodelStartDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -290,7 +290,7 @@ type salesforce.Location {
   }
   salesforce.Unknown ShouldSyncWithOci {
     apiName = "Location.ShouldSyncWithOci"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -298,7 +298,7 @@ type salesforce.Location {
   }
   salesforce.Unknown TimeZone {
     apiName = "Location.TimeZone"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

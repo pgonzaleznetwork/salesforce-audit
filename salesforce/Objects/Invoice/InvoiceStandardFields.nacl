@@ -19,7 +19,7 @@ type salesforce.Invoice {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Invoice.IsDeleted"
@@ -96,7 +96,7 @@ type salesforce.Invoice {
     updateable = true
     relationshipName = "ReferenceEntity"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text InvoiceNumber {
     apiName = "Invoice.InvoiceNumber"
@@ -119,7 +119,7 @@ type salesforce.Invoice {
     updateable = true
     relationshipName = "BillingAccount"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Summary TotalAmount {
     apiName = "Invoice.TotalAmount"
@@ -234,7 +234,7 @@ type salesforce.Invoice {
     updateable = true
     relationshipName = "BillToContact"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text Description {
     apiName = "Invoice.Description"

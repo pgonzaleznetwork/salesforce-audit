@@ -18,7 +18,7 @@ type salesforce.Individual {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Individual.IsDeleted"
@@ -163,7 +163,7 @@ type salesforce.Individual {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsHomeOwner {
     apiName = "Individual.IsHomeOwner"
@@ -211,7 +211,7 @@ type salesforce.Individual {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup MasterRecordId {
     apiName = "Individual.MasterRecordId"

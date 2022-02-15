@@ -99,7 +99,7 @@ type salesforce.Product2 {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.Product2Family
   }
   salesforce.Lookup ExternalDataSourceId {
@@ -111,7 +111,7 @@ type salesforce.Product2 {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text ExternalId {
     apiName = "Product2.ExternalId"
@@ -145,7 +145,7 @@ type salesforce.Product2 {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Product2.IsDeleted"

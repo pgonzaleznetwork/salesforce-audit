@@ -27,5 +27,15 @@ salesforce.StandardValueSet LeadSource {
       default = false
       label = "Other"
     },
+    {
+      fullName = "Where is this shown?"
+      default = false
+      label = "Where is this shown?"
+    },
+    {
+      fullName = "new value"
+      default = false
+      label = "new value"
+    },
   ]
 }

@@ -19,7 +19,7 @@ type salesforce.PartyConsent {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "PartyConsent.IsDeleted"
@@ -100,7 +100,7 @@ type salesforce.PartyConsent {
     updateable = true
     relationshipName = "Party"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Action {
     apiName = "PartyConsent.Action"
@@ -243,7 +243,7 @@ type salesforce.PartyConsent {
   }
   salesforce.Lookup BusinessBrandId {
     apiName = "PartyConsent.BusinessBrandId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -251,7 +251,7 @@ type salesforce.PartyConsent {
   }
   salesforce.Unknown DoubleConsentCaptureDate {
     apiName = "PartyConsent.DoubleConsentCaptureDate"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -259,7 +259,7 @@ type salesforce.PartyConsent {
   }
   salesforce.Unknown EffectiveFrom {
     apiName = "PartyConsent.EffectiveFrom"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -267,7 +267,7 @@ type salesforce.PartyConsent {
   }
   salesforce.Unknown EffectiveTo {
     apiName = "PartyConsent.EffectiveTo"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -275,7 +275,7 @@ type salesforce.PartyConsent {
   }
   salesforce.Lookup PartyRoleId {
     apiName = "PartyConsent.PartyRoleId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

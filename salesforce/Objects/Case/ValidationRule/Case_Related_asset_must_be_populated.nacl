@@ -1,0 +1,9 @@
+salesforce.ValidationRule Case_Related_asset_must_be_populated {
+  fullName = "Case.Related_asset_must_be_populated"
+  active = true
+  errorConditionFormula = "ISBLANK(AssetId )"
+  errorMessage = "Related asset must be populated"
+  _parent = [
+    salesforce.Case,
+  ]
+}

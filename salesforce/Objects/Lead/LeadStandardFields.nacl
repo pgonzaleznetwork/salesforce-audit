@@ -127,7 +127,7 @@ type salesforce.Lead {
     queryable = true
     trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Status {
     apiName = "Lead.Status"
@@ -139,7 +139,7 @@ type salesforce.Lead {
     queryable = true
     trackFeedHistory = true
     valueSetName = salesforce.StandardValueSet.instance.LeadStatus
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Industry {
     apiName = "Lead.Industry"
@@ -150,7 +150,7 @@ type salesforce.Lead {
     queryable = true
     trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.Industry
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Rating {
     apiName = "Lead.Rating"
@@ -161,7 +161,7 @@ type salesforce.Lead {
     queryable = true
     trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountRating
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Currency AnnualRevenue {
     apiName = "Lead.AnnualRevenue"
@@ -195,7 +195,7 @@ type salesforce.Lead {
     queryable = true
     _hidden_value = true
     trackFeedHistory = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsConverted {
     apiName = "Lead.IsConverted"
@@ -413,7 +413,7 @@ type salesforce.Lead {
     relationshipName = "DandbCompany"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text EmailBouncedReason {
     apiName = "Lead.EmailBouncedReason"
@@ -443,7 +443,7 @@ type salesforce.Lead {
     relationshipName = "Individual"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup CampaignId {
     apiName = "Lead.CampaignId"
@@ -459,7 +459,7 @@ type salesforce.Lead {
     updateable = false
     createable = false
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Unknown HasOptedOutOfEmail {
     apiName = "Lead.HasOptedOutOfEmail"
@@ -468,7 +468,7 @@ type salesforce.Lead {
     updateable = false
     createable = false
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Unknown HasOptedOutOfFax {
     apiName = "Lead.HasOptedOutOfFax"
@@ -477,7 +477,7 @@ type salesforce.Lead {
     updateable = false
     createable = false
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Unknown LastTransferDate {
     apiName = "Lead.LastTransferDate"

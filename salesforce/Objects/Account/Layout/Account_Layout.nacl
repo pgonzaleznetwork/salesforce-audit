@@ -78,6 +78,10 @@ salesforce.Layout Account_Account_Layout@bs {
               behavior = "Edit"
               field = salesforce.Account.field.My_Broken_Picklist__c
             },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.Expiry_Date__c
+            },
           ]
         },
         {

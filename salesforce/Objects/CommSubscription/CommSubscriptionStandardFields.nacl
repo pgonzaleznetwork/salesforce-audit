@@ -19,7 +19,7 @@ type salesforce.CommSubscription {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CommSubscription.IsDeleted"
@@ -92,7 +92,7 @@ type salesforce.CommSubscription {
   salesforce.Lookup DataUsePurposeId {
     apiName = "CommSubscription.DataUsePurposeId"
     inlineHelpText = "The data use purpose record associated with the communication subscription."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -101,7 +101,7 @@ type salesforce.CommSubscription {
   salesforce.Unknown IsDefault {
     apiName = "CommSubscription.IsDefault"
     inlineHelpText = "Set this communication subscription as the default."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

@@ -97,6 +97,7 @@ type salesforce.ContactRequest {
       salesforce.Center__c,
       salesforce.Child__c,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       salesforce.Opportunity,
       salesforce.Parent__c,
       salesforce.SRM_CRM_Sprint__c,

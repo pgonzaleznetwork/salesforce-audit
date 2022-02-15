@@ -38,6 +38,7 @@ type salesforce.FeedItem {
       salesforce.CreditMemo,
       salesforce.CreditMemoLine,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       "Dashboard",
       "DashboardComponent",
       salesforce.EngagementChannelType,

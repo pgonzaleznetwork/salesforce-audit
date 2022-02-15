@@ -1,7 +1,7 @@
 type salesforce.StreamActivityAccess {
   salesforce.Lookup ActivityTeamId {
     apiName = "StreamActivityAccess.ActivityTeamId"
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
   string ExternalResource {
@@ -12,7 +12,7 @@ type salesforce.StreamActivityAccess {
   }
   salesforce.Lookup OwnerId {
     apiName = "StreamActivityAccess.OwnerId"
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
 }

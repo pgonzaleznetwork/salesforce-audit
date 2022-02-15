@@ -86,7 +86,7 @@ type salesforce.InvoiceLine {
     updateable = false
     relationshipName = "Invoice"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
   salesforce.Lookup ReferenceEntityItemId {
@@ -99,7 +99,7 @@ type salesforce.InvoiceLine {
     updateable = true
     relationshipName = "ReferenceEntityItem"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup GroupReferenceEntityItemId {
     apiName = "InvoiceLine.GroupReferenceEntityItemId"
@@ -257,7 +257,7 @@ type salesforce.InvoiceLine {
     updateable = true
     relationshipName = "Product2"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup RelatedLineId {
     apiName = "InvoiceLine.RelatedLineId"
@@ -269,7 +269,7 @@ type salesforce.InvoiceLine {
     updateable = true
     relationshipName = "RelatedLine"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Type {
     apiName = "InvoiceLine.Type"

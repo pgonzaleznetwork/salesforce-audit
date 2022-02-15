@@ -19,6 +19,7 @@ type salesforce.AnalyticSnapshotMapping {
       values = [
         "Average",
         "Maximum",
+        "Median",
         "Minimum",
         "None",
         "Sum",

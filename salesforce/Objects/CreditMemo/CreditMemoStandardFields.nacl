@@ -19,7 +19,7 @@ type salesforce.CreditMemo {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CreditMemo.IsDeleted"
@@ -97,7 +97,7 @@ type salesforce.CreditMemo {
     updateable = true
     relationshipName = "BillingAccount"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text CreditMemoNumber {
     apiName = "CreditMemo.CreditMemoNumber"
@@ -212,7 +212,7 @@ type salesforce.CreditMemo {
     updateable = true
     relationshipName = "BillToContact"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Currency Balance {
     apiName = "CreditMemo.Balance"
@@ -262,6 +262,38 @@ type salesforce.CreditMemo {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
+  }
+  salesforce.Unknown AppType {
+    apiName = "CreditMemo.AppType"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown CreationMode {
+    apiName = "CreditMemo.CreationMode"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ExternalReference {
+    apiName = "CreditMemo.ExternalReference"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown ExternalReferenceDataSource {
+    apiName = "CreditMemo.ExternalReferenceDataSource"
+    trackHistory = false
+    queryable = false
+    updateable = false
+    createable = false
     _hidden_value = true
   }
 }

@@ -1,0 +1,6 @@
+salesforce.ApexClass SaltoUIController {
+  apiVersion = 52
+  status = "Active"
+  fullName = "SaltoUIController"
+  content = file("salesforce/Records/ApexClass/SaltoUIController.cls")
+}

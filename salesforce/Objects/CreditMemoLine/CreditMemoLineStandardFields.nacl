@@ -86,7 +86,7 @@ type salesforce.CreditMemoLine {
     updateable = false
     relationshipName = "CreditMemo"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
   salesforce.Date StartDate {
@@ -269,7 +269,7 @@ type salesforce.CreditMemoLine {
     updateable = true
     relationshipName = "RelatedLine"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup Product2Id {
     apiName = "CreditMemoLine.Product2Id"
@@ -281,7 +281,7 @@ type salesforce.CreditMemoLine {
     updateable = true
     relationshipName = "Product2"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text TaxName {
     apiName = "CreditMemoLine.TaxName"

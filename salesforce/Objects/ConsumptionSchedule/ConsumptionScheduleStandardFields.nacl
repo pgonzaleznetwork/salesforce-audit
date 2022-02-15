@@ -177,7 +177,7 @@ type salesforce.ConsumptionSchedule {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist RatingMethod {
     apiName = "ConsumptionSchedule.RatingMethod"

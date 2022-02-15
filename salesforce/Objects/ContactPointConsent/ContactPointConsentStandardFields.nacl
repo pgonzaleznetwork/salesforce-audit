@@ -101,7 +101,7 @@ type salesforce.ContactPointConsent {
     updateable = true
     relationshipName = "ContactPoint"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup DataUsePurposeId {
     apiName = "ContactPointConsent.DataUsePurposeId"
@@ -113,7 +113,7 @@ type salesforce.ContactPointConsent {
     updateable = true
     relationshipName = "DataUsePurpose"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist PrivacyConsentStatus {
     apiName = "ContactPointConsent.PrivacyConsentStatus"
@@ -230,7 +230,7 @@ type salesforce.ContactPointConsent {
   }
   salesforce.Lookup BusinessBrandId {
     apiName = "ContactPointConsent.BusinessBrandId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -238,7 +238,7 @@ type salesforce.ContactPointConsent {
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "ContactPointConsent.EngagementChannelTypeId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -246,7 +246,7 @@ type salesforce.ContactPointConsent {
   }
   salesforce.Lookup PartyRoleId {
     apiName = "ContactPointConsent.PartyRoleId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

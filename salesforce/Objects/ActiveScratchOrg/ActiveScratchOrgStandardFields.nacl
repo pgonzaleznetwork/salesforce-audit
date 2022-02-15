@@ -107,7 +107,7 @@ type salesforce.ActiveScratchOrg {
     updateable = true
     relationshipName = "ScratchOrgInfo"
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
   }
   salesforce.LongTextArea Description {
     apiName = "ActiveScratchOrg.Description"

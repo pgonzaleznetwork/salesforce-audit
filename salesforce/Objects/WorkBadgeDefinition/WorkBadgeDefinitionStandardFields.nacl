@@ -19,7 +19,7 @@ type salesforce.WorkBadgeDefinition {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "WorkBadgeDefinition.IsDeleted"
@@ -167,11 +167,5 @@ type salesforce.WorkBadgeDefinition {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup RewardFundId {
-    apiName = "WorkBadgeDefinition.RewardFundId"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
-  }
+  
 }

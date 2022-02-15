@@ -19,7 +19,7 @@ type salesforce.Order {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup ContractId {
     apiName = "Order.ContractId"
@@ -31,7 +31,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "Contract"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup AccountId {
     apiName = "Order.AccountId"
@@ -43,7 +43,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup Pricebook2Id {
     apiName = "Order.Pricebook2Id"
@@ -55,7 +55,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "Pricebook2"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup OriginalOrderId {
     apiName = "Order.OriginalOrderId"
@@ -99,7 +99,7 @@ type salesforce.Order {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
     valueSetName = salesforce.StandardValueSet.instance.OrderStatus
   }
   salesforce.LongTextArea Description {
@@ -120,7 +120,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "CustomerAuthorizedBy"
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
   }
   salesforce.Date CustomerAuthorizedDate {
     apiName = "Order.CustomerAuthorizedDate"
@@ -139,7 +139,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "CompanyAuthorizedBy"
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
   }
   salesforce.Date CompanyAuthorizedDate {
     apiName = "Order.CompanyAuthorizedDate"
@@ -154,7 +154,7 @@ type salesforce.Order {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
   }
   salesforce.Address BillingAddress {
     apiName = "Order.BillingAddress"
@@ -220,7 +220,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "BillToContact"
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
   }
   salesforce.Lookup ShipToContactId {
     apiName = "Order.ShipToContactId"
@@ -232,7 +232,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "ShipToContact"
     queryable = true
-    trackHistory = "true"
+    trackHistory = true
   }
   salesforce.DateTime ActivatedDate {
     apiName = "Order.ActivatedDate"
@@ -251,7 +251,7 @@ type salesforce.Order {
     updateable = true
     relationshipName = "ActivatedBy"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist StatusCode {
     apiName = "Order.StatusCode"
@@ -387,7 +387,7 @@ type salesforce.Order {
   }
   salesforce.Lookup OpportunityId {
     apiName = "Order.OpportunityId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

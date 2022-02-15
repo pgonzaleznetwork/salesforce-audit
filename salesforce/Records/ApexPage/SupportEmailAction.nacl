@@ -1,0 +1,20 @@
+salesforce.ApexPage SupportEmailAction {
+  apiVersion = 53
+  availableInTouch = false
+  confirmationTokenRequired = false
+  label = "SupportEmailAction"
+  packageVersions = [
+    {
+      majorNumber = 1
+      minorNumber = 7
+      namespace = "sf_com_apps"
+    },
+    {
+      majorNumber = 1
+      minorNumber = 0
+      namespace = "trlhdtips"
+    },
+  ]
+  fullName = "SupportEmailAction"
+  content = file("salesforce/Records/ApexPage/SupportEmailAction.page")
+}

@@ -122,7 +122,7 @@ type salesforce.AuthorizationForm {
     updateable = true
     relationshipName = "DefaultAuthFormText"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsSignatureRequired {
     apiName = "AuthorizationForm.IsSignatureRequired"

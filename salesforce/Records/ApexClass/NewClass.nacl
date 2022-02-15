@@ -1,0 +1,14 @@
+salesforce.ApexClass NewClass {
+  apiVersion = 53
+  status = "Active"
+  fullName = "NewClass"
+  content = file("salesforce/Records/ApexClass/NewClass.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.New_field__c
+    },
+  ]
+}

@@ -54,6 +54,7 @@ type salesforce.MLField {
         "Related",
         "ScoringExpression",
         "SegmentExpression",
+        "SourceDate",
         "TrainingExpression",
       ]
     }

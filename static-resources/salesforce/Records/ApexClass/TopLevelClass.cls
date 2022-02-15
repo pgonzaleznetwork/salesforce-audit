@@ -8,6 +8,7 @@ public with sharing class TopLevelClass {
         //new comment
 
         List<Lead> leads = [SELECT ProductInterest__c ,Connected_Org__c FROM Lead];
+        //this comment was added in the workspace..
 
     }
     

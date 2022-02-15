@@ -56,10 +56,6 @@ salesforce.RecordType Account_Internal {
           fullName = "New High"
           default = false
         },
-        {
-          fullName = "Super High"
-          default = false
-        },
       ]
     },
     {

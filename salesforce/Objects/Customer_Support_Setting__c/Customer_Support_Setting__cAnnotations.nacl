@@ -1,4 +1,4 @@
-type salesforce.MLModelFactor {
+type salesforce.Customer_Support_Setting__c {
   annotations {
     serviceid apiName {
     }
@@ -54,10 +54,15 @@ type salesforce.MLModelFactor {
     }
     hidden_string internalId {
     }
+    string customSettingsType {
+    }
+    string visibility {
+    }
   }
-  apiName = "MLModelFactor"
+  apiName = "Customer_Support_Setting__c"
   metadataType = "CustomObject"
-  label = "ML Model Factor"
+  label = "Customer Support Settings"
+  customSettingsType = "Hierarchy"
   enableFeeds = false
-  externalSharingModel = "ControlledByParent"
+  visibility = "Public"
 }

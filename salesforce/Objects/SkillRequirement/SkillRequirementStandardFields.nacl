@@ -83,7 +83,7 @@ type salesforce.SkillRequirement {
     updateable = false
     relationshipName = "RelatedRecord"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup SkillId {
     apiName = "SkillRequirement.SkillId"
@@ -96,7 +96,7 @@ type salesforce.SkillRequirement {
     updateable = true
     relationshipName = "Skill"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsAdditionalSkill {
     apiName = "SkillRequirement.IsAdditionalSkill"
@@ -118,7 +118,7 @@ type salesforce.SkillRequirement {
   }
   salesforce.Unknown SkillLevel {
     apiName = "SkillRequirement.SkillLevel"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

@@ -112,6 +112,7 @@ type salesforce.AgentWork {
       salesforce.Contact,
       salesforce.ContactRequest,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       salesforce.Lead,
       salesforce.Opportunity,
       salesforce.Order,
@@ -511,6 +512,20 @@ type salesforce.AgentWork {
   }
   salesforce.Unknown StatusSequence {
     apiName = "AgentWork.StatusSequence"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown FlagMessage {
+    apiName = "AgentWork.FlagMessage"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown IsFlagged {
+    apiName = "AgentWork.IsFlagged"
     queryable = false
     updateable = false
     createable = false

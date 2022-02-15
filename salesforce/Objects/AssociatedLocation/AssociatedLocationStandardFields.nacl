@@ -83,7 +83,7 @@ type salesforce.AssociatedLocation {
     updateable = false
     relationshipName = "ParentRecord"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup LocationId {
     apiName = "AssociatedLocation.LocationId"
@@ -96,7 +96,7 @@ type salesforce.AssociatedLocation {
     updateable = true
     relationshipName = "Location"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Type {
     apiName = "AssociatedLocation.Type"
@@ -104,7 +104,7 @@ type salesforce.AssociatedLocation {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.DateTime ActiveFrom {
     apiName = "AssociatedLocation.ActiveFrom"

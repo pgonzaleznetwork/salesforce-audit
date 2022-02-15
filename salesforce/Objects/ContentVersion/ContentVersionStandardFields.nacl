@@ -232,7 +232,7 @@ type salesforce.ContentVersion {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup CreatedById {
     apiName = "ContentVersion.CreatedById"
@@ -394,6 +394,7 @@ type salesforce.ContentVersion {
       salesforce.CreditMemo,
       salesforce.CreditMemoLine,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       "Dashboard",
       "DashboardComponent",
       salesforce.EmailMessage,
@@ -565,7 +566,7 @@ type salesforce.ContentVersion {
   }
   salesforce.Unknown Language {
     apiName = "ContentVersion.Language"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

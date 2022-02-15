@@ -99,7 +99,7 @@ type salesforce.AuthorizationFormDataUse {
     updateable = true
     relationshipName = "AuthorizationForm"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup DataUsePurposeId {
     apiName = "AuthorizationFormDataUse.DataUsePurposeId"
@@ -112,6 +112,6 @@ type salesforce.AuthorizationFormDataUse {
     updateable = true
     relationshipName = "DataUsePurpose"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

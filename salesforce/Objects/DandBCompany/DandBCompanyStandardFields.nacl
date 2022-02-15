@@ -4749,6 +4749,18 @@ type salesforce.DandBCompany {
         label = "Canada Federal Corporation Number"
         isActive = true
       },
+      {
+        fullName = "00835"
+        default = false
+        label = "Charity Commission for England & Wales Charity Number"
+        isActive = true
+      },
+      {
+        fullName = "00836"
+        default = false
+        label = "UK Financial Conduct Authority Reference Number"
+        isActive = true
+      },
     ]
     restricted = true
     createable = true

@@ -56,10 +56,6 @@ salesforce.RecordType Account_Reseller {
           fullName = "New High"
           default = false
         },
-        {
-          fullName = "Super High"
-          default = false
-        },
       ]
     },
     {

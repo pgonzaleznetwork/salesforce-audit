@@ -36,7 +36,7 @@ type salesforce.Account {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountType
   }
   salesforce.Lookup RecordTypeId {
@@ -135,7 +135,7 @@ type salesforce.Account {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.Industry
   }
   salesforce.Currency AnnualRevenue {
@@ -156,6 +156,7 @@ type salesforce.Account {
     scale = 0
     unique = false
     queryable = true
+    inlineHelpText = "Help text goes here"
   }
   salesforce.Picklist Ownership {
     apiName = "Account.Ownership"
@@ -165,7 +166,7 @@ type salesforce.Account {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountOwnership
   }
   salesforce.Text TickerSymbol {
@@ -194,7 +195,7 @@ type salesforce.Account {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountRating
   }
   salesforce.Text Site {
@@ -219,7 +220,7 @@ type salesforce.Account {
     queryable = true
     _hidden_value = true
     trackFeedHistory = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.DateTime CreatedDate {
     apiName = "Account.CreatedDate"
@@ -364,7 +365,7 @@ type salesforce.Account {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
   }
   salesforce.Text DunsNumber {
@@ -438,12 +439,12 @@ type salesforce.Account {
     relationshipName = "DandbCompany"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Unknown Name {
     apiName = "Account.Name"
     trackFeedHistory = true
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

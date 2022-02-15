@@ -100,6 +100,7 @@ type salesforce.PendingServiceRouting {
       salesforce.Contact,
       salesforce.ContactRequest,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       salesforce.Lead,
       salesforce.Opportunity,
       salesforce.Order,

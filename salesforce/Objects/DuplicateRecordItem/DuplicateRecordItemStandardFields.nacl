@@ -97,6 +97,7 @@ type salesforce.DuplicateRecordItem {
       salesforce.Child__c,
       salesforce.Contact,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       salesforce.Individual,
       salesforce.Lead,
       salesforce.Parent__c,

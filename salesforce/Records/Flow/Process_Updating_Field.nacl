@@ -124,7 +124,7 @@ salesforce.Flow Process_Updating_Field {
         },
       ]
       name = "myRule_1_A1"
-      label = "update field"
+      label = "update field v3"
       locationX = 100
       locationY = 200
       connector = {
@@ -192,7 +192,7 @@ salesforce.Flow Process_Updating_Field {
     },
   ]
   startElementReference = "myDecision"
-  status = "Draft"
+  status = "Active"
   variables = [
     {
       name = "myVariable_current"

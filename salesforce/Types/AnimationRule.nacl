@@ -45,86 +45,13 @@ type salesforce.AnimationRule {
   string recordTypeName {
   }
   string sobjectType {
-    _restriction = {
-      enforce_value = false
-      values = [
-        "Account",
-        "Asset",
-        "BoatReview__c",
-        "BoatType__c",
-        "Boat__c",
-        "Campaign",
-        "Case",
-        "Center__c",
-        "Child__c",
-        "Contact",
-        "Contract",
-        "Custom_Object__c",
-        "Field_referencing__mdt",
-        "Lead",
-        "Lead_To_Oppty_Mapping__mdt",
-        "Opportunity",
-        "Order",
-        "Parent__c",
-        "ProcessException",
-        "SRM_API_Metadata_Client_Setting__mdt",
-        "SRM_CRM_Sprint__c",
-        "SRM_Connected_Org__c",
-        "SRM_Development_Task__c",
-        "SRM_Jira_Ticket__c",
-        "SRM_Metadata_Conflict_Warning__mdt",
-        "SRM_Metadata__c",
-        "SRM_Package_XML_Setting__mdt",
-        "Trigger_Context_Status__mdt",
-        "Trigger_Handler__mdt",
-        "nebc__Log_Setting__mdt",
-        "nebc__Test_Record_Generator_Field__mdt",
-        "nebc__Test_Record_Generator__mdt",
-        "nebc__Trigger_Handler__mdt",
-      ]
-    }
+    
     foreignKeyDomain = [
       "CustomObject",
     ]
   }
   string targetField {
-    _restriction = {
-      enforce_value = false
-      values = [
-        "AccountSource",
-        "Active__c",
-        "Category",
-        "ConsequenceOfFailure",
-        "CustomerPriority__c",
-        "DeliveryInstallationStatus__c",
-        "Deployment_Type__c",
-        "DigitalAssetStatus",
-        "ForecastCategoryName",
-        "Industry",
-        "LeadSource",
-        "Level__c",
-        "My_Broken_Picklist__c",
-        "My_Picklist_Field__c",
-        "Owner__c",
-        "Ownership",
-        "PotentialLiability__c",
-        "Primary__c",
-        "Priority",
-        "ProductInterest__c",
-        "Product__c",
-        "Rating",
-        "SLAViolation__c",
-        "SLA__c",
-        "Severity",
-        "StageName",
-        "Status",
-        "Status__c",
-        "Type",
-        "UpsellOpportunity__c",
-        "nebc__Event__c",
-        "nebc__Level__c",
-      ]
-    }
+    
     foreignKeyDomain = [
       salesforce.CustomField,
     ]

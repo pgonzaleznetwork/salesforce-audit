@@ -1,0 +1,158 @@
+type salesforce.BriefcaseRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.BriefcaseRuleFilter briefcaseRuleFilters {
+  }
+  string filterLogic {
+  }
+  boolean isAscendingOrder {
+  }
+  string orderBy {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string parentRule {
+    foreignKeyDomain = [
+      salesforce.BriefcaseRule,
+    ]
+  }
+  number recordLimit {
+  }
+  string targetEntity {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "ActiveScratchOrg",
+        "AlternativePaymentMethod",
+        "ApiAnomalyEventStore",
+        "Asset",
+        "AssetAction",
+        "AssetActionSource",
+        "AssetRelationship",
+        "AssetStatePeriod",
+        "AssociatedLocation",
+        "AuthorizationForm",
+        "AuthorizationFormConsent",
+        "AuthorizationFormDataUse",
+        "AuthorizationFormText",
+        "BoatReview__c",
+        "BoatType__c",
+        "Boat__c",
+        "BusinessBrand",
+        "Campaign",
+        "CampaignMember",
+        "CardPaymentMethod",
+        "Case",
+        "Center__c",
+        "Child__c",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "ConsumptionRate",
+        "ConsumptionSchedule",
+        "Contact",
+        "ContactPointAddress",
+        "ContactPointConsent",
+        "ContactPointEmail",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContactRequest",
+        "ContentVersion",
+        "Contract",
+        "CredentialStuffingEventStore",
+        "CreditMemo",
+        "CreditMemoInvApplication",
+        "CreditMemoLine",
+        "Custom_Object__c",
+        "Customer",
+        "DandBCompany",
+        "DataUseLegalBasis",
+        "DataUsePurpose",
+        "DigitalWallet",
+        "DuplicateRecordItem",
+        "DuplicateRecordSet",
+        "EmailMessage",
+        "EngagementChannelType",
+        "Event",
+        "FinanceBalanceSnapshot",
+        "FinanceTransaction",
+        "Idea",
+        "Image",
+        "Individual",
+        "Invoice",
+        "InvoiceLine",
+        "Lead",
+        "LegalEntity",
+        "Location",
+        "LocationGroup",
+        "LocationGroupAssignment",
+        "Macro",
+        "NamespaceRegistry",
+        "Opportunity",
+        "OpportunityContactRole",
+        "OpportunityLineItem",
+        "Order",
+        "OrderItem",
+        "Parent__c",
+        "PartyConsent",
+        "Payment",
+        "PaymentAuthAdjustment",
+        "PaymentAuthorization",
+        "PaymentGateway",
+        "PaymentGroup",
+        "PaymentLineInvoice",
+        "Pricebook2",
+        "PricebookEntry",
+        "ProcessException",
+        "Product2",
+        "ProductConsumptionSchedule",
+        "QuickText",
+        "Recommendation",
+        "Refund",
+        "RefundLinePayment",
+        "ReportAnomalyEventStore",
+        "SRM_CRM_Sprint__c",
+        "SRM_Connected_Org__c",
+        "SRM_Development_Task__c",
+        "SRM_Jira_Ticket__c",
+        "SRM_Metadata__c",
+        "Scorecard",
+        "ScorecardAssociation",
+        "ScorecardMetric",
+        "ScratchOrgInfo",
+        "Seller",
+        "ServiceResource",
+        "ServiceResourceSkill",
+        "SessionHijackingEventStore",
+        "SkillRequirement",
+        "SocialPersona",
+        "Solution",
+        "Task",
+        "User",
+        "UserProvisioningRequest",
+        "WorkBadge",
+        "WorkBadgeDefinition",
+        "WorkThanks",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  metadataType = "BriefcaseRule"
+}

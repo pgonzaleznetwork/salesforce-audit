@@ -251,12 +251,6 @@ type salesforce.User {
         isActive = true
       },
       {
-        fullName = "Pacific/Fiji"
-        default = false
-        label = "(GMT+13:00) Fiji Summer Time (Pacific/Fiji)"
-        isActive = true
-      },
-      {
         fullName = "Pacific/Tongatapu"
         default = false
         label = "(GMT+13:00) Tonga Standard Time (Pacific/Tongatapu)"
@@ -266,6 +260,12 @@ type salesforce.User {
         fullName = "Asia/Kamchatka"
         default = false
         label = "(GMT+12:00) Petropavlovsk-Kamchatski Standard Time (Asia/Kamchatka)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Fiji"
+        default = false
+        label = "(GMT+12:00) Fiji Standard Time (Pacific/Fiji)"
         isActive = true
       },
       {
@@ -2941,20 +2941,8 @@ type salesforce.User {
     updateable = true
     queryable = true
   }
-  salesforce.Checkbox UserPreferencesDisableFeedbackEmail {
-    apiName = "User.UserPreferencesDisableFeedbackEmail"
-    label = "DisableFeedbackEmail"
-    createable = true
-    updateable = true
-    queryable = true
-  }
-  salesforce.Checkbox UserPreferencesDisableWorkEmail {
-    apiName = "User.UserPreferencesDisableWorkEmail"
-    label = "DisableWorkEmail"
-    createable = true
-    updateable = true
-    queryable = true
-  }
+  
+  
   salesforce.Checkbox UserPreferencesHideS1BrowserUI {
     apiName = "User.UserPreferencesHideS1BrowserUI"
     label = "HideS1BrowserUI"

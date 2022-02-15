@@ -34,6 +34,7 @@ type salesforce.BrandingSet {
         "ember:branding-ember",
         "es-channel-menu",
         "es-messaging",
+        "esw-template-frame:branding",
         "helpCenter:branding-helpCenter",
         "identity:branding-identity",
         "insurance:branding-insurance",

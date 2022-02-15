@@ -83,7 +83,7 @@ type salesforce.ServiceResourceSkill {
     updateable = false
     relationshipName = "ServiceResource"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup SkillId {
     apiName = "ServiceResourceSkill.SkillId"
@@ -96,7 +96,7 @@ type salesforce.ServiceResourceSkill {
     updateable = true
     relationshipName = "Skill"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Number SkillLevel {
     apiName = "ServiceResourceSkill.SkillLevel"

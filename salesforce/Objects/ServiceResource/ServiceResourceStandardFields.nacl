@@ -19,7 +19,7 @@ type salesforce.ServiceResource {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text Name {
     apiName = "ServiceResource.Name"
@@ -90,7 +90,7 @@ type salesforce.ServiceResource {
     updateable = true
     relationshipName = "RelatedRecord"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist ResourceType {
     apiName = "ServiceResource.ResourceType"
@@ -164,7 +164,7 @@ type salesforce.ServiceResource {
     updateable = true
     relationshipName = "Location"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup AccountId {
     apiName = "ServiceResource.AccountId"
@@ -176,6 +176,6 @@ type salesforce.ServiceResource {
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

@@ -98,7 +98,7 @@ type salesforce.DataUsePurpose {
     updateable = true
     relationshipName = "LegalBasis"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text Description {
     apiName = "DataUsePurpose.Description"

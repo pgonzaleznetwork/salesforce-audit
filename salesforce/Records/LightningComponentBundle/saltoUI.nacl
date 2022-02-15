@@ -1,0 +1,22 @@
+salesforce.LightningComponentBundle saltoUI {
+  apiVersion = 52
+  isExposed = false
+  fullName = "saltoUI"
+  lwcResources = {
+    lwcResource = [
+      {
+        source = file("salesforce/Records/LightningComponentBundle/saltoUI/saltoUI.js")
+        filePath = "lwc/saltoUI/saltoUI.js"
+      },
+      {
+        source = file("salesforce/Records/LightningComponentBundle/saltoUI/saltoUI.html")
+        filePath = "lwc/saltoUI/saltoUI.html"
+      },
+    ]
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.SaltoUIController
+    },
+  ]
+}

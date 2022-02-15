@@ -86,6 +86,7 @@ type salesforce.RecordAction {
       salesforce.ContactRequest,
       salesforce.Contract,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       "EnhancedLetterhead",
       salesforce.Lead,
       salesforce.Location,

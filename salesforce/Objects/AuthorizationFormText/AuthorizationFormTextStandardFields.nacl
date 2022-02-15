@@ -86,7 +86,7 @@ type salesforce.AuthorizationFormText {
     updateable = false
     relationshipName = "AuthorizationForm"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text FullAuthorizationFormUrl {
     apiName = "AuthorizationFormText.FullAuthorizationFormUrl"
@@ -2682,6 +2682,6 @@ type salesforce.AuthorizationFormText {
     updateable = true
     relationshipName = "ContentDocument"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

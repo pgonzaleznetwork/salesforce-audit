@@ -37,6 +37,7 @@ type salesforce.TopicAssignment {
       "ContentDocument",
       salesforce.Contract,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       salesforce.Event,
       salesforce.FeedItem,
       salesforce.Lead,

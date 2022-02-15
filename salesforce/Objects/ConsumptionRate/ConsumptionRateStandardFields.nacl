@@ -84,7 +84,7 @@ type salesforce.ConsumptionRate {
     updateable = false
     relationshipName = "ConsumptionSchedule"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.LongTextArea Description {
     apiName = "ConsumptionRate.Description"

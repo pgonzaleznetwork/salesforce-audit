@@ -17,7 +17,7 @@ type salesforce.Asset {
     updateable = true
     relationshipName = "Contact"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup AccountId {
     apiName = "Asset.AccountId"
@@ -29,7 +29,7 @@ type salesforce.Asset {
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup ParentId {
     apiName = "Asset.ParentId"
@@ -41,7 +41,7 @@ type salesforce.Asset {
     updateable = true
     relationshipName = "Parent"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup RootAssetId {
     apiName = "Asset.RootAssetId"
@@ -53,7 +53,7 @@ type salesforce.Asset {
     updateable = false
     relationshipName = "RootAsset"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
   salesforce.Lookup Product2Id {
@@ -66,7 +66,7 @@ type salesforce.Asset {
     updateable = true
     relationshipName = "Product2"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text ProductCode {
     apiName = "Asset.ProductCode"
@@ -209,7 +209,7 @@ type salesforce.Asset {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AssetStatus
   }
   salesforce.Currency Price {
@@ -250,7 +250,7 @@ type salesforce.Asset {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup AssetProvidedById {
     apiName = "Asset.AssetProvidedById"
@@ -262,7 +262,7 @@ type salesforce.Asset {
     updateable = true
     relationshipName = "AssetProvidedBy"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup AssetServicedById {
     apiName = "Asset.AssetServicedById"
@@ -274,7 +274,7 @@ type salesforce.Asset {
     updateable = true
     relationshipName = "AssetServicedBy"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsInternal {
     apiName = "Asset.IsInternal"
@@ -356,7 +356,7 @@ type salesforce.Asset {
   }
   salesforce.Picklist ConsequenceOfFailure {
     apiName = "Asset.ConsequenceOfFailure"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -364,7 +364,7 @@ type salesforce.Asset {
   }
   salesforce.Picklist DigitalAssetStatus {
     apiName = "Asset.DigitalAssetStatus"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -373,7 +373,7 @@ type salesforce.Asset {
   salesforce.Unknown ExternalIdentifier {
     apiName = "Asset.ExternalIdentifier"
     inlineHelpText = "ID of matching record in an external system."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -381,7 +381,7 @@ type salesforce.Asset {
   }
   salesforce.Lookup LocationId {
     apiName = "Asset.LocationId"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -390,7 +390,7 @@ type salesforce.Asset {
   salesforce.Unknown ManufactureDate {
     apiName = "Asset.ManufactureDate"
     inlineHelpText = "Date when the asset was manufactured."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -413,7 +413,7 @@ type salesforce.Asset {
   salesforce.Picklist StatusReason {
     apiName = "Asset.StatusReason"
     inlineHelpText = "Explanation of the device status."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -421,7 +421,7 @@ type salesforce.Asset {
   }
   salesforce.Unknown TotalLifecycleAmount {
     apiName = "Asset.TotalLifecycleAmount"
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -430,7 +430,7 @@ type salesforce.Asset {
   salesforce.Unknown Uuid {
     apiName = "Asset.Uuid"
     inlineHelpText = "Unique string identifying the asset."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

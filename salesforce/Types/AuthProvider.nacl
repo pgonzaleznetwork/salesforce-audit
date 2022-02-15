@@ -75,6 +75,7 @@ type salesforce.AuthProvider {
         "MicrosoftACS",
         "OpenIdConnect",
         "Salesforce",
+        "Slack",
         "Twitter",
       ]
     }

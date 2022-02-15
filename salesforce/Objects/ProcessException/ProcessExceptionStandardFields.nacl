@@ -97,6 +97,7 @@ type salesforce.ProcessException {
       salesforce.Child__c,
       salesforce.CreditMemo,
       salesforce.Custom_Object__c,
+      salesforce.Customer_Support_Setting__c,
       salesforce.Invoice,
       salesforce.Order,
       salesforce.OrderItem,

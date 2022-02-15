@@ -138,11 +138,5 @@ type salesforce.WorkBadge {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup RewardId {
-    apiName = "WorkBadge.RewardId"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
-  }
+  
 }

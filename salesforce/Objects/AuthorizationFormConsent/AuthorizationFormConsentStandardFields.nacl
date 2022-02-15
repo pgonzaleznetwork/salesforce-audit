@@ -102,7 +102,7 @@ type salesforce.AuthorizationFormConsent {
     updateable = true
     relationshipName = "ConsentGiver"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup AuthorizationFormTextId {
     apiName = "AuthorizationFormConsent.AuthorizationFormTextId"
@@ -114,7 +114,7 @@ type salesforce.AuthorizationFormConsent {
     updateable = true
     relationshipName = "AuthorizationFormText"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text ConsentCapturedSource {
     apiName = "AuthorizationFormConsent.ConsentCapturedSource"
@@ -211,7 +211,7 @@ type salesforce.AuthorizationFormConsent {
     updateable = true
     relationshipName = "DocumentVersion"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Lookup RelatedRecordId {
     apiName = "AuthorizationFormConsent.RelatedRecordId"
@@ -223,6 +223,6 @@ type salesforce.AuthorizationFormConsent {
     updateable = true
     relationshipName = "RelatedRecord"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
 }

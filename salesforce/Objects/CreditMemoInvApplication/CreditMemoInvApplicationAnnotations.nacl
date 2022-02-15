@@ -60,6 +60,34 @@ type salesforce.CreditMemoInvApplication {
   label = "Credit Memo Invoice Application"
   actionOverrides = [
     {
+      actionName = "CancelEdit"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "CancelEdit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "Edit"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "List"
       type = "Default"
     },
@@ -70,6 +98,20 @@ type salesforce.CreditMemoInvApplication {
     },
     {
       actionName = "List"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "SaveEdit"
       formFactor = "Small"
       type = "Default"
     },

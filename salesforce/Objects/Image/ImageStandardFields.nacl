@@ -177,7 +177,7 @@ type salesforce.Image {
     updateable = true
     relationshipName = "ContentDocument"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Text CapturedAngle {
     apiName = "Image.CapturedAngle"

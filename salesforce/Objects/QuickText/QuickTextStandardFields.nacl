@@ -19,7 +19,7 @@ type salesforce.QuickText {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "QuickText.IsDeleted"
@@ -105,7 +105,7 @@ type salesforce.QuickText {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.QuickTextCategory
   }
   salesforce.MultiselectPicklist Channel {
@@ -116,7 +116,7 @@ type salesforce.QuickText {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.QuickTextChannel
   }
   salesforce.Checkbox IsInsertable {

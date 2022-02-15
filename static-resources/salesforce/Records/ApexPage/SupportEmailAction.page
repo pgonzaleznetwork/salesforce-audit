@@ -1,0 +1,5 @@
+<apex:page >
+    <p>
+        Email us at sla-emails@company.com
+    </p>
+</apex:page>

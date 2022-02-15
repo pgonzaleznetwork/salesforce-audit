@@ -47,7 +47,7 @@ type salesforce.Case {
     relationshipName = "Contact"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
   }
   salesforce.Lookup AccountId {
@@ -61,7 +61,7 @@ type salesforce.Case {
     relationshipName = "Account"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
   }
   salesforce.Lookup AssetId {
@@ -75,7 +75,7 @@ type salesforce.Case {
     relationshipName = "Asset"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
   }
   salesforce.Lookup ParentId {
@@ -89,7 +89,7 @@ type salesforce.Case {
     relationshipName = "Parent"
     queryable = true
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
   }
   salesforce.Text SuppliedName {
@@ -138,7 +138,7 @@ type salesforce.Case {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
     valueSetName = salesforce.StandardValueSet.instance.CaseType
   }
@@ -150,7 +150,7 @@ type salesforce.Case {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
     valueSetName = salesforce.StandardValueSet.instance.CaseStatus
   }
@@ -162,7 +162,7 @@ type salesforce.Case {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
     valueSetName = salesforce.StandardValueSet.instance.CaseReason
   }
@@ -174,7 +174,7 @@ type salesforce.Case {
     updateable = true
     queryable = true
     trackFeedHistory = false
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
     valueSetName = salesforce.StandardValueSet.instance.CaseOrigin
   }
@@ -196,7 +196,7 @@ type salesforce.Case {
     updateable = true
     queryable = true
     trackFeedHistory = true
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
     valueSetName = salesforce.StandardValueSet.instance.CasePriority
   }
@@ -246,7 +246,7 @@ type salesforce.Case {
     queryable = true
     _hidden_value = true
     trackFeedHistory = true
-    trackHistory = "true"
+    trackHistory = true
     trackTrending = false
   }
   salesforce.DateTime CreatedDate {
@@ -341,7 +341,7 @@ type salesforce.Case {
   salesforce.Lookup BusinessHoursId {
     apiName = "Case.BusinessHoursId"
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
     queryable = false
     updateable = false
@@ -351,7 +351,7 @@ type salesforce.Case {
   salesforce.Unknown IsClosedOnCreate {
     apiName = "Case.IsClosedOnCreate"
     trackFeedHistory = false
-    trackHistory = "false"
+    trackHistory = false
     trackTrending = false
     queryable = false
     updateable = false

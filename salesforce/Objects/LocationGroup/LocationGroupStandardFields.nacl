@@ -13,7 +13,7 @@ type salesforce.LocationGroup {
   }
   salesforce.Lookup OwnerId {
     apiName = "LocationGroup.OwnerId"
-    trackHistory = "false"
+    trackHistory = false
     _hidden_value = true
   }
   string ShouldSyncWithOci {

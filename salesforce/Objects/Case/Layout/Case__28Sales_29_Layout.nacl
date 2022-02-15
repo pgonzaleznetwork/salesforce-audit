@@ -96,6 +96,14 @@ salesforce.Layout Case_Case__28Sales_29_Layout@bspps {
               behavior = "Edit"
               field = salesforce.Case.field.CustomDate__c
             },
+            {
+              behavior = "Readonly"
+              field = salesforce.Case.field.Target_Email__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Case.field.new_date_field__c
+            },
           ]
         },
         {

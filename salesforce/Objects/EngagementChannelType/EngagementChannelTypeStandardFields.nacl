@@ -19,7 +19,7 @@ type salesforce.EngagementChannelType {
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "EngagementChannelType.IsDeleted"
@@ -92,7 +92,7 @@ type salesforce.EngagementChannelType {
   salesforce.Unknown ContactPointType {
     apiName = "EngagementChannelType.ContactPointType"
     inlineHelpText = "The contact point type record associated with the engagement channel type."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

@@ -1,14 +1,10 @@
 salesforce.ValidationRule Account_Priority_must_be_set {
   fullName = "Account.Priority_must_be_set"
-  active = true
+  active = false
   errorConditionFormula = "ISPICKVAL(CustomerPriority__c,\"High\") &&  ISBLANK(TEXT(Type))"
-  errorMessage = "brand new error yay"
+  errorMessage = "Customer priority cannot be High"
   _parent = [
     salesforce.Account,
   ]
-  _generated_dependencies = [
-    {
-      reference = salesforce.Account.field.CustomerPriority__c
-    },
-  ]
+  
 }

@@ -2,6 +2,6 @@ salesforce.SchemaSettings {
   fullName = "Schema"
   enableAdvancedCMTSecurity = true
   enableAdvancedCSSecurity = true
-  enableListCustomSettingCreation = false
+  enableListCustomSettingCreation = true
   enableSOSLOnCustomSettings = false
 }

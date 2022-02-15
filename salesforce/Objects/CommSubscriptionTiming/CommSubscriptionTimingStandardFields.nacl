@@ -84,7 +84,7 @@ type salesforce.CommSubscriptionTiming {
     updateable = false
     relationshipName = "CommSubscriptionConsent"
     queryable = true
-    trackHistory = "false"
+    trackHistory = false
   }
   salesforce.Picklist Unit {
     apiName = "CommSubscriptionTiming.Unit"
@@ -131,7 +131,7 @@ type salesforce.CommSubscriptionTiming {
   salesforce.Unknown Offset {
     apiName = "CommSubscriptionTiming.Offset"
     inlineHelpText = "The amount of time before or after an event or the specific day of the week that you should communicate with the contact point. Set the unit of time in Unit. For example, if you set Unit as \"Week\" and Offset as \"-4\" communicate with the contact point four weeks before the event. If you set Offset as \"4\" communicate with the contact point four weeks after the event. If you set Unit as \"Day of Week\" and Offset as \"1,\" communicate with the contact point on Monday. If you set Offset as \"7\" communicate with the contact point on Sunday."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -140,7 +140,7 @@ type salesforce.CommSubscriptionTiming {
   salesforce.Unknown PreferredTimeEnd {
     apiName = "CommSubscriptionTiming.PreferredTimeEnd"
     inlineHelpText = "End of the preferred time span in which to reach the contact point."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -149,7 +149,7 @@ type salesforce.CommSubscriptionTiming {
   salesforce.Unknown PreferredTimeStart {
     apiName = "CommSubscriptionTiming.PreferredTimeStart"
     inlineHelpText = "Start of the preferred time span in which to reach the contact point."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false
@@ -158,7 +158,7 @@ type salesforce.CommSubscriptionTiming {
   salesforce.Unknown PreferredTimeZone {
     apiName = "CommSubscriptionTiming.PreferredTimeZone"
     inlineHelpText = "Time zone of the preferred time span."
-    trackHistory = "false"
+    trackHistory = false
     queryable = false
     updateable = false
     createable = false

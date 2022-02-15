@@ -1,0 +1,12 @@
+type salesforce.Customer_Support_Setting__c {
+  salesforce.Email Email_Address__c {
+    apiName = "Customer_Support_Setting__c.Email_Address__c"
+    label = "Email Address"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackTrending = false
+  }
+}

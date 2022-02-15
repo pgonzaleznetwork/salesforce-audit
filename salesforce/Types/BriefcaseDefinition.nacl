@@ -1,0 +1,33 @@
+type salesforce.BriefcaseDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BriefcaseRule briefcaseRules {
+  }
+  string description {
+  }
+  boolean isActive {
+  }
+  string masterLabel {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "briefcaseDefinition"
+  dirName = "briefcaseDefinitions"
+  metadataType = "BriefcaseDefinition"
+}
