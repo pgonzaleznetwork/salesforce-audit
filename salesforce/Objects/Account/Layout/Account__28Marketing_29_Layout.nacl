@@ -1,10 +1,7 @@
 salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
   fullName = "Account-Account %28Marketing%29 Layout"
-  emailDefault = false
-  headers = [
-    "PersonalTagging",
-    "PublicTagging",
-  ]
+  
+  
   layoutSections = [
     {
       customLabel = false
@@ -37,10 +34,6 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
             {
               behavior = "Edit"
               field = salesforce.Account.field.Site
-            },
-            {
-              behavior = "Readonly"
-              field = salesforce.Account.field.Name_Formula__c
             },
             {
               behavior = "Edit"
@@ -77,6 +70,10 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
             {
               behavior = "Edit"
               field = salesforce.Account.field.Rating
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Account.field.Name_Formula__c
             },
             {
               behavior = "Edit"
@@ -240,7 +237,7 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
       style = "OneColumn"
     },
     {
-      customLabel = false
+      customLabel = true
       detailHeading = false
       editHeading = false
       layoutColumns = [
@@ -253,6 +250,7 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
         },
       ]
       style = "CustomLinks"
+      label = "Custom Links"
     },
   ]
   miniLayout = {
@@ -394,13 +392,19 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
   relatedObjects = [
     "ParentId",
   ]
-  runAssignmentRulesDefault = false
-  showEmailCheckbox = true
+  
+  showEmailCheckbox = false
   showHighlightsPanel = false
   showInteractionLogPanel = false
-  showRunAssignmentRulesCheckbox = true
+  showRunAssignmentRulesCheckbox = false
   showSubmitAndAttachButton = false
   _parent = [
     salesforce.Account,
   ]
+  summaryLayout = {
+    masterLabel = "00h3h00000421ON"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
 }

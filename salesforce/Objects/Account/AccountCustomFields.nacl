@@ -91,7 +91,7 @@ type salesforce.Account {
     trackFeedHistory = false
     trackHistory = false
     sorted = false
-    description = "Is the account active or not?"
+    description = "New description"
   }
   salesforce.Number NumberofLocations__c {
     apiName = "Account.NumberofLocations__c"
