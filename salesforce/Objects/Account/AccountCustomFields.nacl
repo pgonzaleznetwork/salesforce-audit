@@ -20,7 +20,7 @@ type salesforce.Account {
       },
     ]
     restricted = false
-    inlineHelpText = "This field is used to trigger automatic notifications to sla-notifications@company.com"
+    inlineHelpText = "This field is used to trigger automatic notifications to sla-emails@company.com"
     createable = true
     updateable = true
     queryable = true
